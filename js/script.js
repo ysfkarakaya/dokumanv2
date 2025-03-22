@@ -250,23 +250,51 @@ function setupSearch() {
         const searchTerm = $(this).val().toLowerCase();
         
         if (searchTerm.length < 2) {
-            $('.module-item').show();
-            $('.module-category').show();
+            // Arama terimi çok kısaysa tüm modülleri göster
+            renderModuleMenu(staticModules);
             return;
         }
         
-        // Tüm modül öğelerini gizle
-        $('.module-item').hide();
-        $('.module-category').hide();
-        
-        // Arama terimiyle eşleşen öğeleri göster
-        $('.module-item').each(function() {
-            const itemText = $(this).text().toLowerCase();
-            if (itemText.includes(searchTerm)) {
-                $(this).show();
-                $(this).closest('.module-category').show();
-                $(this).closest('.collapse').addClass('show');
+        // Arama terimine göre modülleri filtrele
+        const filteredModules = staticModules.map(module => {
+            // Modül adı arama terimiyle eşleşiyorsa, tüm sayfaları göster
+            if (module.name.toLowerCase().includes(searchTerm)) {
+                return module;
             }
-        });
+            
+            // Sayfaları filtrele
+            const filteredPages = module.pages.filter(page => 
+                page.title.toLowerCase().includes(searchTerm)
+            );
+            
+            // Eğer filtrelenmiş sayfalar varsa, modülü bu sayfalarla döndür
+            if (filteredPages.length > 0) {
+                return {
+                    ...module,
+                    pages: filteredPages
+                };
+            }
+            
+            // Eşleşme yoksa null döndür
+            return null;
+        }).filter(module => module !== null);
+        
+        // Filtrelenmiş modülleri göster
+        renderModuleMenu(filteredModules);
+        
+        // Tüm collapse'leri aç
+        $('.module-items').addClass('show');
+    });
+    
+    // Arama butonuna tıklama olayı ekle
+    $('#searchButton').on('click', function() {
+        const searchTerm = $('#searchInput').val().toLowerCase();
+        
+        if (searchTerm.length < 2) {
+            return;
+        }
+        
+        // Arama işlemini tetikle
+        $('#searchInput').trigger('keyup');
     });
 }
