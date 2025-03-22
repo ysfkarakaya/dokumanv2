@@ -14,6 +14,9 @@ $(document).ready(function() {
     // Modülleri yükle (tamamen JavaScript ile)
     loadModules();
     
+    // Ana sayfada modül kartlarını oluştur
+    renderModuleCards();
+    
     // Arama fonksiyonu
     setupSearch();
     
@@ -23,6 +26,69 @@ $(document).ready(function() {
     // Yazdırma işlevselliği
     setupPrintButton();
 });
+
+/**
+ * Ana sayfada modül kartlarını render eder
+ */
+function renderModuleCards() {
+    let cardsHtml = '';
+    
+    // Modülleri sırala
+    const sortedModules = [...staticModules].sort((a, b) => a.order - b.order);
+    
+    // Her modül için bir kart oluştur
+    sortedModules.forEach(function(module) {
+        // Modül için rastgele bir renk sınıfı seç
+        const colorClasses = ['primary', 'success', 'info', 'warning', 'danger'];
+        const randomColor = colorClasses[Math.floor(Math.random() * colorClasses.length)];
+        
+        cardsHtml += `
+            <div class="col-md-4 mb-4">
+                <div class="card h-100">
+                    <div class="card-header bg-${randomColor} text-white">
+                        <h4 class="mb-0"><i class="bi ${module.icon}"></i> ${module.name}</h4>
+                    </div>
+                    <div class="card-body">
+                        <p>${module.description || 'Bu modül ile ilgili dokümantasyon.'}</p>
+                        <h5>Sayfalar:</h5>
+                        <ul class="list-group list-group-flush">`;
+        
+        // Modülün ilk 4 sayfasını göster
+        const pagesToShow = module.pages.slice(0, 4);
+        pagesToShow.forEach(function(page) {
+            cardsHtml += `
+                <li class="list-group-item">
+                    <a href="?module=${module.id}&page=${page.id}">
+                        ${page.title}
+                    </a>
+                </li>`;
+        });
+        
+        // Eğer daha fazla sayfa varsa, "Daha fazla..." linki ekle
+        if (module.pages.length > 4) {
+            cardsHtml += `
+                <li class="list-group-item">
+                    <a href="#" onclick="$('#module-${module.id}').addClass('show');">
+                        <i class="bi bi-three-dots"></i> Daha fazla...
+                    </a>
+                </li>`;
+        }
+        
+        cardsHtml += `
+                        </ul>
+                    </div>
+                    <div class="card-footer">
+                        <a href="?module=${module.id}&page=genel-bakis" class="btn btn-sm btn-${randomColor}">
+                            <i class="bi bi-arrow-right-circle"></i> Modüle Git
+                        </a>
+                    </div>
+                </div>
+            </div>`;
+    });
+    
+    // Kartları sayfaya ekle
+    $('#moduleCards').html(cardsHtml);
+}
 
 /**
  * Dark Mode işlevselliğini ayarlar

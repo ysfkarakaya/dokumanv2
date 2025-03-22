@@ -50,6 +50,7 @@
                         <img src="img/logo-large.png" alt="Aaro ERP Logo" class="img-fluid mb-4" style="max-width: 300px;">
                         <h2>Aaro ERP Dokümantasyon Portalına Hoş Geldiniz</h2>
                         <p class="lead">Bu portal, Aaro ERP yazılımının kullanımı hakkında detaylı bilgiler ve adım adım kılavuzlar sunmaktadır.</p>
+                        
                         <div class="row justify-content-center mt-5">
                             <div class="col-md-8">
                                 <div class="card">
@@ -64,34 +65,45 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="row justify-content-center mt-4">
-                            <div class="col-md-4">
-                                <div class="card h-100">
-                                    <div class="card-header bg-success text-white">
-                                        <h4 class="mb-0">Temel Modüller</h4>
-                                    </div>
-                                    <div class="card-body">
-                                        <ul class="list-group list-group-flush">
-                                            <li class="list-group-item"><i class="bi bi-people"></i> Müşteri/Satıcı Yönetimi</li>
-                                            <li class="list-group-item"><i class="bi bi-box-seam"></i> Stok Yönetimi</li>
-                                            <li class="list-group-item"><i class="bi bi-cash-coin"></i> Finans Yönetimi</li>
-                                            <li class="list-group-item"><i class="bi bi-calculator"></i> Muhasebe</li>
-                                        </ul>
-                                    </div>
+                        
+                        <!-- Modül Kartları (Dinamik) -->
+                        <div class="row justify-content-center mt-5">
+                            <div class="col-md-10">
+                                <h3 class="mb-4">Modüller</h3>
+                                <div class="row" id="moduleCards">
+                                    <!-- Modül kartları buraya dinamik olarak eklenecek -->
                                 </div>
                             </div>
-                            <div class="col-md-4">
-                                <div class="card h-100">
-                                    <div class="card-header bg-info text-white">
-                                        <h4 class="mb-0">Gelişmiş Modüller</h4>
+                        </div>
+                        
+                        <!-- Hızlı Erişim Bölümü -->
+                        <div class="row justify-content-center mt-5">
+                            <div class="col-md-10">
+                                <div class="card">
+                                    <div class="card-header bg-success text-white">
+                                        <h4 class="mb-0">Hızlı Erişim</h4>
                                     </div>
                                     <div class="card-body">
-                                        <ul class="list-group list-group-flush">
-                                            <li class="list-group-item"><i class="bi bi-gear"></i> Üretim Yönetimi</li>
-                                            <li class="list-group-item"><i class="bi bi-truck"></i> Lojistik Yönetimi</li>
-                                            <li class="list-group-item"><i class="bi bi-graph-up"></i> Raporlama ve Analiz</li>
-                                            <li class="list-group-item"><i class="bi bi-person-badge"></i> İnsan Kaynakları</li>
-                                        </ul>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <h5>Sık Kullanılan Sayfalar</h5>
+                                                <ul class="list-group list-group-flush">
+                                                    <li class="list-group-item"><a href="?module=stok&page=stok-karti"><i class="bi bi-box"></i> Stok Kartı</a></li>
+                                                    <li class="list-group-item"><a href="?module=musteri-satici&page=musteri-ekleme"><i class="bi bi-person-plus"></i> Müşteri Ekleme</a></li>
+                                                    <li class="list-group-item"><a href="?module=satis-pazarlama&page=siparis-listesi"><i class="bi bi-list-check"></i> Sipariş Listesi</a></li>
+                                                    <li class="list-group-item"><a href="?module=cek-senet&page=hareket-olustur"><i class="bi bi-cash-coin"></i> Çek/Senet Hareket Oluştur</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <h5>Yardım ve Destek</h5>
+                                                <ul class="list-group list-group-flush">
+                                                    <li class="list-group-item"><a href="?module=sss&page=genel-bakis"><i class="bi bi-question-circle"></i> Sık Sorulan Sorular</a></li>
+                                                    <li class="list-group-item"><a href="#"><i class="bi bi-headset"></i> Destek Talebi Oluştur</a></li>
+                                                    <li class="list-group-item"><a href="#"><i class="bi bi-book"></i> Kullanım Kılavuzu</a></li>
+                                                    <li class="list-group-item"><a href="#"><i class="bi bi-play-circle"></i> Video Eğitimler</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
