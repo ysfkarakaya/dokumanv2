@@ -312,6 +312,7 @@ function renderModuleHeader(moduleInfo) {
  * Arama fonksiyonunu ayarlar
  */
 function setupSearch() {
+    // Sidebar arama fonksiyonu
     $('#searchInput').on('keyup', function() {
         const searchTerm = $(this).val().toLowerCase();
         
@@ -352,7 +353,7 @@ function setupSearch() {
         $('.module-items').addClass('show');
     });
     
-    // Arama butonuna tıklama olayı ekle
+    // Sidebar arama butonuna tıklama olayı ekle
     $('#searchButton').on('click', function() {
         const searchTerm = $('#searchInput').val().toLowerCase();
         
@@ -363,4 +364,285 @@ function setupSearch() {
         // Arama işlemini tetikle
         $('#searchInput').trigger('keyup');
     });
+    
+    // Gelişmiş arama fonksiyonu
+    setupAdvancedSearch();
+}
+
+/**
+ * Gelişmiş arama fonksiyonunu ayarlar
+ */
+function setupAdvancedSearch() {
+    // Enter tuşuna basıldığında arama yap
+    $('#advancedSearchInput').on('keypress', function(e) {
+        if (e.which === 13) {
+            $('#advancedSearchButton').click();
+        }
+    });
+    
+    // Arama butonuna tıklama olayı ekle
+    $('#advancedSearchButton').on('click', function() {
+        const searchTerm = $('#advancedSearchInput').val().toLowerCase();
+        
+        if (searchTerm.length < 2) {
+            // Arama terimi çok kısaysa uyarı göster
+            $('#searchResults').html(`
+                <div class="alert alert-warning">
+                    <i class="bi bi-exclamation-triangle"></i> Lütfen en az 2 karakter girin.
+                </div>
+            `);
+            return;
+        }
+        
+        // Arama filtrelerini al
+        const searchModules = $('#searchModules').is(':checked');
+        const searchPages = $('#searchPages').is(':checked');
+        const searchContent = $('#searchContent').is(':checked');
+        
+        // Arama yapılıyor göster
+        $('#searchResults').html(`
+            <div class="text-center p-4">
+                <div class="spinner"></div>
+                <p class="mt-3">Arama yapılıyor...</p>
+            </div>
+        `);
+        
+        // Arama yap
+        setTimeout(() => {
+            performAdvancedSearch(searchTerm, searchModules, searchPages, searchContent);
+        }, 500); // Gerçek bir arama yapıldığı hissi vermek için küçük bir gecikme
+    });
+}
+
+/**
+ * Gelişmiş arama işlemini gerçekleştirir
+ * @param {string} searchTerm - Arama terimi
+ * @param {boolean} searchModules - Modüllerde arama yapılacak mı
+ * @param {boolean} searchPages - Sayfalarda arama yapılacak mı
+ * @param {boolean} searchContent - İçerikte arama yapılacak mı
+ */
+function performAdvancedSearch(searchTerm, searchModules, searchPages, searchContent) {
+    // Arama sonuçları
+    let searchResults = [];
+    
+    // Modüllerde arama yap
+    if (searchModules) {
+        staticModules.forEach(module => {
+            if (module.name.toLowerCase().includes(searchTerm) || 
+                module.description.toLowerCase().includes(searchTerm)) {
+                searchResults.push({
+                    type: 'module',
+                    title: module.name,
+                    icon: module.icon,
+                    path: `?module=${module.id}&page=genel-bakis`,
+                    snippet: module.description || 'Modül açıklaması bulunmuyor.',
+                    highlight: highlightText(module.description || '', searchTerm),
+                    moduleId: module.id,
+                    pageId: 'genel-bakis',
+                    relevance: module.name.toLowerCase().includes(searchTerm) ? 10 : 5
+                });
+            }
+        });
+    }
+    
+    // Sayfalarda arama yap
+    if (searchPages) {
+        staticModules.forEach(module => {
+            module.pages.forEach(page => {
+                if (page.title.toLowerCase().includes(searchTerm)) {
+                    searchResults.push({
+                        type: 'page',
+                        title: page.title,
+                        icon: page.icon || 'bi-file-text',
+                        path: `?module=${module.id}&page=${page.id}`,
+                        snippet: `${module.name} modülünde bir sayfa.`,
+                        highlight: `<strong>${page.title}</strong> sayfası, ${module.name} modülünde bulunmaktadır.`,
+                        moduleId: module.id,
+                        pageId: page.id,
+                        relevance: 8
+                    });
+                }
+            });
+        });
+    }
+    
+    // İçerikte arama yap (Gerçek bir uygulamada bu kısım sunucu tarafında yapılır)
+    if (searchContent) {
+        // Örnek içerik araması (gerçek bir uygulamada bu kısım sunucu tarafında yapılır)
+        // Bu örnekte, bazı sabit içerik parçaları ekliyoruz
+        const sampleContentMatches = [
+            {
+                moduleId: 'stok',
+                pageId: 'stok-karti',
+                content: 'Stok kartı, ürünlerinizin detaylı bilgilerini içerir. Stok kodu, adı, barkodu, fiyatı gibi bilgileri burada yönetebilirsiniz.'
+            },
+            {
+                moduleId: 'musteri-satici',
+                pageId: 'musteri-ekleme',
+                content: 'Müşteri ekleme ekranında yeni müşteri kaydı oluşturabilirsiniz. Müşteri adı, vergi numarası, adres ve iletişim bilgilerini girebilirsiniz.'
+            },
+            {
+                moduleId: 'bayi',
+                pageId: 'bayi-ekrani',
+                content: 'Bayi ekranı, bayilerinizin eriştiği ekrandır. Bayiler bu ekrandan ürünleri görüntüleyebilir, sipariş verebilir ve hesaplarını takip edebilir.'
+            },
+            {
+                moduleId: 'bayi',
+                pageId: 'siparis-listesi',
+                content: 'Sipariş listesi, bayilerinizin vermiş olduğu siparişlerin detaylarını içerir. Siparişin tarihini, tutarını ve durumunu görebilirsiniz.'
+            }
+        ];
+        
+        sampleContentMatches.forEach(item => {
+            if (item.content.toLowerCase().includes(searchTerm)) {
+                // İlgili modül ve sayfayı bul
+                const module = staticModules.find(m => m.id === item.moduleId);
+                const page = module ? module.pages.find(p => p.id === item.pageId) : null;
+                
+                if (module && page) {
+                    searchResults.push({
+                        type: 'content',
+                        title: page.title,
+                        icon: page.icon || 'bi-file-text',
+                        path: `?module=${module.id}&page=${page.id}`,
+                        snippet: item.content,
+                        highlight: highlightText(item.content, searchTerm),
+                        moduleId: module.id,
+                        pageId: page.id,
+                        relevance: 6
+                    });
+                }
+            }
+        });
+    }
+    
+    // Sonuçları alaka düzeyine göre sırala
+    searchResults.sort((a, b) => b.relevance - a.relevance);
+    
+    // Sonuçları göster
+    renderSearchResults(searchResults, searchTerm);
+}
+
+/**
+ * Arama sonuçlarını render eder
+ * @param {Array} results - Arama sonuçları
+ * @param {string} searchTerm - Arama terimi
+ */
+function renderSearchResults(results, searchTerm) {
+    if (results.length === 0) {
+        // Sonuç bulunamadıysa
+        $('#searchResults').html(`
+            <div class="search-no-results">
+                <i class="bi bi-search"></i>
+                <h4>Sonuç bulunamadı</h4>
+                <p>"${searchTerm}" için herhangi bir sonuç bulunamadı. Lütfen farklı bir arama terimi deneyin.</p>
+            </div>
+        `);
+        return;
+    }
+    
+    // Sonuç başlığı
+    let resultsHtml = `
+        <div class="search-results-header">
+            <div class="search-results-count">
+                <strong>${results.length}</strong> sonuç bulundu
+            </div>
+            <div class="search-results-sort">
+                <span>Sıralama:</span>
+                <select class="form-select form-select-sm" id="searchResultsSort">
+                    <option value="relevance" selected>Alaka Düzeyi</option>
+                    <option value="az">A-Z</option>
+                    <option value="za">Z-A</option>
+                </select>
+            </div>
+        </div>
+        <div class="search-results-list">
+    `;
+    
+    // Sonuçları listele
+    results.forEach(result => {
+        let typeIcon, typeLabel, typeClass;
+        
+        switch (result.type) {
+            case 'module':
+                typeIcon = 'bi-grid-3x3-gap';
+                typeLabel = 'Modül';
+                typeClass = 'module';
+                break;
+            case 'page':
+                typeIcon = 'bi-file-text';
+                typeLabel = 'Sayfa';
+                typeClass = 'page';
+                break;
+            case 'content':
+                typeIcon = 'bi-card-text';
+                typeLabel = 'İçerik';
+                typeClass = 'content';
+                break;
+        }
+        
+        resultsHtml += `
+            <div class="search-result-item">
+                <div class="search-result-title">
+                    <i class="bi ${result.icon}"></i>
+                    ${result.title}
+                    <span class="search-result-type ${typeClass}">
+                        <i class="bi ${typeIcon}"></i> ${typeLabel}
+                    </span>
+                </div>
+                <div class="search-result-path">
+                    <i class="bi bi-link-45deg"></i>
+                    ${result.path}
+                </div>
+                <div class="search-result-snippet">
+                    ${result.highlight}
+                </div>
+                <div class="search-result-actions">
+                    <a href="${result.path}" class="btn btn-sm btn-primary">
+                        <i class="bi bi-arrow-right"></i> Git
+                    </a>
+                </div>
+            </div>
+        `;
+    });
+    
+    resultsHtml += `</div>`;
+    
+    // Sonuçları göster
+    $('#searchResults').html(resultsHtml);
+    
+    // Sıralama değiştiğinde sonuçları yeniden sırala
+    $('#searchResultsSort').on('change', function() {
+        const sortType = $(this).val();
+        
+        switch (sortType) {
+            case 'az':
+                results.sort((a, b) => a.title.localeCompare(b.title));
+                break;
+            case 'za':
+                results.sort((a, b) => b.title.localeCompare(a.title));
+                break;
+            case 'relevance':
+            default:
+                results.sort((a, b) => b.relevance - a.relevance);
+                break;
+        }
+        
+        // Sonuçları yeniden render et
+        renderSearchResults(results, searchTerm);
+    });
+}
+
+/**
+ * Metindeki arama terimini vurgular
+ * @param {string} text - Metin
+ * @param {string} term - Vurgulanacak terim
+ * @returns {string} Vurgulanmış metin
+ */
+function highlightText(text, term) {
+    if (!text) return '';
+    
+    // Regex ile arama terimini bul ve vurgula
+    const regex = new RegExp(`(${term})`, 'gi');
+    return text.replace(regex, '<mark>$1</mark>');
 }

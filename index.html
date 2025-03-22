@@ -64,10 +64,51 @@
                                             <a href="https://aaro.com.tr" target="_blank" class="btn btn-warning btn-lg px-4">
                                                 <i class="bi bi-globe"></i> aaro.com.tr
                                             </a>
-                                            <button type="button" class="btn btn-outline-light btn-lg px-4" onclick="document.getElementById('searchInput').focus()">
+                                            <button type="button" class="btn btn-outline-light btn-lg px-4" onclick="document.getElementById('advancedSearchInput').focus()">
                                                 <i class="bi bi-search"></i> Arama Yap
                                             </button>
                                         </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Modern Advanced Search Section -->
+                        <div class="container mb-5">
+                            <div class="card border-0 shadow-lg">
+                                <div class="card-body p-4">
+                                    <h3 class="card-title mb-4 text-center">
+                                        <i class="bi bi-search text-primary"></i> Akıllı Dokümantasyon Arama
+                                    </h3>
+                                    <div class="advanced-search-container">
+                                        <div class="input-group input-group-lg mb-3">
+                                            <span class="input-group-text bg-primary text-white">
+                                                <i class="bi bi-search"></i>
+                                            </span>
+                                            <input type="text" class="form-control form-control-lg" id="advancedSearchInput" 
+                                                placeholder="Modül, sayfa veya içerik ara..." 
+                                                aria-label="Arama" aria-describedby="search-addon">
+                                            <button class="btn btn-primary px-4" type="button" id="advancedSearchButton">
+                                                <i class="bi bi-search me-2"></i> Ara
+                                            </button>
+                                        </div>
+                                        <div class="search-filters mb-3">
+                                            <div class="form-check form-check-inline">
+                                                <input class="form-check-input" type="checkbox" id="searchModules" value="modules" checked>
+                                                <label class="form-check-label" for="searchModules">Modüller</label>
+                                            </div>
+                                            <div class="form-check form-check-inline">
+                                                <input class="form-check-input" type="checkbox" id="searchPages" value="pages" checked>
+                                                <label class="form-check-label" for="searchPages">Sayfalar</label>
+                                            </div>
+                                            <div class="form-check form-check-inline">
+                                                <input class="form-check-input" type="checkbox" id="searchContent" value="content" checked>
+                                                <label class="form-check-label" for="searchContent">İçerik</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="searchResults" class="mt-4">
+                                        <!-- Arama sonuçları buraya dinamik olarak eklenecek -->
                                     </div>
                                 </div>
                             </div>
