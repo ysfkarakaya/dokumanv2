@@ -46,21 +46,108 @@
                 </div>
                 <div id="moduleContent" class="module-content">
                     <!-- İçerik buraya dinamik olarak yüklenecek -->
-                    <div class="text-center my-5">
-                        <img src="img/logo-large.png" alt="Aaro ERP Logo" class="img-fluid mb-4" style="max-width: 300px;">
-                        <h2>Aaro ERP Dokümantasyon Portalına Hoş Geldiniz</h2>
-                        <p class="lead">Bu portal, Aaro ERP yazılımının kullanımı hakkında detaylı bilgiler ve adım adım kılavuzlar sunmaktadır.</p>
-                        
-                        <div class="row justify-content-center mt-5">
-                            <div class="col-md-8">
-                                <div class="card">
-                                    <div class="card-header bg-primary text-white">
-                                        <h3 class="mb-0">Başlarken</h3>
+                    <div class="my-5">
+                        <!-- Modern Hero Section -->
+                        <div class="bg-primary text-white p-5 rounded-3 mb-5 text-center">
+                            <div class="container">
+                                <div class="row align-items-center">
+                                    <div class="col-md-8 mx-auto">
+                                        <img src="img/logo-large.png" alt="Aaro ERP Logo" class="img-fluid mb-4" style="max-width: 200px;">
+                                        <h1 class="display-4 fw-bold">Aaro ERP Dokümantasyon</h1>
+                                        <p class="lead fs-4 mb-4">İşletmenizin dijital dönüşümünde yanınızdayız</p>
+                                        <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+                                            <button type="button" class="btn btn-light btn-lg px-4 gap-3" onclick="document.getElementById('moduleCards').scrollIntoView({behavior: 'smooth'})">
+                                                <i class="bi bi-grid-3x3-gap"></i> Modülleri Keşfet
+                                            </button>
+                                            <button type="button" class="btn btn-outline-light btn-lg px-4" onclick="document.getElementById('searchInput').focus()">
+                                                <i class="bi bi-search"></i> Arama Yap
+                                            </button>
+                                        </div>
                                     </div>
-                                    <div class="card-body">
-                                        <p>Aaro ERP, işletmenizin tüm süreçlerini entegre bir şekilde yönetmenizi sağlayan kapsamlı bir kurumsal kaynak planlama yazılımıdır.</p>
-                                        <p>Sol taraftaki menüden ilgilendiğiniz modülü seçerek başlayabilirsiniz.</p>
-                                        <p>Her modül, ilgili işlevleri ve kullanım adımlarını açıklayan detaylı dokümantasyon içerir.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Bilgilendirme Kartları -->
+                        <div class="container mb-5">
+                            <div class="row g-4">
+                                <div class="col-md-4">
+                                    <div class="card h-100 border-0 shadow-sm">
+                                        <div class="card-body text-center p-4">
+                                            <div class="feature-icon bg-primary bg-gradient text-white rounded-circle mb-3">
+                                                <i class="bi bi-book fs-2 p-3"></i>
+                                            </div>
+                                            <h3 class="fs-4">Kapsamlı Dokümantasyon</h3>
+                                            <p class="mb-0">Aaro ERP'nin tüm modülleri için detaylı kullanım kılavuzları ve adım adım talimatlar.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="card h-100 border-0 shadow-sm">
+                                        <div class="card-body text-center p-4">
+                                            <div class="feature-icon bg-success bg-gradient text-white rounded-circle mb-3">
+                                                <i class="bi bi-lightning fs-2 p-3"></i>
+                                            </div>
+                                            <h3 class="fs-4">Hızlı Başlangıç</h3>
+                                            <p class="mb-0">Yeni başlayanlar için hızlı başlangıç kılavuzları ve en sık kullanılan özelliklere kolay erişim.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="card h-100 border-0 shadow-sm">
+                                        <div class="card-body text-center p-4">
+                                            <div class="feature-icon bg-info bg-gradient text-white rounded-circle mb-3">
+                                                <i class="bi bi-question-circle fs-2 p-3"></i>
+                                            </div>
+                                            <h3 class="fs-4">Destek ve SSS</h3>
+                                            <p class="mb-0">Sık sorulan sorular, sorun giderme ipuçları ve teknik destek ekibine erişim.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Başlarken Bölümü -->
+                        <div class="container mb-5">
+                            <div class="row">
+                                <div class="col-lg-8 mx-auto">
+                                    <div class="card border-0 shadow">
+                                        <div class="card-header bg-primary text-white py-3">
+                                            <h3 class="mb-0"><i class="bi bi-rocket"></i> Başlarken</h3>
+                                        </div>
+                                        <div class="card-body p-4">
+                                            <p class="lead">Aaro ERP, işletmenizin tüm süreçlerini entegre bir şekilde yönetmenizi sağlayan kapsamlı bir kurumsal kaynak planlama yazılımıdır.</p>
+                                            
+                                            <div class="d-flex mb-3">
+                                                <div class="feature-icon bg-primary bg-gradient text-white rounded-circle me-3">
+                                                    <span class="p-2">1</span>
+                                                </div>
+                                                <div>
+                                                    <h5>Modül Seçimi</h5>
+                                                    <p>Sol taraftaki menüden ilgilendiğiniz modülü seçerek başlayabilirsiniz.</p>
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="d-flex mb-3">
+                                                <div class="feature-icon bg-primary bg-gradient text-white rounded-circle me-3">
+                                                    <span class="p-2">2</span>
+                                                </div>
+                                                <div>
+                                                    <h5>Dokümantasyon İnceleme</h5>
+                                                    <p>Her modül, ilgili işlevleri ve kullanım adımlarını açıklayan detaylı dokümantasyon içerir.</p>
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="d-flex">
+                                                <div class="feature-icon bg-primary bg-gradient text-white rounded-circle me-3">
+                                                    <span class="p-2">3</span>
+                                                </div>
+                                                <div>
+                                                    <h5>Uygulama</h5>
+                                                    <p>Öğrendiklerinizi Aaro ERP yazılımında uygulayarak işletmenizin verimliliğini artırın.</p>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
