@@ -334,6 +334,9 @@ function highlightAndScrollToTerm(term) {
         parent.insertBefore(termSpan, afterTerm);
         parent.insertBefore(beforeTerm, termSpan);
         
+        // Arama terimini içeren accordion'ları aç
+        openContainingAccordions(termSpan);
+        
         // Vurgulanan terime kaydır
         setTimeout(() => {
             const highlightedTerm = document.getElementById('search-highlight-term');
@@ -343,8 +346,75 @@ function highlightAndScrollToTerm(term) {
                     block: 'center'
                 });
             }
-        }, 300);
+        }, 500); // Accordion'ların açılması için biraz daha uzun bir süre bekle
     }
+}
+
+/**
+ * Belirtilen elemanı içeren tüm accordion'ları açar
+ * @param {HTMLElement} element - İçeriği kontrol edilecek eleman
+ */
+function openContainingAccordions(element) {
+    // Elemanın tüm üst elemanlarını kontrol et
+    let currentElement = element;
+    
+    while (currentElement && currentElement.id !== 'moduleContent') {
+        // Accordion içeriği mi kontrol et
+        if (currentElement.classList && currentElement.classList.contains('accordion-collapse')) {
+            // Accordion kapalıysa aç
+            if (!currentElement.classList.contains('show')) {
+                // Accordion butonunu bul
+                const accordionId = currentElement.id;
+                const accordionButton = document.querySelector(`[data-bs-target="#${accordionId}"]`);
+                
+                if (accordionButton) {
+                    // Accordion butonuna tıkla
+                    accordionButton.click();
+                    
+                    // Veya Bootstrap API'sini kullanarak aç
+                    if (typeof bootstrap !== 'undefined') {
+                        const collapse = new bootstrap.Collapse(currentElement, {
+                            toggle: true
+                        });
+                    }
+                }
+            }
+        }
+        
+        // Ayrıca faq-item gibi özel accordion yapılarını da kontrol et
+        if (currentElement.classList && currentElement.classList.contains('faq-item')) {
+            // Faq içeriğini bul
+            const faqAnswer = currentElement.querySelector('.faq-answer');
+            const faqQuestion = currentElement.querySelector('.faq-question');
+            
+            if (faqAnswer && faqQuestion) {
+                // Kapalıysa aç
+                if (faqAnswer.style.display === 'none') {
+                    faqQuestion.click();
+                }
+            }
+        }
+        
+        // Bir sonraki üst elemana geç
+        currentElement = currentElement.parentNode;
+    }
+    
+    // Tüm collapse elementlerini kontrol et (genel bir yaklaşım)
+    document.querySelectorAll('.collapse').forEach(collapseEl => {
+        // Eğer arama terimini içeriyorsa ve kapalıysa aç
+        if (collapseEl.textContent.toLowerCase().includes(element.textContent.toLowerCase()) && 
+            !collapseEl.classList.contains('show')) {
+            
+            // Collapse butonunu bul
+            const collapseId = collapseEl.id;
+            const collapseButton = document.querySelector(`[data-bs-target="#${collapseId}"]`);
+            
+            if (collapseButton) {
+                // Collapse butonuna tıkla
+                collapseButton.click();
+            }
+        }
+    });
 }
 
 
