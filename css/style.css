@@ -491,6 +491,57 @@ img {
     border-top: none;
 }
 
+/* Module Pages List */
+.module-pages-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 15px;
+}
+
+.module-page-item {
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    border-radius: 8px;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border-left: 3px solid var(--primary-color);
+}
+
+.module-page-item:hover {
+    background-color: rgba(52, 152, 219, 0.1);
+    transform: translateX(5px);
+    color: var(--primary-color);
+}
+
+.module-page-item .page-icon {
+    margin-right: 10px;
+    color: var(--primary-color);
+}
+
+.module-page-item .page-title {
+    flex: 1;
+    font-weight: 500;
+}
+
+.module-page-item .page-arrow {
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.module-page-item:hover .page-arrow {
+    opacity: 1;
+    transform: translateX(3px);
+}
+
+.module-page-more {
+    background-color: rgba(52, 152, 219, 0.05);
+    border-left: 3px dashed var(--primary-color);
+}
+
 /* Dark Mode Overrides for New Elements */
 [data-theme="dark"] .feature-icon {
     background: linear-gradient(135deg, var(--primary-color), var(--dark-color)) !important;
@@ -507,6 +558,20 @@ img {
 
 [data-theme="dark"] .card.border-0 {
     background-color: var(--card-bg);
+}
+
+[data-theme="dark"] .module-page-item {
+    background-color: rgba(30, 30, 30, 0.5);
+    border-left-color: var(--primary-color);
+}
+
+[data-theme="dark"] .module-page-item:hover {
+    background-color: rgba(79, 163, 224, 0.15);
+}
+
+[data-theme="dark"] .module-page-more {
+    background-color: rgba(30, 30, 30, 0.3);
+    border-left: 3px dashed var(--primary-color);
 }
 
 /* Loading Spinner */

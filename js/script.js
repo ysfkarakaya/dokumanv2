@@ -51,31 +51,31 @@ function renderModuleCards() {
                     <div class="card-body">
                         <p>${module.description || 'Bu modül ile ilgili dokümantasyon.'}</p>
                         <h5>Sayfalar:</h5>
-                        <ul class="list-group list-group-flush">`;
+                        <div class="module-pages-list">`;
         
         // Modülün ilk 4 sayfasını göster
         const pagesToShow = module.pages.slice(0, 4);
         pagesToShow.forEach(function(page) {
             cardsHtml += `
-                <li class="list-group-item">
-                    <a href="?module=${module.id}&page=${page.id}">
-                        ${page.title}
-                    </a>
-                </li>`;
+                <a href="?module=${module.id}&page=${page.id}" class="module-page-item">
+                    <span class="page-icon"><i class="bi bi-file-text"></i></span>
+                    <span class="page-title">${page.title}</span>
+                    <span class="page-arrow"><i class="bi bi-chevron-right"></i></span>
+                </a>`;
         });
         
         // Eğer daha fazla sayfa varsa, "Daha fazla..." linki ekle
         if (module.pages.length > 4) {
             cardsHtml += `
-                <li class="list-group-item">
-                    <a href="#" onclick="$('#module-${module.id}').addClass('show');">
-                        <i class="bi bi-three-dots"></i> Daha fazla...
-                    </a>
-                </li>`;
+                <a href="#" onclick="$('#module-${module.id}').addClass('show');" class="module-page-item module-page-more">
+                    <span class="page-icon"><i class="bi bi-three-dots"></i></span>
+                    <span class="page-title">Daha fazla...</span>
+                    <span class="page-arrow"><i class="bi bi-chevron-down"></i></span>
+                </a>`;
         }
         
         cardsHtml += `
-                        </ul>
+                        </div>
                     </div>
                     <div class="card-footer">
                         <a href="?module=${module.id}&page=genel-bakis" class="btn btn-sm btn-${randomColor}">
