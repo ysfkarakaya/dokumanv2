@@ -208,8 +208,15 @@ function renderModuleMenu(modules) {
  * @param {string} pageId - Sayfa ID'si
  */
 function loadModulePage(moduleId, pageId) {
+    // URL parametrelerini al
+    const urlParams = new URLSearchParams(window.location.search);
+    const highlightTerm = urlParams.get('highlight');
+    
     // URL'i güncelle (sayfa yenilenmeden)
-    const newUrl = `?module=${moduleId}&page=${pageId}`;
+    let newUrl = `?module=${moduleId}&page=${pageId}`;
+    if (highlightTerm) {
+        newUrl += `&highlight=${highlightTerm}`;
+    }
     window.history.pushState({}, '', newUrl);
     
     // Aktif menü öğesini güncelle
@@ -243,6 +250,11 @@ function loadModulePage(moduleId, pageId) {
             // Accordion ve tab gibi Bootstrap bileşenlerini yeniden başlat
             initBootstrapComponents();
             
+            // Eğer highlight parametresi varsa, içerikte arama terimini vurgula ve o kısma kaydır
+            if (highlightTerm) {
+                highlightAndScrollToTerm(highlightTerm);
+            }
+            
             console.log(`İçerik yüklendi: ${moduleId}/${pageId}`);
         })
         .catch(function(error) {
@@ -256,6 +268,83 @@ function loadModulePage(moduleId, pageId) {
                 <p>Lütfen sol menüden başka bir sayfa seçin veya sayfayı yenileyin.</p>
             `);
         });
+}
+
+/**
+ * Sayfada arama terimini vurgular ve o kısma kaydırır
+ * @param {string} term - Vurgulanacak terim
+ */
+function highlightAndScrollToTerm(term) {
+    // Sayfadaki tüm metin düğümlerini bul
+    const textNodes = [];
+    const walker = document.createTreeWalker(
+        document.getElementById('moduleContent'),
+        NodeFilter.SHOW_TEXT,
+        null,
+        false
+    );
+    
+    let node;
+    while (node = walker.nextNode()) {
+        if (node.nodeValue.trim() !== '') {
+            textNodes.push(node);
+        }
+    }
+    
+    // Arama terimini içeren ilk metin düğümünü bul
+    let foundNode = null;
+    let foundIndex = -1;
+    
+    for (let i = 0; i < textNodes.length; i++) {
+        const nodeText = textNodes[i].nodeValue.toLowerCase();
+        const index = nodeText.indexOf(term.toLowerCase());
+        
+        if (index !== -1) {
+            foundNode = textNodes[i];
+            foundIndex = index;
+            break;
+        }
+    }
+    
+    // Eğer arama terimi bulunduysa, vurgula ve o kısma kaydır
+    if (foundNode) {
+        // Metin düğümünü span elementleri ile değiştir
+        const parent = foundNode.parentNode;
+        const text = foundNode.nodeValue;
+        const termIndex = foundIndex;
+        
+        // Terimin öncesindeki metin
+        const beforeTerm = document.createTextNode(text.substring(0, termIndex));
+        
+        // Terim
+        const termSpan = document.createElement('span');
+        termSpan.className = 'search-highlight';
+        termSpan.textContent = text.substring(termIndex, termIndex + term.length);
+        termSpan.style.backgroundColor = 'yellow';
+        termSpan.style.color = 'black';
+        termSpan.style.padding = '2px';
+        termSpan.style.borderRadius = '3px';
+        termSpan.id = 'search-highlight-term';
+        
+        // Terimin sonrasındaki metin
+        const afterTerm = document.createTextNode(text.substring(termIndex + term.length));
+        
+        // Düğümleri değiştir
+        parent.replaceChild(afterTerm, foundNode);
+        parent.insertBefore(termSpan, afterTerm);
+        parent.insertBefore(beforeTerm, termSpan);
+        
+        // Vurgulanan terime kaydır
+        setTimeout(() => {
+            const highlightedTerm = document.getElementById('search-highlight-term');
+            if (highlightedTerm) {
+                highlightedTerm.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'center'
+                });
+            }
+        }, 300);
+    }
 }
 
 
@@ -554,7 +643,7 @@ function renderSearchResults(results, searchTerm) {
                     ${result.highlight}
                 </div>
                 <div class="search-result-actions">
-                    <a href="${result.path}" class="btn btn-sm btn-primary">
+                    <a href="${result.path}${result.type === 'content' ? '&highlight=' + encodeURIComponent(searchTerm) : ''}" class="btn btn-sm btn-primary">
                         <i class="bi bi-arrow-right"></i> Git
                     </a>
                 </div>
