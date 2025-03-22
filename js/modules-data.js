@@ -97,6 +97,51 @@ const staticModules = [
         ]
     },
     {
+        id: "banka",
+        name: "Banka",
+        icon: "bi-bank",
+        description: "Banka işlemleri ile ilgili dokümantasyon",
+        version: "1.0.0",
+        order: 1,
+        pages: [
+            { 
+                id: "genel-bakis", 
+                title: "Genel Bakış",
+                icon: "bi-info-circle",
+                url: "/banka/genel-bakis",
+                lastUpdate: "22.03.2025"
+            },
+            { 
+                id: "banka-hesap-karti", 
+                title: "Banka Hesap Kartı",
+                icon: "bi-card-list",
+                url: "/banka/banka-hesap-karti",
+                lastUpdate: "22.03.2025"
+            },
+            { 
+                id: "banka-hesap-listesi", 
+                title: "Banka Hesap Listesi",
+                icon: "bi-list-ul",
+                url: "/banka/banka-hesap-listesi",
+                lastUpdate: "22.03.2025"
+            },
+            { 
+                id: "banka-hareketleri-listesi", 
+                title: "Banka Hareketleri Listesi",
+                icon: "bi-arrow-left-right",
+                url: "/banka/banka-hareketleri-listesi",
+                lastUpdate: "22.03.2025"
+            },
+            { 
+                id: "hareket-olustur", 
+                title: "Hareket Oluştur",
+                icon: "bi-plus-circle",
+                url: "/banka/hareket-olustur",
+                lastUpdate: "22.03.2025"
+            }
+        ]
+    },
+    {
         id: "musteri-satici",
         name: "Müşteri & Satıcı",
         icon: "bi-people",

@@ -1,0 +1,248 @@
+<!-- Meta Bilgileri -->
+<meta name="title" content="Banka Hesap Kartı">
+<meta name="icon" content="bi-card-list">
+<meta name="url" content="/banka/banka-hesap-karti">
+<meta name="lastUpdate" content="22.03.2025">
+
+<h1>Banka Hesap Kartı</h1>
+
+<p>Bu dokümantasyon, Aaro ERP sisteminde banka hesap kartı oluşturma ve yönetme sürecini adım adım açıklamaktadır.</p>
+
+<div class="alert alert-info">
+    <i class="bi bi-info-circle"></i>
+    <strong>Erişim Linki:</strong> <a href="https://erp.aaro.com.tr/BankaHesap/Kalem" target="_blank">erp.aaro.com.tr/BankaHesap/Kalem</a>
+</div>
+
+<h2>Banka Hesap Kartına Erişim</h2>
+
+<p>Banka hesap kartına aşağıdaki yöntemlerle erişebilirsiniz:</p>
+
+<div class="row">
+    <div class="col-md-4">
+        <div class="card mb-3">
+            <div class="card-header">
+                <i class="bi bi-search"></i> Arama Motoru ile
+            </div>
+            <div class="card-body">
+                <p>Sol sekmede Aaro kullanıcı bilgilerinin hemen altındaki arama motorundan "Banka hesap kartı" ifadesini aratarak ulaşım sağlayabilirsiniz.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card mb-3">
+            <div class="card-header">
+                <i class="bi bi-menu-button-wide"></i> Menü ile
+            </div>
+            <div class="card-body">
+                <p>Sol menüden <strong>Banka -> Banka Modülü -> Banka Hesap Kartı</strong> şeklinde ulaşım sağlayabilirsiniz.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card mb-3">
+            <div class="card-header">
+                <i class="bi bi-list-ul"></i> Kart Listesi
+            </div>
+            <div class="card-body">
+                <p>Sol menüden <strong>Banka -> Kartlar -> Banka Hesap Listesi</strong> üzerinden ulaşım sağlayarak yeni kart ekleyebilir ya da mevcutları düzenleyebilirsiniz.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<h2>Banka Hesap Kartı Tanımı</h2>
+
+<p>Banka hesap kartı, firmanızın bankalarda bulunan hesaplarındaki bilgileri içeren karttır. Banka hesap kartları ile farklı bankalarda ve hesaplarda bulunan finansal durumunuzu takip edebilir, bakiyelerinizi görüntüleyebilir, özet alabilir ve yönetebilirsiniz.</p>
+
+<div class="alert alert-primary">
+    <i class="bi bi-lightbulb"></i>
+    <strong>İpucu:</strong> Banka hesap kartlarını doğru ve eksiksiz bir şekilde tanımlamak, finansal yönetim süreçlerinizin daha verimli çalışmasını sağlar.
+</div>
+
+<h2>Banka Hesap Kartı Bilgileri</h2>
+
+<div class="accordion" id="bankaAccordion">
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="headingGeneral">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseGeneral">
+                Genel Bilgiler
+            </button>
+        </h2>
+        <div id="collapseGeneral" class="accordion-collapse collapse show" data-bs-parent="#bankaAccordion">
+            <div class="accordion-body">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Alan</th>
+                            <th>Açıklama</th>
+                            <th>Zorunlu</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Hesap Adı</td>
+                            <td>Banka Hesap kartının kendine özel adıdır.</td>
+                            <td>Evet</td>
+                        </tr>
+                        <tr>
+                            <td>Hesap Kodu</td>
+                            <td>Banka Hesap Kartının kendine özel kodudur. <a href="#">Hesap Kodu</a></td>
+                            <td>Evet</td>
+                        </tr>
+                        <tr>
+                            <td>Tip</td>
+                            <td>Banka hesap kartının tipini belirtir. Cari, Pos, Kredi seçeneklerinden biri olabilir. Pos ve kredi banka hesapları için bir adet cari tipli banka hesabı açılmalıdır. Detaylı açıklama için linke tıklayınız. <a href="#">Tip</a></td>
+                            <td>Evet</td>
+                        </tr>
+                        <tr>
+                            <td>Cari Banka Hesap</td>
+                            <td>Pos ve kredi tipli banka hesaplarının bağlı olduğu cari tipli banka hesabı seçilir.</td>
+                            <td>Hayır</td>
+                        </tr>
+                        <tr>
+                            <td>Banka Şube</td>
+                            <td>Banka Hesap kartın kayıtlı olduğu banka şubesini belirtir.</td>
+                            <td>Evet</td>
+                        </tr>
+                        <tr>
+                            <td>Iban No</td>
+                            <td>Kartın banka hesap iban bilgilerini belirtir.</td>
+                            <td>Hayır</td>
+                        </tr>
+                        <tr>
+                            <td>Kodlar</td>
+                            <td>Kartları hiyerarşik olarak gruplamak için kullanılır. Detaylı tanım için linke tıklayınız. <a href="#">Kodlar</a></td>
+                            <td>Hayır</td>
+                        </tr>
+                        <tr>
+                            <td>Etiketler</td>
+                            <td>Gruplamak için kullanılır. Detaylı tanım için linke tıklayınız. <a href="#">Etiketler</a></td>
+                            <td>Hayır</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="headingContact">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseContact">
+                İletişim
+            </button>
+        </h2>
+        <div id="collapseContact" class="accordion-collapse collapse" data-bs-parent="#bankaAccordion">
+            <div class="accordion-body">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Alan</th>
+                            <th>Açıklama</th>
+                            <th>Zorunlu</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Telefon</td>
+                            <td>Karta ait telefon numarasını ifade eder.</td>
+                            <td>Hayır</td>
+                        </tr>
+                        <tr>
+                            <td>Fax</td>
+                            <td>Karta ait fax numarasını ifade eder.</td>
+                            <td>Hayır</td>
+                        </tr>
+                        <tr>
+                            <td>Email</td>
+                            <td>Karta ait mail adresini ifade eder.</td>
+                            <td>Hayır</td>
+                        </tr>
+                        <tr>
+                            <td>Web</td>
+                            <td>Karta ait web adresini ifade eder.</td>
+                            <td>Hayır</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="headingAccounting">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseAccounting">
+                Muhasebe Tanımları
+            </button>
+        </h2>
+        <div id="collapseAccounting" class="accordion-collapse collapse" data-bs-parent="#bankaAccordion">
+            <div class="accordion-body">
+                <p>Muhasebeleşme tanımlarını ayarlayarak, bu kart için hareket işlendiğinde otomatik olarak belirli muhasebe hesaplarına gerekli kayıtların oluşmasını sağlayabilirsiniz.</p>
+                <p>Detaylı bilgi için <a href="#">Muhasebeleşme Tanımları</a> sayfasını ziyaret edebilirsiniz.</p>
+            </div>
+        </div>
+    </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="headingAdvanced">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseAdvanced">
+                Gelişmiş
+            </button>
+        </h2>
+        <div id="collapseAdvanced" class="accordion-collapse collapse" data-bs-parent="#bankaAccordion">
+            <div class="accordion-body">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Alan</th>
+                            <th>Açıklama</th>
+                            <th>Zorunlu</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Durum</td>
+                            <td>Kartın kullanılabilirliğini belirtir. Pasif kartlar işlemde kullanılamaz.</td>
+                            <td>Hayır</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<h2>Kaydetme ve Silme</h2>
+
+<div class="row">
+    <div class="col-md-6">
+        <div class="alert alert-success">
+            <i class="bi bi-check-circle"></i>
+            <strong>Kaydetme:</strong> Doldurulması gereken alanlar girildikten sonra sağ alt köşede bulunan <strong>Kaydet</strong> butonuna tıklayarak Müşteri/Satıcı kartı açma işleminizi tamamlayabilirsiniz.
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="alert alert-danger">
+            <i class="bi bi-trash"></i>
+            <strong>Silme:</strong> Kayıtlı bir kartı silmek için sol altta bulunan sil butonuna tıklayabilirsiniz.
+        </div>
+    </div>
+</div>
+
+<h2>Kısayollar</h2>
+
+<p>Kartta bulunan kısayollar sekmesi ile cariye ait ilgili raporlara ve öncelikli sayfalara kolayca ulaşabilirsiniz.</p>
+
+<ul>
+    <li>Liste
+        <ul>
+            <li><strong>Hareketleri Bugün</strong> linki ile banka hesap kartına ait bugünün hareketlerine ve bakiye bilgisine ulaşabilirsiniz.</li>
+            <li><strong>Hareketleri</strong> linki ile banka hesap kartına ait hareketlerine ve bakiye bilgisine ulaşabilirsiniz.</li>
+        </ul>
+    </li>
+</ul>
+
+<h2>Kayıt Bilgileri</h2>
+
+<p>Kartın hangi kullanıcı tarafından ve hangi tarihlerde oluşturulduğu ve değiştirildiği bilgisini içerir.</p>
+
+<div class="alert alert-secondary mt-4">
+    <i class="bi bi-question-circle"></i>
+    <strong>Yardıma mı ihtiyacınız var?</strong> Daha fazla yardım için <a href="?module=destek&page=iletisim">Destek Ekibi</a> ile iletişime geçebilirsiniz.
+</div>
