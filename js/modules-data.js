@@ -7,6 +7,51 @@
 // Tüm modüllerin statik tanımı
 const staticModules = [
     {
+        id: "gelir-gider",
+        name: "Gelir & Gider",
+        icon: "bi-cash-stack",
+        description: "Gelir ve gider yönetimi ile ilgili dokümantasyon",
+        version: "1.0.0",
+        order: 1,
+        pages: [
+            { 
+                id: "genel-bakis", 
+                title: "Genel Bakış",
+                icon: "bi-info-circle",
+                url: "/gelir-gider/genel-bakis",
+                lastUpdate: "22.03.2025"
+            },
+            { 
+                id: "gelir-gider-karti", 
+                title: "Gelir Gider Kartı",
+                icon: "bi-card-list",
+                url: "/gelir-gider/gelir-gider-karti",
+                lastUpdate: "22.03.2025"
+            },
+            { 
+                id: "gelir-gider-karti-listesi", 
+                title: "Gelir Gider Kartı Listesi",
+                icon: "bi-list-ul",
+                url: "/gelir-gider/gelir-gider-karti-listesi",
+                lastUpdate: "22.03.2025"
+            },
+            { 
+                id: "gelir-gider-hareketleri-listesi", 
+                title: "Gelir Gider Hareketleri Listesi",
+                icon: "bi-arrow-left-right",
+                url: "/gelir-gider/gelir-gider-hareketleri-listesi",
+                lastUpdate: "22.03.2025"
+            },
+            { 
+                id: "hareket-olustur", 
+                title: "Hareket Oluştur",
+                icon: "bi-plus-circle",
+                url: "/gelir-gider/hareket-olustur",
+                lastUpdate: "22.03.2025"
+            }
+        ]
+    },
+    {
         id: "musteri-satici",
         name: "Müşteri & Satıcı",
         icon: "bi-people",

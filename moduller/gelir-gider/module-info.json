@@ -1,0 +1,7 @@
+{
+    "name": "Gelir & Gider",
+    "icon": "bi-cash-stack",
+    "description": "Gelir ve gider yönetimi ile ilgili dokümantasyon",
+    "version": "1.0.0",
+    "order": 1
+}

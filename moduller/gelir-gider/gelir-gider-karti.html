@@ -1,0 +1,252 @@
+<!-- Meta Bilgileri -->
+<meta name="title" content="Gelir Gider Kartı">
+<meta name="icon" content="bi-card-list">
+<meta name="url" content="/gelir-gider/gelir-gider-karti">
+<meta name="lastUpdate" content="22.03.2025">
+
+<h1>Gelir Gider Kartı</h1>
+
+<p>Bu dokümantasyon, Aaro ERP sisteminde gelir gider kartı oluşturma ve yönetme sürecini adım adım açıklamaktadır.</p>
+
+<div class="alert alert-info">
+    <i class="bi bi-info-circle"></i>
+    <strong>Erişim Linki:</strong> <a href="https://erp.aaro.com.tr/GelirGider/Kalem" target="_blank">erp.aaro.com.tr/GelirGider/Kalem</a>
+</div>
+
+<h2>Gelir Gider Kartına Erişim</h2>
+
+<p>Gelir gider kartına aşağıdaki yöntemlerle erişebilirsiniz:</p>
+
+<div class="row">
+    <div class="col-md-4">
+        <div class="card mb-3">
+            <div class="card-header">
+                <i class="bi bi-search"></i> Arama Motoru ile
+            </div>
+            <div class="card-body">
+                <p>Sol sekmede Aaro kullanıcı bilgilerinin hemen altındaki arama motorundan "Gelir Gider Hesap Kartı" şeklinde aratarak ulaşım sağlayabilirsiniz.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card mb-3">
+            <div class="card-header">
+                <i class="bi bi-menu-button-wide"></i> Menü ile
+            </div>
+            <div class="card-body">
+                <p>Sol menüden <strong>Gelir Gider -> Gelir Gider Modülü -> Gelir Gider Kartı</strong> şeklinde ulaşım sağlayabilirsiniz.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card mb-3">
+            <div class="card-header">
+                <i class="bi bi-list-ul"></i> Kart Listesi
+            </div>
+            <div class="card-body">
+                <p>Sol menüden <strong>Gelir Gider -> Kartlar -> Gelir/Gider Kartı Listesi</strong> üzerinden ulaşım sağlayarak yeni kart ekleyebilir ya da mevcutları düzenleyebilirsiniz.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<h2>Gelir Gider Kartı Tanımı</h2>
+
+<p>Gelir-gider kartından, işletmenizin gelir ve giderlerini izleyebilir, kaydedebilir ve raporlayabilirsiniz. Gelir-gider kartından, işletmenin finansal performansını izleyebilir ve yönetebilirsiniz. Gelir-gider kartı, işletmenin gelir ve giderlerini detaylı bir şekilde takip edebilmesine ve finansal durumunu değerlendirmesine yardımcı olur. Ayrıca, gelir-gider kartları, işletmenin bütçeleme, planlama ve karar verme süreçlerinde önemli bir rol oynar.</p>
+
+<div class="alert alert-primary">
+    <i class="bi bi-lightbulb"></i>
+    <strong>İpucu:</strong> Gelir gider kartlarını doğru ve eksiksiz bir şekilde tanımlamak, finansal yönetim süreçlerinizin daha verimli çalışmasını sağlar.
+</div>
+
+<h2>Gelir Gider Kartı Bilgileri</h2>
+
+<div class="accordion" id="gelirGiderAccordion">
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="headingGeneral">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseGeneral">
+                Genel Bilgiler
+            </button>
+        </h2>
+        <div id="collapseGeneral" class="accordion-collapse collapse show" data-bs-parent="#gelirGiderAccordion">
+            <div class="accordion-body">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Alan</th>
+                            <th>Açıklama</th>
+                            <th>Zorunlu</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Gelir Gider Adı</td>
+                            <td>Bu kartın kendine özel adıdır.</td>
+                            <td>Evet</td>
+                        </tr>
+                        <tr>
+                            <td>Gelir Gider Kodu</td>
+                            <td>Bu kartın kendine özel kodudur. Seri takibi yapılabilir.</td>
+                            <td>Evet</td>
+                        </tr>
+                        <tr>
+                            <td>Birim 1</td>
+                            <td>Bu kartın hangi birim cinsinden takip edileceğini belirtir.</td>
+                            <td>Evet</td>
+                        </tr>
+                        <tr>
+                            <td>Kodlar</td>
+                            <td>Kartları hiyerarşik olarak gruplamak için kullanılır.</td>
+                            <td>Hayır</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="headingUnits">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseUnits">
+                Ölçü Birimleri
+            </button>
+        </h2>
+        <div id="collapseUnits" class="accordion-collapse collapse" data-bs-parent="#gelirGiderAccordion">
+            <div class="accordion-body">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Alan</th>
+                            <th>Açıklama</th>
+                            <th>Zorunlu</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Birim 2</td>
+                            <td>Bu kart için ikinci ölçü birimidir. Kolay hesap yapmak ve raporlarda farklı cins rapor alabilmek için kullanılır.</td>
+                            <td>Hayır</td>
+                        </tr>
+                        <tr>
+                            <td>Birim 3</td>
+                            <td>Bu kart için üçüncü ölçü birimidir. Kolay hesap yapmak ve raporlarda farklı cins rapor alabilmek için kullanılır.</td>
+                            <td>Hayır</td>
+                        </tr>
+                        <tr>
+                            <td>Çevrimiçi Birim2</td>
+                            <td>Birim-1 cinsinden kaç Birim-2 cinsinden olduğunu belirtir. Örneğin; Birim-1:Adet ve Birim-2:Deste ise bu değer = 0,1(1/10) olur.</td>
+                            <td>Hayır</td>
+                        </tr>
+                        <tr>
+                            <td>Çevrimiçi Birim3</td>
+                            <td>Birim-1 cinsinden kaç Birim-3 cinsinden olduğunu belirtir. Örneğin; Birim-1:Adet ve Birim-3:Düzine ise bu değer = 0,083(1/12) olur.</td>
+                            <td>Hayır</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="headingTax">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTax">
+                Vergi Oranları
+            </button>
+        </h2>
+        <div id="collapseTax" class="accordion-collapse collapse" data-bs-parent="#gelirGiderAccordion">
+            <div class="accordion-body">
+                <p>Bu karta ait işlemlerde kullanılacak devletin belirlemiş olduğu KDV Oranını (vergi oranını) belirtir. <strong>Girilmesi Zorunludur.</strong></p>
+            </div>
+        </div>
+    </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="headingAccounting">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseAccounting">
+                Muhasebe Tanımları
+            </button>
+        </h2>
+        <div id="collapseAccounting" class="accordion-collapse collapse" data-bs-parent="#gelirGiderAccordion">
+            <div class="accordion-body">
+                <p>Muhasebeleşme tanımlarını ayarlayarak, bu kart için hareket işlendiğinde otomatik olarak belirli muhasebe hesaplarına gerekli kayıtların oluşturulmasını sağlayabilirsiniz.</p>
+            </div>
+        </div>
+    </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="headingAdvanced">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseAdvanced">
+                Gelişmiş
+            </button>
+        </h2>
+        <div id="collapseAdvanced" class="accordion-collapse collapse" data-bs-parent="#gelirGiderAccordion">
+            <div class="accordion-body">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Alan</th>
+                            <th>Açıklama</th>
+                            <th>Zorunlu</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Kısa Kodu</td>
+                            <td>Raporlama için gereklidir.</td>
+                            <td>Hayır</td>
+                        </tr>
+                        <tr>
+                            <td>Kısa Adı</td>
+                            <td>Raporlama için gereklidir.</td>
+                            <td>Hayır</td>
+                        </tr>
+                        <tr>
+                            <td>GTIP</td>
+                            <td>İhracat tipindeki e-faturalarda, karta ait GTIP değerinin doldurulması zorunludur.</td>
+                            <td>Hayır</td>
+                        </tr>
+                        <tr>
+                            <td>Cari Zorunlu</td>
+                            <td>Bu kart için yapılan hareketlerde hareketin hangi cariye ait olduğunun raporlanabilmesi için seçilir. Her harekette istenecektir.</td>
+                            <td>Hayır</td>
+                        </tr>
+                        <tr>
+                            <td>Demirbaş Zorunlu</td>
+                            <td>Bu kart için yapılan hareketlerde hareketin hangi demirbaşa ait olduğunun raporlanabilmesi için seçilir. Her harekette istenecektir.</td>
+                            <td>Hayır</td>
+                        </tr>
+                        <tr>
+                            <td>Dekont Zorunlu</td>
+                            <td>Bu kart için yapılan hareketlerde hareketin hangi dekonta ait olduğunun raporlanabilmesi için seçilir. Her harekette istenecektir.</td>
+                            <td>Hayır</td>
+                        </tr>
+                        <tr>
+                            <td>Masraf Merkezi Zorunlu</td>
+                            <td>Hareket kaydı girilirken bu kart seçildiğinde masraf merkezi seçilmesini zorunlu yapar.</td>
+                            <td>Hayır</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<h2>Kaydetme ve Silme</h2>
+
+<div class="row">
+    <div class="col-md-6">
+        <div class="alert alert-success">
+            <i class="bi bi-check-circle"></i>
+            <strong>Kaydetme:</strong> Doldurulması gereken alanlar girildikten sonra sağ alt köşede bulunan <strong>Kaydet</strong> butonuna tıklayarak gelir gider kartı oluşturma işleminizi tamamlayabilirsiniz.
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="alert alert-danger">
+            <i class="bi bi-trash"></i>
+            <strong>Silme:</strong> Kayıtlı bir kartı silmek için sol altta bulunan sil butonuna tıklayabilirsiniz.
+        </div>
+    </div>
+</div>
+
+<div class="alert alert-secondary mt-4">
+    <i class="bi bi-question-circle"></i>
+    <strong>Yardıma mı ihtiyacınız var?</strong> Daha fazla yardım için <a href="?module=destek&page=iletisim">Destek Ekibi</a> ile iletişime geçebilirsiniz.
+</div>
