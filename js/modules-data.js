@@ -142,6 +142,51 @@ const staticModules = [
         ]
     },
     {
+        id: "kasa",
+        name: "Kasa",
+        icon: "bi-cash-coin",
+        description: "Kasa işlemleri ile ilgili dokümantasyon",
+        version: "1.0.0",
+        order: 1,
+        pages: [
+            { 
+                id: "genel-bakis", 
+                title: "Genel Bakış",
+                icon: "bi-info-circle",
+                url: "/kasa/genel-bakis",
+                lastUpdate: "22.03.2025"
+            },
+            { 
+                id: "kasa-karti", 
+                title: "Kasa Kartı",
+                icon: "bi-card-list",
+                url: "/kasa/kasa-karti",
+                lastUpdate: "22.03.2025"
+            },
+            { 
+                id: "kasa-karti-listesi", 
+                title: "Kasa Kartı Listesi",
+                icon: "bi-list-ul",
+                url: "/kasa/kasa-karti-listesi",
+                lastUpdate: "22.03.2025"
+            },
+            { 
+                id: "kasa-hareketleri-listesi", 
+                title: "Kasa Hareketleri Listesi",
+                icon: "bi-arrow-left-right",
+                url: "/kasa/kasa-hareketleri-listesi",
+                lastUpdate: "22.03.2025"
+            },
+            { 
+                id: "hareket-olustur", 
+                title: "Hareket Oluştur",
+                icon: "bi-plus-circle",
+                url: "/kasa/hareket-olustur",
+                lastUpdate: "22.03.2025"
+            }
+        ]
+    },
+    {
         id: "musteri-satici",
         name: "Müşteri & Satıcı",
         icon: "bi-people",

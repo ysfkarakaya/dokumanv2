@@ -1,0 +1,7 @@
+{
+    "name": "Kasa",
+    "icon": "bi-cash-coin",
+    "description": "Kasa işlemleri ile ilgili dokümantasyon",
+    "version": "1.0.0",
+    "order": 1
+}

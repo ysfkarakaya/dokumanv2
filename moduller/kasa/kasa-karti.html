@@ -1,0 +1,211 @@
+<!-- Meta Bilgileri -->
+<meta name="title" content="Kasa Kartı">
+<meta name="icon" content="bi-card-list">
+<meta name="url" content="/kasa/kasa-karti">
+<meta name="lastUpdate" content="22.03.2025">
+
+<h1>Kasa Kartı</h1>
+
+<p>Bu dokümantasyon, Aaro ERP sisteminde kasa kartı oluşturma ve yönetme sürecini adım adım açıklamaktadır.</p>
+
+<div class="alert alert-info">
+    <i class="bi bi-info-circle"></i>
+    <strong>Erişim Linki:</strong> <a href="https://erp.aaro.com.tr/Kasa/Kalem" target="_blank">erp.aaro.com.tr/Kasa/Kalem</a>
+</div>
+
+<h2>Kasa Kartına Erişim</h2>
+
+<p>Kasa kartına aşağıdaki yöntemlerle erişebilirsiniz:</p>
+
+<div class="row">
+    <div class="col-md-4">
+        <div class="card mb-3">
+            <div class="card-header">
+                <i class="bi bi-search"></i> Arama Motoru ile
+            </div>
+            <div class="card-body">
+                <p>Sol sekmede Aaro kullanıcı bilgilerinin hemen altındaki arama motorundan "Kasa kartı" ifadesini aratarak ulaşım sağlayabilirsiniz.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card mb-3">
+            <div class="card-header">
+                <i class="bi bi-menu-button-wide"></i> Menü ile
+            </div>
+            <div class="card-body">
+                <p>Sol menüden <strong>Kasa -> Kasa Modülü -> Yeni Kasa Kartı Ekle</strong> şeklinde ulaşım sağlayabilirsiniz.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card mb-3">
+            <div class="card-header">
+                <i class="bi bi-list-ul"></i> Kart Listesi
+            </div>
+            <div class="card-body">
+                <p>Sol menüden <strong>Kasa -> Kartlar -> Kasa Kartı Listesi</strong> üzerinden ulaşım sağlayarak yeni kart ekleyebilir ya da mevcutları düzenleyebilirsiniz.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<h2>Kasa Kartı Tanımı</h2>
+
+<p>Kasa kartı, işletmenin nakit varlıklarını izlemek ve yönetmek için kullanılan bir hesap kartıdır. Kasa kartı ile, işletmenin fiziksel kasalarındaki nakit miktarlarını, kasa hareketlerini ve işlemlerini takip edebilirsiniz. Kasa kartı, işletmenin günlük nakit akışını izleyebilir, kasadaki para miktarını doğru bir şekilde takip edebilir ve finansal raporlama yapabilirsiniz.</p>
+
+<div class="alert alert-primary">
+    <i class="bi bi-lightbulb"></i>
+    <strong>İpucu:</strong> Kasa kartlarını doğru ve eksiksiz bir şekilde tanımlamak, nakit yönetim süreçlerinizin daha verimli çalışmasını sağlar.
+</div>
+
+<h2>Kasa Kartı Bilgileri</h2>
+
+<div class="accordion" id="kasaAccordion">
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="headingGeneral">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseGeneral">
+                Genel Bilgiler
+            </button>
+        </h2>
+        <div id="collapseGeneral" class="accordion-collapse collapse show" data-bs-parent="#kasaAccordion">
+            <div class="accordion-body">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Alan</th>
+                            <th>Açıklama</th>
+                            <th>Zorunlu</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Kasa Adı</td>
+                            <td>Kasa kartının kendine özel adıdır.</td>
+                            <td>Evet</td>
+                        </tr>
+                        <tr>
+                            <td>Kasa Kodu</td>
+                            <td>Kasa kartının kendine özel kodudur. <a href="#">Kart Kodu</a></td>
+                            <td>Evet</td>
+                        </tr>
+                        <tr>
+                            <td>Çalışma Para Birimi(Döviz)</td>
+                            <td>Bu kartın çalıştığı döviz cinsini belirtir. Bilgi amaçlıdır.</td>
+                            <td>Hayır</td>
+                        </tr>
+                        <tr>
+                            <td>Kodlar</td>
+                            <td>Kartları hiyerarşik olarak gruplamak için kullanılır. Detaylı tanım için linke tıklayınız. <a href="#">Kodlar</a></td>
+                            <td>Hayır</td>
+                        </tr>
+                        <tr>
+                            <td>Etiketler</td>
+                            <td>Gruplamak için kullanılır. Detaylı tanım için linke tıklayınız. <a href="#">Etiketler</a></td>
+                            <td>Hayır</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="headingAccounting">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseAccounting">
+                Muhasebe Tanımları
+            </button>
+        </h2>
+        <div id="collapseAccounting" class="accordion-collapse collapse" data-bs-parent="#kasaAccordion">
+            <div class="accordion-body">
+                <p>Muhasebeleşme tanımlarını ayarlayarak, bu kart için hareket işlendiğinde otomatik olarak belirli muhasebe hesaplarına gerekli kayıtların oluşmasını sağlayabilirsiniz.</p>
+                <p>Detaylı bilgi için <a href="#">Muhasebeleşme Tanımları</a> sayfasını ziyaret edebilirsiniz.</p>
+            </div>
+        </div>
+    </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="headingAdvanced">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseAdvanced">
+                Gelişmiş
+            </button>
+        </h2>
+        <div id="collapseAdvanced" class="accordion-collapse collapse" data-bs-parent="#kasaAccordion">
+            <div class="accordion-body">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Alan</th>
+                            <th>Açıklama</th>
+                            <th>Zorunlu</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Şirket-Şube</td>
+                            <td>Kartın ait olduğu şirket ve şubeyi belirtir. <a href="#">Şirket-Şube</a></td>
+                            <td>Hayır</td>
+                        </tr>
+                        <tr>
+                            <td>Durum</td>
+                            <td>Kartın kullanılabilirliğini belirtir. Pasif kartlar işlemde kullanılamaz.</td>
+                            <td>Hayır</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<h2>Kaydetme ve Silme</h2>
+
+<div class="row">
+    <div class="col-md-6">
+        <div class="alert alert-success">
+            <i class="bi bi-check-circle"></i>
+            <strong>Kaydetme:</strong> Doldurulması gereken alanlar girildikten sonra sağ alt köşede bulunan <strong>Kaydet</strong> butonuna tıklayarak Müşteri/Satıcı kartı açma işleminizi tamamlayabilirsiniz.
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="alert alert-danger">
+            <i class="bi bi-trash"></i>
+            <strong>Silme:</strong> Kayıtlı bir kartı silmek için sol altta bulunan sil butonuna tıklayabilirsiniz.
+        </div>
+    </div>
+</div>
+
+<h2>Kısayollar</h2>
+
+<p>Kartta bulunan kısayollar sekmesi ile cariye ait ilgili raporlara ve öncelikli sayfalara kolayca ulaşabilirsiniz.</p>
+
+<ul>
+    <li>Liste
+        <ul>
+            <li><strong>Hareketleri</strong> linki ile kasa kartına ait tüm hareketlere ve bakiye bilgisine ulaşabilirsiniz. Belirli bir tarihteki bakiyeyi görüntüleyebilir, ilgili hareketin detaylarına ulaşabilirsiniz.</li>
+        </ul>
+    </li>
+</ul>
+
+<h2>Kayıt Bilgileri</h2>
+
+<p>Kartın hangi kullanıcı tarafından ve hangi tarihlerde oluşturulduğu ve değiştirildiği bilgisini içerir.</p>
+
+<h2>Kasa Sayımı</h2>
+
+<div class="alert alert-warning">
+    <i class="bi bi-exclamation-triangle"></i>
+    <strong>Kasa Sayımı:</strong> Fiziksel kasadaki nakit miktarı ile sistemdeki kayıtların tutarlılığını kontrol etmek için düzenli olarak kasa sayımı yapmanız önerilir. Kasa sayımı yapmak için:
+    <ol>
+        <li>Kasa kartını açın.</li>
+        <li>"Kasa Sayımı" butonuna tıklayın.</li>
+        <li>Sayım tarihini ve saatini girin.</li>
+        <li>Fiziksel kasadaki para miktarını girin.</li>
+        <li>Sistem, girdiğiniz miktar ile sistemdeki bakiye arasındaki farkı hesaplayacaktır.</li>
+        <li>Fark varsa, açıklama kısmına nedenini belirtin.</li>
+        <li>"Kaydet" butonuna tıklayarak sayım kaydını tamamlayın.</li>
+    </ol>
+</div>
+
+<div class="alert alert-secondary mt-4">
+    <i class="bi bi-question-circle"></i>
+    <strong>Yardıma mı ihtiyacınız var?</strong> Daha fazla yardım için <a href="?module=destek&page=iletisim">Destek Ekibi</a> ile iletişime geçebilirsiniz.
+</div>
