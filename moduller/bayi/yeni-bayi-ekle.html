@@ -1,0 +1,337 @@
+<!-- Meta Bilgileri -->
+<meta name="title" content="Yeni Bayi Ekle">
+<meta name="icon" content="bi-plus-circle">
+<meta name="url" content="/bayi/yeni-bayi-ekle">
+<meta name="lastUpdate" content="22.03.2025">
+
+<h1>Yeni Bayi Ekle</h1>
+
+<div class="alert alert-info">
+    <i class="bi bi-info-circle"></i>
+    <strong>Erişim Linki:</strong> <a href="https://erp.aaro.com.tr/Bayi/YeniBayiEkle" target="_blank">erp.aaro.com.tr/Bayi/YeniBayiEkle</a>
+</div>
+
+<h2>Ulaşım</h2>
+
+<ul>
+    <li>Sol sekmede Aaro kullanıcı bilgilerinin hemen altında yer alan arama motorundan "bayi" aratarak ulaşım sağlayabilirsiniz.</li>
+    <li>Sol menüden <strong>Bayi -> Yeni Bayi Ekle</strong> şeklinde ulaşım sağlayabilirsiniz.</li>
+    <li>Sol menüden <strong>Bayi -> Bayi Kullanıcı Listesi -> Yeni Bayi Ekle</strong> şeklinde ulaşım sağlayabilirsiniz.</li>
+</ul>
+
+<h2>Genel</h2>
+
+<p>Yeni bayi ekleme, mevcut bayi ağını genişletmek amacıyla yeni bir bayi kaydının oluşturulması işlemidir. Bu süreç, bayi bilgilerinin toplanması, onay süreci, sistem kaydı ve eğitim aşamalarını içerir.</p>
+
+<div class="row">
+    <div class="col-md-12 mb-4">
+        <div class="card">
+            <div class="card-header bg-primary text-white">
+                <h3 class="mb-0"><i class="bi bi-plus-circle"></i> Yeni Bayi Ekleme Ekranı</h3>
+            </div>
+            <div class="card-body">
+                <img src="https://via.placeholder.com/800x400?text=Yeni+Bayi+Ekleme+Ekran%C4%B1" alt="Yeni Bayi Ekleme Ekranı" class="img-fluid rounded mb-3">
+                <p class="text-muted">Yeni Bayi Ekleme ekranı, bayi bilgilerini girerek yeni bir bayi kaydı oluşturmanızı sağlar.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<h2>Bayi Bilgileri</h2>
+
+<div class="accordion" id="bayiAccordion">
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="headingGeneral">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseGeneral">
+                Genel Bilgiler
+            </button>
+        </h2>
+        <div id="collapseGeneral" class="accordion-collapse collapse show" data-bs-parent="#bayiAccordion">
+            <div class="accordion-body">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Alan</th>
+                            <th>Açıklama</th>
+                            <th>Zorunlu</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Kullanıcı Kodu</td>
+                            <td>Bayinin kullanıcı kodunu ifade eder.</td>
+                            <td>Evet</td>
+                        </tr>
+                        <tr>
+                            <td>Kullanıcı Adı</td>
+                            <td>Bayinin kullanıcı adını ifade eder.</td>
+                            <td>Evet</td>
+                        </tr>
+                        <tr>
+                            <td>Aaro Hesabı</td>
+                            <td>AARO bayi giriş ekranındaki "Kullanıcı Adı" alanını ifade eder.</td>
+                            <td>Evet</td>
+                        </tr>
+                        <tr>
+                            <td>Telefon</td>
+                            <td>Kullanıcıya ait telefon numarasını ifade eder.</td>
+                            <td>Evet</td>
+                        </tr>
+                        <tr>
+                            <td>E-posta</td>
+                            <td>Kullanıcıya ait e-posta adresini ifade eder.</td>
+                            <td>Evet</td>
+                        </tr>
+                        <tr>
+                            <td>Şifre</td>
+                            <td>Bayi kullanıcısının sisteme giriş şifresini ifade eder.</td>
+                            <td>Evet</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="headingAddress">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseAddress">
+                Adres Bilgileri
+            </button>
+        </h2>
+        <div id="collapseAddress" class="accordion-collapse collapse" data-bs-parent="#bayiAccordion">
+            <div class="accordion-body">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Alan</th>
+                            <th>Açıklama</th>
+                            <th>Zorunlu</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Adres</td>
+                            <td>Bayinin açık adresini ifade eder.</td>
+                            <td>Evet</td>
+                        </tr>
+                        <tr>
+                            <td>İl</td>
+                            <td>Bayinin bulunduğu ili ifade eder.</td>
+                            <td>Evet</td>
+                        </tr>
+                        <tr>
+                            <td>İlçe</td>
+                            <td>Bayinin bulunduğu ilçeyi ifade eder.</td>
+                            <td>Evet</td>
+                        </tr>
+                        <tr>
+                            <td>Posta Kodu</td>
+                            <td>Bayinin posta kodunu ifade eder.</td>
+                            <td>Hayır</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="headingTax">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTax">
+                Vergi Bilgileri
+            </button>
+        </h2>
+        <div id="collapseTax" class="accordion-collapse collapse" data-bs-parent="#bayiAccordion">
+            <div class="accordion-body">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Alan</th>
+                            <th>Açıklama</th>
+                            <th>Zorunlu</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Vergi Dairesi</td>
+                            <td>Bayinin bağlı olduğu vergi dairesini ifade eder.</td>
+                            <td>Evet</td>
+                        </tr>
+                        <tr>
+                            <td>Vergi Numarası</td>
+                            <td>Bayinin vergi numarasını ifade eder.</td>
+                            <td>Evet</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="headingStock">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseStock">
+                Stok ve Depo Bilgileri
+            </button>
+        </h2>
+        <div id="collapseStock" class="accordion-collapse collapse" data-bs-parent="#bayiAccordion">
+            <div class="accordion-body">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Alan</th>
+                            <th>Açıklama</th>
+                            <th>Zorunlu</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Depo</td>
+                            <td>Bayinin kullanacağı depoyu belirtir. Stok miktarlarını bu depodan görür, siparişleri bu depoya işlenir.</td>
+                            <td>Evet</td>
+                        </tr>
+                        <tr>
+                            <td>Cari</td>
+                            <td>Bayinin hangi Cari hesabıyla işlem yapacağını belirtir. Siparişleri ve ödemeleri bu Cari hesabına işlenir.</td>
+                            <td>Evet</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<h2>Yetkiler</h2>
+
+<div class="alert alert-warning">
+    <i class="bi bi-shield-lock"></i>
+    <strong>Yetkiler:</strong> Bayi kullanıcılarının yapabileceği işlemleri ifade eder. - <strong>Bakiye Görebilme:</strong> - <strong>Sipariş Oluşturabilir:</strong> Bayi kullanıcı için sipariş oluşturabilme yetkisini ifade eder. Aktif edildiğinde bayi kullanıcısı sipariş oluşturabilir. - <strong>Hareketlerini Görebilir:</strong> Bayi kullanıcı yaptığı işlemleri görebilmesini ifade eder. Böylece geriye dönül işlemleri görerek kontrolünü sağlayabilir.
+</div>
+
+<h2>Oturum Açma Saatleri</h2>
+
+<div class="alert alert-info">
+    <i class="bi bi-clock"></i>
+    <strong>Oturum Açma Saatleri:</strong> Günler bazında başlangıç ve bitiş saatlerini belirleyerek bayi kullanıcı sisteme erişim sağlayabilecekleri zaman aralığını belirtir.
+</div>
+
+<h2>Oturum Açma Yetkisi</h2>
+
+<div class="alert alert-primary">
+    <i class="bi bi-person-check"></i>
+    <strong>Oturum Açma Yetkisi:</strong> Bayinin oturum açabilmesi için gerekli yetkiyi belirtir. Siparişler ve ödemeleri bu Şirket-Şubeye işlenir.
+</div>
+
+<h2>Etiketler</h2>
+
+<div class="alert alert-secondary">
+    <i class="bi bi-tags"></i>
+    <strong>Etiketler:</strong> Bu kartı gruplamak ve ileride gruplu rapor alabilmek için kullanılır. <a href="#">Etiketler</a>
+</div>
+
+<h2>Kaydetme ve Silme</h2>
+
+<div class="row">
+    <div class="col-md-6">
+        <div class="alert alert-success">
+            <i class="bi bi-check-circle"></i>
+            <strong>Kaydetme:</strong> Doldurulması gereken alanlar girildikten sonra sağ alt köşede bulunan <strong>Kaydet</strong> butonuna tıklayarak bayi ekleme işleminizi tamamlayabilirsiniz.
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="alert alert-danger">
+            <i class="bi bi-trash"></i>
+            <strong>Silme:</strong> Kayıtlı bir bayiyi silmek için sol altta bulunan sil butonuna tıklayabilirsiniz.
+        </div>
+    </div>
+</div>
+
+<h2>Bayi Ekleme Süreci</h2>
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="card mb-4">
+            <div class="card-header bg-primary text-white">
+                <h4 class="mb-0">Bayi Ekleme Adımları</h4>
+            </div>
+            <div class="card-body">
+                <ol class="list-group list-group-numbered">
+                    <li class="list-group-item d-flex justify-content-between align-items-start">
+                        <div class="ms-2 me-auto">
+                            <div class="fw-bold">Bayi Bilgilerinin Toplanması</div>
+                            Bayi olmak isteyen işletmenin gerekli bilgilerini toplayın (iletişim bilgileri, vergi bilgileri, adres bilgileri vb.).
+                        </div>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-start">
+                        <div class="ms-2 me-auto">
+                            <div class="fw-bold">Bayi Başvurusunun Değerlendirilmesi</div>
+                            Toplanan bilgileri değerlendirin ve bayi olmak için uygun olup olmadığına karar verin.
+                        </div>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-start">
+                        <div class="ms-2 me-auto">
+                            <div class="fw-bold">Bayi Sözleşmesinin Hazırlanması</div>
+                            Bayi sözleşmesini hazırlayın ve bayi adayına imzalatın.
+                        </div>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-start">
+                        <div class="ms-2 me-auto">
+                            <div class="fw-bold">Sistem Kaydının Oluşturulması</div>
+                            Bayi bilgilerini sisteme girin ve bayi hesabını oluşturun.
+                        </div>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-start">
+                        <div class="ms-2 me-auto">
+                            <div class="fw-bold">Bayi Eğitiminin Verilmesi</div>
+                            Bayiye sistem kullanımı hakkında eğitim verin ve gerekli dokümanları sağlayın.
+                        </div>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-start">
+                        <div class="ms-2 me-auto">
+                            <div class="fw-bold">Bayi Hesabının Aktifleştirilmesi</div>
+                            Bayi hesabını aktifleştirin ve bayiye giriş bilgilerini iletin.
+                        </div>
+                    </li>
+                </ol>
+            </div>
+        </div>
+    </div>
+</div>
+
+<h2>Bayi Yetkilendirme</h2>
+
+<div class="alert alert-warning">
+    <i class="bi bi-key"></i>
+    <strong>Bayi Yetkilendirme:</strong> Bayi hesabı oluşturduktan sonra, bayinin sistem üzerinde yapabileceği işlemleri belirlemek için yetkilendirme yapmanız gerekir. Bunun için:
+    <ol>
+        <li>Bayi hesabını oluşturun.</li>
+        <li>"Yetkiler" bölümünden bayinin yapabileceği işlemleri seçin.</li>
+        <li>Bayinin görebileceği ürünleri ve fiyatları belirleyin.</li>
+        <li>Bayinin çalışma saatlerini belirleyin.</li>
+        <li>Bayinin kullanabileceği ödeme yöntemlerini belirleyin.</li>
+        <li>Bayinin sipariş limitlerini belirleyin.</li>
+        <li>"Kaydet" butonuna tıklayarak yetkilendirme işlemini tamamlayın.</li>
+    </ol>
+    <p>Doğru yetkilendirme, bayilerin sistem üzerinde sadece izin verilen işlemleri yapabilmesini sağlar ve güvenliği artırır.</p>
+</div>
+
+<h2>Bayi Eğitimi</h2>
+
+<div class="alert alert-success">
+    <i class="bi bi-mortarboard"></i>
+    <strong>Bayi Eğitimi:</strong> Yeni eklenen bayilere sistem kullanımı hakkında eğitim vermek, bayilerin sistemi etkin bir şekilde kullanmalarını sağlar. Eğitim konuları şunları içerebilir:
+    <ul>
+        <li>Sisteme giriş yapma</li>
+        <li>Ürün kataloğunu görüntüleme</li>
+        <li>Sipariş oluşturma</li>
+        <li>Sipariş takibi</li>
+        <li>Ödeme yapma</li>
+        <li>Raporları görüntüleme</li>
+        <li>Profil bilgilerini güncelleme</li>
+    </ul>
+    <p>Eğitim, yüz yüze, çevrimiçi veya dokümanlar aracılığıyla verilebilir. Eğitim sonrasında, bayilere destek sağlamak için bir iletişim kanalı oluşturmak önemlidir.</p>
+</div>
+
+<div class="alert alert-secondary mt-4">
+    <i class="bi bi-question-circle"></i>
+    <strong>Yardıma mı ihtiyacınız var?</strong> Daha fazla yardım için <a href="?module=destek&page=iletisim">Destek Ekibi</a> ile iletişime geçebilirsiniz.
+</div>

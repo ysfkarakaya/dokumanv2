@@ -187,6 +187,58 @@ const staticModules = [
         ]
     },
     {
+        id: "bayi",
+        name: "Bayi Sistemi (B2B)",
+        icon: "bi-shop",
+        description: "Bayi sistemi (B2B) ile ilgili dokümantasyon",
+        version: "1.0.0",
+        order: 1,
+        pages: [
+            { 
+                id: "genel-bakis", 
+                title: "Genel Bakış",
+                icon: "bi-info-circle",
+                url: "/bayi/genel-bakis",
+                lastUpdate: "22.03.2025"
+            },
+            { 
+                id: "bayi-ekrani", 
+                title: "Bayi Ekranı",
+                icon: "bi-display",
+                url: "/bayi/bayi-ekrani",
+                lastUpdate: "22.03.2025"
+            },
+            { 
+                id: "bayi-kullanici-listesi", 
+                title: "Bayi Kullanıcı Listesi",
+                icon: "bi-people",
+                url: "/bayi/bayi-kullanici-listesi",
+                lastUpdate: "22.03.2025"
+            },
+            { 
+                id: "bayi-hareket-listesi", 
+                title: "Bayi Hareket Listesi",
+                icon: "bi-arrow-left-right",
+                url: "/bayi/bayi-hareket-listesi",
+                lastUpdate: "22.03.2025"
+            },
+            { 
+                id: "siparis-listesi", 
+                title: "Sipariş Listesi",
+                icon: "bi-cart",
+                url: "/bayi/siparis-listesi",
+                lastUpdate: "22.03.2025"
+            },
+            { 
+                id: "yeni-bayi-ekle", 
+                title: "Yeni Bayi Ekle",
+                icon: "bi-plus-circle",
+                url: "/bayi/yeni-bayi-ekle",
+                lastUpdate: "22.03.2025"
+            }
+        ]
+    },
+    {
         id: "musteri-satici",
         name: "Müşteri & Satıcı",
         icon: "bi-people",
