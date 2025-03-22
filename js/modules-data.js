@@ -52,6 +52,51 @@ const staticModules = [
         ]
     },
     {
+        id: "demirbas",
+        name: "Demirbaş",
+        icon: "bi-pc-display",
+        description: "Demirbaş yönetimi ile ilgili dokümantasyon",
+        version: "1.0.0",
+        order: 1,
+        pages: [
+            { 
+                id: "genel-bakis", 
+                title: "Genel Bakış",
+                icon: "bi-info-circle",
+                url: "/demirbas/genel-bakis",
+                lastUpdate: "22.03.2025"
+            },
+            { 
+                id: "demirbas-karti", 
+                title: "Demirbaş Kartı",
+                icon: "bi-card-list",
+                url: "/demirbas/demirbas-karti",
+                lastUpdate: "22.03.2025"
+            },
+            { 
+                id: "demirbas-karti-listesi", 
+                title: "Demirbaş Kartı Listesi",
+                icon: "bi-list-ul",
+                url: "/demirbas/demirbas-karti-listesi",
+                lastUpdate: "22.03.2025"
+            },
+            { 
+                id: "demirbas-hareketleri-listesi", 
+                title: "Demirbaş Hareketleri Listesi",
+                icon: "bi-arrow-left-right",
+                url: "/demirbas/demirbas-hareketleri-listesi",
+                lastUpdate: "22.03.2025"
+            },
+            { 
+                id: "hareket-olustur", 
+                title: "Hareket Oluştur",
+                icon: "bi-plus-circle",
+                url: "/demirbas/hareket-olustur",
+                lastUpdate: "22.03.2025"
+            }
+        ]
+    },
+    {
         id: "musteri-satici",
         name: "Müşteri & Satıcı",
         icon: "bi-people",

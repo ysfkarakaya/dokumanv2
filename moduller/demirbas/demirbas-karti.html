@@ -1,0 +1,298 @@
+<!-- Meta Bilgileri -->
+<meta name="title" content="Demirbaş Kartı">
+<meta name="icon" content="bi-card-list">
+<meta name="url" content="/demirbas/demirbas-karti">
+<meta name="lastUpdate" content="22.03.2025">
+
+<h1>Demirbaş Kartı</h1>
+
+<p>Bu dokümantasyon, Aaro ERP sisteminde demirbaş kartı oluşturma ve yönetme sürecini adım adım açıklamaktadır.</p>
+
+<div class="alert alert-info">
+    <i class="bi bi-info-circle"></i>
+    <strong>Erişim Linki:</strong> <a href="https://erp.aaro.com.tr/Demirbas/Kalem" target="_blank">erp.aaro.com.tr/Demirbas/Kalem</a>
+</div>
+
+<h2>Demirbaş Kartına Erişim</h2>
+
+<p>Demirbaş kartına aşağıdaki yöntemlerle erişebilirsiniz:</p>
+
+<div class="row">
+    <div class="col-md-4">
+        <div class="card mb-3">
+            <div class="card-header">
+                <i class="bi bi-search"></i> Arama Motoru ile
+            </div>
+            <div class="card-body">
+                <p>Sol sekmede Aaro kullanıcı bilgilerinin hemen altındaki arama motorundan "Demirbaş Hesap Kartı" şeklinde aratarak ulaşım sağlayabilirsiniz.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card mb-3">
+            <div class="card-header">
+                <i class="bi bi-menu-button-wide"></i> Menü ile
+            </div>
+            <div class="card-body">
+                <p>Sol menüden <strong>Demirbaş -> Demirbaş Modülü -> Demirbaş Kartı</strong> şeklinde ulaşım sağlayabilirsiniz.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card mb-3">
+            <div class="card-header">
+                <i class="bi bi-list-ul"></i> Kart Listesi
+            </div>
+            <div class="card-body">
+                <p>Sol menüden <strong>Demirbaş -> Kartlar -> Demirbaş Kartı Listesi</strong> üzerinden ulaşım sağlayarak yeni kart ekleyebilir ya da mevcutları düzenleyebilirsiniz.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<h2>Demirbaş Kartı Tanımı</h2>
+
+<p>Demirbaş kartından, işletmenin sahip olduğu sabit varlıkları, yani demirbaşları izleyebilir ve yönetebilirsiniz. Demirbaş kartından, demirbaşların envanterini, değerini, yerini ve kullanım durumunu takip edebilirsiniz. Demirbaş kartı, işletmenin demirbaşlarını etkin bir şekilde izlemesine, envanteri doğru bir şekilde yönetmesine ve finansal raporlama süreçlerini kolaylaştırmasına yardımcı olur.</p>
+
+<div class="alert alert-primary">
+    <i class="bi bi-lightbulb"></i>
+    <strong>İpucu:</strong> Demirbaş kartlarını doğru ve eksiksiz bir şekilde tanımlamak, varlık yönetimi süreçlerinizin daha verimli çalışmasını sağlar.
+</div>
+
+<h2>Demirbaş Kartı Bilgileri</h2>
+
+<div class="accordion" id="demirbasAccordion">
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="headingGeneral">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseGeneral">
+                Genel Bilgiler
+            </button>
+        </h2>
+        <div id="collapseGeneral" class="accordion-collapse collapse show" data-bs-parent="#demirbasAccordion">
+            <div class="accordion-body">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Alan</th>
+                            <th>Açıklama</th>
+                            <th>Zorunlu</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Demirbaş Adı</td>
+                            <td>Bu kartın kendine özel adıdır.</td>
+                            <td>Evet</td>
+                        </tr>
+                        <tr>
+                            <td>Demirbaş Kodu</td>
+                            <td>Bu kartın kendine özel kodudur. Seri takibi yapılabilir.</td>
+                            <td>Evet</td>
+                        </tr>
+                        <tr>
+                            <td>Birim 1</td>
+                            <td>Demirbaş kartının hangi birim cinsinden takip edileceğini belirtir.</td>
+                            <td>Evet</td>
+                        </tr>
+                        <tr>
+                            <td>Kodlar</td>
+                            <td>Kartları hiyerarşik olarak gruplamak için kullanılır.</td>
+                            <td>Hayır</td>
+                        </tr>
+                        <tr>
+                            <td>Etiketler</td>
+                            <td>Gruplamak için kullanılır.</td>
+                            <td>Hayır</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="headingUnits">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseUnits">
+                Ölçü Birimleri
+            </button>
+        </h2>
+        <div id="collapseUnits" class="accordion-collapse collapse" data-bs-parent="#demirbasAccordion">
+            <div class="accordion-body">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Alan</th>
+                            <th>Açıklama</th>
+                            <th>Zorunlu</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Birim 2</td>
+                            <td>Bu demirbaş kartı için ikinci ölçü birimidir. Kolay hesap yapmak ve raporlarda farklı cins rapor alabilmek için kullanılır.</td>
+                            <td>Hayır</td>
+                        </tr>
+                        <tr>
+                            <td>Birim 3</td>
+                            <td>Bu demirbaş kartı için üçüncü ölçü birimidir. Kolay hesap yapmak ve raporlarda farklı cins rapor alabilmek için kullanılır.</td>
+                            <td>Hayır</td>
+                        </tr>
+                        <tr>
+                            <td>Çevrimiçi Birim2</td>
+                            <td>Birim-1 cinsinden bu demirbaşın kaç Birim-2 cinsinden olduğunu belirtir. Örneğin; Birim-1:Adet ve Birim-2:Deste ise bu değer = 0,1(1/10) olur.</td>
+                            <td>Hayır</td>
+                        </tr>
+                        <tr>
+                            <td>Çevrimiçi Birim3</td>
+                            <td>Birim-1 cinsinden bu demirbaşın kaç Birim-3 cinsinden olduğunu belirtir. Örneğin; Birim-1:Adet ve Birim-3:Düzine ise bu değer = 0,083(1/12) olur.</td>
+                            <td>Hayır</td>
+                        </tr>
+                        <tr>
+                            <td>Üretim Birim</td>
+                            <td>Üretimle ilgili raporlarda seçilen birim cinsinden rapor almanızı kolaylaştırır.</td>
+                            <td>Hayır</td>
+                        </tr>
+                        <tr>
+                            <td>Rapor Birim</td>
+                            <td>Raporlarda seçilen birim cinsinden rapor almanızı kolaylaştırır.</td>
+                            <td>Hayır</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="headingDimensions">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseDimensions">
+                Boyut Bilgileri
+            </button>
+        </h2>
+        <div id="collapseDimensions" class="accordion-collapse collapse" data-bs-parent="#demirbasAccordion">
+            <div class="accordion-body">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Alan</th>
+                            <th>Açıklama</th>
+                            <th>Zorunlu</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Kalınlık</td>
+                            <td>Demirbaşın kalınlık ölçüsünü belirtir.</td>
+                            <td>Hayır</td>
+                        </tr>
+                        <tr>
+                            <td>En</td>
+                            <td>Demirbaşın en ölçüsünü belirtir.</td>
+                            <td>Hayır</td>
+                        </tr>
+                        <tr>
+                            <td>Boy</td>
+                            <td>Demirbaşın boy ölçüsünü belirtir.</td>
+                            <td>Hayır</td>
+                        </tr>
+                        <tr>
+                            <td>Yoğunluk</td>
+                            <td>Demirbaşın yoğunluk ölçüsünü belirtir.</td>
+                            <td>Hayır</td>
+                        </tr>
+                        <tr>
+                            <td>Ağırlık</td>
+                            <td>Demirbaşın ağırlık ölçüsünü belirtir.</td>
+                            <td>Hayır</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="headingAccounting">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseAccounting">
+                Muhasebe Tanımları
+            </button>
+        </h2>
+        <div id="collapseAccounting" class="accordion-collapse collapse" data-bs-parent="#demirbasAccordion">
+            <div class="accordion-body">
+                <p>Muhasebeleşme tanımlarını ayarlayarak, bu kart için hareket işlendiğinde otomatik olarak belirli muhasebe hesaplarına gerekli kayıtların oluşturulmasını sağlayabilirsiniz.</p>
+                <p>Detaylı bilgi için <a href="#">Muhasebeleşme Tanımları</a> sayfasını ziyaret edebilirsiniz.</p>
+            </div>
+        </div>
+    </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="headingAdvanced">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseAdvanced">
+                Gelişmiş
+            </button>
+        </h2>
+        <div id="collapseAdvanced" class="accordion-collapse collapse" data-bs-parent="#demirbasAccordion">
+            <div class="accordion-body">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Alan</th>
+                            <th>Açıklama</th>
+                            <th>Zorunlu</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Şirket-Şube</td>
+                            <td>Kartın ait olduğu şirket ve şubeyi belirtir.</td>
+                            <td>Hayır</td>
+                        </tr>
+                        <tr>
+                            <td>Durum</td>
+                            <td>Kartın kullanabilirliğini belirtir. Pasif kartlar işlemde kullanılamaz.</td>
+                            <td>Hayır</td>
+                        </tr>
+                        <tr>
+                            <td>Kısa Kodu</td>
+                            <td>Raporlama için gereklidir.</td>
+                            <td>Hayır</td>
+                        </tr>
+                        <tr>
+                            <td>Miktarsız</td>
+                            <td>Bu demirbaş miktarsız olarak belirtilirse miktar takibi yapılmaz, depoda gözükmez, eski bakiye kontrolü yapılmaz.</td>
+                            <td>Hayır</td>
+                        </tr>
+                        <tr>
+                            <td>Kısa Adı</td>
+                            <td>Raporlama için gereklidir.</td>
+                            <td>Hayır</td>
+                        </tr>
+                        <tr>
+                            <td>GTIP</td>
+                            <td>İhracat tipindeki e-faturalarda, demirbaşa ait GTIP değerinin doldurulması zorunludur.</td>
+                            <td>Hayır</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<h2>Kaydetme ve Silme</h2>
+
+<div class="row">
+    <div class="col-md-6">
+        <div class="alert alert-success">
+            <i class="bi bi-check-circle"></i>
+            <strong>Kaydetme:</strong> Doldurulması gereken alanlar girildikten sonra sağ alt köşede bulunan <strong>Kaydet</strong> butonuna tıklayarak demirbaş kartı açma işleminizi tamamlayabilirsiniz.
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="alert alert-danger">
+            <i class="bi bi-trash"></i>
+            <strong>Silme:</strong> Kayıtlı bir kartı silmek için sol altta bulunan sil butonuna tıklayabilirsiniz.
+        </div>
+    </div>
+</div>
+
+<div class="alert alert-secondary mt-4">
+    <i class="bi bi-question-circle"></i>
+    <strong>Yardıma mı ihtiyacınız var?</strong> Daha fazla yardım için <a href="?module=destek&page=iletisim">Destek Ekibi</a> ile iletişime geçebilirsiniz.
+</div>
