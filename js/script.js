@@ -429,7 +429,7 @@ function performAdvancedSearch(searchTerm, searchModules, searchPages, searchCon
     if (searchModules) {
         staticModules.forEach(module => {
             if (module.name.toLowerCase().includes(searchTerm) || 
-                module.description.toLowerCase().includes(searchTerm)) {
+                (module.description && module.description.toLowerCase().includes(searchTerm))) {
                 searchResults.push({
                     type: 'module',
                     title: module.name,
@@ -466,248 +466,10 @@ function performAdvancedSearch(searchTerm, searchModules, searchPages, searchCon
         });
     }
     
-    // İçerikte arama yap (Gerçek bir uygulamada bu kısım sunucu tarafında yapılır)
+    // İçerikte arama yap
     if (searchContent) {
-        // Tüm modüllerin HTML içeriklerini tarayarak arama yapmak için
-        // Burada daha kapsamlı bir içerik araması yapıyoruz
-        
-        // Örnek içerik veritabanı (gerçek bir uygulamada bu veriler sunucudan gelir)
-        const contentDatabase = [
-            // SSS Modülü
-            {
-                moduleId: 'sss',
-                pageId: 'genel-bakis',
-                content: `
-                    <h1>Sık Sorulan Sorular</h1>
-                    <p>Bu sayfada Aaro ERP kullanımı ile ilgili sık sorulan soruları ve cevaplarını bulabilirsiniz.</p>
-                    
-                    <div class="faq-item">
-                        <div class="faq-question">
-                            <h3>Aaro ERP'ye nasıl giriş yapabilirim?</h3>
-                        </div>
-                        <div class="faq-answer">
-                            <p>Aaro ERP'ye giriş yapmak için size verilen kullanıcı adı ve şifre ile erp.aaro.com.tr adresinden giriş yapabilirsiniz. Şifrenizi unuttuysanız "Şifremi Unuttum" bağlantısını kullanarak sıfırlayabilirsiniz.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="faq-item">
-                        <div class="faq-question">
-                            <h3>Yeni bir stok kartı nasıl oluşturabilirim?</h3>
-                        </div>
-                        <div class="faq-answer">
-                            <p>Yeni bir stok kartı oluşturmak için Stok Yönetimi modülüne gidin ve "Yeni Stok Kartı" butonuna tıklayın. Açılan formda gerekli bilgileri doldurun ve "Kaydet" butonuna tıklayın.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="faq-item">
-                        <div class="faq-question">
-                            <h3>Fatura kesme işlemi nasıl yapılır?</h3>
-                        </div>
-                        <div class="faq-answer">
-                            <p>Fatura kesmek için Satış & Pazarlama modülüne gidin ve "Yeni Fatura" butonuna tıklayın. Müşteri bilgilerini, ürünleri ve fiyatları girin, ardından "Fatura Oluştur" butonuna tıklayın.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="faq-item">
-                        <div class="faq-question">
-                            <h3>Bayi siparişlerini nasıl görebilirim?</h3>
-                        </div>
-                        <div class="faq-answer">
-                            <p>Bayi siparişlerini görmek için Bayi Sistemi modülüne gidin ve "Sipariş Listesi" sayfasını açın. Burada tüm bayi siparişlerini görüntüleyebilir, filtreleyebilir ve yönetebilirsiniz.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="faq-item">
-                        <div class="faq-question">
-                            <h3>Raporları nasıl oluşturabilirim?</h3>
-                        </div>
-                        <div class="faq-answer">
-                            <p>Raporlar oluşturmak için ilgili modülün "Raporlar" bölümüne gidin. Rapor türünü seçin, tarih aralığı ve diğer filtreleri belirleyin, ardından "Rapor Oluştur" butonuna tıklayın.</p>
-                        </div>
-                    </div>
-                `
-            },
-            // Stok Modülü
-            {
-                moduleId: 'stok',
-                pageId: 'stok-karti',
-                content: `
-                    <h1>Stok Kartı</h1>
-                    <p>Stok kartı, ürünlerinizin detaylı bilgilerini içerir. Stok kodu, adı, barkodu, fiyatı gibi bilgileri burada yönetebilirsiniz.</p>
-                    
-                    <h2>Stok Kartı Oluşturma</h2>
-                    <p>Yeni bir stok kartı oluşturmak için aşağıdaki adımları izleyin:</p>
-                    <ol>
-                        <li>"Yeni Stok Kartı" butonuna tıklayın</li>
-                        <li>Stok kodu ve adı gibi zorunlu alanları doldurun</li>
-                        <li>Birim, KDV oranı ve diğer bilgileri girin</li>
-                        <li>Fiyat bilgilerini girin</li>
-                        <li>"Kaydet" butonuna tıklayın</li>
-                    </ol>
-                    
-                    <h2>Stok Kartı Düzenleme</h2>
-                    <p>Mevcut bir stok kartını düzenlemek için stok listesinden ilgili kartı bulun ve üzerine tıklayın. Açılan ekranda bilgileri güncelleyebilirsiniz.</p>
-                `
-            },
-            {
-                moduleId: 'stok',
-                pageId: 'stok-karti-listesi',
-                content: `
-                    <h1>Stok Kartı Listesi</h1>
-                    <p>Stok kartı listesi, sistemdeki tüm ürünlerin listelendiği ekrandır. Bu ekranda ürünleri filtreleyebilir, sıralayabilir ve yönetebilirsiniz.</p>
-                    
-                    <h2>Filtreleme</h2>
-                    <p>Stok kartlarını filtrelemek için üst kısımdaki filtreleme alanlarını kullanabilirsiniz. Stok kodu, adı, grubu gibi kriterlere göre filtreleme yapabilirsiniz.</p>
-                    
-                    <h2>Sıralama</h2>
-                    <p>Stok kartlarını sıralamak için sütun başlıklarına tıklayabilirsiniz. Tekrar tıklayarak sıralama yönünü değiştirebilirsiniz.</p>
-                    
-                    <h2>Toplu İşlemler</h2>
-                    <p>Birden fazla stok kartı seçerek toplu işlemler yapabilirsiniz. Bunun için sol taraftaki kutucukları işaretleyin ve üst menüden yapmak istediğiniz işlemi seçin.</p>
-                `
-            },
-            // Müşteri & Satıcı Modülü
-            {
-                moduleId: 'musteri-satici',
-                pageId: 'musteri-ekleme',
-                content: `
-                    <h1>Müşteri Ekleme</h1>
-                    <p>Müşteri ekleme ekranında yeni müşteri kaydı oluşturabilirsiniz. Müşteri adı, vergi numarası, adres ve iletişim bilgilerini girebilirsiniz.</p>
-                    
-                    <h2>Müşteri Bilgileri</h2>
-                    <p>Müşteri kaydı oluştururken aşağıdaki bilgileri girmeniz gerekir:</p>
-                    <ul>
-                        <li>Müşteri adı/ünvanı</li>
-                        <li>Vergi dairesi ve numarası</li>
-                        <li>İletişim bilgileri</li>
-                        <li>Adres bilgileri</li>
-                    </ul>
-                    
-                    <h2>Müşteri Kategorileri</h2>
-                    <p>Müşterilerinizi kategorilere ayırarak daha kolay yönetebilirsiniz. Kategori seçimi için "Kategori" alanını kullanın.</p>
-                `
-            },
-            // Bayi Modülü
-            {
-                moduleId: 'bayi',
-                pageId: 'bayi-ekrani',
-                content: `
-                    <h1>Bayi Ekranı</h1>
-                    <p>Bayi ekranı, bayilerinizin eriştiği ekrandır. Bayiler bu ekrandan ürünleri görüntüleyebilir, sipariş verebilir ve hesaplarını takip edebilir.</p>
-                    
-                    <h2>Bayi Ekranı Özellikleri</h2>
-                    <ul>
-                        <li>Aaro logosuna tıklandığında anasayfaya erişim sağlar.</li>
-                        <li>Kategoriler kısmından ürün kategorilerine göre filtreleme sağlayarak ürünleri daha kolay bulabilirsiniz.</li>
-                        <li>Arama butonu: Ürüne ait tüm özellikleri arayabilirsiniz.</li>
-                        <li>Bayisi olduğunuz firmanın iletişim bilgilerini görüntüleyebilirsiniz.</li>
-                        <li>Siparişlerim: Siparişlerinizi burada görüntüleyerek, sipariş durumunu, tutarları, tedarik durumunun takibini sağlayabilirsiniz.</li>
-                    </ul>
-                `
-            },
-            {
-                moduleId: 'bayi',
-                pageId: 'siparis-listesi',
-                content: `
-                    <h1>Bayi Sipariş Listesi</h1>
-                    <p>Sipariş listesi, bayilerinizin vermiş olduğu siparişlerin detaylarını içerir. Siparişin tarihini, tutarını ve sipariş durumunu (alınan sipariş, verilen teklif) görmenizi sağlar.</p>
-                    
-                    <h2>Sipariş Durumları</h2>
-                    <p>Siparişler aşağıdaki durumlarda olabilir:</p>
-                    <ul>
-                        <li>Bekleyen Siparişler: Henüz onaylanmamış veya işleme alınmamış siparişler</li>
-                        <li>Onaylanan Siparişler: Onaylanmış ve işleme alınmış siparişler</li>
-                        <li>İptal Edilen Siparişler: Çeşitli nedenlerle iptal edilmiş siparişler</li>
-                    </ul>
-                    
-                    <h2>Sipariş İşlemleri</h2>
-                    <p>Siparişler üzerinde aşağıdaki işlemleri yapabilirsiniz:</p>
-                    <ul>
-                        <li>Sipariş Onaylama: Bekleyen siparişleri onaylayabilirsiniz.</li>
-                        <li>Sipariş İptal Etme: Siparişleri iptal edebilirsiniz.</li>
-                    </ul>
-                `
-            },
-            {
-                moduleId: 'bayi',
-                pageId: 'bayi-kullanici-listesi',
-                content: `
-                    <h1>Bayi Kullanıcı Listesi</h1>
-                    <p>Bayi kullanıcı listesi, işletmenizin bayi ağındaki tüm kullanıcıların kayıtlı bilgilerini içeren bir veritabanıdır. Bu liste, her bayinin erişim yetkileri, iletişim bilgileri ve sistemdeki rolü gibi bilgileri içerir.</p>
-                    
-                    <h2>Kullanıcı Yetkileri</h2>
-                    <p>Bayi kullanıcılarının yapabileceği işlemleri yetki seviyelerine göre sınırlandırabilirsiniz. Yetki seviyeleri şunları içerir:</p>
-                    <ul>
-                        <li>Bakiye Görüntüleme: Kullanıcının cari hesap bakiyesini görüntüleyebilmesini sağlar.</li>
-                        <li>Sipariş Oluşturma: Kullanıcının sipariş oluşturabilmesini sağlar.</li>
-                        <li>Fatura Görüntüleme: Kullanıcının faturaları görüntüleyebilmesini sağlar.</li>
-                        <li>Ödeme Yapma: Kullanıcının ödeme yapabilmesini sağlar.</li>
-                        <li>Raporları Görüntüleme: Kullanıcının raporları görüntüleyebilmesini sağlar.</li>
-                    </ul>
-                `
-            },
-            // Kasa Modülü
-            {
-                moduleId: 'kasa',
-                pageId: 'kasa-karti',
-                content: `
-                    <h1>Kasa Kartı</h1>
-                    <p>Kasa kartı, işletmenizin nakit akışını takip etmek için kullanılan bir araçtır. Kasa giriş ve çıkışlarını bu ekrandan yönetebilirsiniz.</p>
-                    
-                    <h2>Kasa Bilgileri</h2>
-                    <p>Kasa kartında aşağıdaki bilgiler yer alır:</p>
-                    <ul>
-                        <li>Kasa Kodu ve Adı</li>
-                        <li>Kasa Tipi (Ana Kasa, Alt Kasa)</li>
-                        <li>Kasa Sorumlusu</li>
-                        <li>Açılış Bakiyesi</li>
-                        <li>Güncel Bakiye</li>
-                    </ul>
-                `
-            }
-        ];
-        
-        // İçerik veritabanında arama yap
-        contentDatabase.forEach(item => {
-            // HTML etiketlerini kaldırarak düz metin elde et
-            const plainText = item.content.replace(/<[^>]*>/g, ' ').toLowerCase();
-            
-            // Arama terimini içerikte ara
-            if (plainText.includes(searchTerm)) {
-                // İlgili modül ve sayfayı bul
-                const module = staticModules.find(m => m.id === item.moduleId);
-                const page = module ? module.pages.find(p => p.id === item.pageId) : null;
-                
-                if (module && page) {
-                    // Arama teriminin geçtiği bölümü bul (snippet oluştur)
-                    const termIndex = plainText.indexOf(searchTerm);
-                    const startIndex = Math.max(0, termIndex - 50);
-                    const endIndex = Math.min(plainText.length, termIndex + searchTerm.length + 50);
-                    let snippet = plainText.substring(startIndex, endIndex);
-                    
-                    // Snippet'in başında veya sonunda kelime bölünmesini önle
-                    if (startIndex > 0) {
-                        snippet = '...' + snippet.substring(snippet.indexOf(' ') + 1);
-                    }
-                    if (endIndex < plainText.length) {
-                        snippet = snippet.substring(0, snippet.lastIndexOf(' ')) + '...';
-                    }
-                    
-                    // Sonuçlara ekle
-                    searchResults.push({
-                        type: 'content',
-                        title: page.title,
-                        icon: page.icon || 'bi-file-text',
-                        path: `?module=${module.id}&page=${page.id}`,
-                        snippet: snippet,
-                        highlight: highlightText(snippet, searchTerm),
-                        moduleId: module.id,
-                        pageId: page.id,
-                        relevance: 6
-                    });
-                }
-            }
-        });
+        // Tüm modül klasörlerini ve içlerindeki HTML dosyalarını tara
+        searchInAllModuleFiles(searchTerm, searchResults);
     }
     
     // Sonuçları alaka düzeyine göre sırala
@@ -824,6 +586,85 @@ function renderSearchResults(results, searchTerm) {
         
         // Sonuçları yeniden render et
         renderSearchResults(results, searchTerm);
+    });
+}
+
+/**
+ * Tüm modül klasörleri içerisindeki HTML dosyalarında arama yapar
+ * @param {string} searchTerm - Arama terimi
+ * @param {Array} searchResults - Arama sonuçları dizisi
+ */
+function searchInAllModuleFiles(searchTerm, searchResults) {
+    // Tüm modül klasörlerini tara
+    staticModules.forEach(module => {
+        // Her modül için sayfaları tara
+        module.pages.forEach(page => {
+            // Sayfa içeriğini al ve içinde arama yap
+            fetchPageContent(module.id, page.id, searchTerm, searchResults);
+        });
+    });
+}
+
+/**
+ * Belirtilen modül ve sayfanın içeriğini alır ve içinde arama yapar
+ * @param {string} moduleId - Modül ID'si
+ * @param {string} pageId - Sayfa ID'si
+ * @param {string} searchTerm - Arama terimi
+ * @param {Array} searchResults - Arama sonuçları dizisi
+ */
+function fetchPageContent(moduleId, pageId, searchTerm, searchResults) {
+    // Sayfa içeriğini al
+    $.ajax({
+        url: `moduller/${moduleId}/${pageId}.html`,
+        type: 'GET',
+        async: false, // Senkron istek (gerçek uygulamada asenkron olmalı)
+        success: function(content) {
+            // HTML içeriğini düz metne çevir
+            const plainText = content.replace(/<[^>]*>/g, ' ').toLowerCase();
+            
+            // Arama terimini içerikte ara
+            if (plainText.includes(searchTerm)) {
+                // İlgili modül ve sayfayı bul
+                const module = staticModules.find(m => m.id === moduleId);
+                const page = module ? module.pages.find(p => p.id === pageId) : null;
+                
+                if (module && page) {
+                    // Arama teriminin geçtiği bölümü bul (snippet oluştur)
+                    const termIndex = plainText.indexOf(searchTerm);
+                    const startIndex = Math.max(0, termIndex - 50);
+                    const endIndex = Math.min(plainText.length, termIndex + searchTerm.length + 50);
+                    let snippet = plainText.substring(startIndex, endIndex);
+                    
+                    // Snippet'in başında veya sonunda kelime bölünmesini önle
+                    if (startIndex > 0) {
+                        snippet = '...' + snippet.substring(snippet.indexOf(' ') + 1);
+                    }
+                    if (endIndex < plainText.length) {
+                        snippet = snippet.substring(0, snippet.lastIndexOf(' ')) + '...';
+                    }
+                    
+                    // Sonuçlara ekle (eğer aynı sayfa daha önce eklenmemişse)
+                    const existingResult = searchResults.find(r => r.moduleId === moduleId && r.pageId === pageId && r.type === 'content');
+                    
+                    if (!existingResult) {
+                        searchResults.push({
+                            type: 'content',
+                            title: page.title,
+                            icon: page.icon || 'bi-file-text',
+                            path: `?module=${moduleId}&page=${pageId}`,
+                            snippet: snippet,
+                            highlight: highlightText(snippet, searchTerm),
+                            moduleId: moduleId,
+                            pageId: pageId,
+                            relevance: 6
+                        });
+                    }
+                }
+            }
+        },
+        error: function(xhr, status, error) {
+            console.error(`Sayfa içeriği alınamadı: ${moduleId}/${pageId}`, error);
+        }
     });
 }
 
