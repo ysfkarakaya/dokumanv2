@@ -1,0 +1,774 @@
+<!-- Meta Bilgileri -->
+<meta name="title" content="Hareket Oluştur">
+<meta name="icon" content="bi-plus-circle">
+<meta name="url" content="/cek-senet/hareket-olustur">
+<meta name="lastUpdate" content="12.03.2025">
+
+<h1>Çek/Senet Hareket Oluşturma</h1>
+
+<p>Bu dokümantasyon, Aaro ERP sisteminde çek ve senetler için hareket oluşturma işlemlerini açıklamaktadır. Hareket Oluştur ekranı, çek ve senetler üzerinde tahsilat, ciro, bankaya teslim gibi işlemleri gerçekleştirmenizi sağlar.</p>
+
+<div class="alert alert-info">
+    <i class="bi bi-info-circle"></i>
+    <strong>Bilgi:</strong> Hareket Oluştur ekranı, çek ve senetler için yeni hareket kaydı oluşturmanızı, tahsilat, ciro, bankaya teslim gibi işlemleri gerçekleştirmenizi sağlar.
+</div>
+
+<h2>Hareket Oluştur Ekranına Erişim</h2>
+
+<p>Hareket Oluştur ekranına aşağıdaki yöntemlerden biriyle erişebilirsiniz:</p>
+
+<div class="row">
+    <div class="col-md-4">
+        <div class="card mb-3">
+            <div class="card-header">
+                <i class="bi bi-search"></i> Arama Motoru ile
+            </div>
+            <div class="card-body">
+                <p>Sol sekmede Aaro kullanıcı bilgilerinin hemen altındaki arama motorundan "çek senet hareket oluştur" şeklinde aratarak ulaşım sağlayabilirsiniz.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card mb-3">
+            <div class="card-header">
+                <i class="bi bi-list-ul"></i> Menü Üzerinden
+            </div>
+            <div class="card-body">
+                <p>Sol menüden <strong>Çek & Senet -> Çek/Senet Hareketleri -> Hareket Oluştur</strong> üzerinden ulaşım sağlayabilirsiniz.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card mb-3">
+            <div class="card-header">
+                <i class="bi bi-link"></i> Doğrudan Erişim
+            </div>
+            <div class="card-body">
+                <p>Doğrudan <a href="erp.aaro.com.tr/CekSenet/HareketOlustur" target="_blank">erp.aaro.com.tr/CekSenet/HareketOlustur</a> adresine giderek erişim sağlayabilirsiniz.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<h2>Hareket Türleri</h2>
+
+<p>Aaro ERP'de çek ve senetler için aşağıdaki hareket türleri bulunmaktadır:</p>
+
+<div class="row">
+    <div class="col-md-6">
+        <div class="card mb-3">
+            <div class="card-header bg-success text-white">
+                <h4 class="mb-0"><i class="bi bi-plus-circle"></i> Portföye Alma</h4>
+            </div>
+            <div class="card-body">
+                <p>Çek veya senedin işletme portföyüne alınması işlemidir. Bu hareket, genellikle müşteriden çek veya senet alındığında veya firma çeki/senedi düzenlendiğinde kullanılır.</p>
+                <p><strong>Durum Değişimi:</strong> Yeni -> Portföyde</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="card mb-3">
+            <div class="card-header bg-primary text-white">
+                <h4 class="mb-0"><i class="bi bi-bank"></i> Bankaya Teslim</h4>
+            </div>
+            <div class="card-body">
+                <p>Çek veya senedin tahsil edilmek üzere bankaya teslim edilmesi işlemidir. Bu hareket, çek veya senedin vadesi yaklaştığında tahsilat için kullanılır.</p>
+                <p><strong>Durum Değişimi:</strong> Portföyde -> Bankada</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-6">
+        <div class="card mb-3">
+            <div class="card-header bg-info text-white">
+                <h4 class="mb-0"><i class="bi bi-arrow-left-right"></i> Ciro</h4>
+            </div>
+            <div class="card-body">
+                <p>Çek veya senedin başka bir kişi veya kuruma ciro edilmesi işlemidir. Bu hareket, çek veya senedin alacak hakkının devredilmesi için kullanılır.</p>
+                <p><strong>Durum Değişimi:</strong> Portföyde -> Ciro Edildi</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="card mb-3">
+            <div class="card-header bg-secondary text-white">
+                <h4 class="mb-0"><i class="bi bi-cash"></i> Tahsilat</h4>
+            </div>
+            <div class="card-body">
+                <p>Çek veya senedin tahsil edilmesi işlemidir. Bu hareket, çek veya senedin vadesi geldiğinde veya bankadan tahsil edildiğinde kullanılır.</p>
+                <p><strong>Durum Değişimi:</strong> Portföyde/Bankada -> Tahsil Edildi</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-6">
+        <div class="card mb-3">
+            <div class="card-header bg-danger text-white">
+                <h4 class="mb-0"><i class="bi bi-x-circle"></i> Karşılıksız</h4>
+            </div>
+            <div class="card-body">
+                <p>Çekin karşılıksız çıkması veya senedin ödenmemesi işlemidir. Bu hareket, çek veya senedin vadesi geldiğinde ödenmemesi durumunda kullanılır.</p>
+                <p><strong>Durum Değişimi:</strong> Portföyde/Bankada -> Karşılıksız</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="card mb-3">
+            <div class="card-header bg-warning text-dark">
+                <h4 class="mb-0"><i class="bi bi-arrow-return-left"></i> İade</h4>
+            </div>
+            <div class="card-body">
+                <p>Çek veya senedin müşteriye iade edilmesi işlemidir. Bu hareket, çek veya senedin herhangi bir nedenle müşteriye iade edilmesi durumunda kullanılır.</p>
+                <p><strong>Durum Değişimi:</strong> Portföyde -> İade Edildi</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-6">
+        <div class="card mb-3">
+            <div class="card-header bg-dark text-white">
+                <h4 class="mb-0"><i class="bi bi-trash"></i> İptal</h4>
+            </div>
+            <div class="card-body">
+                <p>Çek veya senedin iptal edilmesi işlemidir. Bu hareket, çek veya senedin herhangi bir nedenle iptal edilmesi durumunda kullanılır.</p>
+                <p><strong>Durum Değişimi:</strong> Herhangi bir durum -> İptal Edildi</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<h2>Hareket Oluşturma İşlemi</h2>
+
+<p>Yeni bir çek veya senet hareketi oluşturmak için aşağıdaki adımları izleyebilirsiniz:</p>
+
+<div class="card mb-4">
+    <div class="card-header bg-primary text-white">
+        <h3 class="mb-0"><i class="bi bi-plus-circle"></i> Hareket Oluşturma Adımları</h3>
+    </div>
+    <div class="card-body">
+        <ol>
+            <li>Hareket Oluştur ekranına giriş yapın.</li>
+            <li>Hareket türünü seçin:
+                <ul>
+                    <li><strong>Portföye Alma</strong></li>
+                    <li><strong>Bankaya Teslim</strong></li>
+                    <li><strong>Ciro</strong></li>
+                    <li><strong>Tahsilat</strong></li>
+                    <li><strong>Karşılıksız</strong></li>
+                    <li><strong>İade</strong></li>
+                    <li><strong>İptal</strong></li>
+                </ul>
+            </li>
+            <li>Hareket bilgilerini doldurun (hareket türüne göre değişiklik gösterir).</li>
+            <li>"Kaydet" butonuna tıklayarak hareketi oluşturun.</li>
+        </ol>
+    </div>
+</div>
+
+<h2>Hareket Türlerine Göre İşlemler</h2>
+
+<p>Her hareket türü için farklı bilgiler ve işlemler gereklidir. Aşağıda, her hareket türü için detaylı açıklamalar bulunmaktadır:</p>
+
+<div class="accordion" id="hareketTurleriAccordion">
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="headingOne">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
+                Portföye Alma
+            </button>
+        </h2>
+        <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#hareketTurleriAccordion">
+            <div class="accordion-body">
+                <p>Portföye alma işlemi, yeni bir çek veya senet kaydı oluşturmak ve işletme portföyüne almak için kullanılır.</p>
+                
+                <h4>Portföye Alma İşlemi Adımları</h4>
+                <ol>
+                    <li>Hareket Oluştur ekranında "Portföye Alma" hareket türünü seçin.</li>
+                    <li>Çek/Senet bilgilerini doldurun:
+                        <ul>
+                            <li><strong>Tür:</strong> Çek veya senet seçeneğini belirleyin.</li>
+                            <li><strong>Portföy Tipi:</strong> Müşteri çeki/senedi veya firma çeki/senedi seçeneğini belirleyin.</li>
+                            <li><strong>Çek/Senet No:</strong> Çek veya senet numarasını girin.</li>
+                            <li><strong>Vade Tarihi:</strong> Çek veya senedin vade tarihini belirleyin.</li>
+                            <li><strong>Tutar:</strong> Çek veya senet tutarını girin.</li>
+                            <li><strong>Para Birimi:</strong> Çek veya senedin para birimini seçin.</li>
+                            <li><strong>Cari Hesap:</strong> Çek veya senedin ilişkili olduğu müşteri veya tedarikçiyi seçin.</li>
+                        </ul>
+                    </li>
+                    <li>Çek için ek bilgileri doldurun:
+                        <ul>
+                            <li><strong>Banka:</strong> Çekin keşide edildiği bankayı seçin.</li>
+                            <li><strong>Şube:</strong> Çekin keşide edildiği şubeyi seçin veya girin.</li>
+                            <li><strong>Hesap No:</strong> Çekin keşide edildiği hesap numarasını girin.</li>
+                            <li><strong>Keşide Yeri:</strong> Çekin keşide edildiği yeri girin.</li>
+                            <li><strong>Keşide Tarihi:</strong> Çekin keşide edildiği tarihi belirleyin.</li>
+                        </ul>
+                    </li>
+                    <li>Senet için ek bilgileri doldurun:
+                        <ul>
+                            <li><strong>Borçlu:</strong> Senedi düzenleyen borçluyu girin.</li>
+                            <li><strong>Düzenleme Tarihi:</strong> Senedin düzenlendiği tarihi belirleyin.</li>
+                            <li><strong>Düzenleme Yeri:</strong> Senedin düzenlendiği yeri girin.</li>
+                        </ul>
+                    </li>
+                    <li>Açıklama ve notları girin (opsiyonel).</li>
+                    <li>"Kaydet" butonuna tıklayarak portföye alma işlemini tamamlayın.</li>
+                </ol>
+                
+                <div class="alert alert-primary">
+                    <i class="bi bi-lightbulb"></i>
+                    <strong>İpucu:</strong> Portföye alma işlemi, çek veya senedin durumunu "Portföyde" olarak belirler ve muhasebe kayıtlarını otomatik olarak oluşturur.
+                </div>
+                
+                <h4>Portföye Alma İşlemi Örneği</h4>
+                <div class="example-container">
+                    <p><strong>Senaryo:</strong> ABC Müşterisinden 10.000 TL tutarında, 15.06.2025 vadeli bir çek alındı.</p>
+                    <ol>
+                        <li>Hareket türü: <strong>Portföye Alma</strong></li>
+                        <li>Tür: <strong>Çek</strong></li>
+                        <li>Portföy Tipi: <strong>Müşteri Çeki</strong></li>
+                        <li>Çek No: <strong>123456</strong></li>
+                        <li>Vade Tarihi: <strong>15.06.2025</strong></li>
+                        <li>Tutar: <strong>10.000</strong></li>
+                        <li>Para Birimi: <strong>TL</strong></li>
+                        <li>Cari Hesap: <strong>ABC Müşterisi</strong></li>
+                        <li>Banka: <strong>X Bankası</strong></li>
+                        <li>Şube: <strong>Merkez Şube</strong></li>
+                        <li>Hesap No: <strong>1234567890</strong></li>
+                        <li>Keşide Yeri: <strong>İstanbul</strong></li>
+                        <li>Keşide Tarihi: <strong>01.03.2025</strong></li>
+                        <li>Açıklama: <strong>ABC Müşterisinden alınan çek</strong></li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="headingTwo">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+                Bankaya Teslim
+            </button>
+        </h2>
+        <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#hareketTurleriAccordion">
+            <div class="accordion-body">
+                <p>Bankaya teslim işlemi, portföydeki bir çek veya senedi tahsil edilmek üzere bankaya teslim etmek için kullanılır.</p>
+                
+                <h4>Bankaya Teslim İşlemi Adımları</h4>
+                <ol>
+                    <li>Hareket Oluştur ekranında "Bankaya Teslim" hareket türünü seçin.</li>
+                    <li>Çek/Senet seçimi yapın:
+                        <ul>
+                            <li>Portföydeki çek veya senetleri listeleyen tablodan ilgili çek veya senedi seçin.</li>
+                            <li>Çek/senet numarası, vade tarihi, tutar gibi kriterlere göre filtreleme yapabilirsiniz.</li>
+                        </ul>
+                    </li>
+                    <li>Bankaya teslim bilgilerini doldurun:
+                        <ul>
+                            <li><strong>Teslim Tarihi:</strong> Çek veya senedin bankaya teslim edildiği tarihi belirleyin.</li>
+                            <li><strong>Banka:</strong> Çek veya senedin teslim edildiği bankayı seçin.</li>
+                            <li><strong>Şube:</strong> Çek veya senedin teslim edildiği şubeyi seçin veya girin.</li>
+                            <li><strong>Hesap No:</strong> Çek veya senedin teslim edildiği hesap numarasını girin.</li>
+                            <li><strong>Teslim Eden:</strong> Çek veya senedi bankaya teslim eden kişiyi girin.</li>
+                        </ul>
+                    </li>
+                    <li>Açıklama ve notları girin (opsiyonel).</li>
+                    <li>"Kaydet" butonuna tıklayarak bankaya teslim işlemini tamamlayın.</li>
+                </ol>
+                
+                <div class="alert alert-primary">
+                    <i class="bi bi-lightbulb"></i>
+                    <strong>İpucu:</strong> Bankaya teslim işlemi, çek veya senedin durumunu "Bankada" olarak günceller ve muhasebe kayıtlarını otomatik olarak oluşturur.
+                </div>
+                
+                <h4>Bankaya Teslim İşlemi Örneği</h4>
+                <div class="example-container">
+                    <p><strong>Senaryo:</strong> Portföydeki 123456 numaralı çek, tahsil edilmek üzere X Bankası'na teslim edildi.</p>
+                    <ol>
+                        <li>Hareket türü: <strong>Bankaya Teslim</strong></li>
+                        <li>Çek/Senet: <strong>123456 numaralı çek</strong></li>
+                        <li>Teslim Tarihi: <strong>10.03.2025</strong></li>
+                        <li>Banka: <strong>X Bankası</strong></li>
+                        <li>Şube: <strong>Merkez Şube</strong></li>
+                        <li>Hesap No: <strong>9876543210</strong></li>
+                        <li>Teslim Eden: <strong>Ahmet Yılmaz</strong></li>
+                        <li>Açıklama: <strong>Tahsil için bankaya teslim edildi</strong></li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="headingThree">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree">
+                Ciro
+            </button>
+        </h2>
+        <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#hareketTurleriAccordion">
+            <div class="accordion-body">
+                <p>Ciro işlemi, portföydeki bir çek veya senedi başka bir kişi veya kuruma devretmek için kullanılır.</p>
+                
+                <h4>Ciro İşlemi Adımları</h4>
+                <ol>
+                    <li>Hareket Oluştur ekranında "Ciro" hareket türünü seçin.</li>
+                    <li>Çek/Senet seçimi yapın:
+                        <ul>
+                            <li>Portföydeki çek veya senetleri listeleyen tablodan ilgili çek veya senedi seçin.</li>
+                            <li>Çek/senet numarası, vade tarihi, tutar gibi kriterlere göre filtreleme yapabilirsiniz.</li>
+                        </ul>
+                    </li>
+                    <li>Ciro bilgilerini doldurun:
+                        <ul>
+                            <li><strong>Ciro Tarihi:</strong> Çek veya senedin ciro edildiği tarihi belirleyin.</li>
+                            <li><strong>Ciro Edilen:</strong> Çek veya senedin ciro edildiği kişi veya kurumu seçin (cari hesap).</li>
+                            <li><strong>Ciro Nedeni:</strong> Ciro nedenini seçin (Borç Ödeme, Satın Alma vb.).</li>
+                        </ul>
+                    </li>
+                    <li>Açıklama ve notları girin (opsiyonel).</li>
+                    <li>"Kaydet" butonuna tıklayarak ciro işlemini tamamlayın.</li>
+                </ol>
+                
+                <div class="alert alert-primary">
+                    <i class="bi bi-lightbulb"></i>
+                    <strong>İpucu:</strong> Ciro işlemi, çek veya senedin durumunu "Ciro Edildi" olarak günceller ve muhasebe kayıtlarını otomatik olarak oluşturur.
+                </div>
+                
+                <h4>Ciro İşlemi Örneği</h4>
+                <div class="example-container">
+                    <p><strong>Senaryo:</strong> Portföydeki 123456 numaralı çek, XYZ Tedarikçisine borç ödemesi için ciro edildi.</p>
+                    <ol>
+                        <li>Hareket türü: <strong>Ciro</strong></li>
+                        <li>Çek/Senet: <strong>123456 numaralı çek</strong></li>
+                        <li>Ciro Tarihi: <strong>05.03.2025</strong></li>
+                        <li>Ciro Edilen: <strong>XYZ Tedarikçisi</strong></li>
+                        <li>Ciro Nedeni: <strong>Borç Ödeme</strong></li>
+                        <li>Açıklama: <strong>XYZ Tedarikçisine borç ödemesi için ciro edildi</strong></li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="headingFour">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour">
+                Tahsilat
+            </button>
+        </h2>
+        <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#hareketTurleriAccordion">
+            <div class="accordion-body">
+                <p>Tahsilat işlemi, portföydeki veya bankadaki bir çek veya senedin tahsil edilmesi için kullanılır.</p>
+                
+                <h4>Tahsilat İşlemi Adımları</h4>
+                <ol>
+                    <li>Hareket Oluştur ekranında "Tahsilat" hareket türünü seçin.</li>
+                    <li>Çek/Senet seçimi yapın:
+                        <ul>
+                            <li>Portföydeki veya bankadaki çek veya senetleri listeleyen tablodan ilgili çek veya senedi seçin.</li>
+                            <li>Çek/senet numarası, vade tarihi, tutar gibi kriterlere göre filtreleme yapabilirsiniz.</li>
+                        </ul>
+                    </li>
+                    <li>Tahsilat bilgilerini doldurun:
+                        <ul>
+                            <li><strong>Tahsilat Tarihi:</strong> Çek veya senedin tahsil edildiği tarihi belirleyin.</li>
+                            <li><strong>Tahsilat Türü:</strong> Tahsilat türünü seçin (Nakit, Banka vb.).</li>
+                            <li><strong>Banka Hesabı:</strong> Tahsilatın yapıldığı banka hesabını seçin (banka tahsilatı için).</li>
+                            <li><strong>Kısmi Tahsilat:</strong> Kısmi tahsilat yapılacaksa bu seçeneği işaretleyin ve tahsil edilecek tutarı girin.</li>
+                        </ul>
+                    </li>
+                    <li>Açıklama ve notları girin (opsiyonel).</li>
+                    <li>"Kaydet" butonuna tıklayarak tahsilat işlemini tamamlayın.</li>
+                </ol>
+                
+                <div class="alert alert-primary">
+                    <i class="bi bi-lightbulb"></i>
+                    <strong>İpucu:</strong> Tahsilat işlemi, çek veya senedin durumunu "Tahsil Edildi" olarak günceller ve muhasebe kayıtlarını otomatik olarak oluşturur. Kısmi tahsilat durumunda, çek veya senedin durumu değişmez ve kalan tutar güncellenir.
+                </div>
+                
+                <h4>Tahsilat İşlemi Örneği</h4>
+                <div class="example-container">
+                    <p><strong>Senaryo:</strong> Bankada bulunan 123456 numaralı çek, vadesi geldiğinde tahsil edildi.</p>
+                    <ol>
+                        <li>Hareket türü: <strong>Tahsilat</strong></li>
+                        <li>Çek/Senet: <strong>123456 numaralı çek</strong></li>
+                        <li>Tahsilat Tarihi: <strong>15.06.2025</strong></li>
+                        <li>Tahsilat Türü: <strong>Banka</strong></li>
+                        <li>Banka Hesabı: <strong>X Bankası / 9876543210</strong></li>
+                        <li>Kısmi Tahsilat: <strong>Hayır</strong></li>
+                        <li>Açıklama: <strong>Vadesi gelen çek tahsil edildi</strong></li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="headingFive">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive">
+                Karşılıksız
+            </button>
+        </h2>
+        <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#hareketTurleriAccordion">
+            <div class="accordion-body">
+                <p>Karşılıksız işlemi, portföydeki veya bankadaki bir çekin karşılıksız çıkması veya senedin ödenmemesi durumunda kullanılır.</p>
+                
+                <h4>Karşılıksız İşlemi Adımları</h4>
+                <ol>
+                    <li>Hareket Oluştur ekranında "Karşılıksız" hareket türünü seçin.</li>
+                    <li>Çek/Senet seçimi yapın:
+                        <ul>
+                            <li>Portföydeki veya bankadaki çek veya senetleri listeleyen tablodan ilgili çek veya senedi seçin.</li>
+                            <li>Çek/senet numarası, vade tarihi, tutar gibi kriterlere göre filtreleme yapabilirsiniz.</li>
+                        </ul>
+                    </li>
+                    <li>Karşılıksız bilgilerini doldurun:
+                        <ul>
+                            <li><strong>Karşılıksız Tarihi:</strong> Çekin karşılıksız çıktığı veya senedin ödenmediği tarihi belirleyin.</li>
+                            <li><strong>Karşılıksız Nedeni:</strong> Karşılıksız nedenini seçin (Yetersiz Bakiye, Hesap Kapalı vb.).</li>
+                            <li><strong>Takip İşlemi:</strong> Yapılacak takip işlemini seçin (Müşteriye Bildirim, Hukuki Takip vb.).</li>
+                        </ul>
+                    </li>
+                    <li>Açıklama ve notları girin (opsiyonel).</li>
+                    <li>"Kaydet" butonuna tıklayarak karşılıksız işlemini tamamlayın.</li>
+                </ol>
+                
+                <div class="alert alert-primary">
+                    <i class="bi bi-lightbulb"></i>
+                    <strong>İpucu:</strong> Karşılıksız işlemi, çek veya senedin durumunu "Karşılıksız" olarak günceller ve muhasebe kayıtlarını otomatik olarak oluşturur.
+                </div>
+                
+                <h4>Karşılıksız İşlemi Örneği</h4>
+                <div class="example-container">
+                    <p><strong>Senaryo:</strong> Bankada bulunan 123456 numaralı çek, vadesi geldiğinde karşılıksız çıktı.</p>
+                    <ol>
+                        <li>Hareket türü: <strong>Karşılıksız</strong></li>
+                        <li>Çek/Senet: <strong>123456 numaralı çek</strong></li>
+                        <li>Karşılıksız Tarihi: <strong>15.06.2025</strong></li>
+                        <li>Karşılıksız Nedeni: <strong>Yetersiz Bakiye</strong></li>
+                        <li>Takip İşlemi: <strong>Müşteriye Bildirim</strong></li>
+                        <li>Açıklama: <strong>Çek karşılıksız çıktı, müşteriye bildirim yapılacak</strong></li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="headingSix">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix">
+                İade
+            </button>
+        </h2>
+        <div id="collapseSix" class="accordion-collapse collapse" data-bs-parent="#hareketTurleriAccordion">
+            <div class="accordion-body">
+                <p>İade işlemi, portföydeki bir çek veya senedi müşteriye iade etmek için kullanılır.</p>
+                
+                <h4>İade İşlemi Adımları</h4>
+                <ol>
+                    <li>Hareket Oluştur ekranında "İade" hareket türünü seçin.</li>
+                    <li>Çek/Senet seçimi yapın:
+                        <ul>
+                            <li>Portföydeki çek veya senetleri listeleyen tablodan ilgili çek veya senedi seçin.</li>
+                            <li>Çek/senet numarası, vade tarihi, tutar gibi kriterlere göre filtreleme yapabilirsiniz.</li>
+                        </ul>
+                    </li>
+                    <li>İade bilgilerini doldurun:
+                        <ul>
+                            <li><strong>İade Tarihi:</strong> Çek veya senedin iade edildiği tarihi belirleyin.</li>
+                            <li><strong>İade Nedeni:</strong> İade nedenini seçin (Anlaşma İptali, Hatalı İşlem vb.).</li>
+                            <li><strong>İade Alan:</strong> Çek veya senedi teslim alan kişiyi girin.</li>
+                        </ul>
+                    </li>
+                    <li>Açıklama ve notları girin (opsiyonel).</li>
+                    <li>"Kaydet" butonuna tıklayarak iade işlemini tamamlayın.</li>
+                </ol>
+                
+                <div class="alert alert-primary">
+                    <i class="bi bi-lightbulb"></i>
+                    <strong>İpucu:</strong> İade işlemi, çek veya senedin durumunu "İade Edildi" olarak günceller ve muhasebe kayıtlarını otomatik olarak oluşturur.
+                </div>
+                
+                <h4>İade İşlemi Örneği</h4>
+                <div class="example-container">
+                    <p><strong>Senaryo:</strong> Portföydeki 123456 numaralı çek, anlaşma iptali nedeniyle müşteriye iade edildi.</p>
+                    <ol>
+                        <li>Hareket türü: <strong>İade</strong></li>
+                        <li>Çek/Senet: <strong>123456 numaralı çek</strong></li>
+                        <li>İade Tarihi: <strong>05.03.2025</strong></li>
+                        <li>İade Nedeni: <strong>Anlaşma İptali</strong></li>
+                        <li>İade Alan: <strong>Mehmet Demir</strong></li>
+                        <li>Açıklama: <strong>Anlaşma iptali nedeniyle müşteriye iade edildi</strong></li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="headingSeven">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven">
+                İptal
+            </button>
+        </h2>
+        <div id="collapseSeven" class="accordion-collapse collapse" data-bs-parent="#hareketTurleriAccordion">
+            <div class="accordion-body">
+                <p>İptal işlemi, bir çek veya senedi iptal etmek için kullanılır.</p>
+                
+                <h4>İptal İşlemi Adımları</h4>
+                <ol>
+                    <li>Hareket Oluştur ekranında "İptal" hareket türünü seçin.</li>
+                    <li>Çek/Senet seçimi yapın:
+                        <ul>
+                            <li>Çek veya senetleri listeleyen tablodan ilgili çek veya senedi seçin.</li>
+                            <li>Çek/senet numarası, vade tarihi, tutar gibi kriterlere göre filtreleme yapabilirsiniz.</li>
+                        </ul>
+                    </li>
+                    <li>İptal bilgilerini doldurun:
+                        <ul>
+                            <li><strong>İptal Tarihi:</strong> Çek veya senedin iptal edildiği tarihi belirleyin.</li>
+                            <li><strong>İptal Nedeni:</strong> İptal nedenini seçin (Hatalı Kayıt, Mükerrer Kayıt vb.).</li>
+                        </ul>
+                    </li>
+                    <li>Açıklama ve notları girin (opsiyonel).</li>
+                    <li>"Kaydet" butonuna tıklayarak iptal işlemini tamamlayın.</li>
+                </ol>
+                
+                <div class="alert alert-primary">
+                    <i class="bi bi-lightbulb"></i>
+                    <strong>İpucu:</strong> İptal işlemi, çek veya senedin durumunu "İptal Edildi" olarak günceller ve muhasebe kayıtlarını otomatik olarak oluşturur.
+                </div>
+                
+                <h4>İptal İşlemi Örneği</h4>
+                <div class="example-container">
+                    <p><strong>Senaryo:</strong> 123456 numaralı çek, hatalı kayıt nedeniyle iptal edildi.</p>
+                    <ol>
+                        <li>Hareket türü: <strong>İptal</strong></li>
+                        <li>Çek/Senet: <strong>123456 numaralı çek</strong></li>
+                        <li>İptal Tarihi: <strong>02.03.2025</strong></li>
+                        <li>İptal Nedeni: <strong>Hatalı Kayıt</strong></li>
+                        <li>Açıklama: <strong>Hatalı kayıt nedeniyle iptal edildi</strong></li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<h2>Toplu Hareket İşlemleri</h2>
+
+<p>Hareket Oluştur ekranında birden fazla çek veya senet için toplu hareket işlemleri gerçekleştirebilirsiniz:</p>
+
+<div class="row">
+    <div class="col-md-6">
+        <div class="card mb-3">
+            <div class="card-header bg-light">
+                <h4 class="mb-0">Toplu Bankaya Teslim</h4>
+            </div>
+            <div class="card-body">
+                <p>Birden fazla çek veya senedi aynı anda bankaya teslim etmek için:</p>
+                <ol>
+                    <li>Hareket Oluştur ekranında "Toplu İşlemler" butonuna tıklayın.</li>
+                    <li>"Toplu Bankaya Teslim" seçeneğini belirleyin.</li>
+                    <li>Açılan pencerede bankaya teslim edilecek çek ve senetleri seçin.</li>
+                    <li>Bankaya teslim bilgilerini girin:
+                        <ul>
+                            <li>Teslim tarihi</li>
+                            <li>Banka ve şube</li>
+                            <li>Hesap no</li>
+                            <li>Teslim eden kişi</li>
+                            <li>Açıklama</li>
+                        </ul>
+                    </li>
+                    <li>"Kaydet" butonuna tıklayarak toplu bankaya teslim işlemini tamamlayın.</li>
+                </ol>
+                <p>Bu işlem, seçilen tüm çek ve senetler için ayrı ayrı bankaya teslim hareketi oluşturur.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="card mb-3">
+            <div class="card-header bg-light">
+                <h4 class="mb-0">Toplu Tahsilat</h4>
+            </div>
+            <div class="card-body">
+                <p>Birden fazla çek veya senedi aynı anda tahsil etmek için:</p>
+                <ol>
+                    <li>Hareket Oluştur ekranında "Toplu İşlemler" butonuna tıklayın.</li>
+                    <li>"Toplu Tahsilat" seçeneğini belirleyin.</li>
+                    <li>Açılan pencerede tahsil edilecek çek ve senetleri seçin.</li>
+                    <li>Tahsilat bilgilerini girin:
+                        <ul>
+                            <li>Tahsilat tarihi</li>
+                            <li>Tahsilat türü</li>
+                            <li>Banka hesabı</li>
+                            <li>Açıklama</li>
+                        </ul>
+                    </li>
+                    <li>"Kaydet" butonuna tıklayarak toplu tahsilat işlemini tamamlayın.</li>
+                </ol>
+                <p>Bu işlem, seçilen tüm çek ve senetler için ayrı ayrı tahsilat hareketi oluşturur.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-6">
+        <div class="card mb-3">
+            <div class="card-header bg-light">
+                <h4 class="mb-0">Toplu Ciro</h4>
+            </div>
+            <div class="card-body">
+                <p>Birden fazla çek veya senedi aynı anda ciro etmek için:</p>
+                <ol>
+                    <li>Hareket Oluştur ekranında "Toplu İşlemler" butonuna tıklayın.</li>
+                    <li>"Toplu Ciro" seçeneğini belirleyin.</li>
+                    <li>Açılan pencerede ciro edilecek çek ve senetleri seçin.</li>
+                    <li>Ciro bilgilerini girin:
+                        <ul>
+                            <li>Ciro tarihi</li>
+                            <li>Ciro edilen cari hesap</li>
+                            <li>Ciro nedeni</li>
+                            <li>Açıklama</li>
+                        </ul>
+                    </li>
+                    <li>"Kaydet" butonuna tıklayarak toplu ciro işlemini tamamlayın.</li>
+                </ol>
+                <p>Bu işlem, seçilen tüm çek ve senetler için ayrı ayrı ciro hareketi oluşturur.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="card mb-3">
+            <div class="card-header bg-light">
+                <h4 class="mb-0">Toplu İade</h4>
+            </div>
+            <div class="card-body">
+                <p>Birden fazla çek veya senedi aynı anda iade etmek için:</p>
+                <ol>
+                    <li>Hareket Oluştur ekranında "Toplu İşlemler" butonuna tıklayın.</li>
+                    <li>"Toplu İade" seçeneğini belirleyin.</li>
+                    <li>Açılan pencerede iade edilecek çek ve senetleri seçin.</li>
+                    <li>İade bilgilerini girin:
+                        <ul>
+                            <li>İade tarihi</li>
+                            <li>İade nedeni</li>
+                            <li>İade alan</li>
+                            <li>Açıklama</li>
+                        </ul>
+                    </li>
+                    <li>"Kaydet" butonuna tıklayarak toplu iade işlemini tamamlayın.</li>
+                </ol>
+                <p>Bu işlem, seçilen tüm çek ve senetler için ayrı ayrı iade hareketi oluşturur.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<h2>Sık Sorulan Sorular</h2>
+
+<div class="accordion" id="faqAccordion">
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="faqOne">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseOne">
+                Bir çek veya senet için birden fazla hareket oluşturabilir miyim?
+            </button>
+        </h2>
+        <div id="faqCollapseOne" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+                <p>Evet, bir çek veya senet için birden fazla hareket oluşturabilirsiniz, ancak bu hareketler çek veya senedin durumuna uygun olmalıdır. Örneğin:</p>
+                <ul>
+                    <li>Portföydeki bir çek için bankaya teslim, ciro veya tahsilat hareketi oluşturabilirsiniz.</li>
+                    <li>Bankadaki bir çek için tahsilat veya karşılıksız hareketi oluşturabilirsiniz.</li>
+                    <li>Tahsil edilmiş, ciro edilmiş veya iptal edilmiş çek ve senetler için yeni hareket oluşturamazsınız.</li>
+                </ul>
+                <p>Sistem, çek veya senedin mevcut durumuna göre oluşturabileceğiniz hareket türlerini otomatik olarak filtreleyecektir.</p>
+            </div>
+        </div>
+    </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="faqTwo">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseTwo">
+                Yanlış oluşturduğum bir hareketi nasıl iptal edebilirim?
+            </button>
+        </h2>
+        <div id="faqCollapseTwo" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+                <p>Yanlış oluşturduğunuz bir hareketi iptal etmek için:</p>
+                <ol>
+                    <li>Çek/Senet Hareket Listesi ekranına gidin.</li>
+                    <li>İptal etmek istediğiniz hareketi bulun.</li>
+                    <li>Hareketin sağ tarafındaki "İptal Et" butonuna tıklayın.</li>
+                    <li>Açılan pencerede iptal gerekçesini belirtin.</li>
+                    <li>"İptal Et" butonuna tıklayarak hareketi iptal edin.</li>
+                </ol>
+                <p>Hareket iptal edildiğinde:</p>
+                <ul>
+                    <li>Hareketin durumu "İptal Edildi" olarak güncellenir.</li>
+                    <li>Çek veya senedin durumu, bir önceki durumuna geri döner.</li>
+                    <li>Muhasebe kayıtları ters kayıtlarla kapatılır.</li>
+                </ul>
+                <div class="alert alert-warning">
+                    <i class="bi bi-exclamation-triangle"></i>
+                    <strong>Dikkat:</strong> Bazı hareketleri iptal etmek için özel yetkiler gerekebilir. Ayrıca, üzerinden belirli bir süre geçmiş hareketleri iptal edemeyebilirsiniz.
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="faqThree">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseThree">
+                Kısmi tahsilat işlemi nasıl yapılır?
+            </button>
+        </h2>
+        <div id="faqCollapseThree" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+                <p>Kısmi tahsilat işlemi, bir çek veya senedin tutarının bir kısmının tahsil edilmesi durumunda kullanılır. Kısmi tahsilat yapmak için:</p>
+                <ol>
+                    <li>Hareket Oluştur ekranında "Tahsilat" hareket türünü seçin.</li>
+                    <li>İlgili çek veya senedi seçin.</li>
+                    <li>"Kısmi Tahsilat" seçeneğini işaretleyin.</li>
+                    <li>Tahsil edilecek tutarı girin (çek veya senet tutarından daha düşük bir tutar).</li>
+                    <li>Tahsilat bilgilerini girin (tarih, tahsilat türü, banka hesabı vb.).</li>
+                    <li>"Kaydet" butonuna tıklayarak kısmi tahsilat işlemini tamamlayın.</li>
+                </ol>
+                <p>Kısmi tahsilat işlemi tamamlandığında:</p>
+                <ul>
+                    <li>Çek veya senedin durumu değişmez, portföyde kalmaya devam eder.</li>
+                    <li>Çek veya senetin kalan tutarı güncellenir.</li>
+                    <li>Tahsil edilen tutar için muhasebe kaydı oluşturulur.</li>
+                </ul>
+                <p>Kalan tutar için daha sonra yeni bir tahsilat işlemi yapabilirsiniz.</p>
+            </div>
+        </div>
+    </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="faqFour">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseFour">
+                Çek/senet hareketleri muhasebeleşiyor mu?
+            </button>
+        </h2>
+        <div id="faqCollapseFour" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+                <p>Evet, Aaro ERP'de çek ve senet hareketleri otomatik olarak muhasebeleşir. Her hareket türü için önceden tanımlanmış muhasebe hesapları ve entegrasyon ayarları bulunmaktadır.</p>
+                <p>Örneğin:</p>
+                <ul>
+                    <li><strong>Portföye Alma:</strong> Müşteri çeki/senedi alındığında, ilgili çek/senet hesabı borçlandırılır, müşteri hesabı alacaklandırılır.</li>
+                    <li><strong>Bankaya Teslim:</strong> Bankaya teslim edildiğinde, tahsil edilecek çekler/senetler hesabı borçlandırılır, portföydeki çekler/senetler hesabı alacaklandırılır.</li>
+                    <li><strong>Tahsilat:</strong> Tahsil edildiğinde, banka hesabı borçlandırılır, tahsil edilecek çekler/senetler hesabı alacaklandırılır.</li>
+                </ul>
+                <p>Muhasebe entegrasyon ayarlarını Yönetim > Sistem Ayarları > Muhasebe Entegrasyonu > Çek/Senet Entegrasyonu ekranından yapılandırabilirsiniz.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<h2>İlgili Konular</h2>
+
+<ul>
+    <li><a href="?module=cek-senet&page=cek-senet-karti-listesi">Çek/Senet Kartı Listesi</a></li>
+    <li><a href="?module=cek-senet&page=cek-senet-hareket-listesi">Çek/Senet Hareket Listesi</a></li>
+    <li><a href="?module=cek-senet&page=genel-bakis">Çek & Senet Modülü</a></li>
+    <li><a href="?module=finans&page=genel-bakis">Finans Yönetimi</a></li>
+    <li><a href="?module=muhasebe&page=genel-bakis">Muhasebe</a></li>
+</ul>

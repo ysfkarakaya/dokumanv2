@@ -1,0 +1,952 @@
+<!-- Meta Bilgileri -->
+<meta name="title" content="Satış Pazarlama Aşamaları">
+<meta name="icon" content="bi-diagram-3">
+<meta name="url" content="/satis-pazarlama/satis-pazarlama-asamalari">
+<meta name="lastUpdate" content="12.03.2025">
+
+<h1>Satış Pazarlama Aşamaları</h1>
+
+<p>Bu dokümantasyon, Aaro ERP sisteminde satış ve pazarlama süreçlerinin aşamalarını ve bu aşamaların nasıl yönetileceğini açıklamaktadır.</p>
+
+<div class="alert alert-info">
+    <i class="bi bi-info-circle"></i>
+    <strong>Bilgi:</strong> Satış Pazarlama Aşamaları, müşteri adayından satış sonrası hizmetlere kadar tüm satış sürecini sistematik bir şekilde yönetmenizi sağlar. Bu yapılandırılmış yaklaşım, satış ekibinizin performansını artırır ve müşteri memnuniyetini yükseltir.
+</div>
+
+<h2>Satış Süreci Genel Bakış</h2>
+
+<p>Aaro ERP'de satış süreci, potansiyel müşterinin tanımlanmasından satış sonrası hizmetlere kadar uzanan bir dizi aşamadan oluşur. Bu süreç, satış ekibinizin müşteri adaylarını nitelikli müşterilere dönüştürmesine ve satış fırsatlarını başarıyla sonuçlandırmasına yardımcı olur.</p>
+
+<div class="process-flow-container">
+    <div class="process-flow">
+        <div class="process-step">
+            <div class="process-icon">
+                <i class="bi bi-person-plus"></i>
+            </div>
+            <div class="process-content">
+                <h4>1. Potansiyel Müşteri</h4>
+                <p>Henüz satış yapılmamış, potansiyel müşterilerin tanımlanması ve takibi</p>
+            </div>
+        </div>
+        <div class="process-arrow">
+            <i class="bi bi-arrow-right"></i>
+        </div>
+        <div class="process-step">
+            <div class="process-icon">
+                <i class="bi bi-telephone"></i>
+            </div>
+            <div class="process-content">
+                <h4>2. İlk Temas</h4>
+                <p>Potansiyel müşteri ile ilk iletişimin kurulması</p>
+            </div>
+        </div>
+        <div class="process-arrow">
+            <i class="bi bi-arrow-right"></i>
+        </div>
+        <div class="process-step">
+            <div class="process-icon">
+                <i class="bi bi-clipboard-data"></i>
+            </div>
+            <div class="process-content">
+                <h4>3. İhtiyaç Analizi</h4>
+                <p>Müşteri ihtiyaçlarının belirlenmesi ve analiz edilmesi</p>
+            </div>
+        </div>
+        <div class="process-arrow">
+            <i class="bi bi-arrow-right"></i>
+        </div>
+        <div class="process-step">
+            <div class="process-icon">
+                <i class="bi bi-file-earmark-text"></i>
+            </div>
+            <div class="process-content">
+                <h4>4. Teklif Hazırlama</h4>
+                <p>Müşteri ihtiyaçlarına uygun tekliflerin hazırlanması</p>
+            </div>
+        </div>
+        <div class="process-arrow">
+            <i class="bi bi-arrow-right"></i>
+        </div>
+        <div class="process-step">
+            <div class="process-icon">
+                <i class="bi bi-chat-dots"></i>
+            </div>
+            <div class="process-content">
+                <h4>5. Müzakere</h4>
+                <p>Teklif üzerinde müşteri ile görüşmelerin yapılması</p>
+            </div>
+        </div>
+    </div>
+    <div class="process-flow">
+        <div class="process-step">
+            <div class="process-icon">
+                <i class="bi bi-file-earmark-check"></i>
+            </div>
+            <div class="process-content">
+                <h4>6. Sözleşme</h4>
+                <p>Anlaşma sağlanması ve sözleşme imzalanması</p>
+            </div>
+        </div>
+        <div class="process-arrow">
+            <i class="bi bi-arrow-right"></i>
+        </div>
+        <div class="process-step">
+            <div class="process-icon">
+                <i class="bi bi-truck"></i>
+            </div>
+            <div class="process-content">
+                <h4>7. Teslimat</h4>
+                <p>Ürün veya hizmetin müşteriye teslim edilmesi</p>
+            </div>
+        </div>
+        <div class="process-arrow">
+            <i class="bi bi-arrow-right"></i>
+        </div>
+        <div class="process-step">
+            <div class="process-icon">
+                <i class="bi bi-receipt"></i>
+            </div>
+            <div class="process-content">
+                <h4>8. Faturalama</h4>
+                <p>Satış faturasının düzenlenmesi ve müşteriye gönderilmesi</p>
+            </div>
+        </div>
+        <div class="process-arrow">
+            <i class="bi bi-arrow-right"></i>
+        </div>
+        <div class="process-step">
+            <div class="process-icon">
+                <i class="bi bi-cash-coin"></i>
+            </div>
+            <div class="process-content">
+                <h4>9. Tahsilat</h4>
+                <p>Satış bedelinin tahsil edilmesi</p>
+            </div>
+        </div>
+        <div class="process-arrow">
+            <i class="bi bi-arrow-right"></i>
+        </div>
+        <div class="process-step">
+            <div class="process-icon">
+                <i class="bi bi-headset"></i>
+            </div>
+            <div class="process-content">
+                <h4>10. Satış Sonrası</h4>
+                <p>Satış sonrası hizmetlerin sunulması ve müşteri memnuniyetinin takibi</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<h2>Satış Aşamaları Detayları</h2>
+
+<p>Aşağıda, her bir satış aşamasının detaylı açıklaması, bu aşamada yapılması gereken işlemler ve kullanılacak belgeler yer almaktadır:</p>
+
+<div class="accordion" id="salesStagesAccordion">
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="headingOne">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
+                1. Potansiyel Müşteri
+            </button>
+        </h2>
+        <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#salesStagesAccordion">
+            <div class="accordion-body">
+                <div class="row">
+                    <div class="col-md-8">
+                        <h4>Açıklama</h4>
+                        <p>Potansiyel müşteri aşaması, henüz satış yapılmamış ancak ürün veya hizmetlerinize ilgi gösterebilecek kişi veya kuruluşların tanımlanması ve takibi sürecidir. Bu aşamada, potansiyel müşterilerin temel bilgileri toplanır ve satış sürecine dahil edilir.</p>
+                        
+                        <h4>Yapılacak İşlemler</h4>
+                        <ul>
+                            <li>Potansiyel müşteri kaynakları belirlenir (web sitesi ziyaretçileri, fuar katılımcıları, referanslar vb.).</li>
+                            <li>Potansiyel müşteri bilgileri toplanır (ad, unvan, iletişim bilgileri, sektör vb.).</li>
+                            <li>Potansiyel müşteri kaydı oluşturulur.</li>
+                            <li>Potansiyel müşteriler kategorilere ayrılır (sektör, büyüklük, potansiyel değer vb.).</li>
+                            <li>İlk temas için hazırlık yapılır.</li>
+                        </ul>
+                        
+                        <h4>Kullanılacak Belgeler</h4>
+                        <ul>
+                            <li>Müşteri Kartı</li>
+                            <li>Potansiyel Müşteri Formu</li>
+                            <li>Müşteri Segmentasyon Raporu</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <div class="card-header bg-primary text-white">
+                                <h5 class="mb-0">İpuçları</h5>
+                            </div>
+                            <div class="card-body">
+                                <ul>
+                                    <li>Potansiyel müşterileri düzenli olarak gözden geçirin ve önceliklendirin.</li>
+                                    <li>Her potansiyel müşteri için bir değer puanı belirleyin.</li>
+                                    <li>Potansiyel müşteri kaynaklarınızı çeşitlendirin.</li>
+                                    <li>CRM sistemini etkin kullanarak potansiyel müşteri bilgilerini güncel tutun.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="headingTwo">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+                2. İlk Temas
+            </button>
+        </h2>
+        <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#salesStagesAccordion">
+            <div class="accordion-body">
+                <div class="row">
+                    <div class="col-md-8">
+                        <h4>Açıklama</h4>
+                        <p>İlk temas aşaması, potansiyel müşteri ile ilk iletişimin kurulduğu süreçtir. Bu aşamada, potansiyel müşterinin ilgisini çekmek, ürün veya hizmetleriniz hakkında bilgi vermek ve bir sonraki adım için randevu almak amaçlanır.</p>
+                        
+                        <h4>Yapılacak İşlemler</h4>
+                        <ul>
+                            <li>İlk temas yöntemi belirlenir (telefon, e-posta, yüz yüze görüşme vb.).</li>
+                            <li>İlk temas için uygun zaman planlanır.</li>
+                            <li>İlk temas gerçekleştirilir.</li>
+                            <li>Potansiyel müşterinin ilgi düzeyi değerlendirilir.</li>
+                            <li>Bir sonraki adım için randevu alınır veya takip planı oluşturulur.</li>
+                            <li>İlk temas sonuçları kaydedilir.</li>
+                        </ul>
+                        
+                        <h4>Kullanılacak Belgeler</h4>
+                        <ul>
+                            <li>Müşteri İletişim Kaydı</li>
+                            <li>Görüşme Notları</li>
+                            <li>Tanıtım Materyalleri</li>
+                            <li>Ürün/Hizmet Broşürleri</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <div class="card-header bg-primary text-white">
+                                <h5 class="mb-0">İpuçları</h5>
+                            </div>
+                            <div class="card-body">
+                                <ul>
+                                    <li>İlk temas öncesi potansiyel müşteri hakkında araştırma yapın.</li>
+                                    <li>Kısa ve net bir tanıtım konuşması hazırlayın.</li>
+                                    <li>Müşterinin ihtiyaçlarını anlamaya odaklanın, ürün özelliklerini sıralamak yerine.</li>
+                                    <li>İlk temas sonrası mutlaka takip yapın.</li>
+                                    <li>Tüm görüşme detaylarını CRM sistemine kaydedin.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="headingThree">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree">
+                3. İhtiyaç Analizi
+            </button>
+        </h2>
+        <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#salesStagesAccordion">
+            <div class="accordion-body">
+                <div class="row">
+                    <div class="col-md-8">
+                        <h4>Açıklama</h4>
+                        <p>İhtiyaç analizi aşaması, potansiyel müşterinin ihtiyaçlarının, beklentilerinin ve sorunlarının detaylı olarak belirlenmesi ve analiz edilmesi sürecidir. Bu aşamada, müşterinin gerçek ihtiyaçlarını anlamak ve bu ihtiyaçlara uygun çözümler sunmak için gerekli bilgiler toplanır.</p>
+                        
+                        <h4>Yapılacak İşlemler</h4>
+                        <ul>
+                            <li>Müşteri ile detaylı görüşme yapılır.</li>
+                            <li>Müşterinin mevcut durumu, sorunları ve ihtiyaçları belirlenir.</li>
+                            <li>Müşterinin bütçesi ve zaman çerçevesi öğrenilir.</li>
+                            <li>Karar verme süreci ve karar vericiler hakkında bilgi toplanır.</li>
+                            <li>Rakip çözümler hakkında bilgi edinilir.</li>
+                            <li>İhtiyaç analizi raporu hazırlanır.</li>
+                        </ul>
+                        
+                        <h4>Kullanılacak Belgeler</h4>
+                        <ul>
+                            <li>İhtiyaç Analiz Formu</li>
+                            <li>Müşteri Talep Formu</li>
+                            <li>Görüşme Notları</li>
+                            <li>İhtiyaç Analizi Raporu</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <div class="card-header bg-primary text-white">
+                                <h5 class="mb-0">İpuçları</h5>
+                            </div>
+                            <div class="card-body">
+                                <ul>
+                                    <li>Açık uçlu sorular sorun (ne, neden, nasıl, ne zaman, nerede).</li>
+                                    <li>Aktif dinleme tekniklerini kullanın.</li>
+                                    <li>Müşterinin söylediklerini not alın ve özetleyin.</li>
+                                    <li>Sadece konuşmayın, müşterinin konuşmasına izin verin.</li>
+                                    <li>Müşterinin gerçek ihtiyaçlarını anlamak için "neden" sorusunu birkaç kez sorun.</li>
+                                    <li>Müşterinin dile getirmediği ihtiyaçları da keşfetmeye çalışın.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="headingFour">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour">
+                4. Teklif Hazırlama
+            </button>
+        </h2>
+        <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#salesStagesAccordion">
+            <div class="accordion-body">
+                <div class="row">
+                    <div class="col-md-8">
+                        <h4>Açıklama</h4>
+                        <p>Teklif hazırlama aşaması, müşterinin ihtiyaçlarına uygun çözümlerin belirlendiği ve bu çözümlerin fiyat, teslimat süresi, ödeme koşulları gibi detaylarla birlikte bir teklif haline getirildiği süreçtir. Bu aşamada, müşteriye sunulacak değer önerisi netleştirilir ve resmi bir teklif hazırlanır.</p>
+                        
+                        <h4>Yapılacak İşlemler</h4>
+                        <ul>
+                            <li>İhtiyaç analizi sonuçlarına göre uygun ürün/hizmet paketi belirlenir.</li>
+                            <li>Fiyatlandırma yapılır.</li>
+                            <li>Teslimat süresi, ödeme koşulları ve diğer şartlar belirlenir.</li>
+                            <li>Teklif dokümanı hazırlanır.</li>
+                            <li>Teklif onay sürecinden geçirilir.</li>
+                            <li>Teklif müşteriye sunulur.</li>
+                            <li>Teklif takibi planlanır.</li>
+                        </ul>
+                        
+                        <h4>Kullanılacak Belgeler</h4>
+                        <ul>
+                            <li>Teklif Formu</li>
+                            <li>Fiyat Listesi</li>
+                            <li>Ürün/Hizmet Kataloğu</li>
+                            <li>Referans Dokümanları</li>
+                            <li>Sözleşme Taslağı</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <div class="card-header bg-primary text-white">
+                                <h5 class="mb-0">İpuçları</h5>
+                            </div>
+                            <div class="card-body">
+                                <ul>
+                                    <li>Teklifinizi müşterinin diline ve ihtiyaçlarına göre özelleştirin.</li>
+                                    <li>Ürün özelliklerinden çok, müşteriye sağlayacağı faydaları vurgulayın.</li>
+                                    <li>Teklifinizi görsel unsurlarla zenginleştirin.</li>
+                                    <li>Referanslar ve başarı hikayeleri ekleyin.</li>
+                                    <li>Teklifinizi zamanında sunun ve takip edin.</li>
+                                    <li>Teklifinizin rakiplerden farkını net bir şekilde ortaya koyun.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="headingFive">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive">
+                5. Müzakere
+            </button>
+        </h2>
+        <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#salesStagesAccordion">
+            <div class="accordion-body">
+                <div class="row">
+                    <div class="col-md-8">
+                        <h4>Açıklama</h4>
+                        <p>Müzakere aşaması, teklif üzerinde müşteri ile görüşmelerin yapıldığı ve anlaşmaya varmak için karşılıklı tavizlerin verildiği süreçtir. Bu aşamada, müşterinin teklif hakkındaki soruları yanıtlanır, itirazları ele alınır ve teklif üzerinde gerekli değişiklikler yapılır.</p>
+                        
+                        <h4>Yapılacak İşlemler</h4>
+                        <ul>
+                            <li>Müşteri ile teklif görüşmesi yapılır.</li>
+                            <li>Müşterinin soruları yanıtlanır ve itirazları ele alınır.</li>
+                            <li>Fiyat, teslimat süresi, ödeme koşulları gibi konularda müzakere edilir.</li>
+                            <li>Gerekirse teklif revize edilir.</li>
+                            <li>Müşterinin karar verme sürecindeki engeller belirlenir ve çözülür.</li>
+                            <li>Anlaşma sağlanması için son adımlar atılır.</li>
+                        </ul>
+                        
+                        <h4>Kullanılacak Belgeler</h4>
+                        <ul>
+                            <li>Revize Teklif</li>
+                            <li>Görüşme Notları</li>
+                            <li>Müzakere Stratejisi Dokümanı</li>
+                            <li>İtiraz Yönetimi Kılavuzu</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <div class="card-header bg-primary text-white">
+                                <h5 class="mb-0">İpuçları</h5>
+                            </div>
+                            <div class="card-body">
+                                <ul>
+                                    <li>Müzakereye iyi hazırlanın, BATNA'nızı (en iyi alternatif anlaşma) belirleyin.</li>
+                                    <li>Sadece fiyat üzerinden değil, toplam değer üzerinden müzakere edin.</li>
+                                    <li>Müşterinin itirazlarını fırsat olarak görün ve değerlendirin.</li>
+                                    <li>Taviz verirken karşılığında bir şey isteyin.</li>
+                                    <li>Müzakere sırasında duygusal değil, profesyonel kalın.</li>
+                                    <li>Kazan-kazan çözümleri arayın.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="headingSix">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix">
+                6. Sözleşme
+            </button>
+        </h2>
+        <div id="collapseSix" class="accordion-collapse collapse" data-bs-parent="#salesStagesAccordion">
+            <div class="accordion-body">
+                <div class="row">
+                    <div class="col-md-8">
+                        <h4>Açıklama</h4>
+                        <p>Sözleşme aşaması, müşteri ile anlaşma sağlandıktan sonra resmi bir sözleşmenin hazırlandığı ve imzalandığı süreçtir. Bu aşamada, tarafların hak ve yükümlülükleri, ürün/hizmet detayları, fiyat, ödeme koşulları, teslimat süresi gibi tüm şartlar yazılı hale getirilir ve yasal bir bağlayıcılık kazanır.</p>
+                        
+                        <h4>Yapılacak İşlemler</h4>
+                        <ul>
+                            <li>Sözleşme taslağı hazırlanır veya mevcut şablonlar üzerinde gerekli değişiklikler yapılır.</li>
+                            <li>Sözleşme hukuk departmanı tarafından incelenir.</li>
+                            <li>Sözleşme müşteriye gönderilir ve müşterinin incelemesi sağlanır.</li>
+                            <li>Müşterinin sözleşme üzerindeki değişiklik talepleri değerlendirilir.</li>
+                            <li>Sözleşme son haline getirilir.</li>
+                            <li>Sözleşme taraflarca imzalanır.</li>
+                            <li>Sözleşme sonrası süreç planlanır.</li>
+                        </ul>
+                        
+                        <h4>Kullanılacak Belgeler</h4>
+                        <ul>
+                            <li>Sözleşme Şablonu</li>
+                            <li>Sipariş Formu</li>
+                            <li>Teknik Şartname</li>
+                            <li>Hizmet Seviyesi Anlaşması (SLA)</li>
+                            <li>Gizlilik Anlaşması</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <div class="card-header bg-primary text-white">
+                                <h5 class="mb-0">İpuçları</h5>
+                            </div>
+                            <div class="card-body">
+                                <ul>
+                                    <li>Sözleşme dilinin açık ve anlaşılır olmasına dikkat edin.</li>
+                                    <li>Tüm önemli noktaların sözleşmede yer aldığından emin olun.</li>
+                                    <li>Sözleşme imzalanmadan önce tüm onayları alın.</li>
+                                    <li>Sözleşme sürecini gereksiz yere uzatmayın.</li>
+                                    <li>Sözleşme imzalandıktan sonra tüm ilgili departmanları bilgilendirin.</li>
+                                    <li>Sözleşmenin elektronik bir kopyasını CRM sisteminde saklayın.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="headingSeven">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven">
+                7. Teslimat
+            </button>
+        </h2>
+        <div id="collapseSeven" class="accordion-collapse collapse" data-bs-parent="#salesStagesAccordion">
+            <div class="accordion-body">
+                <div class="row">
+                    <div class="col-md-8">
+                        <h4>Açıklama</h4>
+                        <p>Teslimat aşaması, sözleşmede belirtilen ürün veya hizmetin müşteriye teslim edildiği süreçtir. Bu aşamada, ürünün sevkiyatı, kurulumu, hizmetin başlatılması gibi işlemler gerçekleştirilir ve müşterinin ürün/hizmeti sorunsuz bir şekilde kullanmaya başlaması sağlanır.</p>
+                        
+                        <h4>Yapılacak İşlemler</h4>
+                        <ul>
+                            <li>Teslimat planı hazırlanır.</li>
+                            <li>Ürün hazırlanır veya hizmet için gerekli kaynaklar organize edilir.</li>
+                            <li>Müşteri ile teslimat tarihi ve detayları koordine edilir.</li>
+                            <li>Ürün sevkiyatı veya hizmet başlatılması gerçekleştirilir.</li>
+                            <li>Gerekirse kurulum, eğitim veya oryantasyon sağlanır.</li>
+                            <li>Teslimat belgesi müşteri tarafından imzalanır.</li>
+                            <li>Teslimat sonrası kontrol yapılır.</li>
+                        </ul>
+                        
+                        <h4>Kullanılacak Belgeler</h4>
+                        <ul>
+                            <li>İrsaliye</li>
+                            <li>Teslimat Formu</li>
+                            <li>Kurulum Raporu</li>
+                            <li>Eğitim Dokümanları</li>
+                            <li>Kullanım Kılavuzları</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <div class="card-header bg-primary text-white">
+                                <h5 class="mb-0">İpuçları</h5>
+                            </div>
+                            <div class="card-body">
+                                <ul>
+                                    <li>Teslimat öncesi tüm hazırlıkları kontrol edin.</li>
+                                    <li>Müşteriye teslimat süreci hakkında önceden bilgi verin.</li>
+                                    <li>Teslimat sırasında müşteri beklentilerini yönetin.</li>
+                                    <li>Teslimat sonrası müşteri memnuniyetini kontrol edin.</li>
+                                    <li>Teslimat sırasında ortaya çıkan sorunları hızlıca çözün.</li>
+                                    <li>Teslimat sürecini belgelendirin ve kayıt altına alın.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="headingEight">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEight">
+                8. Faturalama
+            </button>
+        </h2>
+        <div id="collapseEight" class="accordion-collapse collapse" data-bs-parent="#salesStagesAccordion">
+            <div class="accordion-body">
+                <div class="row">
+                    <div class="col-md-8">
+                        <h4>Açıklama</h4>
+                        <p>Faturalama aşaması, teslimat tamamlandıktan sonra satış faturasının düzenlendiği ve müşteriye gönderildiği süreçtir. Bu aşamada, sözleşmede belirtilen fiyat, ödeme koşulları ve diğer şartlara uygun olarak fatura hazırlanır ve müşteriye iletilir.</p>
+                        
+                        <h4>Yapılacak İşlemler</h4>
+                        <ul>
+                            <li>Fatura bilgileri kontrol edilir (müşteri bilgileri, ürün/hizmet detayları, fiyat vb.).</li>
+                            <li>Fatura düzenlenir.</li>
+                            <li>Fatura onay sürecinden geçirilir.</li>
+                            <li>Fatura müşteriye gönderilir.</li>
+                            <li>Fatura kaydı oluşturulur.</li>
+                            <li>Ödeme takibi planlanır.</li>
+                        </ul>
+                        
+                        <h4>Kullanılacak Belgeler</h4>
+                        <ul>
+                            <li>Satış Faturası</li>
+                            <li>Fatura Gönderim Formu</li>
+                            <li>Ödeme Planı</li>
+                            <li>Fatura Takip Listesi</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <div class="card-header bg-primary text-white">
+                                <h5 class="mb-0">İpuçları</h5>
+                            </div>
+                            <div class="card-body">
+                                <ul>
+                                    <li>Faturayı zamanında düzenleyin ve gönderin.</li>
+                                    <li>Fatura bilgilerinin doğruluğunu kontrol edin.</li>
+                                    <li>Faturada ödeme koşullarını ve son ödeme tarihini açıkça belirtin.</li>
+                                    <li>Fatura gönderimini belgelendirin ve takip edin.</li>
+                                    <li>Müşterinin faturayı aldığından emin olun.</li>
+                                    <li>Fatura ile ilgili müşteri sorularını hızlıca yanıtlayın.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="headingNine">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNine">
+                9. Tahsilat
+            </button>
+        </h2>
+        <div id="collapseNine" class="accordion-collapse collapse" data-bs-parent="#salesStagesAccordion">
+            <div class="accordion-body">
+                <div class="row">
+                    <div class="col-md-8">
+                        <h4>Açıklama</h4>
+                        <p>Tahsilat aşaması, fatura bedelinin müşteriden tahsil edildiği süreçtir. Bu aşamada, ödeme takibi yapılır, gerekirse müşteri ile iletişime geçilir ve ödemenin zamanında ve tam olarak alınması sağlanır.</p>
+                        
+                        <h4>Yapılacak İşlemler</h4>
+                        <ul>
+                            <li>Ödeme vadesi takip edilir.</li>
+                            <li>Ödeme öncesi müşteriye hatırlatma yapılır.</li>
+                            <li>Ödeme alınır ve kaydedilir.</li>
+                            <li>Ödeme makbuzu düzenlenir ve müşteriye gönderilir.</li>
+                            <li>Geç ödemeler için gerekirse müşteri ile iletişime geçilir.</li>
+                            <li>Tahsilat raporu hazırlanır.</li>
+                        </ul>
+                        
+                        <h4>Kullanılacak Belgeler</h4>
+                        <ul>
+                            <li>Tahsilat Makbuzu</li>
+                            <li>Banka Dekontu</li>
+                            <li>Ödeme Hatırlatma Yazısı</li>
+                            <li>Tahsilat Raporu</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <div class="card-header bg-primary text-white">
+                                <h5 class="mb-0">İpuçları</h5>
+                            </div>
+                            <div class="card-body">
+                                <ul>
+                                    <li>Ödeme vadelerini yakından takip edin.</li>
+                                    <li>Ödeme öncesi nazik hatırlatmalar yapın.</li>
+                                    <li>Tahsilat sürecini profesyonelce yönetin.</li>
+                                    <li>Geç ödemeler için esnek çözümler sunun.</li>
+                                    <li>Tahsilat sorunlarını erken tespit edin ve çözün.</li>
+                                    <li>Düzenli tahsilat raporları hazırlayın ve analiz edin.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="headingTen">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTen">
+                10. Satış Sonrası
+            </button>
+        </h2>
+        <div id="collapseTen" class="accordion-collapse collapse" data-bs-parent="#salesStagesAccordion">
+            <div class="accordion-body">
+                <div class="row">
+                    <div class="col-md-8">
+                        <h4>Açıklama</h4>
+                        <p>Satış sonrası aşaması, satış tamamlandıktan sonra müşteri ile ilişkinin devam ettirildiği, müşteri memnuniyetinin sağlandığı ve ek satış fırsatlarının değerlendirildiği süreçtir. Bu aşamada, müşteriye destek ve hizmet sunulur, memnuniyet ölçülür ve müşteri sadakati oluşturulur.</p>
+                        
+                        <h4>Yapılacak İşlemler</h4>
+                        <ul>
+                            <li>Satış sonrası takip planı hazırlanır.</li>
+                            <li>Müşteri ile düzenli iletişim kurulur.</li>
+                            <li>Müşteri memnuniyeti ölçülür.</li>
+                            <li>Teknik destek ve servis hizmetleri sağlanır.</li>
+                            <li>Müşteri şikayetleri ve önerileri değerlendirilir.</li>
+                            <li>Ek satış ve çapraz satış fırsatları belirlenir.</li>
+                            <li>Müşteri referans programına dahil edilir.</li>
+                        </ul>
+                        
+                        <h4>Kullanılacak Belgeler</h4>
+                        <ul>
+                            <li>Müşteri Memnuniyet Anketi</li>
+                            <li>Servis Formu</li>
+                            <li>Müşteri Takip Raporu</li>
+                            <li>Şikayet Yönetim Formu</li>
+                            <li>Referans Mektubu Talebi</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <div class="card-header bg-primary text-white">
+                                <h5 class="mb-0">İpuçları</h5>
+                            </div>
+                            <div class="card-body">
+                                <ul>
+                                    <li>Müşteri ile düzenli iletişim kurun.</li>
+                                    <li>Müşteri memnuniyetini sürekli ölçün ve değerlendirin.</li>
+                                    <li>Müşteri şikayetlerini fırsat olarak görün ve hızlıca çözün.</li>
+                                    <li>Müşteriye değer katan ek hizmetler sunun.</li>
+                                    <li>Memnun müşterilerden referans isteyin.</li>
+                                    <li>Müşteri sadakatini artıracak programlar geliştirin.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<h2>Satış Aşamalarının Yönetimi</h2>
+
+<p>Aaro ERP'de satış aşamalarını etkin bir şekilde yönetmek için aşağıdaki adımları izleyebilirsiniz:</p>
+
+<div class="row">
+    <div class="col-md-6">
+        <div class="card mb-3">
+            <div class="card-header bg-light">
+                <h4 class="mb-0">Satış Fırsatı Oluşturma</h4>
+            </div>
+            <div class="card-body">
+                <ol>
+                    <li>Satış & Pazarlama > Satış Fırsatları > Yeni Fırsat ekranına gidin.</li>
+                    <li>Müşteri bilgilerini girin veya mevcut bir müşteriyi seçin.</li>
+                    <li>Fırsat başlığı, tahmini değer, kapanış tarihi gibi temel bilgileri girin.</li>
+                    <li>Başlangıç aşamasını seçin (genellikle "Potansiyel Müşteri" veya "İlk Temas").</li>
+                    <li>Fırsatla ilgili ek bilgileri girin.</li>
+                    <li>"Kaydet" butonuna tıklayarak fırsatı oluşturun.</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="card mb-3">
+            <div class="card-header bg-light">
+                <h4 class="mb-0">Aşama İlerlemesi</h4>
+            </div>
+            <div class="card-body">
+                <ol>
+                    <li>Satış & Pazarlama > Satış Fırsatları > Fırsat Listesi ekranına gidin.</li>
+                    <li>İlgili fırsatı seçin.</li>
+                    <li>Fırsat detay ekranında "Aşama Değiştir" butonuna tıklayın.</li>
+                    <li>Yeni aşamayı seçin ve gerekli bilgileri girin.</li>
+                    <li>Aşama değişikliği ile ilgili notları ekleyin.</li>
+                    <li>"Kaydet" butonuna tıklayarak aşama değişikliğini onaylayın.</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-6">
+        <div class="card mb-3">
+            <div class="card-header bg-light">
+                <h4 class="mb-0">Aktivite Planlama</h4>
+            </div>
+            <div class="card-body">
+                <ol>
+                    <li>Fırsat detay ekranında "Aktivite Ekle" butonuna tıklayın.</li>
+                    <li>Aktivite tipini seçin (Görüşme, Telefon, E-posta vb.).</li>
+                    <li>Aktivite başlığı, tarihi, süresi gibi bilgileri girin.</li>
+                    <li>Aktivite ile ilgili notları ekleyin.</li>
+                    <li>Gerekirse hatırlatma ayarlayın.</li>
+                    <li>"Kaydet" butonuna tıklayarak aktiviteyi planlayın.</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="card mb-3">
+            <div class="card-header bg-light">
+                <h4 class="mb-0">Fırsat Kapama</h4>
+            </div>
+            <div class="card-body">
+                <ol>
+                    <li>Fırsat detay ekranında "Fırsatı Kapat" butonuna tıklayın.</li>
+                    <li>Kapanış durumunu seçin (Kazanıldı/Kaybedildi).</li>
+                    <li>Kapanış tarihi ve gerçekleşen değeri girin.</li>
+                    <li>Kapanış nedeni ve notları ekleyin.</li>
+                    <li>Kazanılan fırsatlar için sonraki adımları belirleyin.</li>
+                    <li>"Kaydet" butonuna tıklayarak fırsatı kapatın.</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+</div>
+
+<h2>Satış Aşamaları Raporları</h2>
+
+<p>Aaro ERP'de satış aşamalarını analiz etmek ve performansı değerlendirmek için aşağıdaki raporları kullanabilirsiniz:</p>
+
+<div class="table-responsive">
+    <table class="table table-bordered">
+        <thead class="table-light">
+            <tr>
+                <th>Rapor Adı</th>
+                <th>Açıklama</th>
+                <th>Erişim Yolu</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Satış Hunisi Raporu</td>
+                <td>Her aşamadaki fırsat sayısını ve değerini gösteren rapor. Satış sürecindeki darboğazları belirlemenize yardımcı olur.</td>
+                <td>Satış & Pazarlama > Raporlar > Satış Hunisi</td>
+            </tr>
+            <tr>
+                <td>Aşama Dönüşüm Raporu</td>
+                <td>Bir aşamadan diğerine geçiş oranlarını gösteren rapor. Hangi aşamalarda iyileştirme gerektiğini belirlemenize yardımcı olur.</td>
+                <td>Satış & Pazarlama > Raporlar > Aşama Dönüşümleri</td>
+            </tr>
+            <tr>
+                <td>Satış Döngüsü Raporu</td>
+                <td>Bir fırsatın başlangıçtan kapanışa kadar geçen ortalama süresini gösteren rapor. Satış sürecinin verimliliğini değerlendirmenize yardımcı olur.</td>
+                <td>Satış & Pazarlama > Raporlar > Satış Döngüsü</td>
+            </tr>
+            <tr>
+                <td>Kazanma/Kaybetme Analizi</td>
+                <td>Kazanılan ve kaybedilen fırsatların nedenlerini ve özelliklerini gösteren rapor. Başarı faktörlerini belirlemenize yardımcı olur.</td>
+                <td>Satış & Pazarlama > Raporlar > Kazanma/Kaybetme Analizi</td>
+            </tr>
+            <tr>
+                <td>Satış Temsilcisi Performans Raporu</td>
+                <td>Her satış temsilcisinin aşama bazında performansını gösteren rapor. Ekip performansını değerlendirmenize yardımcı olur.</td>
+                <td>Satış & Pazarlama > Raporlar > Satış Temsilcisi Performansı</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<h2>Satış Aşamaları İçin En İyi Uygulamalar</h2>
+
+<div class="row">
+    <div class="col-md-6">
+        <div class="card mb-3">
+            <div class="card-header bg-success text-white">
+                <h4 class="mb-0"><i class="bi bi-check-circle"></i> Yapılması Gerekenler</h4>
+            </div>
+            <div class="card-body">
+                <ul>
+                    <li>Her aşama için net kriterler ve çıktılar belirleyin.</li>
+                    <li>Satış sürecini düzenli olarak gözden geçirin ve optimize edin.</li>
+                    <li>Satış ekibine aşama yönetimi konusunda eğitim verin.</li>
+                    <li>Her aşama için şablonlar ve kontrol listeleri oluşturun.</li>
+                    <li>Müşteri geri bildirimlerini satış sürecini iyileştirmek için kullanın.</li>
+                    <li>Satış aşamalarını CRM sistemi üzerinden titizlikle takip edin.</li>
+                    <li>Aşama geçişlerinde gerekli onayları alın.</li>
+                    <li>Satış aşamalarını müşteri yolculuğu ile uyumlu hale getirin.</li>
+                    <li>Satış aşamalarını düzenli olarak analiz edin ve darboğazları belirleyin.</li>
+                    <li>Başarılı satış örneklerini belgelendirin ve paylaşın.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="card mb-3">
+            <div class="card-header bg-danger text-white">
+                <h4 class="mb-0"><i class="bi bi-x-circle"></i> Yapılmaması Gerekenler</h4>
+            </div>
+            <div class="card-body">
+                <ul>
+                    <li>Aşamaları atlamayın veya birleştirmeyin.</li>
+                    <li>Fırsatları gerçekçi olmayan aşamalarda göstermeyin.</li>
+                    <li>Satış sürecini gereksiz yere karmaşık hale getirmeyin.</li>
+                    <li>Müşteri ihtiyaçlarını anlamadan teklif hazırlamayın.</li>
+                    <li>Aşama geçişlerini belgelendirmeden yapmayın.</li>
+                    <li>Satış aşamalarını sadece yönetim raporlaması için kullanmayın.</li>
+                    <li>Tüm müşteriler için aynı satış sürecini uygulamakta ısrar etmeyin.</li>
+                    <li>Satış ekibini sadece aşama ilerlemesine göre değerlendirmeyin.</li>
+                    <li>Müşteri iletişimini sadece aşama geçişlerinde yapmayın.</li>
+                    <li>Satış sonrası aşamayı ihmal etmeyin.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<h2>Sık Sorulan Sorular</h2>
+
+<div class="accordion" id="faqAccordion">
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="faqOne">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseOne">
+                Bir fırsatın aşamasını nasıl değiştirebilirim?
+            </button>
+        </h2>
+        <div id="faqCollapseOne" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+                <p>Bir fırsatın aşamasını değiştirmek için:</p>
+                <ol>
+                    <li>Satış & Pazarlama > Satış Fırsatları > Fırsat Listesi ekranına gidin.</li>
+                    <li>İlgili fırsatı seçin.</li>
+                    <li>Fırsat detay ekranında "Aşama Değiştir" butonuna tıklayın.</li>
+                    <li>Açılan pencerede yeni aşamayı seçin.</li>
+                    <li>Aşama değişikliği ile ilgili notları ekleyin.</li>
+                    <li>"Kaydet" butonuna tıklayarak aşama değişikliğini onaylayın.</li>
+                </ol>
+                <p>Aşama değişikliği yapıldığında, sistem otomatik olarak bir aşama geçiş kaydı oluşturur ve ilgili kişilere bildirim gönderir.</p>
+            </div>
+        </div>
+    </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="faqTwo">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseTwo">
+                Satış aşamalarını özelleştirebilir miyim?
+            </button>
+        </h2>
+        <div id="faqCollapseTwo" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+                <p>Evet, Aaro ERP'de satış aşamalarını işletmenizin ihtiyaçlarına göre özelleştirebilirsiniz:</p>
+                <ol>
+                    <li>Yönetim > Sistem Ayarları > Satış Ayarları > Satış Aşamaları ekranına gidin.</li>
+                    <li>"Yeni Aşama" butonuna tıklayarak yeni bir aşama ekleyebilir veya mevcut aşamaları düzenleyebilirsiniz.</li>
+                    <li>Her aşama için ad, açıklama, sıra, renk ve olasılık yüzdesi gibi bilgileri belirleyebilirsiniz.</li>
+                    <li>Aşamalar arası geçiş kurallarını tanımlayabilirsiniz.</li>
+                    <li>Her aşama için gerekli alanları ve kontrol listelerini belirleyebilirsiniz.</li>
+                </ol>
+                <div class="alert alert-warning">
+                    <i class="bi bi-exclamation-triangle"></i>
+                    <strong>Dikkat:</strong> Satış aşamalarında yapılan değişiklikler, mevcut fırsatları da etkileyebilir. Bu nedenle, özelleştirme yapmadan önce yedek almanız ve değişiklikleri test ortamında denemeniz önerilir.
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="faqThree">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseThree">
+                Satış aşamalarını otomatikleştirebilir miyim?
+            </button>
+        </h2>
+        <div id="faqCollapseThree" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+                <p>Evet, Aaro ERP'de satış aşamalarını belirli ölçüde otomatikleştirebilirsiniz:</p>
+                <ol>
+                    <li>Yönetim > İş Akışları > Satış İş Akışları ekranına gidin.</li>
+                    <li>"Yeni İş Akışı" butonuna tıklayın.</li>
+                    <li>Tetikleyici olarak "Aşama Değişikliği" seçin.</li>
+                    <li>Koşulları belirleyin (örn. belirli bir aşamaya geçiş).</li>
+                    <li>Gerçekleştirilecek eylemleri belirleyin (örn. e-posta gönderme, görev oluşturma, onay talebi vb.).</li>
+                    <li>İş akışını kaydedin ve etkinleştirin.</li>
+                </ol>
+                <p>Ayrıca, belirli kriterlere göre aşama ilerlemesini otomatikleştiren kurallar da tanımlayabilirsiniz. Örneğin, bir teklif oluşturulduğunda fırsatın otomatik olarak "Teklif Hazırlama" aşamasına geçmesi gibi.</p>
+                <div class="alert alert-primary">
+                    <i class="bi bi-lightbulb"></i>
+                    <strong>İpucu:</strong> Otomatikleştirme, satış sürecini hızlandırabilir ve standartlaştırabilir, ancak insan kararını tamamen ortadan kaldırmak yerine destekleyici olarak kullanılmalıdır.
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="faqFour">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseFour">
+                Satış aşamalarının performansını nasıl ölçebilirim?
+            </button>
+        </h2>
+        <div id="faqCollapseFour" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+                <p>Satış aşamalarının performansını ölçmek için aşağıdaki metrikleri kullanabilirsiniz:</p>
+                <ul>
+                    <li><strong>Dönüşüm Oranı:</strong> Bir aşamadan diğerine geçen fırsatların yüzdesi.</li>
+                    <li><strong>Aşama Süresi:</strong> Bir fırsatın belirli bir aşamada geçirdiği ortalama süre.</li>
+                    <li><strong>Aşama Değeri:</strong> Her aşamadaki fırsatların toplam değeri.</li>
+                    <li><strong>Kazanma Oranı:</strong> Belirli bir aşamadan başlayıp kazanılan fırsatların yüzdesi.</li>
+                    <li><strong>Düşüş Oranı:</strong> Belirli bir aşamada kaybedilen veya iptal edilen fırsatların yüzdesi.</li>
+                </ul>
+                <p>Bu metrikleri görüntülemek için:</p>
+                <ol>
+                    <li>Satış & Pazarlama > Raporlar > Satış Aşamaları Analizi ekranına gidin.</li>
+                    <li>İlgili rapor türünü seçin.</li>
+                    <li>Tarih aralığı, satış temsilcisi, ürün grubu gibi filtreleri belirleyin.</li>
+                    <li>"Rapor Oluştur" butonuna tıklayın.</li>
+                </ol>
+                <div class="alert alert-primary">
+                    <i class="bi bi-lightbulb"></i>
+                    <strong>İpucu:</strong> Performans metriklerini düzenli olarak takip edin ve trendleri analiz edin. Aşama performansındaki değişiklikler, satış sürecinizdeki sorunları veya fırsatları erken tespit etmenize yardımcı olabilir.
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<h2>İlgili Konular</h2>
+
+<ul>
+    <li><a href="?module=satis-pazarlama&page=satis-firsatlari">Satış Fırsatları</a></li>
+    <li><a href="?module=satis-pazarlama&page=musteri-iliskileri">Müşteri İlişkileri Yönetimi</a></li>
+    <li><a href="?module=satis-pazarlama&page=teklif-yonetimi">Teklif Yönetimi</a></li>
+    <li><a href="?module=satis-pazarlama&page=sozlesme-listesi">Sözleşme Listesi</a></li>
+    <li><a href="?module=satis-pazarlama&page=fatura-listesi">Fatura Listesi</a></li>
+    <li><a href="?module=satis-pazarlama&page=satis-raporlari">Satış Raporları</a></li>
+</ul>

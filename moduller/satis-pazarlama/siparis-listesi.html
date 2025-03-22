@@ -1,0 +1,625 @@
+<!-- Meta Bilgileri -->
+<meta name="title" content="Sipariş Listesi">
+<meta name="icon" content="bi-clipboard-check">
+<meta name="url" content="/satis-pazarlama/siparis-listesi">
+<meta name="lastUpdate" content="12.03.2025">
+
+<h1>Sipariş Listesi</h1>
+
+<p>Bu dokümantasyon, Aaro ERP sisteminde müşterilerden alınan siparişlerin listelendiği, filtrelendiği ve yönetildiği Sipariş Listesi ekranını açıklamaktadır.</p>
+
+<div class="alert alert-info">
+    <i class="bi bi-info-circle"></i>
+    <strong>Bilgi:</strong> Sipariş Listesi ekranında müşterilerden alınan siparişleri görüntüleyebilir, filtreleme yapabilir, durumlarını takip edebilir ve yeni sipariş ekleyebilirsiniz.
+</div>
+
+<h2>Sipariş Listesine Erişim</h2>
+
+<p>Sipariş Listesi ekranına aşağıdaki yöntemlerden biriyle erişebilirsiniz:</p>
+
+<div class="row">
+    <div class="col-md-4">
+        <div class="card mb-3">
+            <div class="card-header">
+                <i class="bi bi-search"></i> Arama Motoru ile
+            </div>
+            <div class="card-body">
+                <p>Sol sekmede Aaro kullanıcı bilgilerinin hemen altındaki arama motorundan "sipariş listesi" şeklinde aratarak ulaşım sağlayabilirsiniz.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card mb-3">
+            <div class="card-header">
+                <i class="bi bi-list-ul"></i> Menü Üzerinden
+            </div>
+            <div class="card-body">
+                <p>Sol menüden <strong>Satış & Pazarlama -> Siparişler -> Sipariş Listesi</strong> üzerinden ulaşım sağlayabilirsiniz.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card mb-3">
+            <div class="card-header">
+                <i class="bi bi-link"></i> Doğrudan Erişim
+            </div>
+            <div class="card-body">
+                <p>Doğrudan <a href="erp.aaro.com.tr/Siparis/Liste" target="_blank">erp.aaro.com.tr/Siparis/Liste</a> adresine giderek erişim sağlayabilirsiniz.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<h2>Sipariş Listesi Ekranı</h2>
+
+<p>Sipariş Listesi ekranında müşterilerden alınan siparişleri görüntüleyebilir, filtreleme yapabilir, durumlarını takip edebilir ve yeni sipariş ekleyebilirsiniz.</p>
+
+<div class="card mb-4">
+    <div class="card-header bg-light">
+        <h3 class="mb-0">Ekran Bileşenleri</h3>
+    </div>
+    <div class="card-body">
+        <div class="row">
+            <div class="col-md-6">
+                <h4>Filtre Bölümü</h4>
+                <p>Ekranın üst kısmında bulunan filtre bölümü, siparişleri çeşitli kriterlere göre filtrelemenizi sağlar:</p>
+                <ul>
+                    <li><strong>Tarih Aralığı:</strong> Belirli bir tarih aralığındaki siparişleri görüntülemek için kullanılır.</li>
+                    <li><strong>Müşteri:</strong> Belirli bir müşteriye ait siparişleri görüntülemek için kullanılır.</li>
+                    <li><strong>Sipariş Durumu:</strong> Belirli bir durumdaki siparişleri görüntülemek için kullanılır (Beklemede, Onaylandı, Kısmen Sevk Edildi, Sevk Edildi, İptal Edildi vb.).</li>
+                    <li><strong>Sipariş No:</strong> Belirli bir sipariş numarasına sahip siparişi bulmak için kullanılır.</li>
+                    <li><strong>Tutar Aralığı:</strong> Belirli bir tutar aralığındaki siparişleri görüntülemek için kullanılır.</li>
+                    <li><strong>Ürün:</strong> Belirli bir ürünü içeren siparişleri görüntülemek için kullanılır.</li>
+                </ul>
+            </div>
+            <div class="col-md-6">
+                <h4>Liste Bölümü</h4>
+                <p>Ekranın orta kısmında bulunan liste bölümü, filtrelere uygun siparişleri tablo halinde gösterir:</p>
+                <ul>
+                    <li><strong>Sipariş No:</strong> Sipariş numarası</li>
+                    <li><strong>Tarih:</strong> Siparişin alındığı tarih</li>
+                    <li><strong>Müşteri:</strong> Siparişi veren müşteri</li>
+                    <li><strong>Tutar:</strong> Sipariş tutarı</li>
+                    <li><strong>Para Birimi:</strong> Siparişin para birimi</li>
+                    <li><strong>Durum:</strong> Siparişin güncel durumu</li>
+                    <li><strong>Teslim Tarihi:</strong> Planlanan teslim tarihi</li>
+                    <li><strong>İşlemler:</strong> Sipariş üzerinde yapılabilecek işlemler (Görüntüle, Düzenle, İptal Et vb.)</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<h2>Sipariş Durumları</h2>
+
+<p>Aaro ERP'de siparişler aşağıdaki durumlarda olabilir:</p>
+
+<div class="table-responsive">
+    <table class="table table-bordered">
+        <thead class="table-light">
+            <tr>
+                <th>Durum</th>
+                <th>Açıklama</th>
+                <th>Renk Kodu</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><span class="badge bg-warning">Beklemede</span></td>
+                <td>Sipariş sisteme girilmiş ancak henüz onaylanmamış durumda.</td>
+                <td><code>#ffc107</code></td>
+            </tr>
+            <tr>
+                <td><span class="badge bg-success">Onaylandı</span></td>
+                <td>Sipariş onaylanmış ve işleme alınmış durumda.</td>
+                <td><code>#28a745</code></td>
+            </tr>
+            <tr>
+                <td><span class="badge bg-info">Kısmen Sevk Edildi</span></td>
+                <td>Siparişin bir kısmı sevk edilmiş, kalan kısmı henüz sevk edilmemiş durumda.</td>
+                <td><code>#17a2b8</code></td>
+            </tr>
+            <tr>
+                <td><span class="badge bg-primary">Sevk Edildi</span></td>
+                <td>Sipariş tamamen sevk edilmiş durumda.</td>
+                <td><code>#007bff</code></td>
+            </tr>
+            <tr>
+                <td><span class="badge bg-secondary">Faturalandı</span></td>
+                <td>Sipariş sevk edilmiş ve faturalandırılmış durumda.</td>
+                <td><code>#6c757d</code></td>
+            </tr>
+            <tr>
+                <td><span class="badge bg-danger">İptal Edildi</span></td>
+                <td>Sipariş iptal edilmiş durumda.</td>
+                <td><code>#dc3545</code></td>
+            </tr>
+            <tr>
+                <td><span class="badge bg-dark">Kapatıldı</span></td>
+                <td>Sipariş tamamlanmış ve kapatılmış durumda.</td>
+                <td><code>#343a40</code></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<h2>Yeni Sipariş Oluşturma</h2>
+
+<p>Yeni bir sipariş oluşturmak için aşağıdaki adımları izleyebilirsiniz:</p>
+
+<div class="card mb-4">
+    <div class="card-header bg-primary text-white">
+        <h3 class="mb-0"><i class="bi bi-plus-circle"></i> Yeni Sipariş Oluşturma</h3>
+    </div>
+    <div class="card-body">
+        <ol>
+            <li>Sipariş Listesi ekranında "Yeni Sipariş" butonuna tıklayın.</li>
+            <li>Açılan formda aşağıdaki bilgileri doldurun:
+                <ul>
+                    <li><strong>Müşteri:</strong> Siparişi veren müşteriyi seçin.</li>
+                    <li><strong>Sipariş Tarihi:</strong> Siparişin alındığı tarihi belirleyin.</li>
+                    <li><strong>Teslim Tarihi:</strong> Planlanan teslim tarihini belirleyin.</li>
+                    <li><strong>Para Birimi:</strong> Siparişin para birimini seçin.</li>
+                    <li><strong>Ödeme Şekli:</strong> Ödeme şeklini belirleyin.</li>
+                    <li><strong>Açıklama:</strong> Sipariş ile ilgili açıklamaları girin.</li>
+                </ul>
+            </li>
+            <li>Sipariş kalemlerini ekleyin:
+                <ul>
+                    <li>"Kalem Ekle" butonuna tıklayın.</li>
+                    <li>Ürün seçin veya ürün kodunu girin.</li>
+                    <li>Miktar, birim fiyat ve varsa iskonto bilgilerini girin.</li>
+                    <li>Gerekirse ek açıklamalar ekleyin.</li>
+                    <li>"Ekle" butonuna tıklayarak kalemi siparişe ekleyin.</li>
+                    <li>Gerektiği kadar kalem eklemek için bu adımları tekrarlayın.</li>
+                </ul>
+            </li>
+            <li>Sipariş toplamını kontrol edin.</li>
+            <li>"Kaydet" butonuna tıklayarak siparişi oluşturun.</li>
+        </ol>
+    </div>
+</div>
+
+<h2>Sipariş İşlemleri</h2>
+
+<p>Sipariş Listesi ekranında her bir sipariş için aşağıdaki işlemleri gerçekleştirebilirsiniz:</p>
+
+<div class="accordion" id="siparisIslemleriAccordion">
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="headingOne">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
+                Sipariş Görüntüleme
+            </button>
+        </h2>
+        <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#siparisIslemleriAccordion">
+            <div class="accordion-body">
+                <p>Bir siparişi görüntülemek için:</p>
+                <ol>
+                    <li>Sipariş Listesi ekranında ilgili siparişi bulun.</li>
+                    <li>Siparişin sağ tarafındaki "Görüntüle" butonuna tıklayın veya sipariş satırına çift tıklayın.</li>
+                    <li>Sipariş detayları ekranda görüntülenecektir.</li>
+                </ol>
+                <p>Sipariş detay ekranında aşağıdaki bilgileri görebilirsiniz:</p>
+                <ul>
+                    <li>Sipariş başlık bilgileri (sipariş no, tarih, müşteri vb.)</li>
+                    <li>Sipariş kalemleri (ürün, miktar, birim fiyat, tutar vb.)</li>
+                    <li>Sipariş toplamı ve varsa iskonto, vergi bilgileri</li>
+                    <li>Sipariş durumu ve geçmiş durum değişiklikleri</li>
+                    <li>İlişkili belgeler (irsaliye, fatura vb.)</li>
+                    <li>Sipariş notları ve açıklamalar</li>
+                </ul>
+                <div class="alert alert-primary">
+                    <i class="bi bi-lightbulb"></i>
+                    <strong>İpucu:</strong> Sipariş detay ekranında, siparişin durumunu takip edebilir ve ilgili belgelere (irsaliye, fatura vb.) hızlıca erişebilirsiniz.
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="headingTwo">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+                Sipariş Düzenleme
+            </button>
+        </h2>
+        <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#siparisIslemleriAccordion">
+            <div class="accordion-body">
+                <p>Bir siparişi düzenlemek için:</p>
+                <ol>
+                    <li>Sipariş Listesi ekranında ilgili siparişi bulun.</li>
+                    <li>Siparişin sağ tarafındaki "Düzenle" butonuna tıklayın.</li>
+                    <li>Sipariş bilgilerini düzenleyin:
+                        <ul>
+                            <li>Başlık bilgilerini (tarih, teslim tarihi, açıklama vb.) değiştirebilirsiniz.</li>
+                            <li>Mevcut kalemleri düzenleyebilirsiniz (miktar, fiyat, iskonto vb.).</li>
+                            <li>Yeni kalemler ekleyebilirsiniz.</li>
+                            <li>Mevcut kalemleri silebilirsiniz.</li>
+                        </ul>
+                    </li>
+                    <li>"Kaydet" butonuna tıklayarak değişiklikleri kaydedin.</li>
+                </ol>
+                <div class="alert alert-warning">
+                    <i class="bi bi-exclamation-triangle"></i>
+                    <strong>Dikkat:</strong> Sevk edilmiş veya faturalandırılmış siparişlerde düzenleme yapabilmeniz için gerekli yetkilere sahip olmanız gerekir. Ayrıca, sevk edilmiş kalemlerin miktarını azaltamazsınız.
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="headingThree">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree">
+                Sipariş Onaylama
+            </button>
+        </h2>
+        <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#siparisIslemleriAccordion">
+            <div class="accordion-body">
+                <p>Beklemede durumundaki bir siparişi onaylamak için:</p>
+                <ol>
+                    <li>Sipariş Listesi ekranında ilgili siparişi bulun.</li>
+                    <li>Siparişin sağ tarafındaki "Onayla" butonuna tıklayın.</li>
+                    <li>Açılan pencerede onay notunu girin (opsiyonel).</li>
+                    <li>"Onayla" butonuna tıklayarak siparişi onaylayın.</li>
+                </ol>
+                <p>Sipariş onaylandığında aşağıdaki işlemler gerçekleşir:</p>
+                <ul>
+                    <li>Siparişin durumu "Onaylandı" olarak güncellenir.</li>
+                    <li>Sipariş için stok rezervasyonu yapılır.</li>
+                    <li>Müşteriye sipariş onay bildirimi gönderilebilir (ayarlara bağlı olarak).</li>
+                    <li>İlgili departmanlara bildirim gönderilir.</li>
+                </ul>
+                <div class="alert alert-primary">
+                    <i class="bi bi-lightbulb"></i>
+                    <strong>İpucu:</strong> Toplu sipariş onaylamak için, Sipariş Listesi ekranında birden fazla bekleyen siparişi seçip "Toplu İşlemler" menüsünden "Seçili Siparişleri Onayla" seçeneğini kullanabilirsiniz.
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="headingFour">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour">
+                Sipariş Sevk Etme
+            </button>
+        </h2>
+        <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#siparisIslemleriAccordion">
+            <div class="accordion-body">
+                <p>Onaylanmış bir siparişi sevk etmek için:</p>
+                <ol>
+                    <li>Sipariş Listesi ekranında ilgili siparişi bulun.</li>
+                    <li>Siparişin sağ tarafındaki "Sevk Et" butonuna tıklayın.</li>
+                    <li>Açılan pencerede sevk edilecek kalemleri ve miktarları belirleyin.</li>
+                    <li>Sevkiyat bilgilerini girin (sevkiyat tarihi, taşıyıcı, araç plakası vb.).</li>
+                    <li>"Sevk Et" butonuna tıklayarak sevkiyatı gerçekleştirin.</li>
+                </ol>
+                <p>Sevkiyat gerçekleştiğinde aşağıdaki işlemler otomatik olarak yapılır:</p>
+                <ul>
+                    <li>İrsaliye oluşturulur.</li>
+                    <li>Stok hareketleri gerçekleştirilir.</li>
+                    <li>Siparişin durumu güncellenir (tüm kalemler sevk edildiyse "Sevk Edildi", kısmen sevk edildiyse "Kısmen Sevk Edildi").</li>
+                    <li>Müşteriye sevkiyat bildirimi gönderilebilir (ayarlara bağlı olarak).</li>
+                </ul>
+                <div class="alert alert-primary">
+                    <i class="bi bi-lightbulb"></i>
+                    <strong>İpucu:</strong> Kısmi sevkiyat yapabilirsiniz. Yani, siparişin tamamını değil, belirli kalemleri veya belirli miktarları sevk edebilirsiniz. Kalan kalemler için daha sonra yeni sevkiyat yapabilirsiniz.
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="headingFive">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive">
+                Sipariş Faturalandırma
+            </button>
+        </h2>
+        <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#siparisIslemleriAccordion">
+            <div class="accordion-body">
+                <p>Sevk edilmiş bir siparişi faturalandırmak için:</p>
+                <ol>
+                    <li>Sipariş Listesi ekranında ilgili siparişi bulun.</li>
+                    <li>Siparişin sağ tarafındaki "Faturala" butonuna tıklayın.</li>
+                    <li>Açılan pencerede faturalandırılacak sevkiyatları seçin.</li>
+                    <li>Fatura bilgilerini girin (fatura tarihi, vade, açıklama vb.).</li>
+                    <li>"Faturala" butonuna tıklayarak faturayı oluşturun.</li>
+                </ol>
+                <p>Faturalandırma gerçekleştiğinde aşağıdaki işlemler otomatik olarak yapılır:</p>
+                <ul>
+                    <li>Satış faturası oluşturulur.</li>
+                    <li>Siparişin durumu "Faturalandı" olarak güncellenir.</li>
+                    <li>Muhasebe kayıtları oluşturulur.</li>
+                    <li>Müşteriye fatura bildirimi gönderilebilir (ayarlara bağlı olarak).</li>
+                </ul>
+                <div class="alert alert-primary">
+                    <i class="bi bi-lightbulb"></i>
+                    <strong>İpucu:</strong> Birden fazla siparişi tek bir faturada birleştirebilirsiniz. Bunun için, Fatura Oluşturma ekranında "Sipariş Ekle" butonunu kullanarak birden fazla sipariş seçebilirsiniz.
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="headingSix">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix">
+                Sipariş İptal Etme
+            </button>
+        </h2>
+        <div id="collapseSix" class="accordion-collapse collapse" data-bs-parent="#siparisIslemleriAccordion">
+            <div class="accordion-body">
+                <p>Bir siparişi iptal etmek için:</p>
+                <ol>
+                    <li>Sipariş Listesi ekranında ilgili siparişi bulun.</li>
+                    <li>Siparişin sağ tarafındaki "İptal Et" butonuna tıklayın.</li>
+                    <li>Açılan pencerede iptal gerekçesini belirtin.</li>
+                    <li>"İptal Et" butonuna tıklayarak siparişi iptal edin.</li>
+                </ol>
+                <p>Sipariş iptal edildiğinde aşağıdaki işlemler gerçekleşir:</p>
+                <ul>
+                    <li>Siparişin durumu "İptal Edildi" olarak güncellenir.</li>
+                    <li>Stok rezervasyonları iptal edilir.</li>
+                    <li>Müşteriye iptal bildirimi gönderilebilir (ayarlara bağlı olarak).</li>
+                    <li>İlgili departmanlara bildirim gönderilir.</li>
+                </ul>
+                <div class="alert alert-warning">
+                    <i class="bi bi-exclamation-triangle"></i>
+                    <strong>Dikkat:</strong> Sevk edilmiş veya faturalandırılmış siparişleri iptal edemezsiniz. Bu durumdaki siparişler için iade işlemi yapmanız gerekir.
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="headingSeven">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven">
+                Sipariş Kopyalama
+            </button>
+        </h2>
+        <div id="collapseSeven" class="accordion-collapse collapse" data-bs-parent="#siparisIslemleriAccordion">
+            <div class="accordion-body">
+                <p>Mevcut bir siparişi kopyalayarak yeni bir sipariş oluşturmak için:</p>
+                <ol>
+                    <li>Sipariş Listesi ekranında ilgili siparişi bulun.</li>
+                    <li>Siparişin sağ tarafındaki "Kopyala" butonuna tıklayın.</li>
+                    <li>Açılan pencerede yeni sipariş için bilgileri girin:
+                        <ul>
+                            <li>Müşteriyi değiştirebilirsiniz.</li>
+                            <li>Sipariş tarihini ve teslim tarihini güncelleyebilirsiniz.</li>
+                            <li>Kopyalanacak kalemleri seçebilirsiniz.</li>
+                            <li>Kalem miktarlarını ve fiyatlarını değiştirebilirsiniz.</li>
+                        </ul>
+                    </li>
+                    <li>"Kopyala" butonuna tıklayarak yeni siparişi oluşturun.</li>
+                </ol>
+                <div class="alert alert-primary">
+                    <i class="bi bi-lightbulb"></i>
+                    <strong>İpucu:</strong> Sipariş kopyalama özelliği, düzenli olarak benzer siparişler alan müşteriler için kullanışlıdır. Böylece her seferinde tüm sipariş bilgilerini yeniden girmek zorunda kalmazsınız.
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<h2>Sipariş Takibi</h2>
+
+<p>Aaro ERP'de siparişlerin durumunu ve ilerlemesini takip etmek için aşağıdaki yöntemleri kullanabilirsiniz:</p>
+
+<div class="row">
+    <div class="col-md-6">
+        <div class="card mb-3">
+            <div class="card-header bg-light">
+                <h4 class="mb-0">Sipariş Listesi Ekranı</h4>
+            </div>
+            <div class="card-body">
+                <p>Sipariş Listesi ekranında, siparişlerin durumunu renk kodları ve durum etiketleri ile hızlıca görebilirsiniz. Ayrıca, "Durum" filtresini kullanarak belirli durumdaki siparişleri listeleyebilirsiniz.</p>
+                <p>Sipariş detay ekranında, siparişin geçmiş durum değişikliklerini ve ilgili belgeleri (irsaliye, fatura vb.) görüntüleyebilirsiniz.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="card mb-3">
+            <div class="card-header bg-light">
+                <h4 class="mb-0">Sipariş Takip Raporları</h4>
+            </div>
+            <div class="card-body">
+                <p>Aaro ERP'de siparişleri takip etmek için aşağıdaki raporları kullanabilirsiniz:</p>
+                <ul>
+                    <li><strong>Açık Siparişler Raporu:</strong> Henüz tamamlanmamış siparişleri listeler.</li>
+                    <li><strong>Geciken Siparişler Raporu:</strong> Teslim tarihi geçmiş ancak henüz tamamlanmamış siparişleri listeler.</li>
+                    <li><strong>Sipariş Durumu Raporu:</strong> Siparişlerin durumunu ve ilerlemesini gösterir.</li>
+                    <li><strong>Sipariş Karşılama Performansı Raporu:</strong> Siparişlerin zamanında karşılanma oranını gösterir.</li>
+                </ul>
+                <p>Bu raporlara Satış & Pazarlama > Raporlar menüsünden erişebilirsiniz.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-6">
+        <div class="card mb-3">
+            <div class="card-header bg-light">
+                <h4 class="mb-0">Gösterge Paneli</h4>
+            </div>
+            <div class="card-body">
+                <p>Ana ekrandaki gösterge panelinde, siparişlerle ilgili önemli metrikleri ve grafikleri görüntüleyebilirsiniz:</p>
+                <ul>
+                    <li>Bekleyen siparişler sayısı ve tutarı</li>
+                    <li>Onaylanmış siparişler sayısı ve tutarı</li>
+                    <li>Geciken siparişler sayısı ve tutarı</li>
+                    <li>Sipariş durumu dağılımı</li>
+                    <li>Sipariş trendi (günlük, haftalık, aylık)</li>
+                </ul>
+                <p>Gösterge panelini özelleştirerek, sizin için en önemli sipariş metriklerini görüntüleyebilirsiniz.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="card mb-3">
+            <div class="card-header bg-light">
+                <h4 class="mb-0">Bildirimler</h4>
+            </div>
+            <div class="card-body">
+                <p>Aaro ERP, siparişlerle ilgili önemli olaylar hakkında otomatik bildirimler gönderebilir:</p>
+                <ul>
+                    <li>Yeni sipariş alındığında</li>
+                    <li>Sipariş durumu değiştiğinde</li>
+                    <li>Sipariş teslim tarihi yaklaştığında</li>
+                    <li>Sipariş geciktiğinde</li>
+                    <li>Stok seviyesi sipariş karşılamak için yetersiz olduğunda</li>
+                </ul>
+                <p>Bildirim ayarlarını Kullanıcı Ayarları > Bildirimler menüsünden özelleştirebilirsiniz.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<h2>Ek İşlemler</h2>
+
+<p>Sipariş Listesi ekranında aşağıdaki ek işlemleri gerçekleştirebilirsiniz:</p>
+
+<div class="table-responsive">
+    <table class="table table-bordered">
+        <thead class="table-light">
+            <tr>
+                <th>İşlem</th>
+                <th>Açıklama</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Sipariş Yazdırma</td>
+                <td>Siparişi yazdırmak için, sipariş detay ekranında "Yazdır" butonuna tıklayın. Farklı yazdırma şablonları arasından seçim yapabilirsiniz (standart, detaylı, özet vb.).</td>
+            </tr>
+            <tr>
+                <td>Sipariş Gönderme</td>
+                <td>Siparişi müşteriye e-posta olarak göndermek için, sipariş detay ekranında "Gönder" butonuna tıklayın. E-posta şablonunu özelleştirebilir ve ek dosyalar ekleyebilirsiniz.</td>
+            </tr>
+            <tr>
+                <td>Sipariş Onay Formu</td>
+                <td>Müşteriden sipariş onayı almak için, sipariş detay ekranında "Onay Formu" butonuna tıklayın. Sistem, müşterinin onaylayabileceği bir form oluşturur ve müşteriye e-posta ile gönderir.</td>
+            </tr>
+            <tr>
+                <td>Toplu İşlemler</td>
+                <td>Birden fazla sipariş üzerinde işlem yapmak için, Sipariş Listesi ekranında ilgili siparişleri seçin ve "Toplu İşlemler" menüsünü kullanın. Toplu onaylama, toplu iptal etme, toplu yazdırma gibi işlemler yapabilirsiniz.</td>
+            </tr>
+            <tr>
+                <td>Dışa Aktarma</td>
+                <td>Sipariş listesini Excel, PDF veya CSV formatında dışa aktarmak için, Sipariş Listesi ekranında "Dışa Aktar" butonuna tıklayın ve istediğiniz formatı seçin.</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<h2>Sık Sorulan Sorular</h2>
+
+<div class="accordion" id="faqAccordion">
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="faqOne">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseOne">
+                Bir siparişin durumunu nasıl değiştirebilirim?
+            </button>
+        </h2>
+        <div id="faqCollapseOne" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+                <p>Bir siparişin durumunu değiştirmek için:</p>
+                <ol>
+                    <li>Sipariş Listesi ekranında ilgili siparişi bulun.</li>
+                    <li>Siparişin sağ tarafındaki "Durum Değiştir" butonuna tıklayın.</li>
+                    <li>Açılan pencerede yeni durumu seçin.</li>
+                    <li>Durum değişikliği ile ilgili not ekleyin (opsiyonel).</li>
+                    <li>"Kaydet" butonuna tıklayarak durum değişikliğini onaylayın.</li>
+                </ol>
+                <div class="alert alert-warning">
+                    <i class="bi bi-exclamation-triangle"></i>
+                    <strong>Dikkat:</strong> Bazı durum değişiklikleri için gerekli yetkilere sahip olmanız gerekir. Ayrıca, bazı durum değişiklikleri otomatik işlemleri tetikleyebilir (stok hareketleri, muhasebe kayıtları vb.).
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="faqTwo">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseTwo">
+                Bir siparişe not veya ek dosya nasıl ekleyebilirim?
+            </button>
+        </h2>
+        <div id="faqCollapseTwo" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+                <p>Bir siparişe not eklemek için:</p>
+                <ol>
+                    <li>Sipariş detay ekranında "Notlar" sekmesine tıklayın.</li>
+                    <li>"Yeni Not" butonuna tıklayın.</li>
+                    <li>Not başlığını ve içeriğini girin.</li>
+                    <li>Notun görünürlüğünü belirleyin (dahili, müşteriye görünür vb.).</li>
+                    <li>"Kaydet" butonuna tıklayarak notu ekleyin.</li>
+                </ol>
+                <p>Bir siparişe ek dosya eklemek için:</p>
+                <ol>
+                    <li>Sipariş detay ekranında "Ekler" sekmesine tıklayın.</li>
+                    <li>"Dosya Ekle" butonuna tıklayın.</li>
+                    <li>Eklemek istediğiniz dosyayı seçin.</li>
+                    <li>Dosya açıklamasını girin (opsiyonel).</li>
+                    <li>Dosyanın görünürlüğünü belirleyin (dahili, müşteriye görünür vb.).</li>
+                    <li>"Yükle" butonuna tıklayarak dosyayı ekleyin.</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="faqThree">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseThree">
+                Tekrarlayan siparişleri nasıl oluşturabilirim?
+            </button>
+        </h2>
+        <div id="faqCollapseThree" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+                <p>Tekrarlayan siparişler oluşturmak için:</p>
+                <ol>
+                    <li>Satış & Pazarlama > Siparişler > Tekrarlayan Siparişler ekranına gidin.</li>
+                    <li>"Yeni Tekrarlayan Sipariş" butonuna tıklayın.</li>
+                    <li>Müşteriyi ve sipariş kalemlerini normal bir sipariş gibi girin.</li>
+                    <li>"Tekrarlama Ayarları" bölümünde:
+                        <ul>
+                            <li>Tekrarlama sıklığını belirleyin (günlük, haftalık, aylık, yıllık).</li>
+                            <li>Başlangıç ve bitiş tarihlerini belirleyin.</li>
+                            <li>Tekrarlama gününü veya tarihini belirleyin.</li>
+                        </ul>
+                    </li>
+                    <li>"Kaydet" butonuna tıklayarak tekrarlayan siparişi oluşturun.</li>
+                </ol>
+                <p>Sistem, belirlediğiniz sıklıkta otomatik olarak yeni siparişler oluşturacaktır. Tekrarlayan siparişleri Tekrarlayan Siparişler ekranından izleyebilir, düzenleyebilir veya durdurabilirsiniz.</p>
+                <div class="alert alert-primary">
+                    <i class="bi bi-lightbulb"></i>
+                    <strong>İpucu:</strong> Tekrarlayan siparişler, düzenli olarak aynı ürünleri sipariş eden müşteriler için idealdir. Örneğin, her ay belirli miktarda hammadde alan bir üretici için tekrarlayan sipariş oluşturabilirsiniz.
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="faqFour">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseFour">
+                Sipariş karşılama sürecini nasıl hızlandırabilirim?
+            </button>
+        </h2>
+        <div id="faqCollapseFour" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+                <p>Sipariş karşılama sürecini hızlandırmak için aşağıdaki yöntemleri kullanabilirsiniz:</p>
+                <ol>
+                    <li><strong>Otomatik Onay:</strong> Belirli kriterlere uyan siparişlerin (belirli bir tutar altındaki, belirli müşterilerden gelen vb.) otomatik olarak onaylanmasını sağlayabilirsiniz. Bunun için Yönetim > Sistem Ayarları > Sipariş Ayarları ekranını kullanın.</li>
+                    <li><strong>Toplu Sevkiyat:</strong> Birden fazla siparişi aynı anda sevk etmek için, Sipariş Listesi ekranında ilgili siparişleri seçin ve "Toplu İşlemler > Toplu Sevkiyat" seçeneğini kullanın.</li>
+                    <li><strong>Barkod Tarama:</strong> Sevkiyat sırasında ürünleri barkod okuyucu ile tarayarak hızlı ve hatasız sevkiyat yapabilirsiniz.</li>
+                    <li><strong>Depo Optimizasyonu:</strong> Sık sipariş edilen ürünleri deponun kolay erişilebilir bölgelerine yerleştirerek toplama süresini kısaltabilirsiniz.</li>
+                    <li><strong>Öncelik Belirleme:</strong> Siparişlere öncelik atayarak, önemli veya acil siparişlerin önce karşılanmasını sağlayabilirsiniz.</li>
+                </ol>
+                <div class="alert alert-primary">
+                    <i class="bi bi-lightbulb"></i>
+                    <strong>İpucu:</strong> Sipariş karşılama performansınızı düzenli olarak analiz edin ve darboğazları belirleyin. Sipariş Karşılama Performansı Raporu, bu analiz için faydalı olacaktır.
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<h2>İlgili Konular</h2>
+
+<ul>
+    <li><a href="?module=satis-pazarlama&page=satis-faturasi">Satış Faturası</a></li>
+    <li><a href="?module=satis-pazarlama&page=satis-irsaliyesi">Satış İrsaliyesi</a></li>
+    <li><a href="?module=satis-pazarlama&page=verilen-teklif">Verilen Teklif</a></li>
+    <li><a href="?module=satis-pazarlama&page=fiyat-listesi">Fiyat Listesi</a></li>
+    <li><a href="?module=stok&page=stok-hareketleri">Stok Hareketleri</a></li>
+    <li><a href="?module=satis-pazarlama&page=satis-raporlari">Satış Raporları</a></li>
+</ul>

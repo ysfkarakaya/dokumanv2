@@ -1,0 +1,7 @@
+{
+    "name": "Müşteri & Satıcı",
+    "icon": "bi-people",
+    "description": "Müşteri ve satıcı yönetimi ile ilgili dokümantasyon",
+    "version": "1.0.0",
+    "order": 1
+}

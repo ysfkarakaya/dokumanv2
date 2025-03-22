@@ -1,0 +1,204 @@
+<!-- Meta Bilgileri -->
+<meta name="title" content="Stok Kartı Listesi">
+<meta name="icon" content="bi-list-ul">
+<meta name="url" content="/stok/stok-karti-listesi">
+<meta name="lastUpdate" content="12.03.2025">
+
+<h1>Stok Kartı Listesi</h1>
+
+<p>Bu dokümantasyon, Aaro ERP sisteminde stok kartı listesi ekranını ve kullanımını açıklamaktadır.</p>
+
+<div class="alert alert-info">
+    <i class="bi bi-info-circle"></i>
+    <strong>Erişim Linki:</strong> <a href="https://erp.aaro.com.tr/Stok/Liste" target="_blank">erp.aaro.com.tr/Stok/Liste</a>
+</div>
+
+<h2>Stok Kartı Listesine Erişim</h2>
+
+<p>Stok kartı listesine aşağıdaki yöntemlerle erişebilirsiniz:</p>
+
+<div class="row">
+    <div class="col-md-4">
+        <div class="card mb-3">
+            <div class="card-header">
+                <i class="bi bi-search"></i> Arama Motoru ile
+            </div>
+            <div class="card-body">
+                <p>Sol sekmede Aaro kullanıcı bilgilerinin hemen altındaki arama motorundan "stok kartı listesi" şeklinde aratarak ulaşım sağlayabilirsiniz.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card mb-3">
+            <div class="card-header">
+                <i class="bi bi-list-ul"></i> Stok Modülü Üzerinden
+            </div>
+            <div class="card-body">
+                <p>Sol menüden <strong>Stok -> Stok Modülü -> Stok Kartı Listesi</strong> şeklinde ulaşım sağlayabilirsiniz.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card mb-3">
+            <div class="card-header">
+                <i class="bi bi-folder"></i> Kartlar Menüsü Üzerinden
+            </div>
+            <div class="card-body">
+                <p>Sol menüden <strong>Stok -> Stok Modülü -> Kartlar -> Stok Kartı Listesi</strong> şeklinde ulaşım sağlayabilirsiniz.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<h2>Stok Kartı Listesi Tanımı</h2>
+
+<p>Stok kartı listesi, sistemde tanımlı tüm stok kartlarını görüntüleyebileceğiniz, yönetebileceğiniz ve yeni stok kartları ekleyebileceğiniz bir ekrandır. Bu ekran üzerinden:</p>
+
+<div class="row">
+    <div class="col-md-4">
+        <div class="card mb-3">
+            <div class="card-header">
+                <i class="bi bi-eye"></i> Görüntüleme
+            </div>
+            <div class="card-body">
+                <p>Stok kartlarının genel bilgilerini bu sayfadan görüntüleyebilirsiniz. Detaylı bilgi için <a href="?module=stok&page=stok-karti">Stok Kartı</a> sayfasına bakabilirsiniz.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card mb-3">
+            <div class="card-header">
+                <i class="bi bi-cash-stack"></i> Bakiye Takibi
+            </div>
+            <div class="card-body">
+                <p>Stok kartlarının güncel bakiyelerini görüntüleyebilirsiniz.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card mb-3">
+            <div class="card-header">
+                <i class="bi bi-pencil-square"></i> Yönetim
+            </div>
+            <div class="card-body">
+                <p>Mevcut stok kartlarını düzenleyebilir, silebilir veya yeni stok kartı ekleyebilirsiniz.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="alert alert-primary">
+    <i class="bi bi-lightbulb"></i>
+    <strong>İpucu:</strong> Stok kartı listesinde, stok kartlarını hızlıca bulmak için filtreleme ve sıralama özelliklerini kullanabilirsiniz.
+</div>
+
+<h2>Stok Kartı Listesi Özellikleri</h2>
+
+<div class="accordion" id="stockListAccordion">
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="headingFiltering">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFiltering">
+                Filtreleme
+            </button>
+        </h2>
+        <div id="collapseFiltering" class="accordion-collapse collapse show" data-bs-parent="#stockListAccordion">
+            <div class="accordion-body">
+                <p>Sayfanın üst kısmında bulunan filtreleme özelliği ile gelen veriyi istediğiniz şekilde sınırlandırabilirsiniz. Filtreleme seçenekleri şunları içerir:</p>
+                <ul>
+                    <li><strong>Stok Kodu:</strong> Belirli bir stok koduna göre filtreleme</li>
+                    <li><strong>Stok Adı:</strong> Stok adına göre filtreleme</li>
+                    <li><strong>Kategori:</strong> Stok kategorisine göre filtreleme</li>
+                    <li><strong>Birim:</strong> Ölçü birimine göre filtreleme</li>
+                    <li><strong>Durum:</strong> Aktif/Pasif durumuna göre filtreleme</li>
+                    <li><strong>Tarih Aralığı:</strong> Oluşturma veya güncelleme tarihine göre filtreleme</li>
+                </ul>
+                <p>Filtreleme yapmak için ilgili filtreleme alanlarını doldurun ve "Filtrele" butonuna tıklayın. Filtreleri temizlemek için "Temizle" butonunu kullanabilirsiniz.</p>
+            </div>
+        </div>
+    </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="headingListing">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseListing">
+                Özel Listeleme
+            </button>
+        </h2>
+        <div id="collapseListing" class="accordion-collapse collapse" data-bs-parent="#stockListAccordion">
+            <div class="accordion-body">
+                <p>Sayfadaki listeyi özel listeleme özellikleri ile yönetebilirsiniz:</p>
+                <ul>
+                    <li><strong>Sıralama:</strong> Herhangi bir sütun başlığına tıklayarak listeyi o sütuna göre artan veya azalan şekilde sıralayabilirsiniz.</li>
+                    <li><strong>Sütun Boyutlandırma:</strong> Sütun başlıklarının kenarlarını sürükleyerek sütun genişliklerini ayarlayabilirsiniz.</li>
+                    <li><strong>Sayfalama:</strong> Listenin alt kısmındaki sayfa numaralarını kullanarak sayfalar arasında geçiş yapabilirsiniz.</li>
+                    <li><strong>Sayfa Boyutu:</strong> Sayfada gösterilecek kayıt sayısını ayarlayabilirsiniz.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="headingActions">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseActions">
+                İşlemler
+            </button>
+        </h2>
+        <div id="collapseActions" class="accordion-collapse collapse" data-bs-parent="#stockListAccordion">
+            <div class="accordion-body">
+                <p>Stok kartı listesinde her bir stok kartı için aşağıdaki işlemleri gerçekleştirebilirsiniz:</p>
+                <ul>
+                    <li><strong>Görüntüleme:</strong> Stok kartının detaylarını görüntülemek için stok kartı satırına tıklayabilirsiniz.</li>
+                    <li><strong>Düzenleme:</strong> Stok kartını düzenlemek için satır sonundaki düzenleme ikonuna tıklayabilirsiniz.</li>
+                    <li><strong>Silme:</strong> Stok kartını silmek için satır sonundaki silme ikonuna tıklayabilirsiniz.</li>
+                    <li><strong>Hareketler:</strong> Stok kartının hareketlerini görüntülemek için "Hareketler" butonuna tıklayabilirsiniz.</li>
+                    <li><strong>Depo Miktarları:</strong> Stok kartının depo bazlı miktarlarını görüntülemek için "Depo Miktarları" butonuna tıklayabilirsiniz.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<h2>Ek İşlemler</h2>
+
+<p>Sayfanın sağ üst köşesinde bulunan, alt alta üç çizgi şeklindeki düğme ile ek işlemlere erişebilirsiniz:</p>
+
+<div class="row">
+    <div class="col-md-4">
+        <div class="card mb-3">
+            <div class="card-header">
+                <i class="bi bi-star"></i> Ana Sayfaya Kısayol Olarak Ekle
+            </div>
+            <div class="card-body">
+                <p>Stok kartı listesi sayfasını ana sayfanıza kısayol olarak ekleyebilirsiniz.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card mb-3">
+            <div class="card-header">
+                <i class="bi bi-grid-3x3"></i> Grid Sütunları Ayarla
+            </div>
+            <div class="card-body">
+                <p>Listede görüntülenecek sütunları ve sıralamalarını özelleştirebilirsiniz.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card mb-3">
+            <div class="card-header">
+                <i class="bi bi-file-excel"></i> Listeyi Excele Aktar
+            </div>
+            <div class="card-body">
+                <p>Stok kartı listesini Excel formatında dışa aktarabilirsiniz.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<h2>Yeni Stok Kartı Ekleme</h2>
+
+<p>Stok kartı listesi ekranından yeni bir stok kartı eklemek için sayfanın üst kısmında bulunan "Yeni Stok Kartı" butonuna tıklayabilirsiniz. Bu işlem sizi stok kartı ekleme formuna yönlendirecektir.</p>
+
+<p>Stok kartı ekleme hakkında detaylı bilgi için <a href="?module=stok&page=stok-karti">Stok Kartı</a> sayfasına bakabilirsiniz.</p>
+
+<div class="alert alert-secondary mt-4">
+    <i class="bi bi-question-circle"></i>
+    <strong>Yardıma mı ihtiyacınız var?</strong> Daha fazla yardım için <a href="?module=destek&page=iletisim">Destek Ekibi</a> ile iletişime geçebilirsiniz.
+</div>

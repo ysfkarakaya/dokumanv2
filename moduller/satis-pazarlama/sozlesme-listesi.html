@@ -1,0 +1,748 @@
+<!-- Meta Bilgileri -->
+<meta name="title" content="Sözleşme Listesi">
+<meta name="icon" content="bi-file-earmark-check">
+<meta name="url" content="/satis-pazarlama/sozlesme-listesi">
+<meta name="lastUpdate" content="12.03.2025">
+
+<h1>Sözleşme Listesi</h1>
+
+<p>Bu dokümantasyon, Aaro ERP sisteminde müşterilerle yapılan sözleşmelerin listelendiği, filtrelendiği ve yönetildiği Sözleşme Listesi ekranını açıklamaktadır.</p>
+
+<div class="alert alert-info">
+    <i class="bi bi-info-circle"></i>
+    <strong>Bilgi:</strong> Sözleşme Listesi ekranında müşterilerle yapılan sözleşmeleri görüntüleyebilir, filtreleme yapabilir, durumlarını takip edebilir ve yeni sözleşme ekleyebilirsiniz.
+</div>
+
+<h2>Sözleşme Listesine Erişim</h2>
+
+<p>Sözleşme Listesi ekranına aşağıdaki yöntemlerden biriyle erişebilirsiniz:</p>
+
+<div class="row">
+    <div class="col-md-4">
+        <div class="card mb-3">
+            <div class="card-header">
+                <i class="bi bi-search"></i> Arama Motoru ile
+            </div>
+            <div class="card-body">
+                <p>Sol sekmede Aaro kullanıcı bilgilerinin hemen altındaki arama motorundan "sözleşme listesi" şeklinde aratarak ulaşım sağlayabilirsiniz.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card mb-3">
+            <div class="card-header">
+                <i class="bi bi-list-ul"></i> Menü Üzerinden
+            </div>
+            <div class="card-body">
+                <p>Sol menüden <strong>Satış & Pazarlama -> Sözleşmeler -> Sözleşme Listesi</strong> üzerinden ulaşım sağlayabilirsiniz.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card mb-3">
+            <div class="card-header">
+                <i class="bi bi-link"></i> Doğrudan Erişim
+            </div>
+            <div class="card-body">
+                <p>Doğrudan <a href="erp.aaro.com.tr/Sozlesme/Liste" target="_blank">erp.aaro.com.tr/Sozlesme/Liste</a> adresine giderek erişim sağlayabilirsiniz.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<h2>Sözleşme Listesi Ekranı</h2>
+
+<p>Sözleşme Listesi ekranında müşterilerle yapılan sözleşmeleri görüntüleyebilir, filtreleme yapabilir, durumlarını takip edebilir ve yeni sözleşme ekleyebilirsiniz.</p>
+
+<div class="card mb-4">
+    <div class="card-header bg-light">
+        <h3 class="mb-0">Ekran Bileşenleri</h3>
+    </div>
+    <div class="card-body">
+        <div class="row">
+            <div class="col-md-6">
+                <h4>Filtre Bölümü</h4>
+                <p>Ekranın üst kısmında bulunan filtre bölümü, sözleşmeleri çeşitli kriterlere göre filtrelemenizi sağlar:</p>
+                <ul>
+                    <li><strong>Tarih Aralığı:</strong> Belirli bir tarih aralığındaki sözleşmeleri görüntülemek için kullanılır.</li>
+                    <li><strong>Müşteri:</strong> Belirli bir müşteriye ait sözleşmeleri görüntülemek için kullanılır.</li>
+                    <li><strong>Sözleşme Durumu:</strong> Belirli bir durumdaki sözleşmeleri görüntülemek için kullanılır (Taslak, Onay Bekliyor, Aktif, Sona Erdi, İptal Edildi vb.).</li>
+                    <li><strong>Sözleşme No:</strong> Belirli bir sözleşme numarasına sahip sözleşmeyi bulmak için kullanılır.</li>
+                    <li><strong>Tutar Aralığı:</strong> Belirli bir tutar aralığındaki sözleşmeleri görüntülemek için kullanılır.</li>
+                    <li><strong>Sözleşme Tipi:</strong> Belirli bir tipteki sözleşmeleri görüntülemek için kullanılır (Satış, Hizmet, Bakım, Abonelik vb.).</li>
+                </ul>
+            </div>
+            <div class="col-md-6">
+                <h4>Liste Bölümü</h4>
+                <p>Ekranın orta kısmında bulunan liste bölümü, filtrelere uygun sözleşmeleri tablo halinde gösterir:</p>
+                <ul>
+                    <li><strong>Sözleşme No:</strong> Sözleşme numarası</li>
+                    <li><strong>Tarih:</strong> Sözleşmenin imzalandığı tarih</li>
+                    <li><strong>Müşteri:</strong> Sözleşmenin yapıldığı müşteri</li>
+                    <li><strong>Sözleşme Tipi:</strong> Sözleşmenin tipi</li>
+                    <li><strong>Başlangıç Tarihi:</strong> Sözleşmenin başlangıç tarihi</li>
+                    <li><strong>Bitiş Tarihi:</strong> Sözleşmenin bitiş tarihi</li>
+                    <li><strong>Tutar:</strong> Sözleşme tutarı</li>
+                    <li><strong>Para Birimi:</strong> Sözleşmenin para birimi</li>
+                    <li><strong>Durum:</strong> Sözleşmenin güncel durumu</li>
+                    <li><strong>İşlemler:</strong> Sözleşme üzerinde yapılabilecek işlemler (Görüntüle, Düzenle, İptal Et vb.)</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<h2>Sözleşme Durumları</h2>
+
+<p>Aaro ERP'de sözleşmeler aşağıdaki durumlarda olabilir:</p>
+
+<div class="table-responsive">
+    <table class="table table-bordered">
+        <thead class="table-light">
+            <tr>
+                <th>Durum</th>
+                <th>Açıklama</th>
+                <th>Renk Kodu</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><span class="badge bg-secondary">Taslak</span></td>
+                <td>Sözleşme henüz taslak aşamasında, düzenleme yapılabilir.</td>
+                <td><code>#6c757d</code></td>
+            </tr>
+            <tr>
+                <td><span class="badge bg-warning">Onay Bekliyor</span></td>
+                <td>Sözleşme hazırlandı, müşteri onayı bekleniyor.</td>
+                <td><code>#ffc107</code></td>
+            </tr>
+            <tr>
+                <td><span class="badge bg-success">Aktif</span></td>
+                <td>Sözleşme imzalandı ve yürürlükte.</td>
+                <td><code>#28a745</code></td>
+            </tr>
+            <tr>
+                <td><span class="badge bg-info">Yenileme Bekliyor</span></td>
+                <td>Sözleşme bitiş tarihine yaklaşıyor, yenileme süreci başlatılabilir.</td>
+                <td><code>#17a2b8</code></td>
+            </tr>
+            <tr>
+                <td><span class="badge bg-primary">Sona Erdi</span></td>
+                <td>Sözleşme süresi doldu ve normal şekilde sona erdi.</td>
+                <td><code>#007bff</code></td>
+            </tr>
+            <tr>
+                <td><span class="badge bg-danger">İptal Edildi</span></td>
+                <td>Sözleşme iptal edildi.</td>
+                <td><code>#dc3545</code></td>
+            </tr>
+            <tr>
+                <td><span class="badge bg-dark">Arşivlendi</span></td>
+                <td>Sözleşme arşive kaldırıldı.</td>
+                <td><code>#343a40</code></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<h2>Sözleşme Tipleri</h2>
+
+<p>Aaro ERP'de aşağıdaki sözleşme tiplerini kullanabilirsiniz:</p>
+
+<div class="row">
+    <div class="col-md-4">
+        <div class="card mb-3">
+            <div class="card-header bg-light">
+                <h4 class="mb-0">Satış Sözleşmesi</h4>
+            </div>
+            <div class="card-body">
+                <p>Ürün satışı için yapılan sözleşmelerdir. Satılacak ürünlerin listesi, fiyatları, teslimat koşulları, ödeme şartları gibi bilgileri içerir.</p>
+                <p><strong>Kullanım Alanları:</strong> Toplu ürün satışları, proje bazlı satışlar, özel üretim ürünler.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card mb-3">
+            <div class="card-header bg-light">
+                <h4 class="mb-0">Hizmet Sözleşmesi</h4>
+            </div>
+            <div class="card-body">
+                <p>Belirli bir hizmetin sunulması için yapılan sözleşmelerdir. Hizmetin kapsamı, süresi, fiyatı, hizmet seviyesi anlaşması (SLA) gibi bilgileri içerir.</p>
+                <p><strong>Kullanım Alanları:</strong> Danışmanlık hizmetleri, proje yönetimi, yazılım geliştirme, tasarım hizmetleri.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card mb-3">
+            <div class="card-header bg-light">
+                <h4 class="mb-0">Bakım Sözleşmesi</h4>
+            </div>
+            <div class="card-body">
+                <p>Satılan ürünlerin bakımı için yapılan sözleşmelerdir. Bakım kapsamı, periyodu, müdahale süreleri, yedek parça politikası gibi bilgileri içerir.</p>
+                <p><strong>Kullanım Alanları:</strong> Makine bakımı, yazılım bakımı, teknik servis hizmetleri.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <div class="card mb-3">
+            <div class="card-header bg-light">
+                <h4 class="mb-0">Abonelik Sözleşmesi</h4>
+            </div>
+            <div class="card-body">
+                <p>Düzenli olarak sunulan hizmetler için yapılan sözleşmelerdir. Abonelik süresi, fiyatı, yenileme koşulları, iptal şartları gibi bilgileri içerir.</p>
+                <p><strong>Kullanım Alanları:</strong> Yazılım abonelikleri, düzenli bakım hizmetleri, periyodik kontroller.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card mb-3">
+            <div class="card-header bg-light">
+                <h4 class="mb-0">Çerçeve Sözleşme</h4>
+            </div>
+            <div class="card-body">
+                <p>Uzun vadeli iş ilişkisi için genel şartların belirlendiği sözleşmelerdir. Genel çalışma koşulları, fiyatlandırma politikası, teslimat ve ödeme şartları gibi bilgileri içerir.</p>
+                <p><strong>Kullanım Alanları:</strong> Düzenli alım yapan müşteriler, stratejik iş ortaklıkları, tedarikçi anlaşmaları.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card mb-3">
+            <div class="card-header bg-light">
+                <h4 class="mb-0">Özel Sözleşme</h4>
+            </div>
+            <div class="card-body">
+                <p>Standart sözleşme tiplerinin dışında kalan, özel koşullar içeren sözleşmelerdir. İhtiyaca göre özelleştirilebilir.</p>
+                <p><strong>Kullanım Alanları:</strong> Karma hizmetler, özel projeler, kompleks iş birlikleri.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<h2>Yeni Sözleşme Oluşturma</h2>
+
+<p>Yeni bir sözleşme oluşturmak için aşağıdaki adımları izleyebilirsiniz:</p>
+
+<div class="card mb-4">
+    <div class="card-header bg-primary text-white">
+        <h3 class="mb-0"><i class="bi bi-plus-circle"></i> Yeni Sözleşme Oluşturma</h3>
+    </div>
+    <div class="card-body">
+        <ol>
+            <li>Sözleşme Listesi ekranında "Yeni Sözleşme" butonuna tıklayın.</li>
+            <li>Açılan formda sözleşme tipini seçin (Satış, Hizmet, Bakım, Abonelik vb.).</li>
+            <li>Sözleşme bilgilerini doldurun:
+                <ul>
+                    <li><strong>Müşteri:</strong> Sözleşmenin yapılacağı müşteriyi seçin.</li>
+                    <li><strong>Sözleşme Tarihi:</strong> Sözleşmenin imzalandığı/imzalanacağı tarihi belirleyin.</li>
+                    <li><strong>Başlangıç Tarihi:</strong> Sözleşmenin yürürlüğe gireceği tarihi belirleyin.</li>
+                    <li><strong>Bitiş Tarihi:</strong> Sözleşmenin sona ereceği tarihi belirleyin.</li>
+                    <li><strong>Para Birimi:</strong> Sözleşmenin para birimini seçin.</li>
+                    <li><strong>Ödeme Şekli:</strong> Ödeme şeklini belirleyin.</li>
+                    <li><strong>Açıklama:</strong> Sözleşme ile ilgili açıklamaları girin.</li>
+                </ul>
+            </li>
+            <li>Sözleşme kalemlerini ekleyin (sözleşme tipine göre değişir):
+                <ul>
+                    <li><strong>Satış Sözleşmesi için:</strong> Ürünleri, miktarları ve fiyatları ekleyin.</li>
+                    <li><strong>Hizmet Sözleşmesi için:</strong> Hizmetleri, süreleri ve fiyatları ekleyin.</li>
+                    <li><strong>Bakım Sözleşmesi için:</strong> Bakım yapılacak ürünleri ve bakım koşullarını ekleyin.</li>
+                    <li><strong>Abonelik Sözleşmesi için:</strong> Abonelik paketini, süresini ve fiyatını ekleyin.</li>
+                </ul>
+            </li>
+            <li>Sözleşme şartlarını ve koşullarını belirleyin:
+                <ul>
+                    <li>Standart şablonlardan birini seçebilir veya özel şartlar ekleyebilirsiniz.</li>
+                    <li>Gerekirse maddeleri düzenleyebilir veya yeni maddeler ekleyebilirsiniz.</li>
+                </ul>
+            </li>
+            <li>Sözleşme eklerini ekleyin (gerekirse):
+                <ul>
+                    <li>Teknik şartname, çizimler, fiyat listeleri vb. dokümanları ekleyebilirsiniz.</li>
+                </ul>
+            </li>
+            <li>"Kaydet" butonuna tıklayarak sözleşmeyi oluşturun.</li>
+        </ol>
+    </div>
+</div>
+
+<h2>Sözleşme İşlemleri</h2>
+
+<p>Sözleşme Listesi ekranında her bir sözleşme için aşağıdaki işlemleri gerçekleştirebilirsiniz:</p>
+
+<div class="accordion" id="sozlesmeIslemleriAccordion">
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="headingOne">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
+                Sözleşme Görüntüleme
+            </button>
+        </h2>
+        <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#sozlesmeIslemleriAccordion">
+            <div class="accordion-body">
+                <p>Bir sözleşmeyi görüntülemek için:</p>
+                <ol>
+                    <li>Sözleşme Listesi ekranında ilgili sözleşmeyi bulun.</li>
+                    <li>Sözleşmenin sağ tarafındaki "Görüntüle" butonuna tıklayın veya sözleşme satırına çift tıklayın.</li>
+                    <li>Sözleşme detayları ekranda görüntülenecektir.</li>
+                </ol>
+                <p>Sözleşme detay ekranında aşağıdaki bilgileri görebilirsiniz:</p>
+                <ul>
+                    <li>Sözleşme başlık bilgileri (sözleşme no, tarih, müşteri vb.)</li>
+                    <li>Sözleşme kalemleri (ürün/hizmet, miktar, birim fiyat, tutar vb.)</li>
+                    <li>Sözleşme şartları ve koşulları</li>
+                    <li>Sözleşme ekleri</li>
+                    <li>Sözleşme durumu ve geçmiş durum değişiklikleri</li>
+                    <li>İlişkili belgeler (sipariş, irsaliye, fatura vb.)</li>
+                    <li>Sözleşme notları ve açıklamalar</li>
+                </ul>
+                <div class="alert alert-primary">
+                    <i class="bi bi-lightbulb"></i>
+                    <strong>İpucu:</strong> Sözleşme detay ekranında, sözleşmenin PDF versiyonunu görüntüleyebilir ve yazdırabilirsiniz. Bunun için "PDF Görüntüle" butonunu kullanabilirsiniz.
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="headingTwo">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+                Sözleşme Düzenleme
+            </button>
+        </h2>
+        <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#sozlesmeIslemleriAccordion">
+            <div class="accordion-body">
+                <p>Bir sözleşmeyi düzenlemek için:</p>
+                <ol>
+                    <li>Sözleşme Listesi ekranında ilgili sözleşmeyi bulun.</li>
+                    <li>Sözleşmenin sağ tarafındaki "Düzenle" butonuna tıklayın.</li>
+                    <li>Sözleşme bilgilerini düzenleyin:
+                        <ul>
+                            <li>Başlık bilgilerini (tarih, başlangıç tarihi, bitiş tarihi vb.) değiştirebilirsiniz.</li>
+                            <li>Mevcut kalemleri düzenleyebilirsiniz (miktar, fiyat vb.).</li>
+                            <li>Yeni kalemler ekleyebilirsiniz.</li>
+                            <li>Mevcut kalemleri silebilirsiniz.</li>
+                            <li>Sözleşme şartlarını ve koşullarını düzenleyebilirsiniz.</li>
+                            <li>Sözleşme eklerini ekleyebilir veya kaldırabilirsiniz.</li>
+                        </ul>
+                    </li>
+                    <li>"Kaydet" butonuna tıklayarak değişiklikleri kaydedin.</li>
+                </ol>
+                <div class="alert alert-warning">
+                    <i class="bi bi-exclamation-triangle"></i>
+                    <strong>Dikkat:</strong> Aktif durumdaki sözleşmelerde düzenleme yapabilmeniz için gerekli yetkilere sahip olmanız gerekir. Ayrıca, aktif sözleşmelerde yapılan değişiklikler için revizyon kaydı oluşturulur ve değişiklik geçmişi tutulur.
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="headingThree">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree">
+                Sözleşme Onaylama
+            </button>
+        </h2>
+        <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#sozlesmeIslemleriAccordion">
+            <div class="accordion-body">
+                <p>Taslak durumundaki bir sözleşmeyi onaylamak için:</p>
+                <ol>
+                    <li>Sözleşme Listesi ekranında ilgili sözleşmeyi bulun.</li>
+                    <li>Sözleşmenin sağ tarafındaki "Onayla" butonuna tıklayın.</li>
+                    <li>Açılan pencerede onay notunu girin (opsiyonel).</li>
+                    <li>"Onayla" butonuna tıklayarak sözleşmeyi onaylayın.</li>
+                </ol>
+                <p>Sözleşme onaylandığında aşağıdaki işlemler gerçekleşir:</p>
+                <ul>
+                    <li>Sözleşmenin durumu "Onay Bekliyor" olarak güncellenir.</li>
+                    <li>Müşteriye sözleşme onay bildirimi gönderilebilir (ayarlara bağlı olarak).</li>
+                    <li>İlgili departmanlara bildirim gönderilir.</li>
+                </ul>
+                <div class="alert alert-primary">
+                    <i class="bi bi-lightbulb"></i>
+                    <strong>İpucu:</strong> Sözleşme onay sürecini hızlandırmak için, sözleşmeyi PDF formatında müşteriye e-posta ile gönderebilirsiniz. Bunun için sözleşme detay ekranında "Gönder" butonunu kullanabilirsiniz.
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="headingFour">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour">
+                Sözleşme Aktivasyon
+            </button>
+        </h2>
+        <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#sozlesmeIslemleriAccordion">
+            <div class="accordion-body">
+                <p>Onay bekleyen bir sözleşmeyi aktif hale getirmek için:</p>
+                <ol>
+                    <li>Sözleşme Listesi ekranında ilgili sözleşmeyi bulun.</li>
+                    <li>Sözleşmenin sağ tarafındaki "Aktifleştir" butonuna tıklayın.</li>
+                    <li>Açılan pencerede aktivasyon bilgilerini girin:
+                        <ul>
+                            <li>İmza tarihi</li>
+                            <li>İmzalayan kişiler</li>
+                            <li>Aktivasyon notu (opsiyonel)</li>
+                        </ul>
+                    </li>
+                    <li>Gerekirse imzalı sözleşme kopyasını yükleyin.</li>
+                    <li>"Aktifleştir" butonuna tıklayarak sözleşmeyi aktif hale getirin.</li>
+                </ol>
+                <p>Sözleşme aktifleştirildiğinde aşağıdaki işlemler gerçekleşir:</p>
+                <ul>
+                    <li>Sözleşmenin durumu "Aktif" olarak güncellenir.</li>
+                    <li>Sözleşme başlangıç tarihi itibariyle yürürlüğe girer.</li>
+                    <li>İlgili departmanlara bildirim gönderilir.</li>
+                    <li>Sözleşmeye bağlı sipariş, irsaliye, fatura gibi belgeler oluşturulabilir.</li>
+                </ul>
+                <div class="alert alert-primary">
+                    <i class="bi bi-lightbulb"></i>
+                    <strong>İpucu:</strong> Sözleşme aktivasyonu sırasında, sözleşmeye bağlı otomatik görevler oluşturabilirsiniz. Örneğin, periyodik bakım sözleşmesi için bakım takvimi oluşturabilirsiniz.
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="headingFive">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive">
+                Sözleşme Yenileme
+            </button>
+        </h2>
+        <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#sozlesmeIslemleriAccordion">
+            <div class="accordion-body">
+                <p>Bitiş tarihine yaklaşan veya sona eren bir sözleşmeyi yenilemek için:</p>
+                <ol>
+                    <li>Sözleşme Listesi ekranında ilgili sözleşmeyi bulun.</li>
+                    <li>Sözleşmenin sağ tarafındaki "Yenile" butonuna tıklayın.</li>
+                    <li>Açılan pencerede yenileme bilgilerini girin:
+                        <ul>
+                            <li>Yeni başlangıç tarihi</li>
+                            <li>Yeni bitiş tarihi</li>
+                            <li>Fiyat güncellemeleri (gerekirse)</li>
+                            <li>Yenileme notu (opsiyonel)</li>
+                        </ul>
+                    </li>
+                    <li>Gerekirse sözleşme şartlarını ve koşullarını güncelleyin.</li>
+                    <li>"Yenile" butonuna tıklayarak yeni sözleşmeyi oluşturun.</li>
+                </ol>
+                <p>Sözleşme yenilendiğinde aşağıdaki işlemler gerçekleşir:</p>
+                <ul>
+                    <li>Eski sözleşmenin durumu "Sona Erdi" olarak güncellenir.</li>
+                    <li>Yeni sözleşme oluşturulur ve durumu "Taslak" olarak ayarlanır.</li>
+                    <li>Yeni sözleşme, eski sözleşme ile ilişkilendirilir.</li>
+                    <li>Müşteriye yenileme bildirimi gönderilebilir (ayarlara bağlı olarak).</li>
+                </ul>
+                <div class="alert alert-primary">
+                    <i class="bi bi-lightbulb"></i>
+                    <strong>İpucu:</strong> Sözleşme yenileme işlemini, bitiş tarihinden belirli bir süre önce (örneğin 30 gün) başlatabilirsiniz. Sistem, bitiş tarihine yaklaşan sözleşmeler için otomatik hatırlatmalar gönderebilir.
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="headingSix">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix">
+                Sözleşme İptal Etme
+            </button>
+        </h2>
+        <div id="collapseSix" class="accordion-collapse collapse" data-bs-parent="#sozlesmeIslemleriAccordion">
+            <div class="accordion-body">
+                <p>Bir sözleşmeyi iptal etmek için:</p>
+                <ol>
+                    <li>Sözleşme Listesi ekranında ilgili sözleşmeyi bulun.</li>
+                    <li>Sözleşmenin sağ tarafındaki "İptal Et" butonuna tıklayın.</li>
+                    <li>Açılan pencerede iptal bilgilerini girin:
+                        <ul>
+                            <li>İptal tarihi</li>
+                            <li>İptal gerekçesi</li>
+                            <li>İptal koşulları (ceza bedeli, iade koşulları vb.)</li>
+                        </ul>
+                    </li>
+                    <li>Gerekirse iptal belgelerini yükleyin.</li>
+                    <li>"İptal Et" butonuna tıklayarak sözleşmeyi iptal edin.</li>
+                </ol>
+                <p>Sözleşme iptal edildiğinde aşağıdaki işlemler gerçekleşir:</p>
+                <ul>
+                    <li>Sözleşmenin durumu "İptal Edildi" olarak güncellenir.</li>
+                    <li>İptal tarihi itibariyle sözleşme yürürlükten kalkar.</li>
+                    <li>İptal koşullarına göre ceza bedeli veya iade işlemleri gerçekleştirilebilir.</li>
+                    <li>İlgili departmanlara bildirim gönderilir.</li>
+                </ul>
+                <div class="alert alert-warning">
+                    <i class="bi bi-exclamation-triangle"></i>
+                    <strong>Dikkat:</strong> Sözleşme iptal işlemi geri alınamaz. İptal işlemi öncesinde, sözleşme şartlarında belirtilen iptal koşullarını kontrol etmeniz ve gerekli onayları almanız önerilir.
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<h2>Sözleşme Takibi</h2>
+
+<p>Aaro ERP'de sözleşmelerin durumunu ve ilerlemesini takip etmek için aşağıdaki yöntemleri kullanabilirsiniz:</p>
+
+<div class="row">
+    <div class="col-md-6">
+        <div class="card mb-3">
+            <div class="card-header bg-light">
+                <h4 class="mb-0">Sözleşme Listesi Ekranı</h4>
+            </div>
+            <div class="card-body">
+                <p>Sözleşme Listesi ekranında, sözleşmelerin durumunu renk kodları ve durum etiketleri ile hızlıca görebilirsiniz. Ayrıca, "Durum" filtresini kullanarak belirli durumdaki sözleşmeleri listeleyebilirsiniz.</p>
+                <p>Sözleşme detay ekranında, sözleşmenin geçmiş durum değişikliklerini, revizyon geçmişini ve ilişkili belgeleri görüntüleyebilirsiniz.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="card mb-3">
+            <div class="card-header bg-light">
+                <h4 class="mb-0">Sözleşme Takip Raporları</h4>
+            </div>
+            <div class="card-body">
+                <p>Aaro ERP'de sözleşmeleri takip etmek için aşağıdaki raporları kullanabilirsiniz:</p>
+                <ul>
+                    <li><strong>Aktif Sözleşmeler Raporu:</strong> Yürürlükte olan sözleşmeleri listeler.</li>
+                    <li><strong>Sona Erecek Sözleşmeler Raporu:</strong> Belirli bir süre içinde sona erecek sözleşmeleri listeler.</li>
+                    <li><strong>Sözleşme Performansı Raporu:</strong> Sözleşmelerin performansını ve karlılığını gösterir.</li>
+                    <li><strong>Sözleşme Yenileme Oranı Raporu:</strong> Yenilenen sözleşmelerin oranını gösterir.</li>
+                </ul>
+                <p>Bu raporlara Satış & Pazarlama > Raporlar menüsünden erişebilirsiniz.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-6">
+        <div class="card mb-3">
+            <div class="card-header bg-light">
+                <h4 class="mb-0">Gösterge Paneli</h4>
+            </div>
+            <div class="card-body">
+                <p>Ana ekrandaki gösterge panelinde, sözleşmelerle ilgili önemli metrikleri ve grafikleri görüntüleyebilirsiniz:</p>
+                <ul>
+                    <li>Aktif sözleşmeler sayısı ve tutarı</li>
+                    <li>Sona erecek sözleşmeler sayısı ve tutarı</li>
+                    <li>Sözleşme durumu dağılımı</li>
+                    <li>Sözleşme tipi dağılımı</li>
+                    <li>Sözleşme trendi (aylık, yıllık)</li>
+                </ul>
+                <p>Gösterge panelini özelleştirerek, sizin için en önemli sözleşme metriklerini görüntüleyebilirsiniz.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="card mb-3">
+            <div class="card-header bg-light">
+                <h4 class="mb-0">Bildirimler</h4>
+            </div>
+            <div class="card-body">
+                <p>Aaro ERP, sözleşmelerle ilgili önemli olaylar hakkında otomatik bildirimler gönderebilir:</p>
+                <ul>
+                    <li>Yeni sözleşme oluşturulduğunda</li>
+                    <li>Sözleşme durumu değiştiğinde</li>
+                    <li>Sözleşme bitiş tarihi yaklaştığında</li>
+                    <li>Sözleşme yenileme zamanı geldiğinde</li>
+                    <li>Sözleşme yükümlülükleri yerine getirilmediğinde</li>
+                </ul>
+                <p>Bildirim ayarlarını Kullanıcı Ayarları > Bildirimler menüsünden özelleştirebilirsiniz.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<h2>Ek İşlemler</h2>
+
+<p>Sözleşme Listesi ekranında aşağıdaki ek işlemleri gerçekleştirebilirsiniz:</p>
+
+<div class="table-responsive">
+    <table class="table table-bordered">
+        <thead class="table-light">
+            <tr>
+                <th>İşlem</th>
+                <th>Açıklama</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Sözleşme Yazdırma</td>
+                <td>Sözleşmeyi yazdırmak için, sözleşme detay ekranında "Yazdır" butonuna tıklayın. Farklı yazdırma şablonları arasından seçim yapabilirsiniz (standart, detaylı, özet vb.).</td>
+            </tr>
+            <tr>
+                <td>Sözleşme Gönderme</td>
+                <td>Sözleşmeyi müşteriye e-posta olarak göndermek için, sözleşme detay ekranında "Gönder" butonuna tıklayın. E-posta şablonunu özelleştirebilir ve ek dosyalar ekleyebilirsiniz.</td>
+            </tr>
+            <tr>
+                <td>Sözleşme Dışa Aktarma</td>
+                <td>Sözleşmeyi PDF, Word veya Excel formatında dışa aktarmak için, sözleşme detay ekranında "Dışa Aktar" butonuna tıklayın ve istediğiniz formatı seçin.</td>
+            </tr>
+            <tr>
+                <td>Sözleşme Arşivleme</td>
+                <td>Sona eren veya iptal edilen sözleşmeleri arşivlemek için, sözleşme detay ekranında "Arşivle" butonuna tıklayın. Arşivlenen sözleşmeler, "Arşivlenmiş Sözleşmeler" ekranında görüntülenebilir.</td>
+            </tr>
+            <tr>
+                <td>Sözleşme Kopyalama</td>
+                <td>Mevcut bir sözleşmeyi kopyalayarak yeni bir sözleşme oluşturmak için, sözleşme detay ekranında "Kopyala" butonuna tıklayın. Kopyalanan sözleşmede gerekli değişiklikleri yaparak yeni bir sözleşme oluşturabilirsiniz.</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<h2>Sık Sorulan Sorular</h2>
+
+<div class="accordion" id="faqAccordion">
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="faqOne">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseOne">
+                Sözleşme şablonlarını nasıl özelleştirebilirim?
+            </button>
+        </h2>
+        <div id="faqCollapseOne" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+                <p>Sözleşme şablonlarını özelleştirmek için:</p>
+                <ol>
+                    <li>Yönetim > Sistem Ayarları > Sözleşme Şablonları ekranına gidin.</li>
+                    <li>"Yeni Şablon" butonuna tıklayın veya mevcut bir şablonu seçip "Düzenle" butonuna tıklayın.</li>
+                    <li>Şablon bilgilerini girin:
+                        <ul>
+                            <li>Şablon adı</li>
+                            <li>Sözleşme tipi</li>
+                            <li>Şablon içeriği (zengin metin editörü ile)</li>
+                        </ul>
+                    </li>
+                    <li>Şablonda değişken alanlar kullanabilirsiniz:
+                        <ul>
+                            <li>{MUSTERI_ADI} - Müşteri adı</li>
+                            <li>{SOZLESME_NO} - Sözleşme numarası</li>
+                            <li>{SOZLESME_TARIHI} - Sözleşme tarihi</li>
+                            <li>{BASLANGIC_TARIHI} - Başlangıç tarihi</li>
+                            <li>{BITIS_TARIHI} - Bitiş tarihi</li>
+                            <li>{TOPLAM_TUTAR} - Toplam tutar</li>
+                        </ul>
+                    </li>
+                    <li>"Kaydet" butonuna tıklayarak şablonu kaydedin.</li>
+                </ol>
+                <div class="alert alert-primary">
+                    <i class="bi bi-lightbulb"></i>
+                    <strong>İpucu:</strong> Şablon oluştururken, hukuk departmanınızın onayını almanız önerilir. Ayrıca, farklı müşteri grupları veya ürün/hizmet tipleri için farklı şablonlar oluşturabilirsiniz.
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="faqTwo">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseTwo">
+                Sözleşme revizyonları nasıl yönetilir?
+            </button>
+        </h2>
+        <div id="faqCollapseTwo" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+                <p>Sözleşme revizyonlarını yönetmek için:</p>
+                <ol>
+                    <li>Sözleşme detay ekranında "Revizyon Oluştur" butonuna tıklayın.</li>
+                    <li>Açılan pencerede revizyon bilgilerini girin:
+                        <ul>
+                            <li>Revizyon tarihi</li>
+                            <li>Revizyon nedeni</li>
+                            <li>Değişiklik açıklaması</li>
+                        </ul>
+                    </li>
+                    <li>Sözleşmede gerekli değişiklikleri yapın.</li>
+                    <li>"Kaydet" butonuna tıklayarak revizyonu kaydedin.</li>
+                </ol>
+                <p>Revizyon oluşturulduğunda aşağıdaki işlemler gerçekleşir:</p>
+                <ul>
+                    <li>Sözleşmenin yeni bir versiyonu oluşturulur.</li>
+                    <li>Revizyon geçmişine yeni bir kayıt eklenir.</li>
+                    <li>Müşteriye revizyon bildirimi gönderilebilir (ayarlara bağlı olarak).</li>
+                </ul>
+                <p>Revizyon geçmişini görüntülemek için, sözleşme detay ekranında "Revizyon Geçmişi" sekmesine tıklayabilirsiniz. Burada, tüm revizyonları ve değişiklikleri görebilir, önceki versiyonları görüntüleyebilirsiniz.</p>
+                <div class="alert alert-primary">
+                    <i class="bi bi-lightbulb"></i>
+                    <strong>İpucu:</strong> Önemli revizyonlar için müşteri onayı almanız önerilir. Revizyon bildirimi gönderirken, değişiklikleri açıkça belirtin ve gerekirse müşteriden onay isteyin.
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="faqThree">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseThree">
+                Sözleşme yükümlülükleri nasıl takip edilir?
+            </button>
+        </h2>
+        <div id="faqCollapseThree" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+                <p>Sözleşme yükümlülüklerini takip etmek için:</p>
+                <ol>
+                    <li>Sözleşme detay ekranında "Yükümlülükler" sekmesine tıklayın.</li>
+                    <li>"Yeni Yükümlülük" butonuna tıklayın.</li>
+                    <li>Yükümlülük bilgilerini girin:
+                        <ul>
+                            <li>Yükümlülük adı</li>
+                            <li>Açıklama</li>
+                            <li>Sorumlu taraf (şirket veya müşteri)</li>
+                            <li>Sorumlu kişi</li>
+                            <li>Son tarih</li>
+                            <li>Durum</li>
+                        </ul>
+                    </li>
+                    <li>"Kaydet" butonuna tıklayarak yükümlülüğü ekleyin.</li>
+                </ol>
+                <p>Yükümlülükleri takip etmek için:</p>
+                <ul>
+                    <li>Sözleşme detay ekranındaki "Yükümlülükler" sekmesinde, tüm yükümlülükleri ve durumlarını görebilirsiniz.</li>
+                    <li>Yükümlülük durumunu güncellemek için, ilgili yükümlülüğü seçin ve "Durum Güncelle" butonuna tıklayın.</li>
+                    <li>Yükümlülük tamamlandığında, durumunu "Tamamlandı" olarak güncelleyin ve tamamlanma tarihini girin.</li>
+                </ul>
+                <p>Ayrıca, Satış & Pazarlama > Raporlar > Sözleşme Yükümlülükleri Raporu ekranında, tüm sözleşmelerdeki yükümlülükleri ve durumlarını görüntüleyebilirsiniz.</p>
+                <div class="alert alert-primary">
+                    <i class="bi bi-lightbulb"></i>
+                    <strong>İpucu:</strong> Yükümlülükler için hatırlatmalar oluşturabilirsiniz. Böylece, son tarih yaklaştığında veya geçtiğinde otomatik bildirimler alabilirsiniz.
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="faqFour">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseFour">
+                Sözleşme onay sürecini nasıl yönetebilirim?
+            </button>
+        </h2>
+        <div id="faqCollapseFour" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+                <p>Sözleşme onay sürecini yönetmek için:</p>
+                <ol>
+                    <li>Yönetim > Sistem Ayarları > İş Akışları > Sözleşme Onay Süreci ekranına gidin.</li>
+                    <li>Onay sürecini yapılandırın:
+                        <ul>
+                            <li>Onay adımlarını belirleyin (departman yöneticisi, hukuk departmanı, üst yönetim vb.).</li>
+                            <li>Her adım için onaylayıcıları belirleyin.</li>
+                            <li>Onay koşullarını belirleyin (belirli bir tutar üzerindeki sözleşmeler için ek onay adımları vb.).</li>
+                        </ul>
+                    </li>
+                    <li>"Kaydet" butonuna tıklayarak onay sürecini kaydedin.</li>
+                </ol>
+                <p>Sözleşme onay sürecini başlatmak için:</p>
+                <ol>
+                    <li>Sözleşme detay ekranında "Onay Süreci Başlat" butonuna tıklayın.</li>
+                    <li>Sistem, yapılandırılan onay sürecine göre ilgili onaylayıcılara bildirim gönderir.</li>
+                    <li>Onaylayıcılar, kendilerine atanan onay görevlerini Görevler ekranında görüntüleyebilir ve onaylayabilir veya reddedebilir.</li>
+                    <li>Tüm onay adımları tamamlandığında, sözleşme "Onaylandı" durumuna geçer.</li>
+                </ol>
+                <p>Onay durumunu takip etmek için, sözleşme detay ekranında "Onay Durumu" sekmesine tıklayabilirsiniz. Burada, tüm onay adımlarını ve durumlarını görebilirsiniz.</p>
+                <div class="alert alert-primary">
+                    <i class="bi bi-lightbulb"></i>
+                    <strong>İpucu:</strong> Onay sürecini hızlandırmak için, onaylayıcılara otomatik hatırlatmalar gönderilebilir. Ayrıca, acil durumlarda onay adımlarını atlamak için yetkilendirme yapılabilir.
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<h2>İlgili Konular</h2>
+
+<ul>
+    <li><a href="?module=satis-pazarlama&page=verilen-teklif">Verilen Teklif</a></li>
+    <li><a href="?module=satis-pazarlama&page=siparis-listesi">Sipariş Listesi</a></li>
+    <li><a href="?module=satis-pazarlama&page=fatura-listesi">Fatura Listesi</a></li>
+    <li><a href="?module=satis-pazarlama&page=satis-pazarlama-asamalari">Satış Pazarlama Aşamaları</a></li>
+    <li><a href="?module=musteri-satici&page=musteri-ekleme">Müşteri Ekleme</a></li>
+    <li><a href="?module=satis-pazarlama&page=satis-raporlari">Satış Raporları</a></li>
+</ul>

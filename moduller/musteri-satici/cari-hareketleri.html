@@ -1,0 +1,568 @@
+<!-- Meta Bilgileri -->
+<meta name="title" content="Cari Hareketleri">
+<meta name="icon" content="bi-arrow-left-right">
+<meta name="url" content="/musteri-satici/cari-hareketleri">
+<meta name="lastUpdate" content="12.03.2025">
+
+<h1>Cari Hareketleri</h1>
+
+<p>Bu dokümantasyon, Aaro ERP sisteminde cari hareketlerin izlenmesi, yönetilmesi ve raporlanması işlemlerini açıklamaktadır.</p>
+
+<div class="alert alert-info">
+    <i class="bi bi-info-circle"></i>
+    <strong>Bilgi:</strong> Cari hareketler, müşteri ve satıcılarla olan finansal işlemlerin kaydını tutar ve borç/alacak durumunuzu takip etmenizi sağlar.
+</div>
+
+<h2>Cari Hareketler Nedir?</h2>
+
+<p>Cari hareketler, müşteri ve satıcılarla (cari hesaplarla) gerçekleştirilen tüm finansal işlemlerin kaydıdır. Bu hareketler, borç/alacak durumunuzu, tahsilat ve ödeme işlemlerinizi, vade takibinizi ve genel finansal durumunuzu izlemenizi sağlar.</p>
+
+<div class="row">
+    <div class="col-md-6">
+        <div class="card mb-3">
+            <div class="card-header bg-primary text-white">
+                <h3 class="mb-0">Cari Hareket Türleri</h3>
+            </div>
+            <div class="card-body">
+                <ul>
+                    <li><strong>Satış Faturası:</strong> Müşterilere kesilen faturalar</li>
+                    <li><strong>Alış Faturası:</strong> Satıcılardan alınan faturalar</li>
+                    <li><strong>Tahsilat:</strong> Müşterilerden yapılan tahsilatlar</li>
+                    <li><strong>Ödeme:</strong> Satıcılara yapılan ödemeler</li>
+                    <li><strong>İade Faturası:</strong> Satış veya alış iadesi işlemleri</li>
+                    <li><strong>Cari Devir:</strong> Dönem başı cari bakiye devir kayıtları</li>
+                    <li><strong>Cari Virman:</strong> Bir cariden diğerine bakiye aktarımı</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="card mb-3">
+            <div class="card-header bg-success text-white">
+                <h3 class="mb-0">Cari Hareket Etkileri</h3>
+            </div>
+            <div class="card-body">
+                <ul>
+                    <li><strong>Borçlandırıcı Hareketler:</strong> Müşteri bakiyesini artırır, satıcı bakiyesini azaltır</li>
+                    <li><strong>Alacaklandırıcı Hareketler:</strong> Müşteri bakiyesini azaltır, satıcı bakiyesini artırır</li>
+                    <li><strong>Nötr Hareketler:</strong> Bakiyeyi değiştirmez, sadece bilgi amaçlıdır</li>
+                </ul>
+                <p>Örneğin, bir müşteriye kesilen satış faturası müşterinin borcunu artırır (borçlandırıcı hareket), müşteriden yapılan bir tahsilat ise müşterinin borcunu azaltır (alacaklandırıcı hareket).</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<h2>Cari Hareketler Listesine Erişim</h2>
+
+<p>Cari hareketler listesine erişmek için aşağıdaki yöntemlerden birini kullanabilirsiniz:</p>
+
+<div class="row">
+    <div class="col-md-4">
+        <div class="card mb-3">
+            <div class="card-header">
+                <i class="bi bi-search"></i> Arama Motoru ile
+            </div>
+            <div class="card-body">
+                <p>Sol sekmede Aaro kullanıcı bilgilerinin hemen altındaki arama motorundan "müşteri/satıcı hareket listesi" şeklinde aratarak ulaşım sağlayabilirsiniz.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card mb-3">
+            <div class="card-header">
+                <i class="bi bi-list-ul"></i> Menü Üzerinden
+            </div>
+            <div class="card-body">
+                <p>Sol menüden <strong>Müşteri/Satıcı -> Listeler -> Müşteri/Satıcı Hareketleri Listesi</strong> üzerinden ulaşım sağlayabilirsiniz.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card mb-3">
+            <div class="card-header">
+                <i class="bi bi-person-vcard"></i> Cari Kart Üzerinden
+            </div>
+            <div class="card-body">
+                <p>Herhangi bir müşteri veya satıcı kartını açtığınızda, "Kısayollar" bölümünden "Cari Hareketleri" seçeneğine tıklayarak ilgili carinin hareketlerine ulaşabilirsiniz.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<h2>Cari Hareketler Listesi Ekranı</h2>
+
+<p>Cari hareketler listesi ekranı, tüm cari hareketleri görüntülemenizi, filtrelemenizi ve yönetmenizi sağlar.</p>
+
+<div class="card mb-4">
+    <div class="card-header bg-light">
+        <h3 class="mb-0">Ekran Bileşenleri</h3>
+    </div>
+    <div class="card-body">
+        <div class="row">
+            <div class="col-md-6">
+                <h4>Filtre Bölümü</h4>
+                <p>Ekranın üst kısmında bulunan filtre bölümü, cari hareketleri çeşitli kriterlere göre filtrelemenizi sağlar:</p>
+                <ul>
+                    <li><strong>Tarih Aralığı:</strong> Belirli bir tarih aralığındaki hareketleri görüntülemek için kullanılır.</li>
+                    <li><strong>Cari Hesap:</strong> Belirli bir müşteri veya satıcıya ait hareketleri görüntülemek için kullanılır.</li>
+                    <li><strong>Hareket Türü:</strong> Belirli bir hareket türüne ait kayıtları görüntülemek için kullanılır.</li>
+                    <li><strong>Belge No:</strong> Belirli bir belge numarasına sahip hareketleri bulmak için kullanılır.</li>
+                    <li><strong>Tutar Aralığı:</strong> Belirli bir tutar aralığındaki hareketleri görüntülemek için kullanılır.</li>
+                    <li><strong>Para Birimi:</strong> Belirli bir para birimindeki hareketleri görüntülemek için kullanılır.</li>
+                </ul>
+            </div>
+            <div class="col-md-6">
+                <h4>Liste Bölümü</h4>
+                <p>Ekranın orta kısmında bulunan liste bölümü, filtrelere uygun cari hareketleri tablo halinde gösterir:</p>
+                <ul>
+                    <li><strong>Tarih:</strong> Hareketin gerçekleştiği tarih</li>
+                    <li><strong>Belge No:</strong> Hareketin belge numarası (fatura no, makbuz no vb.)</li>
+                    <li><strong>Cari Hesap:</strong> İlgili müşteri veya satıcı adı</li>
+                    <li><strong>Açıklama:</strong> Hareketin açıklaması</li>
+                    <li><strong>Hareket Türü:</strong> Hareketin türü (satış faturası, tahsilat vb.)</li>
+                    <li><strong>Borç:</strong> Borç tutarı</li>
+                    <li><strong>Alacak:</strong> Alacak tutarı</li>
+                    <li><strong>Bakiye:</strong> İşlem sonrası güncel bakiye</li>
+                    <li><strong>Para Birimi:</strong> İşlemin para birimi</li>
+                </ul>
+            </div>
+        </div>
+        <div class="row mt-3">
+            <div class="col-12">
+                <h4>Özet Bölümü</h4>
+                <p>Ekranın alt kısmında bulunan özet bölümü, listelenen hareketlerin toplam borç, alacak ve bakiye bilgilerini gösterir.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<h2>Cari Hareket İşlemleri</h2>
+
+<div class="accordion" id="cariHareketAccordion">
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="headingOne">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
+                Cari Hareket Görüntüleme
+            </button>
+        </h2>
+        <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#cariHareketAccordion">
+            <div class="accordion-body">
+                <p>Cari hareketleri görüntülemek için:</p>
+                <ol>
+                    <li>Cari hareketler listesi ekranına erişin.</li>
+                    <li>İstediğiniz filtreleri uygulayın (isteğe bağlı).</li>
+                    <li>Listede görüntülenen hareketleri inceleyin.</li>
+                    <li>Herhangi bir hareketin detaylarını görmek için üzerine çift tıklayın veya sağ taraftaki detay butonuna tıklayın.</li>
+                </ol>
+                <div class="alert alert-primary">
+                    <i class="bi bi-lightbulb"></i>
+                    <strong>İpucu:</strong> Liste üzerinde sağ tıklayarak açılan menüden "Sütunları Düzenle" seçeneğini kullanarak görüntülenen sütunları özelleştirebilirsiniz.
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="headingTwo">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+                Cari Hareket Filtreleme
+            </button>
+        </h2>
+        <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#cariHareketAccordion">
+            <div class="accordion-body">
+                <p>Cari hareketleri filtrelemek için:</p>
+                <ol>
+                    <li>Filtre bölümünde yer alan kriterleri kullanın.</li>
+                    <li>Tarih aralığı, cari hesap, hareket türü gibi filtreleri belirleyin.</li>
+                    <li>"Filtrele" butonuna tıklayın.</li>
+                    <li>Filtreleri temizlemek için "Temizle" butonuna tıklayın.</li>
+                </ol>
+                <div class="alert alert-primary">
+                    <i class="bi bi-lightbulb"></i>
+                    <strong>İpucu:</strong> Sık kullandığınız filtre kombinasyonlarını "Filtre Kaydet" butonu ile kaydedebilir ve daha sonra "Kayıtlı Filtreler" menüsünden hızlıca erişebilirsiniz.
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="headingThree">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree">
+                Cari Ekstre Alma
+            </button>
+        </h2>
+        <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#cariHareketAccordion">
+            <div class="accordion-body">
+                <p>Cari ekstre almak için:</p>
+                <ol>
+                    <li>Cari hareketler listesi ekranında, ilgili cari hesabı filtreleyin.</li>
+                    <li>İstediğiniz tarih aralığını belirleyin.</li>
+                    <li>Ekranın üst kısmında yer alan "Ekstre Al" butonuna tıklayın.</li>
+                    <li>Açılan pencerede ekstre formatını ve çıktı seçeneklerini belirleyin.</li>
+                    <li>"Ekstre Oluştur" butonuna tıklayın.</li>
+                </ol>
+                <div class="alert alert-primary">
+                    <i class="bi bi-lightbulb"></i>
+                    <strong>İpucu:</strong> Ekstre formatını "Detaylı" veya "Özet" olarak seçebilir, çıktıyı PDF, Excel veya e-posta olarak alabilirsiniz.
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="headingFour">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour">
+                Cari Hareket Raporları
+            </button>
+        </h2>
+        <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#cariHareketAccordion">
+            <div class="accordion-body">
+                <p>Cari hareket raporları almak için:</p>
+                <ol>
+                    <li>Cari hareketler listesi ekranında, ekranın üst kısmında yer alan "Raporlar" menüsüne tıklayın.</li>
+                    <li>İstediğiniz rapor türünü seçin:
+                        <ul>
+                            <li><strong>Cari Durum Raporu:</strong> Tüm cari hesapların güncel bakiyelerini gösterir.</li>
+                            <li><strong>Vade Analizi:</strong> Vadesi gelen ve gelecek olan borç/alacakları gösterir.</li>
+                            <li><strong>Yaşlandırma Raporu:</strong> Borç/alacakları vade tarihine göre gruplar.</li>
+                            <li><strong>Hareket Özeti:</strong> Belirli bir dönemdeki hareket özetini gösterir.</li>
+                        </ul>
+                    </li>
+                    <li>Rapor parametrelerini belirleyin.</li>
+                    <li>"Rapor Oluştur" butonuna tıklayın.</li>
+                </ol>
+                <div class="alert alert-primary">
+                    <i class="bi bi-lightbulb"></i>
+                    <strong>İpucu:</strong> Raporları PDF, Excel veya e-posta olarak alabilir, düzenli olarak otomatik gönderilmesini sağlayabilirsiniz.
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<h2>Cari Hareket Türleri ve Etkileri</h2>
+
+<div class="table-responsive">
+    <table class="table table-bordered">
+        <thead class="table-light">
+            <tr>
+                <th>Hareket Türü</th>
+                <th>Açıklama</th>
+                <th>Müşteri Etkisi</th>
+                <th>Satıcı Etkisi</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Satış Faturası</td>
+                <td>Müşterilere kesilen faturalar</td>
+                <td><span class="badge bg-danger">Borçlandırır (+)</span></td>
+                <td><span class="badge bg-secondary">İlgisiz</span></td>
+            </tr>
+            <tr>
+                <td>Alış Faturası</td>
+                <td>Satıcılardan alınan faturalar</td>
+                <td><span class="badge bg-secondary">İlgisiz</span></td>
+                <td><span class="badge bg-danger">Alacaklandırır (+)</span></td>
+            </tr>
+            <tr>
+                <td>Tahsilat</td>
+                <td>Müşterilerden yapılan tahsilatlar</td>
+                <td><span class="badge bg-success">Alacaklandırır (-)</span></td>
+                <td><span class="badge bg-secondary">İlgisiz</span></td>
+            </tr>
+            <tr>
+                <td>Ödeme</td>
+                <td>Satıcılara yapılan ödemeler</td>
+                <td><span class="badge bg-secondary">İlgisiz</span></td>
+                <td><span class="badge bg-success">Borçlandırır (-)</span></td>
+            </tr>
+            <tr>
+                <td>Satış İade Faturası</td>
+                <td>Müşterilerden gelen iade faturalar</td>
+                <td><span class="badge bg-success">Alacaklandırır (-)</span></td>
+                <td><span class="badge bg-secondary">İlgisiz</span></td>
+            </tr>
+            <tr>
+                <td>Alış İade Faturası</td>
+                <td>Satıcılara kesilen iade faturalar</td>
+                <td><span class="badge bg-secondary">İlgisiz</span></td>
+                <td><span class="badge bg-success">Borçlandırır (-)</span></td>
+            </tr>
+            <tr>
+                <td>Cari Devir</td>
+                <td>Dönem başı cari bakiye devir kayıtları</td>
+                <td><span class="badge bg-info text-dark">Duruma Göre</span></td>
+                <td><span class="badge bg-info text-dark">Duruma Göre</span></td>
+            </tr>
+            <tr>
+                <td>Cari Virman</td>
+                <td>Bir cariden diğerine bakiye aktarımı</td>
+                <td><span class="badge bg-info text-dark">Duruma Göre</span></td>
+                <td><span class="badge bg-info text-dark">Duruma Göre</span></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<h2>Cari Hareket Örnekleri</h2>
+
+<div class="row">
+    <div class="col-md-6">
+        <div class="card mb-3">
+            <div class="card-header bg-primary text-white">
+                <h3 class="mb-0">Müşteri Hareketleri Örneği</h3>
+            </div>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-bordered table-sm">
+                        <thead class="table-light">
+                            <tr>
+                                <th>Tarih</th>
+                                <th>Belge No</th>
+                                <th>Açıklama</th>
+                                <th>Borç</th>
+                                <th>Alacak</th>
+                                <th>Bakiye</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>01.01.2025</td>
+                                <td>Devir</td>
+                                <td>Dönem Başı Devir</td>
+                                <td>5.000,00</td>
+                                <td>0,00</td>
+                                <td>5.000,00</td>
+                            </tr>
+                            <tr>
+                                <td>15.01.2025</td>
+                                <td>SF-00123</td>
+                                <td>Satış Faturası</td>
+                                <td>2.500,00</td>
+                                <td>0,00</td>
+                                <td>7.500,00</td>
+                            </tr>
+                            <tr>
+                                <td>20.01.2025</td>
+                                <td>TH-00045</td>
+                                <td>Tahsilat (Nakit)</td>
+                                <td>0,00</td>
+                                <td>3.000,00</td>
+                                <td>4.500,00</td>
+                            </tr>
+                            <tr>
+                                <td>25.01.2025</td>
+                                <td>SF-00145</td>
+                                <td>Satış Faturası</td>
+                                <td>1.800,00</td>
+                                <td>0,00</td>
+                                <td>6.300,00</td>
+                            </tr>
+                            <tr>
+                                <td>28.01.2025</td>
+                                <td>İF-00012</td>
+                                <td>İade Faturası</td>
+                                <td>0,00</td>
+                                <td>500,00</td>
+                                <td>5.800,00</td>
+                            </tr>
+                            <tr>
+                                <td>31.01.2025</td>
+                                <td>TH-00067</td>
+                                <td>Tahsilat (Havale)</td>
+                                <td>0,00</td>
+                                <td>5.800,00</td>
+                                <td>0,00</td>
+                            </tr>
+                        </tbody>
+                        <tfoot class="table-light">
+                            <tr>
+                                <th colspan="3">Toplam</th>
+                                <th>9.300,00</th>
+                                <th>9.300,00</th>
+                                <th>0,00</th>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="card mb-3">
+            <div class="card-header bg-primary text-white">
+                <h3 class="mb-0">Satıcı Hareketleri Örneği</h3>
+            </div>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-bordered table-sm">
+                        <thead class="table-light">
+                            <tr>
+                                <th>Tarih</th>
+                                <th>Belge No</th>
+                                <th>Açıklama</th>
+                                <th>Borç</th>
+                                <th>Alacak</th>
+                                <th>Bakiye</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>01.01.2025</td>
+                                <td>Devir</td>
+                                <td>Dönem Başı Devir</td>
+                                <td>0,00</td>
+                                <td>8.000,00</td>
+                                <td>-8.000,00</td>
+                            </tr>
+                            <tr>
+                                <td>10.01.2025</td>
+                                <td>AF-00078</td>
+                                <td>Alış Faturası</td>
+                                <td>0,00</td>
+                                <td>4.500,00</td>
+                                <td>-12.500,00</td>
+                            </tr>
+                            <tr>
+                                <td>18.01.2025</td>
+                                <td>ÖD-00034</td>
+                                <td>Ödeme (Havale)</td>
+                                <td>6.000,00</td>
+                                <td>0,00</td>
+                                <td>-6.500,00</td>
+                            </tr>
+                            <tr>
+                                <td>22.01.2025</td>
+                                <td>AF-00092</td>
+                                <td>Alış Faturası</td>
+                                <td>0,00</td>
+                                <td>3.200,00</td>
+                                <td>-9.700,00</td>
+                            </tr>
+                            <tr>
+                                <td>26.01.2025</td>
+                                <td>İF-00008</td>
+                                <td>İade Faturası</td>
+                                <td>700,00</td>
+                                <td>0,00</td>
+                                <td>-9.000,00</td>
+                            </tr>
+                            <tr>
+                                <td>31.01.2025</td>
+                                <td>ÖD-00056</td>
+                                <td>Ödeme (Çek)</td>
+                                <td>9.000,00</td>
+                                <td>0,00</td>
+                                <td>0,00</td>
+                            </tr>
+                        </tbody>
+                        <tfoot class="table-light">
+                            <tr>
+                                <th colspan="3">Toplam</th>
+                                <th>15.700,00</th>
+                                <th>15.700,00</th>
+                                <th>0,00</th>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<h2>Sık Sorulan Sorular</h2>
+
+<div class="accordion" id="faqAccordion">
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="faqOne">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseOne">
+                Cari bakiye ne anlama gelir?
+            </button>
+        </h2>
+        <div id="faqCollapseOne" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+                <p>Cari bakiye, bir müşteri veya satıcı ile olan finansal ilişkinizin güncel durumunu gösterir. Bakiye, borç ve alacak hareketlerinin neticesinde oluşur.</p>
+                <ul>
+                    <li><strong>Müşteri için pozitif bakiye:</strong> Müşterinin size borcu olduğunu gösterir.</li>
+                    <li><strong>Müşteri için negatif bakiye:</strong> Sizin müşteriye borcunuz olduğunu gösterir.</li>
+                    <li><strong>Satıcı için pozitif bakiye:</strong> Sizin satıcıya borcunuz olduğunu gösterir.</li>
+                    <li><strong>Satıcı için negatif bakiye:</strong> Satıcının size borcu olduğunu gösterir.</li>
+                </ul>
+                <p>Bakiye sütunundaki değerler, ilgili hareketin gerçekleşmesinden sonraki güncel bakiyeyi gösterir.</p>
+            </div>
+        </div>
+    </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="faqTwo">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseTwo">
+                Cari hareketlerde yapılan bir hatayı nasıl düzeltebilirim?
+            </button>
+        </h2>
+        <div id="faqCollapseTwo" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+                <p>Cari hareketlerde yapılan bir hatayı düzeltmek için:</p>
+                <ol>
+                    <li><strong>Belge Düzeltme:</strong> Hatalı belgeyi (fatura, tahsilat vb.) bulun ve düzenleme modunda açın. Gerekli düzeltmeleri yapın ve kaydedin.</li>
+                    <li><strong>Belge İptali:</strong> Hatalı belgeyi tamamen iptal etmek için, belgeyi bulun ve "İptal Et" butonuna tıklayın. İptal gerekçesini belirtin ve onaylayın.</li>
+                    <li><strong>Düzeltme Kaydı:</strong> Bazı durumlarda, hatalı kaydı düzeltmek için yeni bir düzeltme kaydı oluşturmanız gerekebilir. Örneğin, yanlış müşteriye kesilen bir faturayı iptal edip doğru müşteriye yeni bir fatura kesebilirsiniz.</li>
+                </ol>
+                <div class="alert alert-warning">
+                    <i class="bi bi-exclamation-triangle"></i>
+                    <strong>Dikkat:</strong> Muhasebeleşmiş belgelerde yapılan düzeltmeler, ilgili muhasebe kayıtlarını da etkileyecektir. Bu tür düzeltmeleri yapmadan önce muhasebe departmanına danışmanız önerilir.
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="faqThree">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseThree">
+                Farklı para birimlerindeki cari hareketleri nasıl takip edebilirim?
+            </button>
+        </h2>
+        <div id="faqCollapseThree" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+                <p>Farklı para birimlerindeki cari hareketleri takip etmek için:</p>
+                <ol>
+                    <li><strong>Para Birimi Filtresi:</strong> Cari hareketler listesinde, "Para Birimi" filtresini kullanarak belirli bir para birimindeki hareketleri görüntüleyebilirsiniz.</li>
+                    <li><strong>Dövizli Bakiye Raporu:</strong> "Raporlar" menüsünden "Dövizli Bakiye Raporu"nu seçerek, her para birimi için ayrı bakiye bilgilerini görüntüleyebilirsiniz.</li>
+                    <li><strong>Yerel Para Birimi Karşılığı:</strong> Sistem, dövizli işlemlerin yerel para birimi karşılığını da otomatik olarak hesaplar ve raporlarda gösterir.</li>
+                </ol>
+                <div class="alert alert-primary">
+                    <i class="bi bi-lightbulb"></i>
+                    <strong>İpucu:</strong> Döviz kurları, sistem tarafından otomatik olarak güncellenir. Ancak, gerektiğinde manuel olarak da güncelleyebilirsiniz. Bunun için "Ayarlar > Döviz Kurları" menüsünü kullanabilirsiniz.
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="faqFour">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseFour">
+                Vade takibini nasıl yapabilirim?
+            </button>
+        </h2>
+        <div id="faqCollapseFour" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+                <p>Vade takibini yapmak için:</p>
+                <ol>
+                    <li><strong>Vade Analizi Raporu:</strong> "Raporlar" menüsünden "Vade Analizi" raporunu seçin. Bu rapor, vadesi gelen ve gelecek olan borç/alacakları tarih bazında gruplar.</li>
+                    <li><strong>Yaşlandırma Raporu:</strong> "Raporlar" menüsünden "Yaşlandırma Raporu"nu seçin. Bu rapor, borç/alacakları vade tarihine göre gruplar (0-30 gün, 31-60 gün vb.).</li>
+                    <li><strong>Vade Uyarıları:</strong> Sistem, vadesi yaklaşan veya geçen borç/alacaklar için otomatik uyarılar oluşturabilir. Bu uyarıları "Ayarlar > Bildirim Ayarları" menüsünden yapılandırabilirsiniz.</li>
+                </ol>
+                <div class="alert alert-primary">
+                    <i class="bi bi-lightbulb"></i>
+                    <strong>İpucu:</strong> Vade raporlarını düzenli olarak e-posta ile almak için, "Raporlar > Rapor Zamanlama" menüsünü kullanabilirsiniz.
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<h2>İlgili Konular</h2>
+
+<ul>
+    <li><a href="?module=musteri-satici&page=genel-bakis">Müşteri & Satıcı Genel Bakış</a></li>
+    <li><a href="?module=musteri-satici&page=musteri-ekleme">Müşteri Ekleme</a></li>
+    <li><a href="?module=musteri-satici&page=satici-ekleme">Satıcı Ekleme</a></li>
+    <li><a href="?module=musteri-satici&page=risk-limitleri">Risk Limitleri</a></li>
+    <li><a href="?module=finans&page=tahsilat-odeme">Tahsilat ve Ödeme İşlemleri</a></li>
+</ul>

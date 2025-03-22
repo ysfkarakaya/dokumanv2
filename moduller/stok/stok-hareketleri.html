@@ -1,0 +1,365 @@
+<!-- Meta Bilgileri -->
+<meta name="title" content="Stok Hareketleri">
+<meta name="icon" content="bi-arrow-left-right">
+<meta name="url" content="/stok/stok-hareketleri">
+<meta name="lastUpdate" content="12.03.2025">
+
+<h1>Stok Hareketleri</h1>
+
+<p>Bu dokümantasyon, Aaro ERP sisteminde stok hareketleri işlemlerini ve kullanımını açıklamaktadır.</p>
+
+<div class="alert alert-info">
+    <i class="bi bi-info-circle"></i>
+    <strong>Bilgi:</strong> Stok hareketleri, stok miktarlarını etkileyen tüm işlemleri kapsar. Bu işlemler, stok giriş-çıkışları, transferler, sayım farkları ve üretim işlemleri gibi çeşitli kategorilere ayrılır.
+</div>
+
+<h2>Stok Hareketleri Kategorileri</h2>
+
+<p>Aaro ERP sisteminde stok hareketleri aşağıdaki kategorilere ayrılmıştır:</p>
+
+<div class="row">
+    <div class="col-md-6">
+        <div class="card mb-3">
+            <div class="card-header bg-primary text-white">
+                <i class="bi bi-box"></i> Genel
+            </div>
+            <div class="card-body">
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        Satış Faturası
+                        <span class="badge bg-danger rounded-pill">Çıkış</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        Alış Faturası
+                        <span class="badge bg-success rounded-pill">Giriş</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        Karma Transfer Hareketi
+                        <span class="badge bg-warning text-dark rounded-pill">Transfer</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        Devir
+                        <span class="badge bg-info text-dark rounded-pill">Devir</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="card mb-3">
+            <div class="card-header bg-primary text-white">
+                <i class="bi bi-receipt"></i> Fatura
+            </div>
+            <div class="card-body">
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        Satış Faturası
+                        <span class="badge bg-danger rounded-pill">Çıkış</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        Alış Faturası
+                        <span class="badge bg-success rounded-pill">Giriş</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        Satış İade Faturası
+                        <span class="badge bg-success rounded-pill">Giriş</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        Alış İade Faturası
+                        <span class="badge bg-danger rounded-pill">Çıkış</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-6">
+        <div class="card mb-3">
+            <div class="card-header bg-primary text-white">
+                <i class="bi bi-truck"></i> İrsaliye
+            </div>
+            <div class="card-body">
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        Satış İrsaliyesi
+                        <span class="badge bg-danger rounded-pill">Çıkış</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        Alış İrsaliyesi
+                        <span class="badge bg-success rounded-pill">Giriş</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        Satış İade İrsaliyesi
+                        <span class="badge bg-success rounded-pill">Giriş</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        Alış İade İrsaliyesi
+                        <span class="badge bg-danger rounded-pill">Çıkış</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="card mb-3">
+            <div class="card-header bg-primary text-white">
+                <i class="bi bi-cart"></i> Sipariş
+            </div>
+            <div class="card-body">
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        Alınan Sipariş
+                        <span class="badge bg-secondary rounded-pill">Rezervasyon</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        Verilen Sipariş
+                        <span class="badge bg-secondary rounded-pill">Planlama</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-6">
+        <div class="card mb-3">
+            <div class="card-header bg-primary text-white">
+                <i class="bi bi-file-earmark-text"></i> Teklif
+            </div>
+            <div class="card-body">
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        Alınan Teklif
+                        <span class="badge bg-secondary rounded-pill">Bilgi</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        Verilen Teklif
+                        <span class="badge bg-secondary rounded-pill">Bilgi</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="card mb-3">
+            <div class="card-header bg-primary text-white">
+                <i class="bi bi-gear"></i> Diğerleri
+            </div>
+            <div class="card-body">
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        Depolar Arası Transfer
+                        <span class="badge bg-warning text-dark rounded-pill">Transfer</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        Depolar Arası Transfer (Doğrudan Sevk)
+                        <span class="badge bg-warning text-dark rounded-pill">Transfer</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        Sayım Farkı İşlemi
+                        <span class="badge bg-info text-dark rounded-pill">Düzeltme</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        Üretime Ham madde Çıkışı
+                        <span class="badge bg-danger rounded-pill">Çıkış</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        Üretimden Mamul Giriş
+                        <span class="badge bg-success rounded-pill">Giriş</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        Devir
+                        <span class="badge bg-info text-dark rounded-pill">Devir</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        Karma Transfer Hareketi
+                        <span class="badge bg-warning text-dark rounded-pill">Transfer</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        Kur Farkı Hareketi
+                        <span class="badge bg-info text-dark rounded-pill">Düzeltme</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<h2>Stok Hareketleri Etkileri</h2>
+
+<p>Stok hareketleri, stok miktarlarını farklı şekillerde etkiler:</p>
+
+<div class="table-responsive">
+    <table class="table table-bordered">
+        <thead class="table-primary">
+            <tr>
+                <th>Etki Türü</th>
+                <th>Açıklama</th>
+                <th>Örnek Hareketler</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><span class="badge bg-success">Stok Artışı (+)</span></td>
+                <td>Stok miktarını artıran hareketler</td>
+                <td>Alış Faturası, Alış İrsaliyesi, Satış İade Faturası, Üretimden Mamul Giriş</td>
+            </tr>
+            <tr>
+                <td><span class="badge bg-danger">Stok Azalışı (-)</span></td>
+                <td>Stok miktarını azaltan hareketler</td>
+                <td>Satış Faturası, Satış İrsaliyesi, Alış İade Faturası, Üretime Ham madde Çıkışı</td>
+            </tr>
+            <tr>
+                <td><span class="badge bg-warning text-dark">Transfer</span></td>
+                <td>Stokları bir depodan diğerine aktaran hareketler</td>
+                <td>Depolar Arası Transfer, Karma Transfer Hareketi</td>
+            </tr>
+            <tr>
+                <td><span class="badge bg-info text-dark">Düzeltme</span></td>
+                <td>Stok miktarlarını düzelten hareketler</td>
+                <td>Sayım Farkı İşlemi, Kur Farkı Hareketi</td>
+            </tr>
+            <tr>
+                <td><span class="badge bg-secondary">Bilgi/Planlama</span></td>
+                <td>Stok miktarını doğrudan etkilemeyen, bilgi veya planlama amaçlı hareketler</td>
+                <td>Alınan Sipariş, Verilen Sipariş, Alınan Teklif, Verilen Teklif</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<h2>Stok Hareketi Oluşturma</h2>
+
+<p>Stok hareketi oluşturmak için aşağıdaki genel adımları izleyebilirsiniz:</p>
+
+<div class="accordion" id="stockMovementAccordion">
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="headingOne">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
+                1. Hareket Türü Seçimi
+            </button>
+        </h2>
+        <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#stockMovementAccordion">
+            <div class="accordion-body">
+                <p>İlgili menüden oluşturmak istediğiniz hareket türünü seçin:</p>
+                <ul>
+                    <li>Satış işlemleri için: <strong>Satış -> Fatura/İrsaliye/Sipariş/Teklif</strong></li>
+                    <li>Alış işlemleri için: <strong>Satın Alma -> Fatura/İrsaliye/Sipariş/Teklif</strong></li>
+                    <li>Stok işlemleri için: <strong>Stok -> Stok Hareketleri</strong></li>
+                    <li>Üretim işlemleri için: <strong>Üretim -> Üretim Hareketleri</strong></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="headingTwo">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+                2. Hareket Bilgilerini Doldurma
+            </button>
+        </h2>
+        <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#stockMovementAccordion">
+            <div class="accordion-body">
+                <p>Hareket türüne göre gerekli bilgileri doldurun:</p>
+                <ul>
+                    <li><strong>Genel Bilgiler:</strong> Tarih, belge numarası, açıklama vb.</li>
+                    <li><strong>Cari Bilgileri:</strong> Müşteri/Satıcı bilgileri (ilgili hareketler için)</li>
+                    <li><strong>Depo Bilgileri:</strong> Kaynak ve hedef depo (transfer işlemleri için)</li>
+                    <li><strong>Ödeme Bilgileri:</strong> Ödeme şekli, vade tarihi vb. (faturalar için)</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="headingThree">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree">
+                3. Stok Kalemlerini Ekleme
+            </button>
+        </h2>
+        <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#stockMovementAccordion">
+            <div class="accordion-body">
+                <p>Harekete dahil edilecek stok kalemlerini ekleyin:</p>
+                <ol>
+                    <li>"Kalem Ekle" butonuna tıklayın</li>
+                    <li>Stok kartını seçin</li>
+                    <li>Miktar, birim fiyat ve diğer gerekli bilgileri girin</li>
+                    <li>Gerekirse lot/seri numarası, depo bilgisi vb. özel bilgileri girin</li>
+                    <li>Eklemeyi tamamlayın</li>
+                    <li>Gerektiği kadar kalem eklemek için işlemi tekrarlayın</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="headingFour">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour">
+                4. Hareket Kaydını Tamamlama
+            </button>
+        </h2>
+        <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#stockMovementAccordion">
+            <div class="accordion-body">
+                <p>Tüm bilgileri kontrol ettikten sonra hareketi kaydedin:</p>
+                <ol>
+                    <li>Tüm bilgilerin doğru olduğundan emin olun</li>
+                    <li>Gerekirse ek bilgileri (notlar, belgeler vb.) ekleyin</li>
+                    <li>"Kaydet" butonuna tıklayın</li>
+                    <li>Onay mesajını kontrol edin</li>
+                </ol>
+                <div class="alert alert-success">
+                    <i class="bi bi-check-circle"></i>
+                    <strong>Bilgi:</strong> Hareket kaydedildikten sonra, hareket türüne göre stok miktarları otomatik olarak güncellenir ve ilgili muhasebe kayıtları oluşturulur.
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<h2>Stok Hareketleri Listesi</h2>
+
+<p>Tüm stok hareketlerini görüntülemek ve yönetmek için "Stok -> Stok Hareketleri Listesi" menüsünü kullanabilirsiniz. Bu ekranda:</p>
+
+<ul>
+    <li>Tüm stok hareketlerini görüntüleyebilirsiniz</li>
+    <li>Hareket türü, tarih, stok kodu vb. kriterlere göre filtreleme yapabilirsiniz</li>
+    <li>Hareket detaylarını görüntüleyebilirsiniz</li>
+    <li>Hareketleri düzenleyebilir veya iptal edebilirsiniz (yetkiniz varsa)</li>
+    <li>Hareket raporları alabilirsiniz</li>
+</ul>
+
+<div class="alert alert-warning">
+    <i class="bi bi-exclamation-triangle"></i>
+    <strong>Uyarı:</strong> Stok hareketleri, stok miktarlarını ve finansal verileri doğrudan etkilediği için, hareket oluşturma ve düzenleme işlemlerinde dikkatli olunmalıdır. Hatalı bir hareket, stok ve muhasebe verilerinde tutarsızlıklara neden olabilir.
+</div>
+
+<h2>İlgili Konular</h2>
+
+<div class="row">
+    <div class="col-md-4">
+        <ul>
+            <li><a href="?module=stok&page=stok-karti">Stok Kartı</a></li>
+            <li><a href="?module=stok&page=stok-karti-listesi">Stok Kartı Listesi</a></li>
+            <li><a href="?module=stok&page=depo-transfer">Depolar Arası Transfer</a></li>
+        </ul>
+    </div>
+    <div class="col-md-4">
+        <ul>
+            <li><a href="?module=stok&page=sayim-fisi">Sayım Fişi</a></li>
+            <li><a href="?module=stok&page=stok-raporlari">Stok Raporları</a></li>
+            <li><a href="?module=satis&page=satis-faturasi">Satış Faturası</a></li>
+        </ul>
+    </div>
+    <div class="col-md-4">
+        <ul>
+            <li><a href="?module=satinalma&page=alis-faturasi">Alış Faturası</a></li>
+            <li><a href="?module=uretim&page=uretim-emri">Üretim Emri</a></li>
+            <li><a href="?module=stok&page=lot-seri-takibi">Lot/Seri Takibi</a></li>
+        </ul>
+    </div>
+</div>
+
+<div class="alert alert-secondary mt-4">
+    <i class="bi bi-question-circle"></i>
+    <strong>Yardıma mı ihtiyacınız var?</strong> Daha fazla yardım için <a href="?module=destek&page=iletisim">Destek Ekibi</a> ile iletişime geçebilirsiniz.
+</div>

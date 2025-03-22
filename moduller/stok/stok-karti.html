@@ -1,0 +1,522 @@
+<!-- Meta Bilgileri -->
+<meta name="title" content="Stok Kartı">
+<meta name="icon" content="bi-box">
+<meta name="url" content="/stok/stok-karti">
+<meta name="lastUpdate" content="12.03.2025">
+
+<h1>Stok Kartı</h1>
+
+<p>Bu dokümantasyon, Aaro ERP sisteminde stok kartı oluşturma ve yönetme sürecini adım adım açıklamaktadır.</p>
+
+<div class="alert alert-info">
+    <i class="bi bi-info-circle"></i>
+    <strong>Erişim Linki:</strong> <a href="https://erp.aaro.com.tr/Stok/Kalem" target="_blank">erp.aaro.com.tr/Stok/Kalem</a>
+</div>
+
+<h2>Stok Kartına Erişim</h2>
+
+<p>Stok kartına aşağıdaki yöntemlerle erişebilirsiniz:</p>
+
+<div class="row">
+    <div class="col-md-4">
+        <div class="card mb-3">
+            <div class="card-header">
+                <i class="bi bi-search"></i> Arama Motoru ile
+            </div>
+            <div class="card-body">
+                <p>Sol sekmede Aaro kullanıcı bilgilerinin hemen altındaki arama motorundan "Stok kartı" olarak aratarak ulaşım sağlayabilirsiniz.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card mb-3">
+            <div class="card-header">
+                <i class="bi bi-plus-circle"></i> Yeni Kart Oluşturma
+            </div>
+            <div class="card-body">
+                <p>Sol menüden <strong>Stok -> Stok Modülü -> Yeni Stok Kartı</strong> şeklinde ulaşım sağlayabilirsiniz.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card mb-3">
+            <div class="card-header">
+                <i class="bi bi-list-ul"></i> Stok Kartı Listesi
+            </div>
+            <div class="card-body">
+                <p>Sol menüden <strong>Stok -> Kartlar -> Stok Kartı Listesi</strong> üzerinden ulaşım sağlayarak yeni kart ekleyebilir ya da mevcutları düzenleyebilirsiniz.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<h2>Stok Kartı Tanımı</h2>
+
+<p>Stok, bir işletmenin satış veya üretim amacıyla depoladığı tüm fiziksel varlıkları ifade eder. Bu varlıklar malzemeler, ham madde, yarı mamul veya tamamlanmış ürünler olabilir. Stok kartlarınızı tanımlayarak, bu varlıkların miktarını, değerini ve döngüsünü izleyebilir ve optimize edebilirsiniz. Stok seviyelerini belirlemek, stok hareketlerini işlemek ve envanterin doğru bir şekilde yönetilmesi için stok kartları oluşturulmalıdır.</p>
+
+<div class="alert alert-primary">
+    <i class="bi bi-lightbulb"></i>
+    <strong>İpucu:</strong> Stok kartlarını doğru ve eksiksiz bir şekilde tanımlamak, stok yönetimi süreçlerinizin daha verimli çalışmasını sağlar.
+</div>
+
+<h2>Stok Kartı Bilgileri</h2>
+
+<p>Stok kartı oluşturulurken aşağıdaki bilgiler doldurulmalıdır:</p>
+
+<div class="accordion" id="stockCardAccordion">
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="headingGeneral">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseGeneral">
+                Genel Bilgiler
+            </button>
+        </h2>
+        <div id="collapseGeneral" class="accordion-collapse collapse show" data-bs-parent="#stockCardAccordion">
+            <div class="accordion-body">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Alan</th>
+                            <th>Açıklama</th>
+                            <th>Zorunlu</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Stok Adı</td>
+                            <td>Bu stok kartının kendine özel adıdır.</td>
+                            <td>Evet</td>
+                        </tr>
+                        <tr>
+                            <td>Stok Kodu</td>
+                            <td>Kartın kendine özel kodudur.</td>
+                            <td>Evet</td>
+                        </tr>
+                        <tr>
+                            <td>Birim 1</td>
+                            <td>Stok kartının hangi birim cinsinden takip edileceğini belirtir. Girilecek ürünün ölçü ya da sayım birimi yani adet, m3, kg, litre, desi, koli, plaka gibi özellikler eklenebilir.</td>
+                            <td>Evet</td>
+                        </tr>
+                        <tr>
+                            <td>Kodlar</td>
+                            <td>Kartları hiyerarşik olarak gruplamak için kullanılır.</td>
+                            <td>Hayır</td>
+                        </tr>
+                        <tr>
+                            <td>Etiketler</td>
+                            <td>Gruplamak için kullanılır.</td>
+                            <td>Hayır</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="headingPrice">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsePrice">
+                Fiyat Bilgileri
+            </button>
+        </h2>
+        <div id="collapsePrice" class="accordion-collapse collapse" data-bs-parent="#stockCardAccordion">
+            <div class="accordion-body">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Alan</th>
+                            <th>Açıklama</th>
+                            <th>Zorunlu</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Alış Fiyat</td>
+                            <td>Bu stok kartına ait ürün veya hizmetin satın alınırken ödenen fiyatını ifade eder.</td>
+                            <td>Hayır</td>
+                        </tr>
+                        <tr>
+                            <td>Döviz Adı (Alış)</td>
+                            <td>Bu stok kartına ait alış fiyatının çalıştığı döviz cinsini belirtir. Bilgi amaçlıdır.</td>
+                            <td>Hayır</td>
+                        </tr>
+                        <tr>
+                            <td>Satış Fiyat</td>
+                            <td>Bu karta ait ürün veya hizmetin müşterilere satıldığı fiyatı ifade eder.</td>
+                            <td>Hayır</td>
+                        </tr>
+                        <tr>
+                            <td>Döviz Adı (Satış)</td>
+                            <td>Bu stok kartın satış fiyatının çalıştığı döviz cinsini belirtir. Bilgi amaçlıdır.</td>
+                            <td>Hayır</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="headingBarcode">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseBarcode">
+                Barkod Bilgileri
+            </button>
+        </h2>
+        <div id="collapseBarcode" class="accordion-collapse collapse" data-bs-parent="#stockCardAccordion">
+            <div class="accordion-body">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Alan</th>
+                            <th>Açıklama</th>
+                            <th>Zorunlu</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Barkod1</td>
+                            <td>Bu stok kartına ait barkod numarasını belirtir.</td>
+                            <td>Hayır</td>
+                        </tr>
+                        <tr>
+                            <td>Barkod2</td>
+                            <td>Bu stok kartına ait ikinci barkod numarasını belirtir. Birden fazla barkodu olan stoklar için kullanım sağlayabilirsiniz.</td>
+                            <td>Hayır</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="headingUnits">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseUnits">
+                Ölçü Birimleri
+            </button>
+        </h2>
+        <div id="collapseUnits" class="accordion-collapse collapse" data-bs-parent="#stockCardAccordion">
+            <div class="accordion-body">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Alan</th>
+                            <th>Açıklama</th>
+                            <th>Zorunlu</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Birim 2</td>
+                            <td>Bu stok kartı için ikinci ölçü birimidir. Kolay hesap yapmak ve raporlarda farklı cins rapor alabilmek için kullanılır.</td>
+                            <td>Hayır</td>
+                        </tr>
+                        <tr>
+                            <td>Birim 3</td>
+                            <td>Bu stok kartı için üçüncü ölçü birimidir. Kolay hesap yapmak ve raporlarda farklı cins rapor alabilmek için kullanılır.</td>
+                            <td>Hayır</td>
+                        </tr>
+                        <tr>
+                            <td>Çevrimiçi Birim2</td>
+                            <td>Birim-1 cinsinden bu stoğun kaç Birim-2 cinsinden olduğunu belirtir. Örneğin; Birim-1:Adet ve Birim-2:Deste ise bu değer = 0,1(1/10) olur.</td>
+                            <td>Hayır</td>
+                        </tr>
+                        <tr>
+                            <td>Çevrimiçi Birim3</td>
+                            <td>Birim-1 cinsinden bu stoğun kaç Birim-3 cinsinden olduğunu belirtir. Örneğin; Birim-1:Adet ve Birim-3:Düzine ise bu değer = 0,083(1/12) olur.</td>
+                            <td>Hayır</td>
+                        </tr>
+                        <tr>
+                            <td>Üretim Birim</td>
+                            <td>Üretimle ilgili raporlarda seçilen birim cinsinden rapor almanızı kolaylaştırır.</td>
+                            <td>Hayır</td>
+                        </tr>
+                        <tr>
+                            <td>Rapor Birim</td>
+                            <td>Raporlarda seçilen birim cinsinden rapor almanızı kolaylaştırır.</td>
+                            <td>Hayır</td>
+                        </tr>
+                        <tr>
+                            <td>Kalınlık</td>
+                            <td>Stoğun kalınlık ölçüsünü belirtir.</td>
+                            <td>Hayır</td>
+                        </tr>
+                        <tr>
+                            <td>En</td>
+                            <td>Stoğun en ölçüsünü belirtir.</td>
+                            <td>Hayır</td>
+                        </tr>
+                        <tr>
+                            <td>Boy</td>
+                            <td>Stoğun boy ölçüsünü belirtir.</td>
+                            <td>Hayır</td>
+                        </tr>
+                        <tr>
+                            <td>Yoğunluk</td>
+                            <td>Stoğun yoğunluk ölçüsünü belirtir.</td>
+                            <td>Hayır</td>
+                        </tr>
+                        <tr>
+                            <td>Ağırlık</td>
+                            <td>Stoğun ağırlık ölçüsünü belirtir.</td>
+                            <td>Hayır</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="headingTax">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTax">
+                Vergi Oranları
+            </button>
+        </h2>
+        <div id="collapseTax" class="accordion-collapse collapse" data-bs-parent="#stockCardAccordion">
+            <div class="accordion-body">
+                <p>Bu stok kartı ait işlemlerde kullanılacak devletin belirlemiş olduğu KDV Oranını (vergi oranını) belirtir. <strong>Girilmesi Zorunludur.</strong></p>
+            </div>
+        </div>
+    </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="headingAccounting">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseAccounting">
+                Muhasebe Tanımları
+            </button>
+        </h2>
+        <div id="collapseAccounting" class="accordion-collapse collapse" data-bs-parent="#stockCardAccordion">
+            <div class="accordion-body">
+                <p>Muhasebeleşme tanımlarını ayarlayarak, bu kart için hareket işlendiğinde otomatik olarak belirli muhasebe hesaplarına gerekli kayıtların oluşturulmasını sağlayabilirsiniz.</p>
+            </div>
+        </div>
+    </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="headingDealer">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseDealer">
+                Bayi Tanımları
+            </button>
+        </h2>
+        <div id="collapseDealer" class="accordion-collapse collapse" data-bs-parent="#stockCardAccordion">
+            <div class="accordion-body">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Alan</th>
+                            <th>Açıklama</th>
+                            <th>Zorunlu</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Bayide Göster</td>
+                            <td>Stoklarınızın tamamı bayilerinize gösterilmez. Bayi sisteminiz aktifse, göstermek istediğiniz stoku işaretlemeniz gerekmektedir.</td>
+                            <td>Hayır</td>
+                        </tr>
+                        <tr>
+                            <td>Bayi Maks. Miktar</td>
+                            <td>Bayileriniz, belirlediğiniz sayının üzerindeki stok miktarını göremezler. Örneğin, deponuzda 100 birim ABC stoğu varsa ve bu alana 50 girerseniz, bayileriniz bu stoğun miktarını "50+" şeklinde görecektir. Eğer 0 girerseniz, bayiler sadece "Stokta Var" veya "Stokta Yok" şeklinde görebilirler.</td>
+                            <td>Hayır</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="headingStockManagement">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseStockManagement">
+                Stok Yönetimi
+            </button>
+        </h2>
+        <div id="collapseStockManagement" class="accordion-collapse collapse" data-bs-parent="#stockCardAccordion">
+            <div class="accordion-body">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Alan</th>
+                            <th>Açıklama</th>
+                            <th>Zorunlu</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Takip Yöntemi</td>
+                            <td>Stok miktar takibi yapılırken seri veya lot takibi yapılıp yapılmadığını gösterir.</td>
+                            <td>Evet</td>
+                        </tr>
+                        <tr>
+                            <td>TY Kod Ön Eki</td>
+                            <td>Otomatik başlatılan seri ve lot numaralarında numaranın istenilen seri ile başlamasını sağlar.</td>
+                            <td>Evet</td>
+                        </tr>
+                        <tr>
+                            <td>TY Üretim Birebir ilişki</td>
+                            <td>Üretim hareketlerinde bu stok üretilirken her bir seri ve lot için hangi ham maddelerin bire bir kontrol edileceğini belirler.</td>
+                            <td>Evet</td>
+                        </tr>
+                        <tr>
+                            <td>Raf Takibi</td>
+                            <td>Raf takibi yapılıp yapılmayacağını belirler.</td>
+                            <td>Evet</td>
+                        </tr>
+                        <tr>
+                            <td>Paket Takibi</td>
+                            <td>Paket takibi yapılıp yapılmayacağını belirler.</td>
+                            <td>Evet</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="headingAdvanced">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseAdvanced">
+                Gelişmiş
+            </button>
+        </h2>
+        <div id="collapseAdvanced" class="accordion-collapse collapse" data-bs-parent="#stockCardAccordion">
+            <div class="accordion-body">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Alan</th>
+                            <th>Açıklama</th>
+                            <th>Zorunlu</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Şirket-Şube</td>
+                            <td>Kartın ait olduğu şirket ve şubeyi belirtir.</td>
+                            <td>Hayır</td>
+                        </tr>
+                        <tr>
+                            <td>Durum</td>
+                            <td>Kartın kullanılabilirliğini belirtir. Pasif kartlar işlemde kullanılamaz.</td>
+                            <td>Hayır</td>
+                        </tr>
+                        <tr>
+                            <td>GTIP</td>
+                            <td>İhracat tipindeki e-faturalarda, stoğa ait GTIP değerinin doldurulması zorunludur.</td>
+                            <td>Hayır</td>
+                        </tr>
+                        <tr>
+                            <td>Harici Depo Miktar</td>
+                            <td>Depo dışında kalan miktarı belirtir.</td>
+                            <td>Hayır</td>
+                        </tr>
+                        <tr>
+                            <td>Hizmet Mi</td>
+                            <td>Bu seçenek hizmet takibi olarak seçilirse miktar takibi yapılmaz, depoda gözükmez, eski bakiye kontrolü yapılmaz.</td>
+                            <td>Hayır</td>
+                        </tr>
+                        <tr>
+                            <td>Stok Kısa Kodu</td>
+                            <td>Raporlama için gereklidir.</td>
+                            <td>Hayır</td>
+                        </tr>
+                        <tr>
+                            <td>Stok Kısa Adı</td>
+                            <td>Raporlama için gereklidir.</td>
+                            <td>Hayır</td>
+                        </tr>
+                        <tr>
+                            <td>Kargo ücreti</td>
+                            <td>Kargo ücreti</td>
+                            <td>Hayır</td>
+                        </tr>
+                        <tr>
+                            <td>StandartMı</td>
+                            <td>Stok kartının standart stok olarak değerlendirilmesini sağlar. Filtreleyerek bulmayı kolaylaştırır.</td>
+                            <td>Hayır</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="headingNotes">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNotes">
+                Açıklamalar
+            </button>
+        </h2>
+        <div id="collapseNotes" class="accordion-collapse collapse" data-bs-parent="#stockCardAccordion">
+            <div class="accordion-body">
+                <p>Bu kısma stok ile ilgili açıklama eklenebilir.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<h2>Kaydetme ve Silme</h2>
+
+<div class="row">
+    <div class="col-md-6">
+        <div class="alert alert-success">
+            <i class="bi bi-check-circle"></i>
+            <strong>Kaydetme:</strong> Doldurulması gereken alanlar girildikten sonra sağ alt köşede bulunan <strong>Kaydet</strong> butonuna tıklayarak stok kartı oluşturma işleminizi tamamlayabilirsiniz.
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="alert alert-danger">
+            <i class="bi bi-trash"></i>
+            <strong>Silme:</strong> Kayıtlı bir kartı silmek için sol altta bulunan sil butonuna tıklayabilirsiniz.
+        </div>
+    </div>
+</div>
+
+<h2>Kısayollar</h2>
+
+<p>Stokta bulunan kısayollar sekmesi ile stokla ait ilgili raporlara ve öncelikli sayfalara kolayca ulaşabilirsiniz:</p>
+
+<ul>
+    <li><strong>Liste</strong></li>
+    <li><strong>Hareketleri</strong></li>
+    <li><strong>Alınan Sipariş Hareketleri</strong></li>
+    <li><strong>Depo Miktarları</strong></li>
+</ul>
+
+<h2>Kayıt Bilgileri</h2>
+
+<p>Kartın hangi kullanıcı tarafından, hangi tarihlerde oluşturulduğu ve değiştirildiği bilgisini içerir.</p>
+
+<p>Kart iş akış süreçlerine dahil edildiğinde hangi kullanıcı tarafından hangi tarihte onaylandığı bilgilerini içerir.</p>
+
+<h2>Yazdır</h2>
+
+<ul>
+    <li>Sayfanın sağ üstünde bulunan yazıcı sembolü ile sayfaya tanımlanan özel çıktı formatları ile farklı çıktılar alınabilir.</li>
+    <li>Kartta bulunan bilgilerin kullanıcının isteğine bağlı olarak özel tasarım ile yazdırılmasını sağlar.</li>
+    <li>Birden çok çıktı tasarım yapılabilir ve değiştirilebilir.</li>
+    <li>Kullanıcıya özel ekstre, dövizli ekstre gibi farklı tasarımlar yapılabilir.</li>
+    <li>Çıktı tasarımlarının her birine ayrı ayrı yetkiler verilerek sadece istenilen kullanıcının belirli çıktılara ulaşması sağlanabilir.</li>
+    <li>Çıktılar program üzerinden e-mail olarak gönderilebilir.</li>
+</ul>
+
+<h2>Ek İşlemler</h2>
+
+<p>Sayfanın sağ üst köşesinde bulunan, alt alta üç çizgi şeklindeki düğme ile ek işlemlere erişebilirsiniz:</p>
+
+<ul>
+    <li>Ana Sayfaya Kısayol Olarak Ekle</li>
+    <li>Görev Oluştur</li>
+    <li>Görev Bağla</li>
+</ul>
+
+<h2>Belgeler</h2>
+
+<p>Yapacağımız işlem için elimizde belgeler var ise jpg, png, pdf vb. formatlardaki belgeleri buraya yükleyebiliriz. Buraya işlem esnasındaki görselleri yükleyebiliriz.</p>
+
+<p>Belge eklemek için tıklayalım:</p>
+
+<ul>
+    <li><strong>Daha önce yüklediklerimden seç -> Belgeyi seç -> İlişkilendir</strong> şeklinde belge yükleme işlemimizi gerçekleştirebiliriz.</li>
+    <li><strong>Yüklenecek belge veya resimleri seç -> Belgeyi ya da belgeleri seç -> Yükle</strong> şeklinde belge yükleme işlemimizi gerçekleştirebiliriz.</li>
+</ul>
+
+<h2>Notlar</h2>
+
+<p>İşleme ait özel notlar ekleyebiliriz. Önemli bir detay varsa, bu ayrıntıları burada belirtebiliriz.</p>
+
+<div class="alert alert-secondary mt-4">
+    <i class="bi bi-question-circle"></i>
+    <strong>Yardıma mı ihtiyacınız var?</strong> Daha fazla yardım için <a href="?module=destek&page=iletisim">Destek Ekibi</a> ile iletişime geçebilirsiniz.
+</div>

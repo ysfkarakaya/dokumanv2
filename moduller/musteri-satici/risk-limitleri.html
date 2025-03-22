@@ -1,0 +1,517 @@
+<!-- Meta Bilgileri -->
+<meta name="title" content="Risk Limitleri">
+<meta name="icon" content="bi-shield-exclamation">
+<meta name="url" content="/musteri-satici/risk-limitleri">
+<meta name="lastUpdate" content="12.03.2025">
+
+<h1>Risk Limitleri</h1>
+
+<p>Bu dokümantasyon, Aaro ERP sisteminde müşteri ve satıcılar için risk limitleri tanımlama, izleme ve yönetme işlemlerini açıklamaktadır.</p>
+
+<div class="alert alert-info">
+    <i class="bi bi-info-circle"></i>
+    <strong>Bilgi:</strong> Risk limitleri, müşteri ve satıcılarla olan finansal ilişkilerinizde riskleri kontrol altında tutmanızı ve potansiyel sorunları önceden tespit etmenizi sağlar.
+</div>
+
+<h2>Risk Limitleri Nedir?</h2>
+
+<p>Risk limitleri, bir müşteri veya satıcı ile yapılacak işlemlerde izin verilen maksimum borç/alacak miktarını belirleyen sınırlardır. Bu limitler, finansal riskleri kontrol etmek, tahsilat sorunlarını önlemek ve sağlıklı bir nakit akışı sağlamak için kullanılır.</p>
+
+<div class="row">
+    <div class="col-md-6">
+        <div class="card mb-3">
+            <div class="card-header bg-primary text-white">
+                <h3 class="mb-0">Müşteri Risk Limitleri</h3>
+            </div>
+            <div class="card-body">
+                <p>Müşteri risk limitleri, bir müşterinin size olan maksimum borç miktarını belirler. Bu limit aşıldığında, sistem belirlediğiniz kurallara göre uyarı verebilir veya yeni işlemleri engelleyebilir.</p>
+                <p>Örneğin, bir müşteriye 10.000 TL risk limiti tanımladığınızda:</p>
+                <ul>
+                    <li>Müşterinin borcu 8.000 TL ise, 2.000 TL daha borçlanabilir.</li>
+                    <li>Müşterinin borcu 10.000 TL'ye ulaştığında, yeni satış işlemleri için uyarı alırsınız veya işlemler engellenir.</li>
+                    <li>Müşteri ödeme yaptığında, limit dahilinde tekrar borçlanabilir.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="card mb-3">
+            <div class="card-header bg-success text-white">
+                <h3 class="mb-0">Satıcı Risk Limitleri</h3>
+            </div>
+            <div class="card-body">
+                <p>Satıcı risk limitleri, bir satıcıya olan maksimum borç miktarınızı belirler. Bu limit, satın alma planlaması ve nakit akışı yönetimi için kullanılır.</p>
+                <p>Örneğin, bir satıcıya 20.000 TL risk limiti tanımladığınızda:</p>
+                <ul>
+                    <li>Satıcıya olan borcunuz 15.000 TL ise, 5.000 TL daha borçlanabilirsiniz.</li>
+                    <li>Borcunuz 20.000 TL'ye ulaştığında, yeni alım işlemleri için uyarı alırsınız.</li>
+                    <li>Satıcıya ödeme yaptığınızda, limit dahilinde tekrar borçlanabilirsiniz.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<h2>Risk Limitleri Tanımlama</h2>
+
+<p>Risk limitleri, müşteri veya satıcı kartı üzerinden tanımlanır. Aşağıdaki adımları izleyerek risk limiti tanımlayabilirsiniz:</p>
+
+<div class="accordion" id="riskLimitAccordion">
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="headingOne">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
+                Müşteri/Satıcı Kartı Üzerinden Risk Limiti Tanımlama
+            </button>
+        </h2>
+        <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#riskLimitAccordion">
+            <div class="accordion-body">
+                <ol>
+                    <li>İlgili müşteri veya satıcı kartını açın.</li>
+                    <li>"Risk Limitleri" sekmesine tıklayın.</li>
+                    <li>"Yeni Risk Limiti" butonuna tıklayın.</li>
+                    <li>Açılan formda aşağıdaki bilgileri doldurun:
+                        <ul>
+                            <li><strong>Risk Limiti:</strong> Maksimum borç/alacak tutarı</li>
+                            <li><strong>Para Birimi:</strong> Limitin para birimi</li>
+                            <li><strong>Başlangıç Tarihi:</strong> Limitin geçerli olacağı başlangıç tarihi</li>
+                            <li><strong>Bitiş Tarihi:</strong> Limitin geçerli olacağı bitiş tarihi (isteğe bağlı)</li>
+                            <li><strong>Risk Kontrolü:</strong> Limit aşıldığında yapılacak işlem (Uyarı, Engelleme, Onaya Gönderme)</li>
+                            <li><strong>Açıklama:</strong> Limit ile ilgili açıklama (isteğe bağlı)</li>
+                        </ul>
+                    </li>
+                    <li>"Kaydet" butonuna tıklayın.</li>
+                </ol>
+                <div class="alert alert-primary">
+                    <i class="bi bi-lightbulb"></i>
+                    <strong>İpucu:</strong> Birden fazla para birimi için ayrı risk limitleri tanımlayabilirsiniz. Örneğin, TL ve USD için farklı limitler belirleyebilirsiniz.
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="headingTwo">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+                Toplu Risk Limiti Tanımlama
+            </button>
+        </h2>
+        <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#riskLimitAccordion">
+            <div class="accordion-body">
+                <p>Birden fazla müşteri veya satıcı için aynı anda risk limiti tanımlamak için:</p>
+                <ol>
+                    <li>Ana menüden "Müşteri/Satıcı > Ayarlar > Risk Limitleri" seçeneğine tıklayın.</li>
+                    <li>"Toplu Risk Limiti Tanımlama" butonuna tıklayın.</li>
+                    <li>Açılan formda aşağıdaki bilgileri doldurun:
+                        <ul>
+                            <li><strong>Cari Hesap Seçimi:</strong> Risk limiti tanımlanacak müşteri/satıcıları seçin</li>
+                            <li><strong>Risk Limiti:</strong> Maksimum borç/alacak tutarı</li>
+                            <li><strong>Para Birimi:</strong> Limitin para birimi</li>
+                            <li><strong>Başlangıç Tarihi:</strong> Limitin geçerli olacağı başlangıç tarihi</li>
+                            <li><strong>Bitiş Tarihi:</strong> Limitin geçerli olacağı bitiş tarihi (isteğe bağlı)</li>
+                            <li><strong>Risk Kontrolü:</strong> Limit aşıldığında yapılacak işlem</li>
+                            <li><strong>Açıklama:</strong> Limit ile ilgili açıklama (isteğe bağlı)</li>
+                        </ul>
+                    </li>
+                    <li>"Uygula" butonuna tıklayın.</li>
+                </ol>
+                <div class="alert alert-primary">
+                    <i class="bi bi-lightbulb"></i>
+                    <strong>İpucu:</strong> Toplu risk limiti tanımlarken, müşteri/satıcıları gruplamak için filtreleri kullanabilirsiniz. Örneğin, belirli bir sektördeki veya bölgedeki tüm müşterilere aynı risk limitini tanımlayabilirsiniz.
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<h2>Risk Kontrolü Seçenekleri</h2>
+
+<p>Risk limiti tanımlarken, limit aşıldığında sistemin nasıl davranacağını belirleyen "Risk Kontrolü" seçeneklerini kullanabilirsiniz:</p>
+
+<div class="table-responsive">
+    <table class="table table-bordered">
+        <thead class="table-light">
+            <tr>
+                <th>Kontrol Tipi</th>
+                <th>Açıklama</th>
+                <th>Kullanım Senaryosu</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><span class="badge bg-info">Bilgi</span></td>
+                <td>Limit aşıldığında sadece bilgi verir, işlemleri engellemez.</td>
+                <td>Güvenilir müşteriler veya düzenli ödemesi olan müşteriler için kullanılabilir.</td>
+            </tr>
+            <tr>
+                <td><span class="badge bg-warning text-dark">Uyarı</span></td>
+                <td>Limit aşıldığında uyarı verir, kullanıcı onaylarsa işleme devam edilir.</td>
+                <td>Orta seviye risk taşıyan müşteriler için kullanılabilir.</td>
+            </tr>
+            <tr>
+                <td><span class="badge bg-danger">Engelleme</span></td>
+                <td>Limit aşıldığında işlemi tamamen engeller, devam edilemez.</td>
+                <td>Yüksek risk taşıyan veya ödeme geçmişi sorunlu müşteriler için kullanılabilir.</td>
+            </tr>
+            <tr>
+                <td><span class="badge bg-secondary">Onaya Gönderme</span></td>
+                <td>Limit aşıldığında işlem onay sürecine girer, yetkili onaylarsa devam edilir.</td>
+                <td>Büyük tutarlı işlemler veya özel müşteriler için kullanılabilir.</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<div class="alert alert-primary">
+    <i class="bi bi-lightbulb"></i>
+    <strong>İpucu:</strong> Risk kontrolü seçeneklerini, müşteri/satıcı ilişkilerinize ve iş süreçlerinize göre özelleştirebilirsiniz. Örneğin, yeni müşteriler için "Engelleme", uzun süreli müşteriler için "Uyarı" seçeneğini kullanabilirsiniz.
+</div>
+
+<h2>Risk Limiti İzleme ve Raporlama</h2>
+
+<p>Tanımladığınız risk limitlerini izlemek ve raporlamak için aşağıdaki araçları kullanabilirsiniz:</p>
+
+<div class="row">
+    <div class="col-md-6">
+        <div class="card mb-3">
+            <div class="card-header">
+                <i class="bi bi-graph-up"></i> Risk Limiti Raporları
+            </div>
+            <div class="card-body">
+                <p>Risk limiti raporları, tanımlanan limitleri ve güncel durumu görüntülemenizi sağlar:</p>
+                <ul>
+                    <li><strong>Risk Limiti Özeti:</strong> Tüm müşteri/satıcıların risk limitlerini ve güncel borç/alacak durumlarını gösterir.</li>
+                    <li><strong>Limit Aşım Raporu:</strong> Risk limitini aşan müşteri/satıcıları listeler.</li>
+                    <li><strong>Limit Yaklaşım Raporu:</strong> Risk limitine yaklaşan müşteri/satıcıları gösterir.</li>
+                    <li><strong>Limit Kullanım Raporu:</strong> Risk limitlerinin ne kadarının kullanıldığını yüzdesel olarak gösterir.</li>
+                </ul>
+                <p>Bu raporlara "Müşteri/Satıcı > Raporlar > Risk Limitleri" menüsünden erişebilirsiniz.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="card mb-3">
+            <div class="card-header">
+                <i class="bi bi-bell"></i> Risk Limiti Uyarıları
+            </div>
+            <div class="card-body">
+                <p>Sistem, risk limitleri ile ilgili aşağıdaki uyarıları otomatik olarak oluşturabilir:</p>
+                <ul>
+                    <li><strong>Limit Aşım Uyarısı:</strong> Bir müşteri/satıcının risk limitini aştığında oluşur.</li>
+                    <li><strong>Limit Yaklaşım Uyarısı:</strong> Bir müşteri/satıcının risk limitine belirli bir oranda yaklaştığında oluşur (örneğin %80).</li>
+                    <li><strong>Limit Süresi Bitiş Uyarısı:</strong> Bir risk limitinin süresi dolmak üzere olduğunda oluşur.</li>
+                </ul>
+                <p>Bu uyarıları "Ayarlar > Bildirim Ayarları > Risk Limiti Bildirimleri" menüsünden yapılandırabilirsiniz.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<h2>Risk Limiti Hesaplama Yöntemleri</h2>
+
+<p>Aaro ERP, risk limitlerini hesaplarken farklı yöntemler kullanabilir. Bu yöntemleri "Ayarlar > Sistem Ayarları > Risk Limiti Ayarları" menüsünden yapılandırabilirsiniz:</p>
+
+<div class="accordion" id="calculationAccordion">
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="calcHeadingOne">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#calcCollapseOne">
+                Bakiye Bazlı Hesaplama
+            </button>
+        </h2>
+        <div id="calcCollapseOne" class="accordion-collapse collapse show" data-bs-parent="#calculationAccordion">
+            <div class="accordion-body">
+                <p>Bu yöntemde, müşteri/satıcının güncel bakiyesi risk limiti ile karşılaştırılır.</p>
+                <div class="card mb-3">
+                    <div class="card-header bg-light">
+                        <h5 class="mb-0">Örnek</h5>
+                    </div>
+                    <div class="card-body">
+                        <ul>
+                            <li><strong>Risk Limiti:</strong> 10.000 TL</li>
+                            <li><strong>Güncel Bakiye:</strong> 8.500 TL</li>
+                            <li><strong>Limit Kullanımı:</strong> %85</li>
+                            <li><strong>Kalan Limit:</strong> 1.500 TL</li>
+                        </ul>
+                        <p>Bu durumda, müşteri 1.500 TL daha borçlanabilir.</p>
+                    </div>
+                </div>
+                <div class="alert alert-primary">
+                    <i class="bi bi-lightbulb"></i>
+                    <strong>İpucu:</strong> Bu yöntem, genel risk yönetimi için en yaygın kullanılan yöntemdir.
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="calcHeadingTwo">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#calcCollapseTwo">
+                Bakiye + Açık Belgeler Hesaplaması
+            </button>
+        </h2>
+        <div id="calcCollapseTwo" class="accordion-collapse collapse" data-bs-parent="#calculationAccordion">
+            <div class="accordion-body">
+                <p>Bu yöntemde, müşteri/satıcının güncel bakiyesine henüz muhasebeleşmemiş açık belgeler (siparişler, irsaliyeler vb.) de eklenerek risk limiti ile karşılaştırılır.</p>
+                <div class="card mb-3">
+                    <div class="card-header bg-light">
+                        <h5 class="mb-0">Örnek</h5>
+                    </div>
+                    <div class="card-body">
+                        <ul>
+                            <li><strong>Risk Limiti:</strong> 10.000 TL</li>
+                            <li><strong>Güncel Bakiye:</strong> 6.000 TL</li>
+                            <li><strong>Açık Siparişler:</strong> 2.500 TL</li>
+                            <li><strong>Açık İrsaliyeler:</strong> 1.000 TL</li>
+                            <li><strong>Toplam Risk:</strong> 9.500 TL</li>
+                            <li><strong>Limit Kullanımı:</strong> %95</li>
+                            <li><strong>Kalan Limit:</strong> 500 TL</li>
+                        </ul>
+                        <p>Bu durumda, müşteri sadece 500 TL daha borçlanabilir.</p>
+                    </div>
+                </div>
+                <div class="alert alert-primary">
+                    <i class="bi bi-lightbulb"></i>
+                    <strong>İpucu:</strong> Bu yöntem, daha kapsamlı bir risk yönetimi için uygundur ve potansiyel riskleri önceden tespit etmenizi sağlar.
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="calcHeadingThree">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#calcCollapseThree">
+                Vade Bazlı Hesaplama
+            </button>
+        </h2>
+        <div id="calcCollapseThree" class="accordion-collapse collapse" data-bs-parent="#calculationAccordion">
+            <div class="accordion-body">
+                <p>Bu yöntemde, müşteri/satıcının vadesi geçmiş borçları daha yüksek bir ağırlıkla hesaplanarak risk limiti ile karşılaştırılır.</p>
+                <div class="card mb-3">
+                    <div class="card-header bg-light">
+                        <h5 class="mb-0">Örnek</h5>
+                    </div>
+                    <div class="card-body">
+                        <ul>
+                            <li><strong>Risk Limiti:</strong> 10.000 TL</li>
+                            <li><strong>Vadesi Gelmemiş Borç:</strong> 5.000 TL (x1 ağırlık = 5.000 TL)</li>
+                            <li><strong>0-30 Gün Vadesi Geçmiş Borç:</strong> 2.000 TL (x1.5 ağırlık = 3.000 TL)</li>
+                            <li><strong>30+ Gün Vadesi Geçmiş Borç:</strong> 1.000 TL (x2 ağırlık = 2.000 TL)</li>
+                            <li><strong>Ağırlıklı Toplam Risk:</strong> 10.000 TL</li>
+                            <li><strong>Limit Kullanımı:</strong> %100</li>
+                            <li><strong>Kalan Limit:</strong> 0 TL</li>
+                        </ul>
+                        <p>Bu durumda, müşteri limit dolduğu için daha fazla borçlanamaz.</p>
+                    </div>
+                </div>
+                <div class="alert alert-primary">
+                    <i class="bi bi-lightbulb"></i>
+                    <strong>İpucu:</strong> Bu yöntem, ödeme alışkanlıklarını da dikkate alarak daha hassas bir risk yönetimi sağlar.
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<h2>Risk Limiti Örnekleri</h2>
+
+<div class="row">
+    <div class="col-md-6">
+        <div class="card mb-3">
+            <div class="card-header bg-primary text-white">
+                <h3 class="mb-0">Örnek 1: Standart Müşteri Risk Limiti</h3>
+            </div>
+            <div class="card-body">
+                <h4>Senaryo</h4>
+                <p>ABC Elektronik Ltd. Şti. adlı müşteriniz için standart bir risk limiti tanımlamak istiyorsunuz.</p>
+                
+                <h4>Risk Limiti Ayarları</h4>
+                <ul>
+                    <li><strong>Risk Limiti:</strong> 25.000 TL</li>
+                    <li><strong>Para Birimi:</strong> TL</li>
+                    <li><strong>Başlangıç Tarihi:</strong> 01.01.2025</li>
+                    <li><strong>Bitiş Tarihi:</strong> 31.12.2025</li>
+                    <li><strong>Risk Kontrolü:</strong> Uyarı</li>
+                    <li><strong>Hesaplama Yöntemi:</strong> Bakiye Bazlı</li>
+                </ul>
+                
+                <h4>Sonuç</h4>
+                <p>Bu ayarlarla, ABC Elektronik'in borcu 25.000 TL'ye ulaştığında sistem uyarı verecek, ancak kullanıcı onaylarsa işlemlere devam edilebilecektir.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="card mb-3">
+            <div class="card-header bg-primary text-white">
+                <h3 class="mb-0">Örnek 2: Kapsamlı Müşteri Risk Limiti</h3>
+            </div>
+            <div class="card-body">
+                <h4>Senaryo</h4>
+                <p>XYZ Market A.Ş. adlı büyük müşteriniz için daha kapsamlı bir risk limiti tanımlamak istiyorsunuz.</p>
+                
+                <h4>Risk Limiti Ayarları</h4>
+                <ul>
+                    <li><strong>Risk Limiti 1:</strong> 50.000 TL (TL cinsinden işlemler için)</li>
+                    <li><strong>Risk Limiti 2:</strong> 10.000 USD (USD cinsinden işlemler için)</li>
+                    <li><strong>Başlangıç Tarihi:</strong> 01.01.2025</li>
+                    <li><strong>Bitiş Tarihi:</strong> 31.12.2025</li>
+                    <li><strong>Risk Kontrolü:</strong> Onaya Gönderme</li>
+                    <li><strong>Hesaplama Yöntemi:</strong> Bakiye + Açık Belgeler</li>
+                    <li><strong>Ek Ayarlar:</strong>
+                        <ul>
+                            <li>Limit Yaklaşım Uyarısı: %80</li>
+                            <li>Onay Yetkilisi: Finans Müdürü</li>
+                        </ul>
+                    </li>
+                </ul>
+                
+                <h4>Sonuç</h4>
+                <p>Bu ayarlarla, XYZ Market'in TL veya USD cinsinden limitleri aşıldığında işlemler otomatik olarak Finans Müdürü'nün onayına gönderilecektir. Ayrıca, limit kullanımı %80'e ulaştığında sistem uyarı verecektir.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-6">
+        <div class="card mb-3">
+            <div class="card-header bg-success text-white">
+                <h3 class="mb-0">Örnek 3: Satıcı Risk Limiti</h3>
+            </div>
+            <div class="card-body">
+                <h4>Senaryo</h4>
+                <p>DEF Tedarik A.Ş. adlı satıcınız için bir risk limiti tanımlamak istiyorsunuz.</p>
+                
+                <h4>Risk Limiti Ayarları</h4>
+                <ul>
+                    <li><strong>Risk Limiti:</strong> 100.000 TL</li>
+                    <li><strong>Para Birimi:</strong> TL</li>
+                    <li><strong>Başlangıç Tarihi:</strong> 01.01.2025</li>
+                    <li><strong>Bitiş Tarihi:</strong> (Süresiz)</li>
+                    <li><strong>Risk Kontrolü:</strong> Bilgi</li>
+                    <li><strong>Hesaplama Yöntemi:</strong> Bakiye Bazlı</li>
+                </ul>
+                
+                <h4>Sonuç</h4>
+                <p>Bu ayarlarla, DEF Tedarik'e olan borcunuz 100.000 TL'ye ulaştığında sistem bilgi verecek, ancak işlemleri engellemeyecektir. Bu, satın alma planlaması ve nakit akışı yönetimi için bir referans noktası sağlar.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="card mb-3">
+            <div class="card-header bg-danger text-white">
+                <h3 class="mb-0">Örnek 4: Yüksek Riskli Müşteri Limiti</h3>
+            </div>
+            <div class="card-body">
+                <h4>Senaryo</h4>
+                <p>GHI Yapı Ltd. Şti. adlı, geçmişte ödeme sorunları yaşadığınız bir müşteri için sıkı bir risk limiti tanımlamak istiyorsunuz.</p>
+                
+                <h4>Risk Limiti Ayarları</h4>
+                <ul>
+                    <li><strong>Risk Limiti:</strong> 5.000 TL</li>
+                    <li><strong>Para Birimi:</strong> TL</li>
+                    <li><strong>Başlangıç Tarihi:</strong> 01.01.2025</li>
+                    <li><strong>Bitiş Tarihi:</strong> 30.06.2025 (6 aylık deneme süresi)</li>
+                    <li><strong>Risk Kontrolü:</strong> Engelleme</li>
+                    <li><strong>Hesaplama Yöntemi:</strong> Vade Bazlı</li>
+                    <li><strong>Ek Ayarlar:</strong>
+                        <ul>
+                            <li>Peşin Ödeme Zorunluluğu: Evet</li>
+                            <li>Limit Aşım İstisnası: Yok</li>
+                        </ul>
+                    </li>
+                </ul>
+                
+                <h4>Sonuç</h4>
+                <p>Bu ayarlarla, GHI Yapı'nın borcu 5.000 TL'ye ulaştığında sistem tüm işlemleri engelleyecektir. Ayrıca, vadesi geçmiş borçlar daha yüksek ağırlıkla hesaplanacak ve yeni satışlar için peşin ödeme zorunlu olacaktır.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<h2>Sık Sorulan Sorular</h2>
+
+<div class="accordion" id="faqAccordion">
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="faqOne">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseOne">
+                Bir müşteri için birden fazla risk limiti tanımlayabilir miyim?
+            </button>
+        </h2>
+        <div id="faqCollapseOne" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+                <p>Evet, bir müşteri için farklı para birimlerinde veya farklı tarih aralıklarında birden fazla risk limiti tanımlayabilirsiniz. Örneğin:</p>
+                <ul>
+                    <li>TL ve USD cinsinden ayrı limitler</li>
+                    <li>Farklı dönemler için farklı limitler (örneğin, sezonluk limitler)</li>
+                    <li>Farklı şubeler veya departmanlar için ayrı limitler</li>
+                </ul>
+                <p>Sistem, ilgili işlem için uygun olan limiti otomatik olarak kullanacaktır.</p>
+            </div>
+        </div>
+    </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="faqTwo">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseTwo">
+                Risk limiti aşıldığında ne olur?
+            </button>
+        </h2>
+        <div id="faqCollapseTwo" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+                <p>Risk limiti aşıldığında, tanımladığınız "Risk Kontrolü" seçeneğine göre sistem farklı davranışlar sergiler:</p>
+                <ul>
+                    <li><strong>Bilgi:</strong> Sistem sadece bilgi mesajı gösterir, işleme devam edilir.</li>
+                    <li><strong>Uyarı:</strong> Sistem uyarı mesajı gösterir, kullanıcı onaylarsa işleme devam edilir.</li>
+                    <li><strong>Engelleme:</strong> Sistem işlemi tamamen engeller, devam edilemez.</li>
+                    <li><strong>Onaya Gönderme:</strong> Sistem işlemi yetkili onayına gönderir, onaylanırsa devam edilir.</li>
+                </ul>
+                <p>Ayrıca, risk limiti aşımları sistem günlüğüne kaydedilir ve raporlarda görüntülenebilir.</p>
+            </div>
+        </div>
+    </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="faqThree">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseThree">
+                Risk limitlerini nasıl belirlemeliyim?
+            </button>
+        </h2>
+        <div id="faqCollapseThree" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+                <p>Risk limitlerini belirlerken aşağıdaki faktörleri dikkate alabilirsiniz:</p>
+                <ul>
+                    <li><strong>Müşteri/Satıcı Geçmişi:</strong> Ödeme alışkanlıkları, geçmiş işlem hacimleri</li>
+                    <li><strong>Finansal Durum:</strong> Müşteri/satıcının finansal gücü ve istikrarı</li>
+                    <li><strong>Sektör Riskleri:</strong> Müşteri/satıcının faaliyet gösterdiği sektörün riskleri</li>
+                    <li><strong>İş İlişkisi:</strong> İş ilişkisinin süresi ve önemi</li>
+                    <li><strong>Nakit Akışı:</strong> Kendi nakit akışınız ve finansal durumunuz</li>
+                </ul>
+                <p>Genel bir kural olarak, bir müşterinin risk limiti, ortalama aylık satış tutarının 2-3 katı olarak belirlenebilir. Ancak bu oran, yukarıdaki faktörlere göre ayarlanmalıdır.</p>
+            </div>
+        </div>
+    </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="faqFour">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseFour">
+                Risk limitlerini düzenli olarak gözden geçirmeli miyim?
+            </button>
+        </h2>
+        <div id="faqCollapseFour" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+                <p>Evet, risk limitlerini düzenli olarak gözden geçirmeniz önerilir. Aşağıdaki durumlarda risk limitlerini güncellemeyi düşünebilirsiniz:</p>
+                <ul>
+                    <li><strong>Periyodik İnceleme:</strong> 3-6 ayda bir tüm risk limitlerini gözden geçirin.</li>
+                    <li><strong>İş Hacmi Değişikliği:</strong> Müşteri/satıcı ile iş hacminiz önemli ölçüde arttığında veya azaldığında.</li>
+                    <li><strong>Ödeme Davranışı Değişikliği:</strong> Müşteri/satıcının ödeme davranışında olumlu veya olumsuz değişiklikler olduğunda.</li>
+                    <li><strong>Finansal Durum Değişikliği:</strong> Müşteri/satıcının finansal durumunda önemli değişiklikler olduğunda.</li>
+                    <li><strong>Sektörel Değişiklikler:</strong> Müşteri/satıcının faaliyet gösterdiği sektörde önemli değişiklikler olduğunda.</li>
+                </ul>
+                <p>Düzenli gözden geçirmeler, risk yönetim stratejinizin güncel ve etkili kalmasını sağlar.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<h2>İlgili Konular</h2>
+
+<ul>
+    <li><a href="?module=musteri-satici&page=genel-bakis">Müşteri & Satıcı Genel Bakış</a></li>
+    <li><a href="?module=musteri-satici&page=musteri-ekleme">Müşteri Ekleme</a></li>
+    <li><a href="?module=musteri-satici&page=satici-ekleme">Satıcı Ekleme</a></li>
+    <li><a href="?module=musteri-satici&page=cari-hareketleri">Cari Hareketleri</a></li>
+    <li><a href="?module=finans&page=tahsilat-odeme">Tahsilat ve Ödeme İşlemleri</a></li>
+</ul>

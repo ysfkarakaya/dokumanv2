@@ -1,0 +1,693 @@
+<meta name="title" content="Genel Bakış">
+<meta name="icon" content="bi-question-circle">
+<meta name="url" content="/sss">
+<meta name="lastUpdate" content="11.03.2025">
+
+<div class="module-content">
+    <h1>Sıkça Sorulan Sorular</h1>
+    <p>Bu bölümde Aaro ERP kullanımı ile ilgili sıkça sorulan sorular ve cevapları bulabilirsiniz. Soruları kategorilere göre düzenledik. İlgili kategoriye tıklayarak soruları görebilirsiniz.</p>
+    
+    <div class="alert alert-info">
+        <i class="bi bi-info-circle"></i>
+        <strong>Bilgi:</strong> Aşağıdaki arama kutusunu kullanarak sorular içinde arama yapabilirsiniz.
+    </div>
+    
+    <!-- Arama Kutusu -->
+    <div class="faq-search-container mb-4">
+        <div class="input-group">
+            <span class="input-group-text"><i class="bi bi-search"></i></span>
+            <input type="text" id="faqSearchInput" class="form-control" placeholder="Soru veya cevap içinde arama yapın...">
+            <button class="btn btn-outline-secondary" type="button" id="faqSearchClear">Temizle</button>
+        </div>
+    </div>
+    
+    <!-- Arama Sonuçları -->
+    <div id="faqSearchResults" class="mb-4" style="display: none;">
+        <h3>Arama Sonuçları</h3>
+        <div id="faqSearchResultsContent"></div>
+    </div>
+    
+    <div class="accordion" id="faqAccordion">
+        <!-- Depo - Stok Soruları -->
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingDepoStok">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseDepoStok" aria-expanded="true" aria-controls="collapseDepoStok">
+                    <i class="bi bi-box-seam me-2"></i> Depo - Stok Soruları
+                </button>
+            </h2>
+            <div id="collapseDepoStok" class="accordion-collapse collapse show" aria-labelledby="headingDepoStok" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <i class="bi bi-question-circle"></i>
+                            <h5>Elimde tek bir ürün farkı var bunu nasıl işleyeceğim?</h5>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Stok -> Stok Kartı Listesi -> Stok kartını seçelim -> Stok Hareketleri -> Stok Fark Girişi -> Stok Fark Girişi Ekle -> Stok kartını seçelim -> Miktar kısmına fark miktarını girelim -> Kaydet diyerek işlemimizi tamamlayabiliriz.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <i class="bi bi-question-circle"></i>
+                            <h5>Üretimde harcanan ürün depodan nasıl düşecek?</h5>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Reçeteler işlem yapıldıkça hammadde, yarı mamül ve mamüller üretilip üretim hareketi girildikçe sistemden otomatik olarak düşmektedir.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <i class="bi bi-question-circle"></i>
+                            <h5>Stok sayımı nasıl yapılır?</h5>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Stok sayımı yapmak için birkaç yöntem bulunmaktadır:</p>
+                            <p>1. Stok -> Stok Sayım Listesi -> Yeni Stok Sayım Girişi Ekle -> Sayım yapılan depomuzu seçelim -> Gerekli alanları dolduralım -> Kaydet diyerek stok sayım girişi kaydımızı tamamlayabiliriz.</p>
+                            <p>2. Açılan ekranda ürünleri tek tek girerek veya "Sayılmayan stoklardan ekle" seçeneğini kullanarak toplu bir seçim yapabiliriz.</p>
+                            <p>3. Ctrl ve Shift tuşlarını kullanarak açılan listeden birden fazla ürün seçip sayım girişi detaylarımızı ekleyebiliriz.</p>
+                            <p>4. Stoklarımızın sayımlarını girdikten sonra "Stoğa İşle" diyerek sayımlarımızı stoklarımıza işleme işlemimizi tamamlabiliriz.</p>
+                            <p>5. Alternatif olarak, Excel şablonu kullanarak toplu sayım girişi yapabilirsiniz: Ayarlar -> Dışarıdan Aktarmalar -> Stok Sayım Aktarma -> Excel Şablonu İndir -> şablonunuzu indirdikten sonra Excel şablonunu doldurmanız gerekmektedir.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <i class="bi bi-question-circle"></i>
+                            <h5>Yanlış açılan stok ve cari kayıtlarının düzeltilmesi ve hareketlerinin taşınması nasıl yapılır?</h5>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Yanlış açılan stok kartına hareket eklenmişse, ilgili hareketin bulunduğu yere gidip kartı değiştirmeniz gerekir. Örneğin, bir satış faturasında yanlış stok kalemini düzeltmek için:</p>
+                            <p>1. Faturanın yevmiye fişinden muhasebeleştirme onayı ve kilidini kaldırın.</p>
+                            <p>2. Faturanın içeriğine gidip, yanlış kalemleri doğru kalemlerle değiştirin.</p>
+                            <p>3. Yanlış kalemin hareketi kalmadığında, ilgili stok kartını listeden çıkarabilirsiniz.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <i class="bi bi-question-circle"></i>
+                            <h5>Fiyat listesi düzenleme şablonları ve bu şablonların tekrar yüklenmesi nasıl yapılır?</h5>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Rapor -> Stok -> Fiyat -> Fiyat Listesi Aktarım/Düzeltme Şablonu kısmından mevcut fiyat listelerini indirip düzenleyebilirsiniz.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Satış&Pazarlama Soruları -->
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingSatisPazarlama">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSatisPazarlama" aria-expanded="false" aria-controls="collapseSatisPazarlama">
+                    <i class="bi bi-graph-up-arrow me-2"></i> Satış&Pazarlama Soruları
+                </button>
+            </h2>
+            <div id="collapseSatisPazarlama" class="accordion-collapse collapse" aria-labelledby="headingSatisPazarlama" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <i class="bi bi-question-circle"></i>
+                            <h5>Siparişin açık kaleminin ne kadar olduğunu ve ne kadarının sevkedildiğini nasıl görebilirim?</h5>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Siparişin açık kalemlerinin ne kadarının sevkedildi görmek için;</p>
+                            <p>Satış&Pazarlama modülünden -> Alınan Sipariş Listesi -> Siparişimizi seçelim -> Kısayollar -> Sevkiyat Detayları şeklinde ulaşım sağlayabiliriz.</p>
+                            <p>Tüm siparişlerin sevkiyat detaylarını görmek için sevkiyat detaylarındayken kalem işaretinde düzenle diyerek filtreleme yaparak istediğiniz aralıktaki siparişlerinizin sevkiyat detaylarına erişim sağlayabilirsiniz.</p>
+                            <p>Bir diğer yöntem ise Rapor -> Sipariş/Teklif -> Hareket -> Sipariş Sevkiyat Detayları (Arama kısmına sevkiyat yazarak da erişim sağlayabilirsiniz) -> Tarih aralığını seçelim -> Cari seçelim -> Sadece Açık Siparişler seçili olmalı -> Raporla -> Yazdır/İndir şeklindedi listelenmektir.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <i class="bi bi-question-circle"></i>
+                            <h5>Carinin açık siparişlerinin sevkiyat listesini nasıl görüntüleyebilirim nasıl indirebilirim?</h5>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Siparişlerin sevkiyatlarını görüntülemek için; Satış&Pazarlama -> Listeler -> Alınan Sipariş Hareketleri -> Cariyi seçelim -> Tarihi seçelim -> Listeyi Excele Aktar diyerek listeyi excele aktarımını gerçekleştirebiliriz.</p>
+                            <p>Bir diğer yöntem ise; Rapor -> Sipariş/Teklif -> Hareket -> Sipariş Sevkiyat Detayları -> Alınan Sipariş -> Cariyi seçelim -> Sadece Açık Siparişler seçeneğini seçelim -> Raporla şeklinde erişim sağlamaktır.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <i class="bi bi-question-circle"></i>
+                            <h5>Verilen teklifi siparişleştir dediğimde geçerlilik tarihi geçmiştir diye uyarı veriyor ne yapmam gerekiyor?</h5>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Verilen teklifimizi açalım, detay kısmında geçerlilik tarihi yer almaktadır tarihi güncel tarihle değiştirdiğimizde siparişleştirme yapabiliriz.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Çek Senet Soruları -->
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingCekSenet">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseCekSenet" aria-expanded="false" aria-controls="collapseCekSenet">
+                    <i class="bi bi-cash-coin me-2"></i> Çek Senet Soruları
+                </button>
+            </h2>
+            <div id="collapseCekSenet" class="accordion-collapse collapse" aria-labelledby="headingCekSenet" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <i class="bi bi-question-circle"></i>
+                            <h5>Müşteriye çeki nasıl ciro edebilirim?</h5>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Çek/Senet modülünden -> Hareket Oluştur -> Çek Ciro Edildi/Verildi şeklinde ulaşım sağlayabilirsiniz. Buradan çeki ciro edeceğiniz cariyi seçelim, döviz türünü seçelim <strong>Kaydet</strong> diyelim. Çek Senet Ekle mavi butonun yanındaki ok'tan ciro ekle seçeneğini seçelim, Ciro edilecek çeki seçelim <strong>Kaydet</strong> seçeneğine basalım.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <i class="bi bi-question-circle"></i>
+                            <h5>Çek /senet takibi nasıl yapılır? (alındı, tahsile verme, tahsil etme, iade, detaylandırılacak)</h5>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Öncelikle çek senet işlemlerinde bir çekin kaydının girilmesi gerekir.</p>
+                            <ul>
+                                <li>Bu çek alındı kaydıdır. Alınan çek farklı bir firmaya ciro edilebilir borcumuzu kapatabilmek için.</li>
+                                <li>Ayrıca çek/senet işlemlerinde adım adım ilerlemek gerekir.</li>
+                                <li>Çekin banka hesabımıza geçmesi için öncelikle alınan çekin bankaya tahsile verilmesi gerekir tahsile verildikten sonra bankadan tahsil edilip hesabımıza geçer. Mesela bir çek aldık direk bankadan tahsil et dersek karşımıza gelmez, çekin tahsile verilmesi gerekir.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Banka Soruları -->
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingBanka">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseBanka" aria-expanded="false" aria-controls="collapseBanka">
+                    <i class="bi bi-bank me-2"></i> Banka Soruları
+                </button>
+            </h2>
+            <div id="collapseBanka" class="accordion-collapse collapse" aria-labelledby="headingBanka" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <i class="bi bi-question-circle"></i>
+                            <h5>Banka eksi girişi yapmıyor, nasıl girilebilir?</h5>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Borcu Alacak yaparak sorunu çözebiliriz.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <i class="bi bi-question-circle"></i>
+                            <h5>Bankadan nasıl virman yapabilirim?</h5>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Banka Hesapları Arası Transfer yapmamız gerekiyor; Banka -> Hareket Oluştur -> Banka Hesapları Arası Transfer -> Banka Alacak: Gönderici bankayı seçelim -> Tutarı girelim -> Şirket-Şube seçelim -> Banka Borç: Alıcı bankayı seçelim. Kaydet diyerek işlemimizi tamamlayabiliriz. Banka hesapları arası transfer detayları için lütfen linke tıklayınız. <a href="#">Banka Hesapları Arası Transfer</a> <strong>Kaydet</strong> şeklinde işlemimizi tamamlayabiliriz.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <i class="bi bi-question-circle"></i>
+                            <h5>Kasadan veya Bankadan Gelir ve Gider hareketleri (Cari Kaydı Açmadan) nasıl işlenir?</h5>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Gelir gider -> Alış Faturası -> Cariyi seçelim -> Gelir gider -> kalemimizi dolduralım kart adını, miktar ve fiyatını girelim -> Depo olarak Gelir/Gider Depo (GG) seçelim -> Demirbaşımızı seçelim. Kaydettikten sonra yevmiye fişimizi açalım gelir giderimize göre yevmiye fişlerimizi güncelleyelim.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <i class="bi bi-question-circle"></i>
+                            <h5>Personel maaşlarını bankadan nasıl gösterebilirim?</h5>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Bankalar içerisinde maaş ödeme hesabına para aktarıp personel maaş ödemesi çıkabilirsiniz.</p>
+                            <pre>Banka -> Hareket -> Yeni Banka Hesap Kartı -></pre>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <i class="bi bi-question-circle"></i>
+                            <h5>Kredi kartını nasıl takip ediyoruz,ödemelerini nasıl yapacağız?</h5>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Ödeme zamanı geldiğinde kredi carisine diğer bankadan transfer yapıyoruz.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <i class="bi bi-question-circle"></i>
+                            <h5>Bankadan çekilen kredi nasıl takip edilir?</h5>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Cari kartı açılır (banka hesap adı ve kredi sözleşme numarasıyla beraber).</p>
+                            <p>Açılan cari kartımıza kredi tutarımız kadar borç girilir. Müşteri/Satıcı -> Hareket Oluştur -> Alış Faturası -> Kaydettiğimiz kredi kartı carimizi seçelim -> Krediyi ne için aldığımızın detaylarını girebiliriz (Gelir gider demirbaş alımı, ihtiyaç giderleri vb.) -> Tutarı girelim.</p>
+                            <p>Her ay ödeme yapılarak güncel bakiye kontrol edilir.</p>
+                            <p>Bankadan ödeme yaptık diyelim; Banka -> Havale/EFT Gönderme -> Hangi bankadan ödeme yaptığımızı seçelim -> Kredi carimizi seçelim -> Cari Bankayı seçelim -> Ödeme yaptığımız tutarı girelim -> <strong>Kaydet</strong> diyerek işlemimizi tamamlayabiliriz.</p>
+                            <p>Nakit(Kasa'dan) ödeme yaptık diyelim; Kasa -> Hareket Oluştur -> Nakit ödeme -> Ödeme yapılan kasamızı seçelim -> Kredi kartı carimizi seçelim -> <strong>Kaydet</strong> diyerek işlemimizi tamamlayalım.</p>
+                            <p>Müşteri/Satıcı -> Müşteri/Satıcı Hareketleri Listesi -> Carimizi seçerek filtreleme yapalım buradan kalan borcumuzu yaptığımız ödemelerimizi takip edebiliriz.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <i class="bi bi-question-circle"></i>
+                            <h5>Bankadan devir işlemini nasıl yapacağız?</h5>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Arama çubuğuna "devir" yazarak erişim sağlayabilirsiniz ya da Banka -> Hareket Oluştur -> Devir -> Gelir gider deposunu çalıştıracağız -> Yeni Banka kalemi ekle -> Alacak-Borçlu seçelim -> Bankayı seçelim -> Tutar girelim -> Açıklama eklenebilir -> Kaydet diyerek işlemimizi tamamlayalım. Yevmiye fişini açalım; üç işlem butonu -> Yevmiye Fiş kontrollerimizi sağlayalım -> Tutarlarımızı karşılaştıralım kontrol ederek işlemimizi sonlandıralım.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- İhracat Soruları -->
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingIhracat">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseIhracat" aria-expanded="false" aria-controls="collapseIhracat">
+                    <i class="bi bi-globe me-2"></i> İhracat Soruları
+                </button>
+            </h2>
+            <div id="collapseIhracat" class="accordion-collapse collapse" aria-labelledby="headingIhracat" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <i class="bi bi-question-circle"></i>
+                            <h5>Mikro ihracatta KDV nasıl sıfırlanır?</h5>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Mikro ihracat, küçük ölçekli ihracat işlemlerini ifade eder ve genellikle e-ticaret yoluyla yapılan ihracatlar için kullanılır. Mikro ihracat, belirli bir parasal limitin altında kalan ve daha basit gümrük prosedürleri gerektiren ihracat işlemleridir. Türkiye'de mikro ihracat işlemleri, Elektronik Ticaret Gümrük Beyannamesi (ETGB) ile gerçekleştirilir ve gümrük müşavirine ihtiyaç duyulmadan hızlı bir şekilde yapılabilir. KDV sıfırlama yapmıyoruz, muafiyet girmemiz gerekiyor. Vergi muafiyetlerini girmemiz gerekmektedir. Vergi muafiyetini nasıl yapılır; Faturamızı oluşturduktan sonra kalemlerimizin yanında ki büyüteçe tıklayalım -> Vergiler - Muafiyet Ekle -> KDV Muafiyet -> İhracat muafiyet kodunu seçelim. Muafiyet tanımlamamız tamamlanmıştır, kontrol edelim. e-Arşiv, e-Faturayı gönder diyelim, Fatura Tipi İSTİSNA olması gerekmektedir.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <i class="bi bi-question-circle"></i>
+                            <h5>İhracat faturasını nasıl kesebilirim? Nelere dikkat etmemiz gerekmektedir?</h5>
+                        </div>
+                        <div class="faq-answer">
+                            <p>İhracat faturalarında yasal gerekliliklere uymak önem arz etmektedir. Yurtdışı satışlarında vergi uygulanmamaktadır vergi muafiyeti girilmesi gerekmektedir. Muafiyet ihracat işleminin hangi koşullarda yapıldığını gösteren teslim şartları (incoterms) net bir şekilde ödeme yöntemleri ve şartları da fatura üzerinde yer almalıdır.</p>
+                            <p>Eğer fatura dövizle kesiliyorsa, döviz cinsi ve kur bilgileri de eklenmelidir.</p>
+                            <p>İhraç edilen malın detaylı ve doğru bir şekilde tanımlanması, cinsi, miktar, birim fiyat gibi bilgilerin eksiksiz bir şekilde yazılması gerekmektedir.</p>
+                            <p>İthalat-İhracat faturalarında e-Fatura mükellefi yazısı çıkmazsa faturada bir hata var demektir, faturayı iptal edip yeniden kesmeniz gerekir.</p>
+                            <p>İthalat ve ihracat faturalarında ödeme şekli/tipi seçmek zorunludur.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- İhraç Faturaları Soruları -->
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingIhracFatura">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseIhracFatura" aria-expanded="false" aria-controls="collapseIhracFatura">
+                    <i class="bi bi-file-earmark-text me-2"></i> İhraç Faturaları Soruları
+                </button>
+            </h2>
+            <div id="collapseIhracFatura" class="accordion-collapse collapse" aria-labelledby="headingIhracFatura" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <i class="bi bi-question-circle"></i>
+                            <h5>GTIP kodu nedir, nasıl tanımlarım?</h5>
+                        </div>
+                        <div class="faq-answer">
+                            <p>GTIP (Gümrük Tarife İstatistik Pozisyonu) Kodu, Türkiye'de malların ithalat ve ihracat işlemlerinde kullanılan, ürünlerin gümrük tarife cetvelinde sınıflandırılmasını sağlayan bir koddur. Bu kod, bir ürünün ticaretine ilişkin vergi oranlarını, ithalat veya ihracat kısıtlamalarını ve diğer gümrük mevzuatlarını belirler.</p>
+                            <p>Ürünün GTIP kodu belirlenirken, öncelikle ürünün ne olduğu, hangi malzeme ya da ham madde içerdiği ve nasıl bir işlevi olduğu doğru bir şekilde tanımlanmalıdır.</p>
+                            <p>Ürünün GTIP kodunu belirlemek için Gümrük ve Ticaret Bakanlığı'nın yayınladığı gümrük tarife cetvelleri kullanılabilir. Bu cetvellerde yer alan sınıflandırmalara göre ürünün kodu bulunur.</p>
+                            <p>Bu kod sayesinde, ürünün gümrükte hangi tarife dilimine girdiği ve ne kadar vergi uygulanacağı belirlenir.</p>
+                            <p>GTIP tanımlamasını yapalım; Stok -> Stok Kartı Listesi -> Yeni Stok Kartı Ekle -> Gelişmiş alanları görebilmek için Gelişmiş kısmında GTIP alanı stok kartına ait GTIP kodumuzu girmemiz gerekmektedir -> <strong>Kaydet</strong> diyerek GTIP kodu tanımlı stok kartımızı tanımlayalım.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <i class="bi bi-question-circle"></i>
+                            <h5>İhraç kayıtlı fatura kesiyorum fakat KDV sıfırladığım halde ihraç kayıtlı fatura olmuyor ne yapmalıyım?</h5>
+                        </div>
+                        <div class="faq-answer">
+                            <p>İhraç kayıtlı fatura keserken KDV oranının sıfır olmasının nedeni vergi muafiyet durumunun olmasıdır. Bu durumda KDV oranımızı eski haline getirerek yani; kalem stoğu için ihraç kayıtlı fatura oluşturacağız KDV oranı:%20 bunu yazalım. Stok kartında vergi KDV sıfırlayarak değil vergi muafiyetini belirteceğiz. Daha sonrasında; üç işlem butonu -> Tüm kalemlerde değiştir -> Vergi Muafiyeti seçeneğimizi aktif ederek -> 11/1-a Mal İhracatı (301) -> Vergileri Yenile seçeneğini de aktif edelim -> Kaydet diyelim -> Gerekli bilgiler tamamlandıktan sonra faturanın kontrollerini sağlayalım. Fatura kalemlerinin tutarını, toplam tutarını kontrol edelim, fatura tipi: İhraç Kayıtlı olmadına dikkat edelim, kontrollerimizi sağladıktan sonra faturamızı gönderebiliriz.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <i class="bi bi-question-circle"></i>
+                            <h5>İhraç kayıtlı e-arşiv fatura nasıl kesilir?</h5>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Normal satış faturası kaydı girilir burada dikkat edilmesi gereken hususlar; stok kartında GTIP kodu belirtilmelidir, KDV istisnası KDV de belirtilmelidir.(KDV girilerek sıfırlanmamalıdır) Fatura tamamlandıktan sonra e-Arşiv fatura gönder seçeneğinden sonra karşımıza çıkan ekranda ihraç kayıtlı seçeneği seçmemiz gerekmektedir.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Fatura Soruları -->
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingFatura">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFatura" aria-expanded="false" aria-controls="collapseFatura">
+                    <i class="bi bi-receipt me-2"></i> Fatura Soruları
+                </button>
+            </h2>
+            <div id="collapseFatura" class="accordion-collapse collapse" aria-labelledby="headingFatura" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <i class="bi bi-question-circle"></i>
+                            <h5>Birden fazla irsaliye tek faturada nasıl birleştirilir?</h5>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Satış Faturası hareketini normal olarak açalım. Fatura oluşturma ekranında kalem ekle kısmındaki oka tıklayalım irsaliyeden kalem ekle diyerek irsaliyelerimizi seçebiliriz.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <i class="bi bi-question-circle"></i>
+                            <h5>Faturada kalemlerin KDV'sini nasıl değiştirebilirim?</h5>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Kalemin yanındaki büyüteçe tıklayalım -> Vergiler -> KDV Oranını girelim -> <strong>Kaydet</strong> -> Üç işlem butonundan Tüm Kalemlerde Değiştir seçelim -> Vergileri Yenile -> <strong>Kaydet</strong> diyerek KDV Oranı değişikliği gerçekleştirebiliriz.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <i class="bi bi-question-circle"></i>
+                            <h5>E-fatura Entegratörü üzerinden kesilen fatura programda nasıl eşleştirilir?</h5>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Foribadan kesilen faturanın eşleştirilmesi için Aaro'dan da aynı şekilde satış faturası hareketi oluşturulur ancak gönderilmez.Kaydedildikten sonra tekrardan düzenlenir ve üst kısımda yer alan e-fatura/e-arşiv bilgileri kısmından UUID kısmına faturadaki ETTN numarası, Ref Belge no kısmına fatura numarası yazılır. Kesilen faturanın tipine göre efaturaTipID, efaturaProfilID,efaturaDurumID seçeneklerinden uygun olanları seçilerek eşleştirme kayıt işlemi ile tamamlanır.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <i class="bi bi-question-circle"></i>
+                            <h5>e-Fatura geçiş işlemleri nasıl yapılır?</h5>
+                        </div>
+                        <div class="faq-answer">
+                            <p>İlk olarak firmanın mali mühür alması gerekir.</p>
+                            <p>Mali mühür yoksa TÜBİTAK kamusm sayfasından alabilir(Link:<a href="https://mportal.kamusm.gov.tr/">https://mportal.kamusm.gov.tr/</a>). Mali mührü aldıktan sonra entegratör firmanın evrakları iletilir.</p>
+                            <p>Ayrıca sözleşmenin dışında firma bilgi formunda istenilen bilgiler doldurulacak ve bu formda istenilen evraklar temin edilecek(firma yetkilisi nüfus fotokopisi? Entegratör firmaya göre değişiklik gösterebilir). Entegratör firma evrakları aldıktan sonra e-fatura başvurusu yapılır ve onaylandıktan sonra kullanıma başlanabilir.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <i class="bi bi-question-circle"></i>
+                            <h5>KDV'den muaf fatura neden ve hangi durumlarda kesilir?</h5>
+                        </div>
+                        <div class="faq-answer">
+                            <p>KDV'den muaf fatura, genellikle belirli yasal düzenlemeler ve muafiyetler kapsamında kesilen faturalardır. KDV muafiyeti, bazı mal ve hizmetlerin KDV'den muaf tutulması anlamına gelir. Türkiye'de KDV muafiyeti aşağıdaki durumlarda uygulanabilir:</p>
+                            <p>Eğitim, Sağlık ve Kültür Hizmetleri: Belirli eğitim, sağlık ve kültür hizmetleri KDV'den muaf olabilir.</p>
+                            <p>Yurt Dışına Yapılan Satışlar da KDV uygulanmaz. Türkiye'den yurt dışına yapılan mal ve hizmet satışları KDV'den muaf tutulur. İhracatçı firmalar, KDV'yi müşteriden tahsil etmezler.</p>
+                            <p>Yatırım Teşvikleri: Bazı yatırım teşvikleri ve devlet destekleri kapsamında KDV muafiyeti sağlanabilir.</p>
+                            <p>Özel Sektör Destekleri: Kamu sektörüne yapılan belirli hizmetler veya mal alımları da KDV'den muaf olabilir.</p>
+                            <p>Diplomatik ve Konsolosluk Satışları: Diplomatik misyonlar ve konsolosluklar için yapılan satışlar KDV'den muaf olabilir.</p>
+                            <p>KDV'den muaf fatura kesilmesi gerektiğinde, ilgili mevzuat ve düzenlemelere dikkat edilmelidir.</p>
+                            <p>Muafiyet durumunu ve uygulama şekillerini netleştirmek için mali müşavir veya vergi uzmanına danışmak en doğrusu olacaktır.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <i class="bi bi-question-circle"></i>
+                            <h5>Fatura tipleri ve bu tiplerin özellikleri nelerdir? Hangi tipteki faturalar iptal edilebilir? Hangi tip faturalarda iade faturası kesmek gerekir?</h5>
+                        </div>
+                        <div class="faq-answer">
+                            <p>e-Faturalar Temel ve ticari fatura olarak iki tip e-Fatura türü vardır.</p>
+                            <p>Ticari faturaların onaylanma süresi 7 gündür, 7 gün içerisinde onaylanmaz ya da reddedilmezse otomatik onaylanır.</p>
+                            <p>Ticari faturalarda 7 gün içerisinde onay ya da ret yapılabilir.</p>
+                            <p>Temel faturalar kesildiğinde fatura kesilmiş olur, onay ya da ret seçeneği yoktur; 7 gün sonrasında iade faturası kesilebilir. 7 gün içerisinde faturayı oluşturan taraf iptal edilebilir.</p>
+                            <p>e-Arşiv faturaları bizim sistemimize düşmez, e-Arşiv kesen firma faturayı iletmek durumundadır.</p>
+                            <p>Fatura bize ulaştığında bilgilerimizi kontrol ederek alış faturamızı girmemiz gerekmektedir.</p>
+                            <p>Adımıza düzenlenen e-Arşiv faturaları gelir vergi dairesi başkanlığı GİB üzerinden bilgilerimizle giriş yaparak adımıza düzenlenen faturaları görebiliriz.</p>
+                            <p>E-Arşiv Portalı giriş -> İnteraktif Vergi Dairesi -> Adıma düzenlenen belgeler -> Tarih seçerek adımıza düzenlenen faturaları görebiliriz. (Görüntüleme tarihleri max 7 gün aralığında seçilebilir, haftalık bakılabilir.)</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <i class="bi bi-question-circle"></i>
+                            <h5>İade faturası nasıl kesilir?</h5>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Satış iade faturası kesmek için; Satış&Pazarlama -> Satış İade Faturası -> Cari Seçelim -> Kalem ekleyelim - Ürünlerin gönderilmesi için satış iade irsaliyesi oluşturmuş isek irsaliyeden kalem ekle diyerek irsaliyemizi seçerek irsaliye kalemlerimizin faturamıza aktarabiliriz.</p>
+                            <p>Bir diğer alternatif yol ise; Satış&Pazarlama -> Satış İade İrsaliyesi Listesi -> İrsaliyemizi seçelim -> Üç işlem butonundan Faturaalaştır diyerek Satış İade Faturamızı oluşturabiliriz. Ürünlerin iade nedenlerini açıklama kısmında belirtilmelidir.</p>
+                            <p>İrsaliyemiz yok ise kalem ekleyebiliriz, bu kalem stok, gelir gider ya da demirbaş olabilir. <strong>Kaydet</strong> diyerek faturamızı kaydedebiliriz, e-Fatura/e-Arşiv Fatura Gönder diyelim -> Fatura Tipini <strong>iade</strong> olarak seçmemiz gerekmektedir. e-Faturamızın önizlemesini yaparak tekrardan kontrollerimizi sağlayarak e-Fatura/e-Arşiv gönderme işlemimizi tamamlayabiliriz.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <i class="bi bi-question-circle"></i>
+                            <h5>Kesilen faturada stok kodu nasıl görüntülenir?</h5>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Aaro'da kesilen faturamızı açalım stok kalemimizin yanında ki büyüteçe tıklayalım burada stok kodumuzu görüntüleyebilir, linke tıklayarak stok kartımıza erişebiliriz.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <i class="bi bi-question-circle"></i>
+                            <h5>Karşı taraf fatura kesemiyor e-posta da hata veriyor ne yapmamız gerekiyor?</h5>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Karşı taraf sovosla görüşmeli sovos'a geçtiklerinin tanımını yapmaları gerekiyor.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <i class="bi bi-question-circle"></i>
+                            <h5>Alış-satış faturalarımı son 3 aylık şekilde görüntüleyerek vergi detaylı raporlamak istiyorum, nereden bakabilirim?</h5>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Rapor kısmından detaylı raporlama fatura raporlama da Rapor -> Fatura/İrsaliye -> Hareket -> Fatura Detaylı Rapor -> Tarih aralığını seçelim -> Cari seçelim -> Raporla diyerek raporumuzu oluşturabiliriz.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <i class="bi bi-question-circle"></i>
+                            <h5>Benim bir müşterim var tek seferlik alışveriş yaptı cari açmak istemiyorum cari açmadan nasıl fatura kesebilirim?</h5>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Muhtelif cari özelliğimizi kullanarak tek seferlik müşterilerimizin fatura işlemlerinde kullanabiliriz. Muhtelif cari açalım öncelikle; Müşteri&Satıcı -> Müşteri&Satıcı Kartı Listesi -> Yeni Müşteri/Satıcı Kartı Ekle -> örneğin adına Muhtelif Cari diyerek genel ortak bir ad ile açabiliriz -> Gelişmiş -> Muhtelif Cari seçeneğimizi aktif etmemiz gerekmektedir.</p>
+                            <p>Satış faturamızı oluşturalım; Müşteri&Satıcı -> Hareket Oluştur -> Satış Faturası -> Cari olarak açtığımız Muhtelif Cariyi seçelim -> Carimizi seçtikten sonra muhtelif carimizin bilgilerini dolduracağımız alan gelecektir bilgileri dolduralım -> satış yaptığımız stok, gelir gider ya da demirbaşı girelim -> <strong>Kaydet</strong> diyerek e-Fatura/e-Arşiv faturamızın ön izlemesini yaparak kontrollerimizi sağlayalım.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <i class="bi bi-question-circle"></i>
+                            <h5>e-Arşiv faturamı iptal etmek istiyorum nasıl yapabilirim?</h5>
+                        </div>
+                        <div class="faq-answer">
+                            <p>e-Arşiv faturalarında kesildikten 7 gün içerisinde iptal işleminin yapılması gerekmektedir. İptal etmek için; Satış&Pazarlama -> Satış Faturası Listesi -> İptal etmek istediğimiz faturayı seçelim -> Üç işlem butonu -> İptal Et -> İptal Nedeni kısmına iptal nedenimizi yazalım -> İptal Et diyerek işlemimizi tamamlayabiliriz.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <i class="bi bi-question-circle"></i>
+                            <h5>Fatura adresimizi değiştirmemiz gerekiyor Aaro'da nasıl değiştireceğiz?</h5>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Ayarlar -> Şirket Listesi -> Adres bilgilerinden değişiklik yapabilirsiniz.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <i class="bi bi-question-circle"></i>
+                            <h5>Makine tamirini nasıl gösterebilirim. Stok açmamız gerekli mi?</h5>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Makine tamirinizin faturası kesilecek mi, banka, kasa çıkışımı yapılacak ya da cari gösterilecek mi bu gibi detaylar önemlidir. Fatura kesilen tamirimizi; Gelir gider -> Hareket Oluştur -> Alış Faturası -> Carimizi seçelim -> Kaydet -> Kalemimizi dolduralım Gelir gider seçelim -> Kart Adı örn; Makine Tamiri -> Fiyat bilgisini girelim -> Demirbaş seçelim -> Doldurulması gereken bilgileri doldurduktan sonra işlemimizi tamamlayabiliriz.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <i class="bi bi-question-circle"></i>
+                            <h5>Siparişimi irsaliyeleştirmeden nasıl fatura oluşturabilirim?</h5>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Siparişini oluşturmuş olduğumuz bir siparişi irsaliyesini kesmeden direk faturaalaştırmak istiyorsak; Alınan Siparişlerden siparişimizi açalım -> Faturaalaştır diyerek siparişimizi faturalandırabiliriz.</p>
+                            <p>Sipariş ya da teklifi olmayan bir siparişimiz için fatura oluşturmak istiyorsak; Satış&Pazarlama -> Hareket Oluştur -> Satış Faturası -> Carimizi seçelim -> Kaydet diyelim -> Kalemlerini dolduralım -> Kaydet diyerek faturalandırma işlemimizi gerçekleştirebiliriz.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <i class="bi bi-question-circle"></i>
+                            <h5>Tek bir hareket için KDV oranı nasıl değiştirilir?</h5>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Herhangi bir kartımızın sadece bir hareket için vergi oranını ilgili harekette kartımızı ekledikten sonra görüntüleyerek KDV bölümünde yer alan rakamı ihtiyacımız olan vergi oranını yazıp kaydederek vergi oranını sadece bu hareket için değiştirmiş oluruz. Kalemin yanında ki büyüteçe tıklayalım -> Vergiler -> KDV oranını girelim -> Kaydet şeklinde KDV oranını değişikliği gerçekleşir.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <i class="bi bi-question-circle"></i>
+                            <h5>Tevkifatlı fatura nasıl kesilir?</h5>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Fatura hareketi sistemimizde olduğu gibi oluşturulur. Harekete eklenen kartlar için o kartların içeriğine gidilerek vergi oranı kısmında tevkifatlı vergi oranı açılır. (Stok kaleminin yanında ki kalem işaretine tıklayalım -> Vergiler -> Muafiyet Ekle -> KDV Muafiyet -> tevkifat muafiyeti seçiniz.) Açılan vergi tanımında tevkifat tipi belirtilerek kaydedilir. Hareketin içeğindeki kart görüntülenerek tevkifat oranı değiştirilebilir.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <i class="bi bi-question-circle"></i>
+                            <h5>Bir faturayı iptal ettik Aaro'dan ve foriba'dan tekrar fatura kesmek istediğimizde foribada numara gözüktüğü için tekrar kesemiyoruz ne yapmamız lazım?</h5>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Fatura iptali foribadan yapılıp Aaro'dan silindiği taktirde Aaro işlemi tanımaz, Aaro'dan silindiğinde sistem bunu bilirdi ve o kodu tekrar verirdi. Şimdi aynı kodu manuel değişiklik yaparak kullanmamız gerekmektedir.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .faq-item {
+        margin-bottom: 20px;
+        border-bottom: 1px solid #eee;
+        padding-bottom: 15px;
+    }
+    
+    .faq-question {
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 10px;
+    }
+    
+    .faq-question i {
+        color: #0d6efd;
+        margin-right: 10px;
+        margin-top: 5px;
+    }
+    
+    .faq-question h5 {
+        margin: 0;
+        font-weight: 600;
+    }
+    
+    .faq-answer {
+        padding-left: 25px;
+    }
+    
+    .faq-answer p {
+        margin-bottom: 10px;
+    }
+    
+    .faq-answer ul {
+        padding-left: 20px;
+    }
+    
+    .accordion-button:not(.collapsed) {
+        background-color: #e7f1ff;
+        color: #0d6efd;
+    }
+    
+    .accordion-button:focus {
+        box-shadow: none;
+        border-color: rgba(0,0,0,.125);
+    }
+    
+    .accordion-button::after {
+        background-size: 1.25rem;
+        transition: transform .2s ease-in-out;
+    }
+    
+    .accordion-button:not(.collapsed)::after {
+        transform: rotate(-180deg);
+    }
+</style>
+
+<script>
+    $(document).ready(function() {
+        // Arama işlevselliği
+        $("#faqSearchInput").on("keyup", function() {
+            var searchText = $(this).val().toLowerCase();
+            
+            if (searchText.length < 2) {
+                // Arama metni çok kısaysa, tüm soruları göster ve arama sonuçlarını gizle
+                $("#faqAccordion").show();
+                $("#faqSearchResults").hide();
+                return;
+            }
+            
+            // Arama sonuçlarını temizle
+            $("#faqSearchResultsContent").empty();
+            
+            // Tüm soruları ve cevapları tara
+            var matchCount = 0;
+            
+            $(".faq-item").each(function() {
+                var question = $(this).find(".faq-question h5").text().toLowerCase();
+                var answer = $(this).find(".faq-answer").text().toLowerCase();
+                var category = $(this).closest(".accordion-item").find(".accordion-button").text().trim();
+                
+                // Soru veya cevapta arama metni varsa
+                if (question.includes(searchText) || answer.includes(searchText)) {
+                    matchCount++;
+                    
+                    // Eşleşen soruyu ve cevabını arama sonuçlarına ekle
+                    var resultItem = $(this).clone();
+                    
+                    // Kategori bilgisini ekle
+                    resultItem.prepend('<div class="faq-category"><span class="badge bg-secondary">' + category + '</span></div>');
+                    
+                    // Arama metnini vurgula
+                    var questionHtml = resultItem.find(".faq-question h5").html();
+                    var answerHtml = resultItem.find(".faq-answer").html();
+                    
+                    // Arama metnini vurgula (case insensitive)
+                    var regex = new RegExp('(' + searchText + ')', 'gi');
+                    questionHtml = questionHtml.replace(regex, '<mark>$1</mark>');
+                    answerHtml = answerHtml.replace(regex, '<mark>$1</mark>');
+                    
+                    resultItem.find(".faq-question h5").html(questionHtml);
+                    resultItem.find(".faq-answer").html(answerHtml);
+                    
+                    $("#faqSearchResultsContent").append(resultItem);
+                }
+            });
+            
+            // Sonuçları göster veya sonuç yoksa mesaj göster
+            if (matchCount > 0) {
+                $("#faqSearchResultsContent").prepend('<p class="text-muted">' + matchCount + ' sonuç bulundu.</p>');
+            } else {
+                $("#faqSearchResultsContent").html('<div class="alert alert-warning"><i class="bi bi-exclamation-triangle"></i> Aramanızla eşleşen sonuç bulunamadı.</div>');
+            }
+            
+            // Accordion'u gizle, arama sonuçlarını göster
+            $("#faqAccordion").hide();
+            $("#faqSearchResults").show();
+        });
+        
+        // Temizle butonu
+        $("#faqSearchClear").click(function() {
+            $("#faqSearchInput").val("");
+            $("#faqAccordion").show();
+            $("#faqSearchResults").hide();
+        });
+    });
+</script>

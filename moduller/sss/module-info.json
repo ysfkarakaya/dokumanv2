@@ -1,0 +1,7 @@
+{
+    "name": "Sıkça Sorulan Sorular",
+    "icon": "bi-question-circle",
+    "description": "Aaro ERP kullanımı ile ilgili sıkça sorulan sorular ve cevapları",
+    "version": "1.0.0",
+    "order": 4
+}

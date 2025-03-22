@@ -1,0 +1,447 @@
+<!-- Meta Bilgileri -->
+<meta name="title" content="Satıcı Ekleme">
+<meta name="icon" content="bi-building-add">
+<meta name="url" content="/musteri-satici/satici-ekleme">
+<meta name="lastUpdate" content="12.03.2025">
+
+<h1>Satıcı Ekleme</h1>
+
+<p>Bu dokümantasyon, Aaro ERP sisteminde yeni satıcı kaydı oluşturma işlemini adım adım açıklamaktadır.</p>
+
+<div class="alert alert-info">
+    <i class="bi bi-info-circle"></i>
+    <strong>Bilgi:</strong> Satıcı bilgilerini eksiksiz ve doğru bir şekilde girmek, satın alma ve muhasebe süreçlerinizin daha verimli çalışmasını sağlar.
+</div>
+
+<h2>Satıcı Kartına Erişim</h2>
+
+<p>Yeni satıcı kartı oluşturmak için aşağıdaki yöntemlerden birini kullanabilirsiniz:</p>
+
+<div class="row">
+    <div class="col-md-4">
+        <div class="card mb-3">
+            <div class="card-header">
+                <i class="bi bi-search"></i> Arama Motoru ile
+            </div>
+            <div class="card-body">
+                <p>Sol sekmede Aaro kullanıcı bilgilerinin hemen altındaki arama motorundan "müşteri satıcı kartı" şeklinde aratarak ulaşım sağlayabilirsiniz.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card mb-3">
+            <div class="card-header">
+                <i class="bi bi-plus-circle"></i> Modül Sayfası Üzerinden
+            </div>
+            <div class="card-body">
+                <p>Sol menüden <strong>Müşteri/Satıcı -> Modül Sayfası -> Yeni Müşteri/Satıcı Kartı</strong> şeklinde ulaşım sağlayabilirsiniz.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card mb-3">
+            <div class="card-header">
+                <i class="bi bi-list-ul"></i> Kart Listesi Üzerinden
+            </div>
+            <div class="card-body">
+                <p>Sol menüden <strong>Müşteri/Satıcı -> Kartlar -> Müşteri/Satıcı Kartı Listesi</strong> üzerinden ulaşım sağlayarak "Yeni Kart" butonuna tıklayabilirsiniz.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<h2>Satıcı Kartı Oluşturma Adımları</h2>
+
+<div class="alert alert-primary">
+    <i class="bi bi-lightbulb"></i>
+    <strong>İpucu:</strong> Satıcı kartı oluştururken, zorunlu alanları mutlaka doldurun. Diğer alanları ise ihtiyacınıza göre doldurabilirsiniz.
+</div>
+
+<h3>1. Genel Bilgiler</h3>
+
+<p>Satıcı kartının temel bilgilerini içeren bu bölümde aşağıdaki alanları doldurmanız gerekir:</p>
+
+<div class="table-responsive">
+    <table class="table table-bordered">
+        <thead class="table-light">
+            <tr>
+                <th>Alan</th>
+                <th>Açıklama</th>
+                <th>Zorunlu</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Adı</td>
+                <td>Satıcının tam adı veya ticari unvanı</td>
+                <td><span class="badge bg-danger">Evet</span></td>
+            </tr>
+            <tr>
+                <td>Kodu</td>
+                <td>Satıcı için benzersiz bir kod. Otomatik oluşturulabilir veya manuel girilebilir.</td>
+                <td><span class="badge bg-danger">Evet</span></td>
+            </tr>
+            <tr>
+                <td>Tip</td>
+                <td>Cari tipini belirtin. "Satıcı" seçeneğini işaretleyin.</td>
+                <td><span class="badge bg-danger">Evet</span></td>
+            </tr>
+            <tr>
+                <td>Kodlar</td>
+                <td>Satıcıyı hiyerarşik olarak gruplamak için kullanılır.</td>
+                <td><span class="badge bg-secondary">Hayır</span></td>
+            </tr>
+            <tr>
+                <td>Etiketler</td>
+                <td>Satıcıyı etiketlemek ve gruplamak için kullanılır.</td>
+                <td><span class="badge bg-secondary">Hayır</span></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<div class="alert alert-warning">
+    <i class="bi bi-exclamation-triangle"></i>
+    <strong>Dikkat:</strong> Sistem mükerrer vergi no girişini otomatik olarak engellemektedir. Yani aynı vergi numarası ile birden çok Müşteri/Satıcı kartı açılması engellenmektedir. Aynı vergi numarası ile birden çok kart açılması ek yetkilerle ayarlanabilmektedir.
+</div>
+
+<h3>2. Adres Bilgileri</h3>
+
+<p>Satıcının adres ve iletişim bilgilerini içeren bu bölümde aşağıdaki alanları doldurabilirsiniz:</p>
+
+<div class="row">
+    <div class="col-md-6">
+        <div class="card mb-3">
+            <div class="card-header">
+                <i class="bi bi-geo-alt"></i> Adres Detayları
+            </div>
+            <div class="card-body">
+                <ul>
+                    <li><strong>Adres Adı:</strong> Adres bilgisini adlandırabilirsiniz (Merkez, Şube vs.)</li>
+                    <li><strong>İlçe:</strong> Adresin ilçe bilgisi</li>
+                    <li><strong>Sokak Adı:</strong> Adresin sokak bilgisi</li>
+                    <li><strong>Bina Adı/No:</strong> Adresin bina bilgisi</li>
+                    <li><strong>Posta Kodu:</strong> Adresin posta kodu</li>
+                </ul>
+                <p><em>Birden fazla adres eklemek için "Yeni Adres Ekle" butonunu kullanabilirsiniz.</em></p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="card mb-3">
+            <div class="card-header">
+                <i class="bi bi-telephone"></i> İletişim Bilgileri
+            </div>
+            <div class="card-body">
+                <ul>
+                    <li><strong>Telefon:</strong> Satıcının telefon numarası</li>
+                    <li><strong>Fax:</strong> Satıcının fax numarası</li>
+                    <li><strong>Email:</strong> Satıcının e-posta adresi</li>
+                    <li><strong>Web:</strong> Satıcının web sitesi adresi</li>
+                    <li><strong>Öncelik:</strong> Birden fazla adres olduğunda, öncelikli adresi belirtmek için kullanılır</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<h3>3. İlgili Kişi Bilgileri</h3>
+
+<p>Satıcı firmasındaki ilgili kişilerin bilgilerini içeren bu bölümde aşağıdaki alanları doldurabilirsiniz:</p>
+
+<div class="table-responsive">
+    <table class="table table-bordered">
+        <thead class="table-light">
+            <tr>
+                <th>Alan</th>
+                <th>Açıklama</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>İlgili Adı</td>
+                <td>İlgili kişinin adı ve soyadı</td>
+            </tr>
+            <tr>
+                <td>Telefon</td>
+                <td>İlgili kişinin telefon numarası</td>
+            </tr>
+            <tr>
+                <td>Fax</td>
+                <td>İlgili kişinin fax numarası</td>
+            </tr>
+            <tr>
+                <td>Email</td>
+                <td>İlgili kişinin e-posta adresi</td>
+            </tr>
+            <tr>
+                <td>Doğum</td>
+                <td>İlgili kişinin doğum tarihi</td>
+            </tr>
+            <tr>
+                <td>Ünvan</td>
+                <td>İlgili kişinin firmadaki ünvanı</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<p><em>Birden fazla ilgili kişi eklemek için "Yeni İlgili Kişi Ekle" butonunu kullanabilirsiniz.</em></p>
+
+<h3>4. Banka Hesapları</h3>
+
+<p>Satıcının banka hesap bilgilerini içeren bu bölümde aşağıdaki alanları doldurabilirsiniz:</p>
+
+<div class="row">
+    <div class="col-md-6">
+        <div class="card mb-3">
+            <div class="card-header">
+                <i class="bi bi-bank"></i> Banka Bilgileri
+            </div>
+            <div class="card-body">
+                <ul>
+                    <li><strong>IBAN No:</strong> Satıcının banka hesap IBAN numarası. Havale/EFT işlemlerinde kolayca kullanabilirsiniz.</li>
+                    <li><strong>Banka Şube:</strong> Satıcının banka ve şube bilgileri</li>
+                </ul>
+                <p><em>Birden fazla banka hesabı eklemek için "Yeni Banka Hesabı Ekle" butonunu kullanabilirsiniz.</em></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<h3>5. Risk Limitleri</h3>
+
+<p>Satıcının risk limitlerini tanımlayarak, risk yönetim sistemini kullanabilirsiniz:</p>
+
+<div class="card mb-3">
+    <div class="card-header">
+        <i class="bi bi-shield-exclamation"></i> Risk Yönetimi
+    </div>
+    <div class="card-body">
+        <p>Risk limiti, satıcıya olan borç limitini belirler. Bu limit aşıldığında sistem, belirlediğiniz kurallara göre uyarı verecek veya işlemi engelleyecektir.</p>
+        <ul>
+            <li><strong>Risk Limiti:</strong> Satıcıya olan maksimum borç limiti</li>
+            <li><strong>Para Birimi:</strong> Risk limitinin para birimi</li>
+            <li><strong>Risk Kontrolü:</strong> Risk kontrolünün nasıl yapılacağına dair parametreler</li>
+        </ul>
+    </div>
+</div>
+
+<h3>6. Gelişmiş Ayarlar</h3>
+
+<p>Satıcı kartının gelişmiş ayarlarını içeren bu bölümde aşağıdaki alanları doldurabilirsiniz:</p>
+
+<div class="table-responsive">
+    <table class="table table-bordered">
+        <thead class="table-light">
+            <tr>
+                <th>Alan</th>
+                <th>Açıklama</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Şirket-Şube</td>
+                <td>Kartın ait olduğu şirket ve şubeyi belirtir.</td>
+            </tr>
+            <tr>
+                <td>Durum</td>
+                <td>Kartın kullanılabilirliğini belirtir. Pasif kartlar işlemlerde kullanılamaz.</td>
+            </tr>
+            <tr>
+                <td>Çalışma Para Birimi</td>
+                <td>Bu kartın çalıştığı döviz cinsini belirtir. Bilgi amaçlıdır.</td>
+            </tr>
+            <tr>
+                <td>Vade</td>
+                <td>Bu satıcının çalışma vadesidir. Hareketler oluşturulurken otomatik olarak belirtilen vade getirilir.</td>
+            </tr>
+            <tr>
+                <td>Fiyat Grup</td>
+                <td>Satıcının hangi fiyat listesinden % kaç iskonto yapacağını belirten fiyat grubudur.</td>
+            </tr>
+            <tr>
+                <td>Plasiyer</td>
+                <td>Hareketin hangi plasiyere (kullanıcıya) ait olduğunu belirtir. Kalemlerde değiştirilebilir.</td>
+            </tr>
+            <tr>
+                <td>Görüntülenme</td>
+                <td>Kartın ve hareketlerinin hangi kullanıcılar tarafından görüntülenebileceğinin ayarlanması için kullanılır.</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<h2>Kaydetme ve Silme</h2>
+
+<div class="row">
+    <div class="col-md-6">
+        <div class="alert alert-success">
+            <i class="bi bi-check-circle"></i>
+            <strong>Kaydetme:</strong> Doldurulması gereken alanlar girildikten sonra sağ alt köşede bulunan <strong>Kaydet</strong> butonuna tıklayarak satıcı kartı oluşturma işleminizi tamamlayabilirsiniz.
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="alert alert-danger">
+            <i class="bi bi-trash"></i>
+            <strong>Silme:</strong> Kayıtlı bir satıcı kartını silmek için sol altta bulunan sil butonuna tıklayabilirsiniz.
+        </div>
+    </div>
+</div>
+
+<h2>Satıcı Kartı Oluşturma Örneği</h2>
+
+<div class="card mb-4">
+    <div class="card-header bg-primary text-white">
+        <h3 class="mb-0">Örnek Satıcı Kartı</h3>
+    </div>
+    <div class="card-body">
+        <h4>Genel Bilgiler</h4>
+        <ul>
+            <li><strong>Adı:</strong> XYZ Tedarik A.Ş.</li>
+            <li><strong>Kodu:</strong> S-00456</li>
+            <li><strong>Tip:</strong> Satıcı</li>
+            <li><strong>Kodlar:</strong> Hammadde > Metal</li>
+            <li><strong>Etiketler:</strong> Öncelikli, Yurtiçi</li>
+        </ul>
+
+        <h4>Adres Bilgileri</h4>
+        <ul>
+            <li><strong>Adres Adı:</strong> Merkez</li>
+            <li><strong>İlçe:</strong> Beylikdüzü</li>
+            <li><strong>Sokak Adı:</strong> Sanayi Caddesi No: 45</li>
+            <li><strong>Posta Kodu:</strong> 34520</li>
+            <li><strong>Telefon:</strong> 0212 456 78 90</li>
+            <li><strong>Email:</strong> info@xyztedarik.com</li>
+            <li><strong>Web:</strong> www.xyztedarik.com</li>
+        </ul>
+
+        <h4>İlgili Kişi Bilgileri</h4>
+        <ul>
+            <li><strong>İlgili Adı:</strong> Mehmet Demir</li>
+            <li><strong>Telefon:</strong> 0533 456 78 90</li>
+            <li><strong>Email:</strong> mehmet@xyztedarik.com</li>
+            <li><strong>Ünvan:</strong> Satış Müdürü</li>
+        </ul>
+
+        <h4>Gelişmiş Ayarlar</h4>
+        <ul>
+            <li><strong>Çalışma Para Birimi:</strong> TL</li>
+            <li><strong>Vade:</strong> 45 gün</li>
+            <li><strong>Fiyat Grup:</strong> B Grubu</li>
+        </ul>
+    </div>
+</div>
+
+<h2>Satıcı Kartı Oluşturma Kontrol Listesi</h2>
+
+<div class="card mb-3">
+    <div class="card-header bg-info text-white">
+        <h3 class="mb-0">Kontrol Listesi</h3>
+    </div>
+    <div class="card-body">
+        <p>Satıcı kartı oluştururken aşağıdaki kontrol listesini kullanabilirsiniz:</p>
+        <div class="table-responsive">
+            <table class="table table-bordered">
+                <thead class="table-light">
+                    <tr>
+                        <th>Adım</th>
+                        <th>Kontrol</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Satıcının tam adı ve ticari unvanı doğru girildi mi?</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Satıcı kodu benzersiz mi?</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Satıcı tipi doğru seçildi mi?</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Vergi dairesi ve vergi numarası doğru girildi mi?</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Adres ve iletişim bilgileri eksiksiz girildi mi?</td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>İlgili kişi bilgileri girildi mi?</td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>Banka hesap bilgileri doğru girildi mi?</td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>Çalışma vadesi ve para birimi doğru seçildi mi?</td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td>Gerekli ise risk limitleri tanımlandı mı?</td>
+                    </tr>
+                    <tr>
+                        <td>10</td>
+                        <td>Kart aktif olarak işaretlendi mi?</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<h2>Sık Sorulan Sorular</h2>
+
+<div class="accordion" id="faqAccordion">
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="faqOne">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseOne">
+                Hem müşteri hem de satıcı olarak çalıştığımız firmalar için nasıl kart oluşturmalıyım?
+            </button>
+        </h2>
+        <div id="faqCollapseOne" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+                Hem müşteri hem de satıcı olarak çalıştığınız firmalar için tek bir kart oluşturabilirsiniz. Kart oluştururken "Tip" alanında "Müşteri/Satıcı" seçeneğini işaretleyebilirsiniz. Bu şekilde, aynı firma için hem satış hem de satın alma işlemleri yapabilirsiniz. Sistem, işlem türüne göre otomatik olarak borç/alacak kaydı oluşturacaktır.
+            </div>
+        </div>
+    </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="faqTwo">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseTwo">
+                Satıcı kodunu nasıl oluşturmalıyım?
+            </button>
+        </h2>
+        <div id="faqCollapseTwo" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+                Satıcı kodu, satıcıyı benzersiz şekilde tanımlayan bir koddur. Sistem otomatik olarak bir kod oluşturabilir veya kendi kodlama sisteminizi kullanabilirsiniz. Örneğin, "S-" öneki ile başlayan ve ardından sıralı bir numara gelen bir kodlama sistemi kullanabilirsiniz (S-00001, S-00002, vb.). Kodlama sisteminizi belirlerken, kolay hatırlanabilir ve anlamlı olmasına dikkat edin.
+            </div>
+        </div>
+    </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="faqThree">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseThree">
+                Satıcı kartına daha sonra bilgi ekleyebilir miyim?
+            </button>
+        </h2>
+        <div id="faqCollapseThree" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+                Evet, satıcı kartını oluşturduktan sonra istediğiniz zaman düzenleyebilir ve yeni bilgiler ekleyebilirsiniz. Satıcı kartını düzenlemek için, satıcı listesinden ilgili satıcıyı bulun ve düzenleme ikonuna tıklayın. Alternatif olarak, satıcı kartını açın ve doğrudan düzenleme yapın.
+            </div>
+        </div>
+    </div>
+</div>
+
+<h2>İlgili Konular</h2>
+
+<ul>
+    <li><a href="?module=musteri-satici&page=genel-bakis">Müşteri & Satıcı Genel Bakış</a></li>
+    <li><a href="?module=musteri-satici&page=musteri-ekleme">Müşteri Ekleme</a></li>
+    <li><a href="?module=musteri-satici&page=cari-hareketleri">Cari Hareketleri</a></li>
+    <li><a href="?module=satinalma&page=satinalma-faturasi">Satın Alma Faturası</a></li>
+</ul>

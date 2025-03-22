@@ -1,0 +1,501 @@
+<!-- Meta Bilgileri -->
+<meta name="title" content="Satış Fiyat Listesi">
+<meta name="icon" content="bi-tags">
+<meta name="url" content="/satis-pazarlama/fiyat-listesi">
+<meta name="lastUpdate" content="12.03.2025">
+
+<h1>Satış Fiyat Listesi</h1>
+
+<p>Bu dokümantasyon, Aaro ERP sisteminde satış fiyat listelerinin oluşturulduğu ve yönetildiği Fiyat Listesi ekranını açıklamaktadır.</p>
+
+<div class="alert alert-info">
+    <i class="bi bi-info-circle"></i>
+    <strong>Bilgi:</strong> Satış fiyat listesi, bir işletmenin sattığı ürün veya hizmetlerin güncel fiyatlarını gösteren bir listedir. Bu liste, ürün veya hizmet adı, birim fiyatı ve varsa indirimler gibi bilgileri içerir. Satış fiyat listesi, müşterilerin ve işletme personelinin fiyat bilgilerine kolayca ulaşmasını sağlar.
+</div>
+
+<h2>Fiyat Listesine Erişim</h2>
+
+<p>Fiyat Listesi ekranına aşağıdaki yöntemlerden biriyle erişebilirsiniz:</p>
+
+<div class="row">
+    <div class="col-md-4">
+        <div class="card mb-3">
+            <div class="card-header">
+                <i class="bi bi-search"></i> Arama Motoru ile
+            </div>
+            <div class="card-body">
+                <p>Sol sekmede Aaro kullanıcı bilgilerinin hemen altındaki arama motorundan "fiyat listesi" şeklinde aratarak ulaşım sağlayabilirsiniz.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card mb-3">
+            <div class="card-header">
+                <i class="bi bi-list-ul"></i> Menü Üzerinden
+            </div>
+            <div class="card-body">
+                <p>Sol menüden <strong>Satış & Pazarlama -> Fiyatlandırma -> Fiyat Listesi</strong> üzerinden ulaşım sağlayabilirsiniz.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card mb-3">
+            <div class="card-header">
+                <i class="bi bi-link"></i> Doğrudan Erişim
+            </div>
+            <div class="card-body">
+                <p>Doğrudan <a href="erp.aaro.com.tr/FiyatListeleri/Liste?TipID=136001" target="_blank">erp.aaro.com.tr/FiyatListeleri/Liste</a> adresine giderek erişim sağlayabilirsiniz.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<h2>Fiyat Listesi Ekranı</h2>
+
+<p>Fiyat Listesi ekranında satış fiyat listelerinizi görüntüleyebilir, filtreleme yapabilir ve yeni fiyat listesi ekleyebilirsiniz.</p>
+
+<div class="card mb-4">
+    <div class="card-header bg-light">
+        <h3 class="mb-0">Ekran Bileşenleri</h3>
+    </div>
+    <div class="card-body">
+        <div class="row">
+            <div class="col-md-6">
+                <h4>Filtre Bölümü</h4>
+                <p>Ekranın üst kısmında bulunan filtre bölümü, fiyat listelerini çeşitli kriterlere göre filtrelemenizi sağlar:</p>
+                <ul>
+                    <li><strong>Fiyat Listesi Adı:</strong> Belirli bir ada sahip fiyat listelerini bulmak için kullanılır.</li>
+                    <li><strong>Tip:</strong> Satış veya alış fiyat listelerini filtrelemek için kullanılır.</li>
+                    <li><strong>Durum:</strong> Aktif veya pasif fiyat listelerini filtrelemek için kullanılır.</li>
+                    <li><strong>Geçerlilik Tarihi:</strong> Belirli bir tarihte geçerli olan fiyat listelerini bulmak için kullanılır.</li>
+                </ul>
+            </div>
+            <div class="col-md-6">
+                <h4>Liste Bölümü</h4>
+                <p>Ekranın orta kısmında bulunan liste bölümü, filtrelere uygun fiyat listelerini tablo halinde gösterir:</p>
+                <ul>
+                    <li><strong>Fiyat Listesi Adı:</strong> Fiyat listesinin adı</li>
+                    <li><strong>Kod:</strong> Fiyat listesinin kodu</li>
+                    <li><strong>Tip:</strong> Fiyat listesinin tipi (Satış/Alış)</li>
+                    <li><strong>Başlangıç Tarihi:</strong> Fiyat listesinin geçerlilik başlangıç tarihi</li>
+                    <li><strong>Bitiş Tarihi:</strong> Fiyat listesinin geçerlilik bitiş tarihi</li>
+                    <li><strong>Durum:</strong> Fiyat listesinin durumu (Aktif/Pasif)</li>
+                    <li><strong>İşlemler:</strong> Fiyat listesi üzerinde yapılabilecek işlemler (Görüntüle, Düzenle, Sil vb.)</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<h2>Yeni Fiyat Listesi Oluşturma</h2>
+
+<p>Yeni bir fiyat listesi oluşturmak için aşağıdaki adımları izleyebilirsiniz:</p>
+
+<div class="card mb-4">
+    <div class="card-header bg-primary text-white">
+        <h3 class="mb-0"><i class="bi bi-plus-circle"></i> Yeni Fiyat Listesi Oluşturma</h3>
+    </div>
+    <div class="card-body">
+        <ol>
+            <li>Fiyat Listesi ekranında "Yeni Fiyat Ekle" butonuna tıklayın.</li>
+            <li>Açılan formda aşağıdaki bilgileri doldurun:
+                <ul>
+                    <li><strong>Fiyat Listesi Adı:</strong> Fiyat listesinin adını girin (örn. "Perakende Satış Fiyatları", "Toptan Satış Fiyatları" vb.).</li>
+                    <li><strong>Kod:</strong> Fiyat listesinin kodunu girin.</li>
+                    <li><strong>Tip:</strong> Fiyat listesinin tipini seçin (Satış).</li>
+                    <li><strong>Başlangıç Tarihi:</strong> Fiyat listesinin geçerlilik başlangıç tarihini belirleyin.</li>
+                    <li><strong>Bitiş Tarihi:</strong> Fiyat listesinin geçerlilik bitiş tarihini belirleyin (opsiyonel).</li>
+                    <li><strong>Vade:</strong> Fiyat listesi için geçerlilik süresini belirleyin (opsiyonel).</li>
+                    <li><strong>Durum:</strong> Fiyat listesinin durumunu belirleyin (Aktif/Pasif).</li>
+                </ul>
+            </li>
+            <li>"Kaydet" butonuna tıklayarak fiyat listesini oluşturun.</li>
+            <li>Fiyat listesi oluşturulduktan sonra, ürünleri ve fiyatları eklemek için aşağıdaki yöntemlerden birini kullanabilirsiniz:
+                <ul>
+                    <li><strong>Toplu Stok Kalem Ekle:</strong> Stok listenizden seçim yaparak birden fazla ürünü fiyat listesine ekleyebilirsiniz.</li>
+                    <li><strong>Stok Ekle:</strong> Tek tek stok eklemek için kullanabilirsiniz.</li>
+                </ul>
+            </li>
+        </ol>
+    </div>
+</div>
+
+<h2>Fiyat Listesi Alanları</h2>
+
+<p>Fiyat listesi oluştururken veya düzenlerken aşağıdaki alanları kullanabilirsiniz:</p>
+
+<div class="table-responsive">
+    <table class="table table-bordered">
+        <thead class="table-light">
+            <tr>
+                <th>Alan</th>
+                <th>Açıklama</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Fiyat Listesi Adı</strong></td>
+                <td>Fiyat listesinin adını ifade eder. Müşterilere veya işletme içi kullanıma yönelik tanımlayıcı bir isim olmalıdır.</td>
+            </tr>
+            <tr>
+                <td><strong>Kod</strong></td>
+                <td>Fiyat listesinin kodunu ifade eder. Sistem içinde benzersiz bir tanımlayıcı olarak kullanılır.</td>
+            </tr>
+            <tr>
+                <td><strong>Tip</strong></td>
+                <td>Fiyat listesinin satış ya da alış listesi tipi seçilir. Satış fiyat listesi, müşterilere uygulanan fiyatları; alış fiyat listesi ise tedarikçilerden alınan ürünlerin fiyatlarını içerir.</td>
+            </tr>
+            <tr>
+                <td><strong>Başlangıç Tarihi</strong></td>
+                <td>Fiyat listesi için geçerlilik başlangıç tarihini ifade eder. Bu tarihten itibaren fiyat listesi kullanılabilir.</td>
+            </tr>
+            <tr>
+                <td><strong>Bitiş Tarihi</strong></td>
+                <td>Fiyat listesi için geçerlilik bitiş tarihini ifade eder. Bu tarihten sonra fiyat listesi otomatik olarak pasif duruma geçer.</td>
+            </tr>
+            <tr>
+                <td><strong>Vade</strong></td>
+                <td>Fiyat listesi için geçerlilik süresini ifade eder. Gün cinsinden belirtilir ve bitiş tarihi otomatik olarak hesaplanır.</td>
+            </tr>
+            <tr>
+                <td><strong>Durum</strong></td>
+                <td>Aktif veya pasif durumunu ifade eder. Aktif fiyat listeleri kullanılabilir, pasif olanlar ise kullanılamaz.</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<h2>Fiyat Listesine Ürün Ekleme</h2>
+
+<p>Fiyat listesi oluşturduktan sonra, ürünleri ve fiyatları eklemek için aşağıdaki yöntemleri kullanabilirsiniz:</p>
+
+<div class="accordion" id="urunEklemeAccordion">
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="headingOne">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
+                Toplu Stok Kalem Ekle
+            </button>
+        </h2>
+        <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#urunEklemeAccordion">
+            <div class="accordion-body">
+                <p>Birden fazla ürünü fiyat listesine eklemek için:</p>
+                <ol>
+                    <li>Fiyat listesi detay ekranında "Toplu Stok Kalem Ekle" butonuna tıklayın.</li>
+                    <li>Açılan pencerede stok listenizden eklemek istediğiniz ürünleri seçin.</li>
+                    <li>Seçilen ürünler için fiyat bilgilerini girin:
+                        <ul>
+                            <li><strong>Birim Fiyat:</strong> Ürünün birim fiyatını girin.</li>
+                            <li><strong>Para Birimi:</strong> Fiyatın para birimini seçin (TL, USD, EUR vb.).</li>
+                            <li><strong>İskonto Oranı:</strong> Varsa uygulanacak iskonto oranını girin.</li>
+                        </ul>
+                    </li>
+                    <li>"Kaydet" butonuna tıklayarak ürünleri fiyat listesine ekleyin.</li>
+                </ol>
+                <div class="alert alert-primary">
+                    <i class="bi bi-lightbulb"></i>
+                    <strong>İpucu:</strong> Toplu ekleme sırasında, mevcut bir fiyat listesinden fiyatları kopyalayabilir veya stok kartlarındaki satış fiyatlarını temel alabilirsiniz.
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="headingTwo">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+                Stok Ekle
+            </button>
+        </h2>
+        <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#urunEklemeAccordion">
+            <div class="accordion-body">
+                <p>Tek tek stok eklemek için:</p>
+                <ol>
+                    <li>Fiyat listesi detay ekranında "Stok Ekle" butonuna tıklayın.</li>
+                    <li>Açılan pencerede eklemek istediğiniz ürünü seçin.</li>
+                    <li>Ürün için fiyat bilgilerini girin:
+                        <ul>
+                            <li><strong>Birim Fiyat:</strong> Ürünün birim fiyatını girin.</li>
+                            <li><strong>Para Birimi:</strong> Fiyatın para birimini seçin (TL, USD, EUR vb.).</li>
+                            <li><strong>İskonto Oranı:</strong> Varsa uygulanacak iskonto oranını girin.</li>
+                            <li><strong>Geçerlilik Tarihi:</strong> Fiyatın geçerlilik tarihini belirleyin.</li>
+                        </ul>
+                    </li>
+                    <li>"Kaydet" butonuna tıklayarak ürünü fiyat listesine ekleyin.</li>
+                </ol>
+                <div class="alert alert-primary">
+                    <i class="bi bi-lightbulb"></i>
+                    <strong>İpucu:</strong> Tekli stok ekleme, özel fiyatlandırma gerektiren ürünler için daha uygundur. Böylece her ürün için farklı fiyat ve iskonto oranları belirleyebilirsiniz.
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<h2>Fiyat Listesi İşlemleri</h2>
+
+<p>Fiyat Listesi ekranında her bir fiyat listesi için aşağıdaki işlemleri gerçekleştirebilirsiniz:</p>
+
+<div class="accordion" id="fiyatListesiIslemleriAccordion">
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="headingThree">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree">
+                Fiyat Listesi Görüntüleme
+            </button>
+        </h2>
+        <div id="collapseThree" class="accordion-collapse collapse show" data-bs-parent="#fiyatListesiIslemleriAccordion">
+            <div class="accordion-body">
+                <p>Bir fiyat listesini görüntülemek için:</p>
+                <ol>
+                    <li>Fiyat Listesi ekranında ilgili fiyat listesini bulun.</li>
+                    <li>Fiyat listesinin sağ tarafındaki "Görüntüle" butonuna tıklayın veya fiyat listesi satırına çift tıklayın.</li>
+                    <li>Fiyat listesi detayları ve içerdiği ürünler ekranda görüntülenecektir.</li>
+                </ol>
+                <div class="alert alert-primary">
+                    <i class="bi bi-lightbulb"></i>
+                    <strong>İpucu:</strong> Fiyat listesi detay ekranında, listedeki ürünleri filtreleyebilir, sıralayabilir ve Excel'e aktarabilirsiniz.
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="headingFour">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour">
+                Fiyat Listesi Düzenleme
+            </button>
+        </h2>
+        <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#fiyatListesiIslemleriAccordion">
+            <div class="accordion-body">
+                <p>Bir fiyat listesini düzenlemek için:</p>
+                <ol>
+                    <li>Fiyat Listesi ekranında ilgili fiyat listesini bulun.</li>
+                    <li>Fiyat listesinin sağ tarafındaki "Düzenle" butonuna tıklayın.</li>
+                    <li>Fiyat listesi bilgilerini düzenleyin.</li>
+                    <li>"Kaydet" butonuna tıklayarak değişiklikleri kaydedin.</li>
+                </ol>
+                <p>Fiyat listesindeki ürünleri düzenlemek için:</p>
+                <ol>
+                    <li>Fiyat listesi detay ekranında düzenlemek istediğiniz ürünü bulun.</li>
+                    <li>Ürünün sağ tarafındaki "Düzenle" butonuna tıklayın.</li>
+                    <li>Ürün fiyat bilgilerini düzenleyin.</li>
+                    <li>"Kaydet" butonuna tıklayarak değişiklikleri kaydedin.</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="headingFive">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive">
+                Toplu Fiyat Değiştirme
+            </button>
+        </h2>
+        <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#fiyatListesiIslemleriAccordion">
+            <div class="accordion-body">
+                <p>Fiyat listesindeki ürünlerin fiyatlarında toplu değişiklik yapmak için:</p>
+                <ol>
+                    <li>Fiyat listesi detay ekranında "Toplu Fiyat Değiştirme Sayfası" butonuna tıklayın.</li>
+                    <li>Açılan ekranda değişiklik yapmak istediğiniz ürünleri seçin.</li>
+                    <li>Değişiklik tipini belirleyin:
+                        <ul>
+                            <li><strong>Yüzde Artış/Azalış:</strong> Fiyatları belirli bir yüzde oranında artırmak veya azaltmak için kullanılır.</li>
+                            <li><strong>Sabit Tutar Artış/Azalış:</strong> Fiyatlara sabit bir tutar eklemek veya çıkarmak için kullanılır.</li>
+                            <li><strong>Sabit Fiyat Belirleme:</strong> Tüm seçili ürünlere aynı fiyatı atamak için kullanılır.</li>
+                        </ul>
+                    </li>
+                    <li>Değişiklik değerini girin.</li>
+                    <li>"Uygula" butonuna tıklayarak değişiklikleri kaydedin.</li>
+                </ol>
+                <div class="alert alert-warning">
+                    <i class="bi bi-exclamation-triangle"></i>
+                    <strong>Dikkat:</strong> Toplu fiyat değişikliği işlemi geri alınamaz. İşlem öncesinde fiyat listesinin bir yedeğini almanız önerilir.
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="headingSix">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix">
+                Fiyat Listesi Kopyalama
+            </button>
+        </h2>
+        <div id="collapseSix" class="accordion-collapse collapse" data-bs-parent="#fiyatListesiIslemleriAccordion">
+            <div class="accordion-body">
+                <p>Mevcut bir fiyat listesini kopyalayarak yeni bir liste oluşturmak için:</p>
+                <ol>
+                    <li>Fiyat Listesi ekranında ilgili fiyat listesini bulun.</li>
+                    <li>Fiyat listesinin sağ tarafındaki "Listeyi Kopyala" butonuna tıklayın.</li>
+                    <li>Açılan pencerede yeni fiyat listesi için bilgileri girin:
+                        <ul>
+                            <li><strong>Fiyat Listesi Adı:</strong> Yeni fiyat listesinin adını girin.</li>
+                            <li><strong>Kod:</strong> Yeni fiyat listesinin kodunu girin.</li>
+                            <li><strong>Başlangıç Tarihi:</strong> Yeni fiyat listesinin geçerlilik başlangıç tarihini belirleyin.</li>
+                            <li><strong>Fiyat Değişikliği:</strong> Kopyalanan fiyatlara uygulanacak değişikliği belirleyin (opsiyonel).</li>
+                        </ul>
+                    </li>
+                    <li>"Kopyala" butonuna tıklayarak yeni fiyat listesini oluşturun.</li>
+                </ol>
+                <div class="alert alert-primary">
+                    <i class="bi bi-lightbulb"></i>
+                    <strong>İpucu:</strong> Fiyat listesi kopyalama özelliği, mevsimsel fiyat listeleri oluşturmak veya farklı müşteri grupları için benzer fiyat listeleri hazırlamak için kullanışlıdır.
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="headingSeven">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven">
+                Fiyat Listesi Taşıma
+            </button>
+        </h2>
+        <div id="collapseSeven" class="accordion-collapse collapse" data-bs-parent="#fiyatListesiIslemleriAccordion">
+            <div class="accordion-body">
+                <p>Bir fiyat listesindeki ürünleri başka bir fiyat listesine taşımak için:</p>
+                <ol>
+                    <li>Fiyat Listesi ekranında ilgili fiyat listesini bulun.</li>
+                    <li>Fiyat listesinin sağ tarafındaki "Listeyi Taşı" butonuna tıklayın.</li>
+                    <li>Açılan pencerede hedef fiyat listesini seçin.</li>
+                    <li>Taşıma seçeneklerini belirleyin:
+                        <ul>
+                            <li><strong>Tüm Ürünleri Taşı:</strong> Listedeki tüm ürünleri taşımak için seçin.</li>
+                            <li><strong>Seçili Ürünleri Taşı:</strong> Sadece seçtiğiniz ürünleri taşımak için seçin.</li>
+                            <li><strong>Fiyat Değişikliği:</strong> Taşınan fiyatlara uygulanacak değişikliği belirleyin (opsiyonel).</li>
+                        </ul>
+                    </li>
+                    <li>"Taşı" butonuna tıklayarak ürünleri hedef listeye taşıyın.</li>
+                </ol>
+                <div class="alert alert-warning">
+                    <i class="bi bi-exclamation-triangle"></i>
+                    <strong>Dikkat:</strong> Hedef listede aynı ürünler varsa, taşıma işlemi sırasında bu ürünlerin fiyatları güncellenecektir.
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<h2>Ek İşlemler</h2>
+
+<p>Fiyat Listesi ekranında aşağıdaki ek işlemleri gerçekleştirebilirsiniz:</p>
+
+<div class="table-responsive">
+    <table class="table table-bordered">
+        <thead class="table-light">
+            <tr>
+                <th>İşlem</th>
+                <th>Açıklama</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Ana Sayfaya Kısayol Olarak Ekle</td>
+                <td>Fiyat Listesi ekranını ana sayfanıza hızlı erişim sağlayabilmek için kısayollarınıza ekleyebilirsiniz. <a href="?module=genel&page=anasayfa-kisayol-ekleme">Anasayfaya Kısayol Olarak Ekle</a></td>
+            </tr>
+            <tr>
+                <td>Listeyi Excele Aktar</td>
+                <td>Fiyat listesini Excel formatında dışa aktarabilirsiniz. <a href="?module=genel&page=listeyi-excele-aktar">Listeyi Excele Aktar</a></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<h2>Sık Sorulan Sorular</h2>
+
+<div class="accordion" id="faqAccordion">
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="faqOne">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseOne">
+                Farklı müşteri grupları için farklı fiyat listeleri nasıl oluşturabilirim?
+            </button>
+        </h2>
+        <div id="faqCollapseOne" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+                <p>Farklı müşteri grupları için farklı fiyat listeleri oluşturmak için:</p>
+                <ol>
+                    <li>Her müşteri grubu için ayrı bir fiyat listesi oluşturun (örn. "Perakende Müşteriler", "Toptan Müşteriler", "Bayiler" vb.).</li>
+                    <li>Her fiyat listesine uygun fiyatlarla ürünleri ekleyin.</li>
+                    <li>Müşteri kartlarında, ilgili müşterilere uygun fiyat listesini atayın:
+                        <ul>
+                            <li>Müşteri & Satıcı > Müşteriler > Müşteri Kartı ekranında, müşterinin "Fiyat Listesi" alanında ilgili fiyat listesini seçin.</li>
+                        </ul>
+                    </li>
+                </ol>
+                <p>Böylece, satış işlemleri sırasında sistem otomatik olarak müşteriye atanmış fiyat listesindeki fiyatları kullanacaktır.</p>
+            </div>
+        </div>
+    </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="faqTwo">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseTwo">
+                Fiyat listesindeki tüm ürünlerin fiyatlarını belirli bir oranda nasıl artırabilirim?
+            </button>
+        </h2>
+        <div id="faqCollapseTwo" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+                <p>Fiyat listesindeki tüm ürünlerin fiyatlarını belirli bir oranda artırmak için:</p>
+                <ol>
+                    <li>Fiyat listesi detay ekranında "Toplu Fiyat Değiştirme Sayfası" butonuna tıklayın.</li>
+                    <li>Açılan ekranda "Tümünü Seç" seçeneğini işaretleyin.</li>
+                    <li>"Yüzde Artış" seçeneğini seçin.</li>
+                    <li>Artış oranını girin (örn. %10 için "10" yazın).</li>
+                    <li>"Uygula" butonuna tıklayarak değişiklikleri kaydedin.</li>
+                </ol>
+                <div class="alert alert-primary">
+                    <i class="bi bi-lightbulb"></i>
+                    <strong>İpucu:</strong> Toplu fiyat değişikliği yapmadan önce, mevcut fiyat listesini kopyalayarak yedeklemeniz önerilir.
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="faqThree">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseThree">
+                Fiyat listesini belirli bir tarihte otomatik olarak aktif hale getirmek mümkün mü?
+            </button>
+        </h2>
+        <div id="faqCollapseThree" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+                <p>Evet, fiyat listesini belirli bir tarihte otomatik olarak aktif hale getirmek mümkündür:</p>
+                <ol>
+                    <li>Fiyat listesi oluştururken veya düzenlerken "Başlangıç Tarihi" alanına, fiyat listesinin aktif olmasını istediğiniz tarihi girin.</li>
+                    <li>"Durum" alanını "Aktif" olarak işaretleyin.</li>
+                    <li>"Kaydet" butonuna tıklayarak değişiklikleri kaydedin.</li>
+                </ol>
+                <p>Sistem, belirtilen başlangıç tarihinde fiyat listesini otomatik olarak kullanmaya başlayacaktır. Benzer şekilde, "Bitiş Tarihi" alanını doldurarak fiyat listesinin belirli bir tarihte otomatik olarak pasif hale gelmesini sağlayabilirsiniz.</p>
+            </div>
+        </div>
+    </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="faqFour">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseFour">
+                Fiyat listesini müşterilere nasıl gönderebilirim?
+            </button>
+        </h2>
+        <div id="faqCollapseFour" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+                <p>Fiyat listesini müşterilere göndermek için:</p>
+                <ol>
+                    <li>Fiyat listesi detay ekranında "Listeyi Excele Aktar" butonuna tıklayın.</li>
+                    <li>Açılan pencerede aktarım seçeneklerini belirleyin:
+                        <ul>
+                            <li>Görüntülenecek sütunları seçin (Ürün Kodu, Ürün Adı, Birim, Fiyat vb.).</li>
+                            <li>Sıralama kriterini belirleyin (Ürün Kodu, Ürün Adı vb.).</li>
+                            <li>Formatı seçin (Excel, PDF vb.).</li>
+                        </ul>
+                    </li>
+                    <li>"Aktar" butonuna tıklayarak listeyi dışa aktarın.</li>
+                    <li>Oluşturulan dosyayı e-posta ile müşterilerinize gönderebilirsiniz.</li>
+                </ol>
+                <div class="alert alert-primary">
+                    <i class="bi bi-lightbulb"></i>
+                    <strong>İpucu:</strong> Müşterilere göndermeden önce, Excel dosyasını düzenleyerek kurumsal kimliğinize uygun hale getirebilir, logo ekleyebilir ve formatı özelleştirebilirsiniz.
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<h2>İlgili Konular</h2>
+
+<ul>
+    <li><a href="?module=satis-pazarlama&page=satis-faturasi">Satış Faturası</a></li>
+    <li><a href="?module=satis-pazarlama&page=siparis-listesi">Sipariş Listesi</a></li>
+    <li><a href="?module=stok&page=stok-karti">Stok Kartı</a></li>
+    <li><a href="?module=musteri-satici&page=musteri-ekleme">Müşteri Ekleme</a></li>
+    <li><a href="?module=satis-pazarlama&page=kampanya-yonetimi">Kampanya Yönetimi</a></li>
+</ul>

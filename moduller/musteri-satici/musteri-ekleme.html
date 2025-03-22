@@ -1,0 +1,384 @@
+<!-- Meta Bilgileri -->
+<meta name="title" content="Müşteri Ekleme">
+<meta name="icon" content="bi-person-plus">
+<meta name="url" content="/musteri-satici/musteri-ekleme">
+<meta name="lastUpdate" content="12.03.2025">
+
+<h1>Müşteri Ekleme</h1>
+
+<p>Bu dokümantasyon, Aaro ERP sisteminde yeni müşteri kaydı oluşturma işlemini adım adım açıklamaktadır.</p>
+
+<div class="alert alert-info">
+    <i class="bi bi-info-circle"></i>
+    <strong>Bilgi:</strong> Müşteri bilgilerini eksiksiz ve doğru bir şekilde girmek, satış ve muhasebe süreçlerinizin daha verimli çalışmasını sağlar.
+</div>
+
+<h2>Müşteri Kartına Erişim</h2>
+
+<p>Yeni müşteri kartı oluşturmak için aşağıdaki yöntemlerden birini kullanabilirsiniz:</p>
+
+<div class="row">
+    <div class="col-md-4">
+        <div class="card mb-3">
+            <div class="card-header">
+                <i class="bi bi-search"></i> Arama Motoru ile
+            </div>
+            <div class="card-body">
+                <p>Sol sekmede Aaro kullanıcı bilgilerinin hemen altındaki arama motorundan "müşteri satıcı kartı" şeklinde aratarak ulaşım sağlayabilirsiniz.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card mb-3">
+            <div class="card-header">
+                <i class="bi bi-plus-circle"></i> Modül Sayfası Üzerinden
+            </div>
+            <div class="card-body">
+                <p>Sol menüden <strong>Müşteri/Satıcı -> Modül Sayfası -> Yeni Müşteri/Satıcı Kartı</strong> şeklinde ulaşım sağlayabilirsiniz.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card mb-3">
+            <div class="card-header">
+                <i class="bi bi-list-ul"></i> Kart Listesi Üzerinden
+            </div>
+            <div class="card-body">
+                <p>Sol menüden <strong>Müşteri/Satıcı -> Kartlar -> Müşteri/Satıcı Kartı Listesi</strong> üzerinden ulaşım sağlayarak "Yeni Kart" butonuna tıklayabilirsiniz.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<h2>Müşteri Kartı Oluşturma Adımları</h2>
+
+<div class="alert alert-primary">
+    <i class="bi bi-lightbulb"></i>
+    <strong>İpucu:</strong> Müşteri kartı oluştururken, zorunlu alanları mutlaka doldurun. Diğer alanları ise ihtiyacınıza göre doldurabilirsiniz.
+</div>
+
+<h3>1. Genel Bilgiler</h3>
+
+<p>Müşteri kartının temel bilgilerini içeren bu bölümde aşağıdaki alanları doldurmanız gerekir:</p>
+
+<div class="table-responsive">
+    <table class="table table-bordered">
+        <thead class="table-light">
+            <tr>
+                <th>Alan</th>
+                <th>Açıklama</th>
+                <th>Zorunlu</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Adı</td>
+                <td>Müşterinin tam adı veya ticari unvanı</td>
+                <td><span class="badge bg-danger">Evet</span></td>
+            </tr>
+            <tr>
+                <td>Kodu</td>
+                <td>Müşteri için benzersiz bir kod. Otomatik oluşturulabilir veya manuel girilebilir.</td>
+                <td><span class="badge bg-danger">Evet</span></td>
+            </tr>
+            <tr>
+                <td>Tip</td>
+                <td>Müşteri tipini belirtin. "Müşteri" seçeneğini işaretleyin.</td>
+                <td><span class="badge bg-danger">Evet</span></td>
+            </tr>
+            <tr>
+                <td>Kodlar</td>
+                <td>Müşteriyi hiyerarşik olarak gruplamak için kullanılır.</td>
+                <td><span class="badge bg-secondary">Hayır</span></td>
+            </tr>
+            <tr>
+                <td>Etiketler</td>
+                <td>Müşteriyi etiketlemek ve gruplamak için kullanılır.</td>
+                <td><span class="badge bg-secondary">Hayır</span></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<div class="alert alert-warning">
+    <i class="bi bi-exclamation-triangle"></i>
+    <strong>Dikkat:</strong> Sistem mükerrer vergi no girişini otomatik olarak engellemektedir. Yani aynı vergi numarası ile birden çok Müşteri/Satıcı kartı açılması engellenmektedir. Aynı vergi numarası ile birden çok kart açılması ek yetkilerle ayarlanabilmektedir.
+</div>
+
+<h3>2. Adres Bilgileri</h3>
+
+<p>Müşterinin adres ve iletişim bilgilerini içeren bu bölümde aşağıdaki alanları doldurabilirsiniz:</p>
+
+<div class="row">
+    <div class="col-md-6">
+        <div class="card mb-3">
+            <div class="card-header">
+                <i class="bi bi-geo-alt"></i> Adres Detayları
+            </div>
+            <div class="card-body">
+                <ul>
+                    <li><strong>Adres Adı:</strong> Adres bilgisini adlandırabilirsiniz (Merkez, Şube vs.)</li>
+                    <li><strong>İlçe:</strong> Adresin ilçe bilgisi</li>
+                    <li><strong>Sokak Adı:</strong> Adresin sokak bilgisi</li>
+                    <li><strong>Bina Adı/No:</strong> Adresin bina bilgisi</li>
+                    <li><strong>Posta Kodu:</strong> Adresin posta kodu</li>
+                </ul>
+                <p><em>Birden fazla adres eklemek için "Yeni Adres Ekle" butonunu kullanabilirsiniz.</em></p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="card mb-3">
+            <div class="card-header">
+                <i class="bi bi-telephone"></i> İletişim Bilgileri
+            </div>
+            <div class="card-body">
+                <ul>
+                    <li><strong>Telefon:</strong> Müşterinin telefon numarası</li>
+                    <li><strong>Fax:</strong> Müşterinin fax numarası</li>
+                    <li><strong>Email:</strong> Müşterinin e-posta adresi</li>
+                    <li><strong>Web:</strong> Müşterinin web sitesi adresi</li>
+                    <li><strong>Öncelik:</strong> Birden fazla adres olduğunda, öncelikli adresi belirtmek için kullanılır</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<h3>3. İlgili Kişi Bilgileri</h3>
+
+<p>Müşteri firmasındaki ilgili kişilerin bilgilerini içeren bu bölümde aşağıdaki alanları doldurabilirsiniz:</p>
+
+<div class="table-responsive">
+    <table class="table table-bordered">
+        <thead class="table-light">
+            <tr>
+                <th>Alan</th>
+                <th>Açıklama</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>İlgili Adı</td>
+                <td>İlgili kişinin adı ve soyadı</td>
+            </tr>
+            <tr>
+                <td>Telefon</td>
+                <td>İlgili kişinin telefon numarası</td>
+            </tr>
+            <tr>
+                <td>Fax</td>
+                <td>İlgili kişinin fax numarası</td>
+            </tr>
+            <tr>
+                <td>Email</td>
+                <td>İlgili kişinin e-posta adresi</td>
+            </tr>
+            <tr>
+                <td>Doğum</td>
+                <td>İlgili kişinin doğum tarihi</td>
+            </tr>
+            <tr>
+                <td>Ünvan</td>
+                <td>İlgili kişinin firmadaki ünvanı</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<p><em>Birden fazla ilgili kişi eklemek için "Yeni İlgili Kişi Ekle" butonunu kullanabilirsiniz.</em></p>
+
+<h3>4. Banka Hesapları</h3>
+
+<p>Müşterinin banka hesap bilgilerini içeren bu bölümde aşağıdaki alanları doldurabilirsiniz:</p>
+
+<div class="row">
+    <div class="col-md-6">
+        <div class="card mb-3">
+            <div class="card-header">
+                <i class="bi bi-bank"></i> Banka Bilgileri
+            </div>
+            <div class="card-body">
+                <ul>
+                    <li><strong>IBAN No:</strong> Müşterinin banka hesap IBAN numarası. Havale/EFT işlemlerinde kolayca kullanabilirsiniz.</li>
+                    <li><strong>Banka Şube:</strong> Müşterinin banka ve şube bilgileri</li>
+                </ul>
+                <p><em>Birden fazla banka hesabı eklemek için "Yeni Banka Hesabı Ekle" butonunu kullanabilirsiniz.</em></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<h3>5. Risk Limitleri</h3>
+
+<p>Müşterinin risk limitlerini tanımlayarak, risk yönetim sistemini kullanabilirsiniz:</p>
+
+<div class="card mb-3">
+    <div class="card-header">
+        <i class="bi bi-shield-exclamation"></i> Risk Yönetimi
+    </div>
+    <div class="card-body">
+        <p>Risk limiti, müşterinin borç limitini belirler. Bu limit aşıldığında sistem, belirlediğiniz kurallara göre uyarı verecek veya işlemi engelleyecektir.</p>
+        <ul>
+            <li><strong>Risk Limiti:</strong> Müşterinin maksimum borç limiti</li>
+            <li><strong>Para Birimi:</strong> Risk limitinin para birimi</li>
+            <li><strong>Risk Kontrolü:</strong> Risk kontrolünün nasıl yapılacağına dair parametreler</li>
+        </ul>
+    </div>
+</div>
+
+<h3>6. Gelişmiş Ayarlar</h3>
+
+<p>Müşteri kartının gelişmiş ayarlarını içeren bu bölümde aşağıdaki alanları doldurabilirsiniz:</p>
+
+<div class="table-responsive">
+    <table class="table table-bordered">
+        <thead class="table-light">
+            <tr>
+                <th>Alan</th>
+                <th>Açıklama</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Şirket-Şube</td>
+                <td>Kartın ait olduğu şirket ve şubeyi belirtir.</td>
+            </tr>
+            <tr>
+                <td>Durum</td>
+                <td>Kartın kullanılabilirliğini belirtir. Pasif kartlar işlemlerde kullanılamaz.</td>
+            </tr>
+            <tr>
+                <td>Çalışma Para Birimi</td>
+                <td>Bu kartın çalıştığı döviz cinsini belirtir. Bilgi amaçlıdır.</td>
+            </tr>
+            <tr>
+                <td>Vade</td>
+                <td>Bu müşterinin çalışma vadesidir. Hareketler oluşturulurken otomatik olarak belirtilen vade getirilir.</td>
+            </tr>
+            <tr>
+                <td>Fiyat Grup</td>
+                <td>Müşterinin hangi fiyat listesinden % kaç iskonto alacağını belirten fiyat grubudur.</td>
+            </tr>
+            <tr>
+                <td>Plasiyer</td>
+                <td>Hareketin hangi plasiyere (kullanıcıya) ait olduğunu belirtir. Kalemlerde değiştirilebilir.</td>
+            </tr>
+            <tr>
+                <td>Görüntülenme</td>
+                <td>Kartın ve hareketlerinin hangi kullanıcılar tarafından görüntülenebileceğinin ayarlanması için kullanılır.</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<h2>Kaydetme ve Silme</h2>
+
+<div class="row">
+    <div class="col-md-6">
+        <div class="alert alert-success">
+            <i class="bi bi-check-circle"></i>
+            <strong>Kaydetme:</strong> Doldurulması gereken alanlar girildikten sonra sağ alt köşede bulunan <strong>Kaydet</strong> butonuna tıklayarak müşteri kartı oluşturma işleminizi tamamlayabilirsiniz.
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="alert alert-danger">
+            <i class="bi bi-trash"></i>
+            <strong>Silme:</strong> Kayıtlı bir müşteri kartını silmek için sol altta bulunan sil butonuna tıklayabilirsiniz.
+        </div>
+    </div>
+</div>
+
+<h2>Müşteri Kartı Oluşturma Örneği</h2>
+
+<div class="card mb-4">
+    <div class="card-header bg-primary text-white">
+        <h3 class="mb-0">Örnek Müşteri Kartı</h3>
+    </div>
+    <div class="card-body">
+        <h4>Genel Bilgiler</h4>
+        <ul>
+            <li><strong>Adı:</strong> ABC Elektronik Ltd. Şti.</li>
+            <li><strong>Kodu:</strong> M-00123</li>
+            <li><strong>Tip:</strong> Müşteri</li>
+            <li><strong>Kodlar:</strong> Elektronik > Perakende</li>
+            <li><strong>Etiketler:</strong> VIP, Düzenli</li>
+        </ul>
+
+        <h4>Adres Bilgileri</h4>
+        <ul>
+            <li><strong>Adres Adı:</strong> Merkez</li>
+            <li><strong>İlçe:</strong> Kadıköy</li>
+            <li><strong>Sokak Adı:</strong> Bağdat Caddesi No: 123</li>
+            <li><strong>Posta Kodu:</strong> 34710</li>
+            <li><strong>Telefon:</strong> 0216 123 45 67</li>
+            <li><strong>Email:</strong> info@abcelektronik.com</li>
+            <li><strong>Web:</strong> www.abcelektronik.com</li>
+        </ul>
+
+        <h4>İlgili Kişi Bilgileri</h4>
+        <ul>
+            <li><strong>İlgili Adı:</strong> Ahmet Yılmaz</li>
+            <li><strong>Telefon:</strong> 0532 123 45 67</li>
+            <li><strong>Email:</strong> ahmet@abcelektronik.com</li>
+            <li><strong>Ünvan:</strong> Satın Alma Müdürü</li>
+        </ul>
+
+        <h4>Gelişmiş Ayarlar</h4>
+        <ul>
+            <li><strong>Çalışma Para Birimi:</strong> TL</li>
+            <li><strong>Vade:</strong> 30 gün</li>
+            <li><strong>Fiyat Grup:</strong> A Grubu</li>
+        </ul>
+    </div>
+</div>
+
+<h2>Sık Sorulan Sorular</h2>
+
+<div class="accordion" id="faqAccordion">
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="faqOne">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseOne">
+                Aynı müşteriye birden fazla kart açabilir miyim?
+            </button>
+        </h2>
+        <div id="faqCollapseOne" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+                Sistem, aynı vergi numarası ile birden fazla müşteri kartı açılmasını otomatik olarak engeller. Ancak, özel durumlarda aynı müşteriye birden fazla kart açma ihtiyacı olabilir. Bu durumda, sistem yöneticinizden gerekli yetkilendirmeyi talep etmeniz gerekir.
+            </div>
+        </div>
+    </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="faqTwo">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseTwo">
+                Müşteri kodunu nasıl oluşturmalıyım?
+            </button>
+        </h2>
+        <div id="faqCollapseTwo" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+                Müşteri kodu, müşteriyi benzersiz şekilde tanımlayan bir koddur. Sistem otomatik olarak bir kod oluşturabilir veya kendi kodlama sisteminizi kullanabilirsiniz. Örneğin, "M-" öneki ile başlayan ve ardından sıralı bir numara gelen bir kodlama sistemi kullanabilirsiniz (M-00001, M-00002, vb.). Kodlama sisteminizi belirlerken, kolay hatırlanabilir ve anlamlı olmasına dikkat edin.
+            </div>
+        </div>
+    </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="faqThree">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseThree">
+                Müşteri kartına daha sonra bilgi ekleyebilir miyim?
+            </button>
+        </h2>
+        <div id="faqCollapseThree" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+                Evet, müşteri kartını oluşturduktan sonra istediğiniz zaman düzenleyebilir ve yeni bilgiler ekleyebilirsiniz. Müşteri kartını düzenlemek için, müşteri listesinden ilgili müşteriyi bulun ve düzenleme ikonuna tıklayın. Alternatif olarak, müşteri kartını açın ve doğrudan düzenleme yapın.
+            </div>
+        </div>
+    </div>
+</div>
+
+<h2>İlgili Konular</h2>
+
+<ul>
+    <li><a href="?module=musteri-satici&page=genel-bakis">Müşteri & Satıcı Genel Bakış</a></li>
+    <li><a href="?module=musteri-satici&page=satici-ekleme">Satıcı Ekleme</a></li>
+    <li><a href="?module=musteri-satici&page=cari-hareketleri">Cari Hareketleri</a></li>
+    <li><a href="?module=musteri-satici&page=risk-limitleri">Risk Limitleri</a></li>
+</ul>

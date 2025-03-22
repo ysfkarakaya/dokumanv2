@@ -1,0 +1,10 @@
+aaro erp yazılımının nasıl kullanıldığını gösteren bir döküman hazırlamanı istiyorum. html,css,jquery,ajax,bootstrap vs ile geliştirilmiş bir şey istiyorum.
+tüm moduller klasör klasör gruplanmış olması gerekiyor. örnek githubdaki gibi 
+https://github.com/AaroYazilim/Dokumantasyon
+dosya yapısı olarak şunu istiyorum moduller dizininde olan moduller otomatik menü de listelenebilsin yani ben meseka moduller dizinine yeni bir modul tanımladığımda otomatik listelensin.
+modul dosyaları sadeec content ten oluşsun ve mesela sayfanın üstünde 
+--modul adı
+-modul iconu
+modul url
+vs gibi değerler tanımlanabilsin ve otomatik modul içindeki dosyadan çeksin
+modul dosyalarınsa sadece content olsun ve menüden tıklandığında ajax ile otomatik çekebilsin.

@@ -1,0 +1,525 @@
+<!-- Meta Bilgileri -->
+<meta name="title" content="Çek/Senet Kartı Listesi">
+<meta name="icon" content="bi-card-list">
+<meta name="url" content="/cek-senet/cek-senet-karti-listesi">
+<meta name="lastUpdate" content="12.03.2025">
+
+<h1>Çek/Senet Kartı Listesi</h1>
+
+<p>Bu dokümantasyon, Aaro ERP sisteminde çek ve senet kartlarının listelendiği, filtrelendiği ve yönetildiği Çek/Senet Kartı Listesi ekranını açıklamaktadır.</p>
+
+<div class="alert alert-info">
+    <i class="bi bi-info-circle"></i>
+    <strong>Bilgi:</strong> Çek/Senet Kartı Listesi ekranında, sisteme girilen tüm çek ve senetlerin listesini görüntüleyebilir, filtreleme yapabilir ve yeni çek/senet kaydı oluşturabilirsiniz.
+</div>
+
+<h2>Çek/Senet Kartı Listesine Erişim</h2>
+
+<p>Çek/Senet Kartı Listesi ekranına aşağıdaki yöntemlerden biriyle erişebilirsiniz:</p>
+
+<div class="row">
+    <div class="col-md-4">
+        <div class="card mb-3">
+            <div class="card-header">
+                <i class="bi bi-search"></i> Arama Motoru ile
+            </div>
+            <div class="card-body">
+                <p>Sol sekmede Aaro kullanıcı bilgilerinin hemen altındaki arama motorundan "çek senet kartı listesi" şeklinde aratarak ulaşım sağlayabilirsiniz.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card mb-3">
+            <div class="card-header">
+                <i class="bi bi-list-ul"></i> Menü Üzerinden
+            </div>
+            <div class="card-body">
+                <p>Sol menüden <strong>Çek & Senet -> Çek/Senet Kartları -> Çek/Senet Kartı Listesi</strong> üzerinden ulaşım sağlayabilirsiniz.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card mb-3">
+            <div class="card-header">
+                <i class="bi bi-link"></i> Doğrudan Erişim
+            </div>
+            <div class="card-body">
+                <p>Doğrudan <a href="erp.aaro.com.tr/CekSenet/KartListesi" target="_blank">erp.aaro.com.tr/CekSenet/KartListesi</a> adresine giderek erişim sağlayabilirsiniz.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<h2>Çek/Senet Kartı Listesi Ekranı</h2>
+
+<p>Çek/Senet Kartı Listesi ekranında, sisteme girilen tüm çek ve senetlerin listesini görüntüleyebilir, filtreleme yapabilir ve yeni çek/senet kaydı oluşturabilirsiniz.</p>
+
+<div class="card mb-4">
+    <div class="card-header bg-light">
+        <h3 class="mb-0">Ekran Bileşenleri</h3>
+    </div>
+    <div class="card-body">
+        <div class="row">
+            <div class="col-md-6">
+                <h4>Filtre Bölümü</h4>
+                <p>Ekranın üst kısmında bulunan filtre bölümü, çek ve senetleri çeşitli kriterlere göre filtrelemenizi sağlar:</p>
+                <ul>
+                    <li><strong>Çek/Senet Türü:</strong> Çek veya senet türüne göre filtreleme yapabilirsiniz.</li>
+                    <li><strong>Portföy Tipi:</strong> Müşteri çeki/senedi veya firma çeki/senedi olarak filtreleme yapabilirsiniz.</li>
+                    <li><strong>Vade Tarihi Aralığı:</strong> Belirli bir vade tarihi aralığındaki çek ve senetleri görüntüleyebilirsiniz.</li>
+                    <li><strong>Tutar Aralığı:</strong> Belirli bir tutar aralığındaki çek ve senetleri görüntüleyebilirsiniz.</li>
+                    <li><strong>Durum:</strong> Çek/senet durumuna göre filtreleme yapabilirsiniz (Portföyde, Tahsil Edildi, Ciro Edildi, Bankada, Karşılıksız vb.).</li>
+                    <li><strong>Cari Hesap:</strong> Belirli bir müşteri veya tedarikçiye ait çek ve senetleri görüntüleyebilirsiniz.</li>
+                    <li><strong>Banka/Şube:</strong> Belirli bir banka veya şubeye ait çek ve senetleri görüntüleyebilirsiniz.</li>
+                </ul>
+            </div>
+            <div class="col-md-6">
+                <h4>Liste Bölümü</h4>
+                <p>Ekranın orta kısmında bulunan liste bölümü, filtrelere uygun çek ve senetleri tablo halinde gösterir:</p>
+                <ul>
+                    <li><strong>Çek/Senet No:</strong> Çek veya senet numarası</li>
+                    <li><strong>Tür:</strong> Çek veya senet</li>
+                    <li><strong>Portföy Tipi:</strong> Müşteri çeki/senedi veya firma çeki/senedi</li>
+                    <li><strong>Vade Tarihi:</strong> Çek veya senedin vade tarihi</li>
+                    <li><strong>Tutar:</strong> Çek veya senet tutarı</li>
+                    <li><strong>Para Birimi:</strong> Çek veya senedin para birimi</li>
+                    <li><strong>Cari Hesap:</strong> Çek veya senedin ilişkili olduğu müşteri veya tedarikçi</li>
+                    <li><strong>Banka/Şube:</strong> Çek veya senedin banka ve şube bilgisi</li>
+                    <li><strong>Durum:</strong> Çek veya senedin güncel durumu</li>
+                    <li><strong>İşlemler:</strong> Çek veya senet üzerinde yapılabilecek işlemler (Görüntüle, Düzenle, Hareket Oluştur vb.)</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<h2>Çek/Senet Durumları</h2>
+
+<p>Aaro ERP'de çek ve senetler aşağıdaki durumlarda olabilir:</p>
+
+<div class="table-responsive">
+    <table class="table table-bordered">
+        <thead class="table-light">
+            <tr>
+                <th>Durum</th>
+                <th>Açıklama</th>
+                <th>Renk Kodu</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><span class="badge bg-success">Portföyde</span></td>
+                <td>Çek veya senet işletme portföyünde bulunmaktadır.</td>
+                <td><code>#28a745</code></td>
+            </tr>
+            <tr>
+                <td><span class="badge bg-primary">Bankada</span></td>
+                <td>Çek veya senet tahsil edilmek üzere bankaya teslim edilmiştir.</td>
+                <td><code>#007bff</code></td>
+            </tr>
+            <tr>
+                <td><span class="badge bg-info">Ciro Edildi</span></td>
+                <td>Çek veya senet başka bir kişi veya kuruma ciro edilmiştir.</td>
+                <td><code>#17a2b8</code></td>
+            </tr>
+            <tr>
+                <td><span class="badge bg-secondary">Tahsil Edildi</span></td>
+                <td>Çek veya senet tahsil edilmiştir.</td>
+                <td><code>#6c757d</code></td>
+            </tr>
+            <tr>
+                <td><span class="badge bg-danger">Karşılıksız</span></td>
+                <td>Çek karşılıksız çıkmıştır veya senet ödenmemiştir.</td>
+                <td><code>#dc3545</code></td>
+            </tr>
+            <tr>
+                <td><span class="badge bg-warning">İade Edildi</span></td>
+                <td>Çek veya senet müşteriye iade edilmiştir.</td>
+                <td><code>#ffc107</code></td>
+            </tr>
+            <tr>
+                <td><span class="badge bg-dark">İptal Edildi</span></td>
+                <td>Çek veya senet iptal edilmiştir.</td>
+                <td><code>#343a40</code></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<h2>Yeni Çek/Senet Kartı Oluşturma</h2>
+
+<p>Yeni bir çek veya senet kartı oluşturmak için aşağıdaki adımları izleyebilirsiniz:</p>
+
+<div class="card mb-4">
+    <div class="card-header bg-primary text-white">
+        <h3 class="mb-0"><i class="bi bi-plus-circle"></i> Yeni Çek/Senet Kartı Oluşturma</h3>
+    </div>
+    <div class="card-body">
+        <ol>
+            <li>Çek/Senet Kartı Listesi ekranında "Yeni Çek/Senet" butonuna tıklayın.</li>
+            <li>Açılan formda aşağıdaki bilgileri doldurun:
+                <ul>
+                    <li><strong>Tür:</strong> Çek veya senet seçeneğini belirleyin.</li>
+                    <li><strong>Portföy Tipi:</strong> Müşteri çeki/senedi veya firma çeki/senedi seçeneğini belirleyin.</li>
+                    <li><strong>Çek/Senet No:</strong> Çek veya senet numarasını girin.</li>
+                    <li><strong>Vade Tarihi:</strong> Çek veya senedin vade tarihini belirleyin.</li>
+                    <li><strong>Tutar:</strong> Çek veya senet tutarını girin.</li>
+                    <li><strong>Para Birimi:</strong> Çek veya senedin para birimini seçin.</li>
+                    <li><strong>Cari Hesap:</strong> Çek veya senedin ilişkili olduğu müşteri veya tedarikçiyi seçin.</li>
+                </ul>
+            </li>
+            <li>Çek için ek bilgileri doldurun:
+                <ul>
+                    <li><strong>Banka:</strong> Çekin keşide edildiği bankayı seçin.</li>
+                    <li><strong>Şube:</strong> Çekin keşide edildiği şubeyi seçin veya girin.</li>
+                    <li><strong>Hesap No:</strong> Çekin keşide edildiği hesap numarasını girin.</li>
+                    <li><strong>Keşide Yeri:</strong> Çekin keşide edildiği yeri girin.</li>
+                    <li><strong>Keşide Tarihi:</strong> Çekin keşide edildiği tarihi belirleyin.</li>
+                </ul>
+            </li>
+            <li>Senet için ek bilgileri doldurun:
+                <ul>
+                    <li><strong>Borçlu:</strong> Senedi düzenleyen borçluyu girin.</li>
+                    <li><strong>Düzenleme Tarihi:</strong> Senedin düzenlendiği tarihi belirleyin.</li>
+                    <li><strong>Düzenleme Yeri:</strong> Senedin düzenlendiği yeri girin.</li>
+                </ul>
+            </li>
+            <li>Açıklama ve notları girin (opsiyonel).</li>
+            <li>"Kaydet" butonuna tıklayarak çek veya senet kartını oluşturun.</li>
+        </ol>
+    </div>
+</div>
+
+<h2>Çek/Senet Kartı İşlemleri</h2>
+
+<p>Çek/Senet Kartı Listesi ekranında her bir çek veya senet için aşağıdaki işlemleri gerçekleştirebilirsiniz:</p>
+
+<div class="accordion" id="cekSenetIslemleriAccordion">
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="headingOne">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
+                Çek/Senet Kartı Görüntüleme
+            </button>
+        </h2>
+        <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#cekSenetIslemleriAccordion">
+            <div class="accordion-body">
+                <p>Bir çek veya senet kartını görüntülemek için:</p>
+                <ol>
+                    <li>Çek/Senet Kartı Listesi ekranında ilgili çek veya senedi bulun.</li>
+                    <li>Çek veya senedin sağ tarafındaki "Görüntüle" butonuna tıklayın veya çek/senet satırına çift tıklayın.</li>
+                    <li>Çek veya senet detayları ekranda görüntülenecektir.</li>
+                </ol>
+                <p>Çek/Senet detay ekranında aşağıdaki bilgileri görebilirsiniz:</p>
+                <ul>
+                    <li>Çek veya senet başlık bilgileri (çek/senet no, tür, portföy tipi vb.)</li>
+                    <li>Çek veya senet detay bilgileri (vade tarihi, tutar, para birimi vb.)</li>
+                    <li>Cari hesap bilgileri</li>
+                    <li>Banka ve şube bilgileri (çek için)</li>
+                    <li>Borçlu bilgileri (senet için)</li>
+                    <li>Çek veya senet durumu ve geçmiş durum değişiklikleri</li>
+                    <li>Çek veya senet hareketleri</li>
+                    <li>Notlar ve açıklamalar</li>
+                </ul>
+                <div class="alert alert-primary">
+                    <i class="bi bi-lightbulb"></i>
+                    <strong>İpucu:</strong> Çek/Senet detay ekranında, çek veya senedin tüm hareketlerini ve durumunu takip edebilirsiniz. Ayrıca, bu ekrandan yeni hareket oluşturabilirsiniz.
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="headingTwo">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+                Çek/Senet Kartı Düzenleme
+            </button>
+        </h2>
+        <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#cekSenetIslemleriAccordion">
+            <div class="accordion-body">
+                <p>Bir çek veya senet kartını düzenlemek için:</p>
+                <ol>
+                    <li>Çek/Senet Kartı Listesi ekranında ilgili çek veya senedi bulun.</li>
+                    <li>Çek veya senedin sağ tarafındaki "Düzenle" butonuna tıklayın.</li>
+                    <li>Çek veya senet bilgilerini düzenleyin:
+                        <ul>
+                            <li>Çek veya senet numarası</li>
+                            <li>Vade tarihi</li>
+                            <li>Tutar ve para birimi</li>
+                            <li>Banka ve şube bilgileri (çek için)</li>
+                            <li>Borçlu bilgileri (senet için)</li>
+                            <li>Açıklama ve notlar</li>
+                        </ul>
+                    </li>
+                    <li>"Kaydet" butonuna tıklayarak değişiklikleri kaydedin.</li>
+                </ol>
+                <div class="alert alert-warning">
+                    <i class="bi bi-exclamation-triangle"></i>
+                    <strong>Dikkat:</strong> Portföyde olmayan (tahsil edilmiş, ciro edilmiş, bankada vb.) çek ve senetlerde düzenleme yapabilmeniz için gerekli yetkilere sahip olmanız gerekir. Ayrıca, bazı bilgiler (tür, portföy tipi, cari hesap vb.) düzenlenemeyebilir.
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="headingThree">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree">
+                Hareket Oluşturma
+            </button>
+        </h2>
+        <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#cekSenetIslemleriAccordion">
+            <div class="accordion-body">
+                <p>Bir çek veya senet için hareket oluşturmak için:</p>
+                <ol>
+                    <li>Çek/Senet Kartı Listesi ekranında ilgili çek veya senedi bulun.</li>
+                    <li>Çek veya senedin sağ tarafındaki "Hareket Oluştur" butonuna tıklayın.</li>
+                    <li>Açılan pencerede hareket türünü seçin:
+                        <ul>
+                            <li><strong>Tahsilat:</strong> Çek veya senedin tahsil edilmesi</li>
+                            <li><strong>Ciro:</strong> Çek veya senedin başka bir kişi veya kuruma ciro edilmesi</li>
+                            <li><strong>Bankaya Teslim:</strong> Çek veya senedin tahsil edilmek üzere bankaya teslim edilmesi</li>
+                            <li><strong>Karşılıksız:</strong> Çekin karşılıksız çıkması veya senedin ödenmemesi</li>
+                            <li><strong>İade:</strong> Çek veya senedin müşteriye iade edilmesi</li>
+                            <li><strong>İptal:</strong> Çek veya senedin iptal edilmesi</li>
+                        </ul>
+                    </li>
+                    <li>Hareket bilgilerini girin:
+                        <ul>
+                            <li><strong>Tarih:</strong> Hareketin gerçekleştiği tarihi belirleyin.</li>
+                            <li><strong>Tutar:</strong> Hareket tutarını girin (kısmi tahsilat durumunda).</li>
+                            <li><strong>Cari Hesap:</strong> Hareketin ilişkili olduğu cari hesabı seçin (ciro işlemi için).</li>
+                            <li><strong>Banka Hesabı:</strong> Tahsilat yapılacak banka hesabını seçin (tahsilat işlemi için).</li>
+                            <li><strong>Açıklama:</strong> Hareket ile ilgili açıklamaları girin.</li>
+                        </ul>
+                    </li>
+                    <li>"Kaydet" butonuna tıklayarak hareketi oluşturun.</li>
+                </ol>
+                <div class="alert alert-primary">
+                    <i class="bi bi-lightbulb"></i>
+                    <strong>İpucu:</strong> Hareket oluşturma işlemi, çek veya senedin durumunu otomatik olarak günceller ve gerekli muhasebe kayıtlarını oluşturur. Daha detaylı hareket işlemleri için "Hareket Oluştur" ekranını kullanabilirsiniz.
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="headingFour">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour">
+                Çek/Senet Yazdırma
+            </button>
+        </h2>
+        <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#cekSenetIslemleriAccordion">
+            <div class="accordion-body">
+                <p>Bir çek veya senedi yazdırmak için:</p>
+                <ol>
+                    <li>Çek/Senet Kartı Listesi ekranında ilgili çek veya senedi bulun.</li>
+                    <li>Çek veya senedin sağ tarafındaki "Yazdır" butonuna tıklayın.</li>
+                    <li>Açılan pencerede yazdırma şablonunu seçin:
+                        <ul>
+                            <li><strong>Standart:</strong> Standart çek veya senet yazdırma şablonu</li>
+                            <li><strong>Detaylı:</strong> Detaylı bilgileri içeren çek veya senet yazdırma şablonu</li>
+                            <li><strong>Bordro:</strong> Çek veya senet bordrosu şablonu</li>
+                        </ul>
+                    </li>
+                    <li>"Yazdır" butonuna tıklayarak çek veya senedi yazdırın.</li>
+                </ol>
+                <div class="alert alert-primary">
+                    <i class="bi bi-lightbulb"></i>
+                    <strong>İpucu:</strong> Birden fazla çek veya senedi toplu olarak yazdırmak için, Çek/Senet Kartı Listesi ekranında ilgili çek ve senetleri seçin ve "Toplu Yazdır" butonuna tıklayın.
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<h2>Çek/Senet Raporları</h2>
+
+<p>Çek/Senet Kartı Listesi ekranından aşağıdaki raporları alabilirsiniz:</p>
+
+<div class="row">
+    <div class="col-md-6">
+        <div class="card mb-3">
+            <div class="card-header bg-light">
+                <h4 class="mb-0">Vade Analizi Raporu</h4>
+            </div>
+            <div class="card-body">
+                <p>Bu rapor, portföyünüzdeki çek ve senetlerin vade tarihlerine göre dağılımını gösterir. Raporu almak için:</p>
+                <ol>
+                    <li>Çek/Senet Kartı Listesi ekranında "Raporlar" butonuna tıklayın.</li>
+                    <li>"Vade Analizi" seçeneğini belirleyin.</li>
+                    <li>Rapor parametrelerini girin (tarih aralığı, portföy tipi vb.).</li>
+                    <li>"Rapor Oluştur" butonuna tıklayın.</li>
+                </ol>
+                <p>Bu rapor, nakit akışı planlaması için önemli bir araçtır.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="card mb-3">
+            <div class="card-header bg-light">
+                <h4 class="mb-0">Portföy Durumu Raporu</h4>
+            </div>
+            <div class="card-body">
+                <p>Bu rapor, portföyünüzdeki çek ve senetlerin durumlarına göre dağılımını gösterir. Raporu almak için:</p>
+                <ol>
+                    <li>Çek/Senet Kartı Listesi ekranında "Raporlar" butonuna tıklayın.</li>
+                    <li>"Portföy Durumu" seçeneğini belirleyin.</li>
+                    <li>Rapor parametrelerini girin (tarih aralığı, portföy tipi vb.).</li>
+                    <li>"Rapor Oluştur" butonuna tıklayın.</li>
+                </ol>
+                <p>Bu rapor, portföyünüzün genel durumunu değerlendirmenize yardımcı olur.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-6">
+        <div class="card mb-3">
+            <div class="card-header bg-light">
+                <h4 class="mb-0">Cari Hesap Bazında Çek/Senet Raporu</h4>
+            </div>
+            <div class="card-body">
+                <p>Bu rapor, müşteri veya tedarikçi bazında çek ve senet dağılımını gösterir. Raporu almak için:</p>
+                <ol>
+                    <li>Çek/Senet Kartı Listesi ekranında "Raporlar" butonuna tıklayın.</li>
+                    <li>"Cari Hesap Bazında" seçeneğini belirleyin.</li>
+                    <li>Rapor parametrelerini girin (cari hesap, tarih aralığı vb.).</li>
+                    <li>"Rapor Oluştur" butonuna tıklayın.</li>
+                </ol>
+                <p>Bu rapor, müşteri veya tedarikçi bazında çek ve senet riskini değerlendirmenize yardımcı olur.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="card mb-3">
+            <div class="card-header bg-light">
+                <h4 class="mb-0">Karşılıksız Çek/Protestolu Senet Raporu</h4>
+            </div>
+            <div class="card-body">
+                <p>Bu rapor, karşılıksız çıkan çekler ve protestolu senetler hakkında bilgi verir. Raporu almak için:</p>
+                <ol>
+                    <li>Çek/Senet Kartı Listesi ekranında "Raporlar" butonuna tıklayın.</li>
+                    <li>"Karşılıksız/Protestolu" seçeneğini belirleyin.</li>
+                    <li>Rapor parametrelerini girin (tarih aralığı, cari hesap vb.).</li>
+                    <li>"Rapor Oluştur" butonuna tıklayın.</li>
+                </ol>
+                <p>Bu rapor, karşılıksız çek ve protestolu senet riskini değerlendirmenize yardımcı olur.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<h2>Sık Sorulan Sorular</h2>
+
+<div class="accordion" id="faqAccordion">
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="faqOne">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseOne">
+                Müşteri çeki ile firma çeki arasındaki fark nedir?
+            </button>
+        </h2>
+        <div id="faqCollapseOne" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+                <p>Müşteri çeki ve firma çeki arasındaki temel farklar şunlardır:</p>
+                <ul>
+                    <li><strong>Müşteri Çeki:</strong> Müşterilerden tahsilat amacıyla alınan çeklerdir. Bu çekler, müşterinin kendi bankasından keşide ettiği çeklerdir ve işletmenin alacaklarını temsil eder.</li>
+                    <li><strong>Firma Çeki:</strong> İşletmenin kendi bankasından keşide ettiği çeklerdir. Bu çekler, işletmenin borçlarını ödemek için kullanılır ve işletmenin borçlarını temsil eder.</li>
+                </ul>
+                <p>Aaro ERP'de, müşteri çekleri ve firma çekleri ayrı portföylerde takip edilir ve farklı muhasebe hesaplarında izlenir.</p>
+            </div>
+        </div>
+    </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="faqTwo">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseTwo">
+                Çek/senet kaydı oluştururken dikkat edilmesi gereken hususlar nelerdir?
+            </button>
+        </h2>
+        <div id="faqCollapseTwo" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+                <p>Çek/senet kaydı oluştururken dikkat edilmesi gereken hususlar şunlardır:</p>
+                <ol>
+                    <li><strong>Doğru Tür Seçimi:</strong> Çek veya senet türünü doğru seçtiğinizden emin olun.</li>
+                    <li><strong>Doğru Portföy Tipi:</strong> Müşteri çeki/senedi veya firma çeki/senedi olduğunu doğru belirleyin.</li>
+                    <li><strong>Çek/Senet Numarası:</strong> Çek veya senet numarasını doğru girin. Bu numara, çek veya senedi tanımlamak için kullanılır.</li>
+                    <li><strong>Vade Tarihi:</strong> Çek veya senedin vade tarihini doğru girin. Bu tarih, nakit akışı planlaması için önemlidir.</li>
+                    <li><strong>Tutar ve Para Birimi:</strong> Çek veya senet tutarını ve para birimini doğru girin.</li>
+                    <li><strong>Cari Hesap:</strong> Çek veya senedin ilişkili olduğu müşteri veya tedarikçiyi doğru seçin.</li>
+                    <li><strong>Banka ve Şube Bilgileri:</strong> Çek için banka ve şube bilgilerini doğru girin.</li>
+                    <li><strong>Borçlu Bilgileri:</strong> Senet için borçlu bilgilerini doğru girin.</li>
+                </ol>
+                <p>Doğru ve eksiksiz bilgi girişi, çek ve senet takibinin sağlıklı yapılabilmesi için önemlidir.</p>
+            </div>
+        </div>
+    </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="faqThree">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseThree">
+                Çek/senet listesini Excel'e nasıl aktarabilirim?
+            </button>
+        </h2>
+        <div id="faqCollapseThree" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+                <p>Çek/senet listesini Excel'e aktarmak için:</p>
+                <ol>
+                    <li>Çek/Senet Kartı Listesi ekranında "Dışa Aktar" butonuna tıklayın.</li>
+                    <li>Açılan menüden "Excel" seçeneğini belirleyin.</li>
+                    <li>Dışa aktarma parametrelerini girin:
+                        <ul>
+                            <li>Dışa aktarılacak alanları seçin.</li>
+                            <li>Dışa aktarma formatını belirleyin (XLSX, XLS vb.).</li>
+                            <li>Dosya adını girin.</li>
+                        </ul>
+                    </li>
+                    <li>"Dışa Aktar" butonuna tıklayarak Excel dosyasını indirin.</li>
+                </ol>
+                <p>Ayrıca, raporlar menüsünden alacağınız raporları da Excel formatında dışa aktarabilirsiniz.</p>
+            </div>
+        </div>
+    </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="faqFour">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseFour">
+                Toplu çek/senet girişi nasıl yapılır?
+            </button>
+        </h2>
+        <div id="faqCollapseFour" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+                <p>Toplu çek/senet girişi yapmak için:</p>
+                <ol>
+                    <li>Çek/Senet Kartı Listesi ekranında "Toplu Giriş" butonuna tıklayın.</li>
+                    <li>Açılan pencerede giriş yöntemini seçin:
+                        <ul>
+                            <li><strong>Manuel Giriş:</strong> Çek veya senet bilgilerini manuel olarak girin.</li>
+                            <li><strong>Excel İle Giriş:</strong> Excel dosyasından çek veya senet bilgilerini içe aktarın.</li>
+                        </ul>
+                    </li>
+                    <li>Manuel giriş için:
+                        <ul>
+                            <li>Tür, portföy tipi, cari hesap gibi ortak bilgileri girin.</li>
+                            <li>"Çek/Senet Ekle" butonuna tıklayarak her bir çek veya senet için satır ekleyin.</li>
+                            <li>Her satırda çek/senet no, vade tarihi, tutar gibi bilgileri girin.</li>
+                        </ul>
+                    </li>
+                    <li>Excel ile giriş için:
+                        <ul>
+                            <li>"Şablon İndir" butonuna tıklayarak Excel şablonunu indirin.</li>
+                            <li>Şablonu doldurun ve kaydedin.</li>
+                            <li>"Dosya Seç" butonuna tıklayarak doldurduğunuz Excel dosyasını seçin.</li>
+                            <li>"Yükle" butonuna tıklayarak dosyayı yükleyin.</li>
+                        </ul>
+                    </li>
+                    <li>"Kaydet" butonuna tıklayarak toplu girişi tamamlayın.</li>
+                </ol>
+                <p>Toplu giriş, çok sayıda çek veya senet girişi yapmanız gerektiğinde zaman kazandırır.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<h2>İlgili Konular</h2>
+
+<ul>
+    <li><a href="?module=cek-senet&page=cek-senet-hareket-listesi">Çek/Senet Hareket Listesi</a></li>
+    <li><a href="?module=cek-senet&page=hareket-olustur">Hareket Oluştur</a></li>
+    <li><a href="?module=cek-senet&page=genel-bakis">Çek & Senet Modülü</a></li>
+    <li><a href="?module=finans&page=genel-bakis">Finans Yönetimi</a></li>
+    <li><a href="?module=muhasebe&page=genel-bakis">Muhasebe</a></li>
+</ul>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aaro ERP Dokümantasyon</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="css/style.css" rel="stylesheet">
+    <!-- Favicon -->
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <!-- Header -->
+     
+
+    <!-- Main Content -->
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Sidebar -->
+            <div class="sidebar col-md-3 col-lg-2">
+                <div class="sidebar-header">
+                    <h3>Aaro ERP</h3>
+                    <p>Dokümantasyon</p>
+                </div>
+                <div class="search-container">
+                    <div class="input-group">
+                        <input type="text" class="form-control" id="searchInput" placeholder="Ara...">
+                        <button class="btn btn-outline-light" type="button" id="searchButton">
+                            <i class="bi bi-search"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="module-menu" id="moduleMenu">
+                    <!-- Modüller buraya dinamik olarak eklenecek -->
+                </div>
+            </div>
+
+            <!-- Content -->
+            <div class="col-md-9 col-lg-10 content-area">
+                <div id="moduleHeader" class="module-header">
+                    <!-- Modül başlık bilgileri buraya dinamik olarak eklenecek -->
+                </div>
+                <div id="moduleContent" class="module-content">
+                    <!-- İçerik buraya dinamik olarak yüklenecek -->
+                    <div class="text-center my-5">
+                        <img src="img/logo-large.png" alt="Aaro ERP Logo" class="img-fluid mb-4" style="max-width: 300px;">
+                        <h2>Aaro ERP Dokümantasyon Portalına Hoş Geldiniz</h2>
+                        <p class="lead">Bu portal, Aaro ERP yazılımının kullanımı hakkında detaylı bilgiler ve adım adım kılavuzlar sunmaktadır.</p>
+                        <div class="row justify-content-center mt-5">
+                            <div class="col-md-8">
+                                <div class="card">
+                                    <div class="card-header bg-primary text-white">
+                                        <h3 class="mb-0">Başlarken</h3>
+                                    </div>
+                                    <div class="card-body">
+                                        <p>Aaro ERP, işletmenizin tüm süreçlerini entegre bir şekilde yönetmenizi sağlayan kapsamlı bir kurumsal kaynak planlama yazılımıdır.</p>
+                                        <p>Sol taraftaki menüden ilgilendiğiniz modülü seçerek başlayabilirsiniz.</p>
+                                        <p>Her modül, ilgili işlevleri ve kullanım adımlarını açıklayan detaylı dokümantasyon içerir.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row justify-content-center mt-4">
+                            <div class="col-md-4">
+                                <div class="card h-100">
+                                    <div class="card-header bg-success text-white">
+                                        <h4 class="mb-0">Temel Modüller</h4>
+                                    </div>
+                                    <div class="card-body">
+                                        <ul class="list-group list-group-flush">
+                                            <li class="list-group-item"><i class="bi bi-people"></i> Müşteri/Satıcı Yönetimi</li>
+                                            <li class="list-group-item"><i class="bi bi-box-seam"></i> Stok Yönetimi</li>
+                                            <li class="list-group-item"><i class="bi bi-cash-coin"></i> Finans Yönetimi</li>
+                                            <li class="list-group-item"><i class="bi bi-calculator"></i> Muhasebe</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="card h-100">
+                                    <div class="card-header bg-info text-white">
+                                        <h4 class="mb-0">Gelişmiş Modüller</h4>
+                                    </div>
+                                    <div class="card-body">
+                                        <ul class="list-group list-group-flush">
+                                            <li class="list-group-item"><i class="bi bi-gear"></i> Üretim Yönetimi</li>
+                                            <li class="list-group-item"><i class="bi bi-truck"></i> Lojistik Yönetimi</li>
+                                            <li class="list-group-item"><i class="bi bi-graph-up"></i> Raporlama ve Analiz</li>
+                                            <li class="list-group-item"><i class="bi bi-person-badge"></i> İnsan Kaynakları</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Dark Mode ve Yazdırma Butonları -->
+    <button class="theme-toggle" id="themeToggle" title="Karanlık/Aydınlık Mod">
+        <i class="bi bi-moon-fill"></i>
+    </button>
+    <button class="print-button" id="printButton" title="Sayfayı Yazdır">
+        <i class="bi bi-printer-fill"></i>
+    </button>
+
+    <!-- Footer -->
+    <footer class="footer mt-auto py-3 bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <span class="text-muted">&copy; 2025 Aaro Yazılım. Tüm hakları saklıdır.</span>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <a href="#" class="text-muted">Gizlilik Politikası</a> |
+                    <a href="#" class="text-muted">Kullanım Şartları</a> |
+                    <a href="#" class="text-muted">İletişim</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Modül Verileri -->
+    <script src="js/modules-data.js"></script>
+    <!-- Custom JS -->
+    <script src="js/script.js"></script>
+</body>
+</html>
